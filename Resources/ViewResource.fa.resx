@@ -1,0 +1,1800 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="Welcome" xml:space="preserve">
+        <value>خوش آمدید</value>
+    </data>
+    <data name="Email" xml:space="preserve">
+        <value>ایمیل</value>
+    </data>
+    <data name="About Conference" xml:space="preserve">
+        <value>درباره کنفرانس</value>
+    </data>
+    <data name="Name &amp; Family (En)" xml:space="preserve">
+        <value>نام و نام خانوادگی (En)</value>
+    </data>
+    <data name="Name &amp; Family (Fa)" xml:space="preserve">
+        <value>نام و نام خانوادگی (فا)</value>
+    </data>
+    <data name="Affiliation (En)" xml:space="preserve">
+        <value>وابستگی علمی (En)</value>
+    </data>
+    <data name="Affiliation (Fa)" xml:space="preserve">
+        <value>وابستگی علمی (فا)</value>
+    </data>
+    <data name="Phone Number" xml:space="preserve">
+        <value>شماره تماس</value>
+    </data>
+    <data name="Password" xml:space="preserve">
+        <value>رمز عبور</value>
+    </data>
+    <data name="Confirm Password" xml:space="preserve">
+        <value>تایید رمز عبور</value>
+    </data>
+    <data name="Authenticator code" xml:space="preserve">
+        <value>کد احراز هویت</value>
+    </data>
+    <data name="Remember this machine" xml:space="preserve">
+        <value>این کامپیوتر را به خاطر بسپار</value>
+    </data>
+    <data name="Subject (En)" xml:space="preserve">
+        <value>موضوع (En)</value>
+    </data>
+    <data name="Subject (Fa)" xml:space="preserve">
+        <value>موضوع (فا)</value>
+    </data>
+    <data name="Body (En)" xml:space="preserve">
+        <value>پیام (En)</value>
+    </data>
+    <data name="Body (Fa)" xml:space="preserve">
+        <value>پیام (فا)</value>
+    </data>
+    <data name="Image" xml:space="preserve">
+        <value>تصویر</value>
+    </data>
+    <data name="Abbreviation (En)" xml:space="preserve">
+        <value>واژه اختصاری (En)</value>
+    </data>
+    <data name="Title (En)" xml:space="preserve">
+        <value>عنوان (En)</value>
+    </data>
+    <data name="Title (Fa)" xml:space="preserve">
+        <value>عنوان (فا)</value>
+    </data>
+    <data name="About (En)" xml:space="preserve">
+        <value>درباره (En)</value>
+    </data>
+    <data name="About (Fa)" xml:space="preserve">
+        <value>درباره (فا)</value>
+    </data>
+    <data name="Url" xml:space="preserve">
+        <value>آدرس اینترنتی</value>
+    </data>
+    <data name="Venue (En)" xml:space="preserve">
+        <value>محل برگزاری (En)</value>
+    </data>
+    <data name="Venue (Fa)" xml:space="preserve">
+        <value>محل برگزاری (فا)</value>
+    </data>
+    <data name="Venue Description (En)" xml:space="preserve">
+        <value>توضیحات محل برگزاری (En)</value>
+    </data>
+    <data name="Venue Description (Fa)" xml:space="preserve">
+        <value>توضیحات محل برگزاری (فا)</value>
+    </data>
+    <data name="Venue Url" xml:space="preserve">
+        <value>وبگاه محل برگزاری</value>
+    </data>
+    <data name="Venue Address (En)" xml:space="preserve">
+        <value>آدرس محل برگزاری (En)</value>
+    </data>
+    <data name="Venue Address (Fa)" xml:space="preserve">
+        <value>آدرس محل برگزاری (فا)</value>
+    </data>
+    <data name="Venue Phone Number" xml:space="preserve">
+        <value>شماره تماس محل برگزاری</value>
+    </data>
+    <data name="Venue Google Map Source" xml:space="preserve">
+        <value>آدرس منبع گوگل</value>
+    </data>
+    <data name="Start Date" xml:space="preserve">
+        <value>تاریخ آغاز</value>
+    </data>
+    <data name="End Date" xml:space="preserve">
+        <value>تاریخ خاتمه</value>
+    </data>
+    <data name="Submit Date" xml:space="preserve">
+        <value>تاریخ ارسال</value>
+    </data>
+    <data name="Review Date" xml:space="preserve">
+        <value>تاریخ داوری</value>
+    </data>
+    <data name="Scientific Chief" xml:space="preserve">
+        <value>دبیر علمی</value>
+    </data>
+    <data name="Executive Chief" xml:space="preserve">
+        <value>دبیر اجرایی</value>
+    </data>
+    <data name="Email Configuration" xml:space="preserve">
+        <value>تنظیمات ایمیل</value>
+    </data>
+    <data name="Host" xml:space="preserve">
+        <value>هاست</value>
+    </data>
+    <data name="Port" xml:space="preserve">
+        <value>پورت</value>
+    </data>
+    <data name="Enable SSL" xml:space="preserve">
+        <value>فعال‌سازی SSL</value>
+    </data>
+    <data name="Username" xml:space="preserve">
+        <value>نام کاربری</value>
+    </data>
+    <data name="Homepage" xml:space="preserve">
+        <value>وبگاه شخصی</value>
+    </data>
+    <data name="From" xml:space="preserve">
+        <value>فرستنده</value>
+    </data>
+    <data name="To" xml:space="preserve">
+        <value>گیرنده</value>
+    </data>
+    <data name="Subject" xml:space="preserve">
+        <value>موضوع</value>
+    </data>
+    <data name="Field" xml:space="preserve">
+        <value>فیلد تخصصی</value>
+    </data>
+    <data name="Message" xml:space="preserve">
+        <value>پیام</value>
+    </data>
+    <data name="Abstract (Fa)" xml:space="preserve">
+        <value>چکیده (فا)</value>
+    </data>
+    <data name="Abstract (En)" xml:space="preserve">
+        <value>چکیده (En)</value>
+    </data>
+    <data name="Keywords (Fa)" xml:space="preserve">
+        <value>کلمات کلیدی (فا)</value>
+    </data>
+    <data name="Keywords (En)" xml:space="preserve">
+        <value>کلمات کلیدی (En)</value>
+    </data>
+    <data name="Submitter" xml:space="preserve">
+        <value>ارسال‌کننده</value>
+    </data>
+    <data name="Correspondent" xml:space="preserve">
+        <value>نویسنده مسئول</value>
+    </data>
+    <data name="Presenter" xml:space="preserve">
+        <value>ارائه‌دهنده</value>
+    </data>
+    <data name="Field (Optional)" xml:space="preserve">
+        <value>فیلد تخصصی (اختیاری)</value>
+    </data>
+    <data name="Virtual Link" xml:space="preserve">
+        <value>لینک جلسه مجازی</value>
+    </data>
+    <data name="Decision Date" xml:space="preserve">
+        <value>تاریخ تصمیم‌گیری</value>
+    </data>
+    <data name="Paper Status" xml:space="preserve">
+        <value>وضعیت مقاله</value>
+    </data>
+    <data name="Accept Status" xml:space="preserve">
+        <value>وضعیت پذیرش</value>
+    </data>
+    <data name="Final" xml:space="preserve">
+        <value>نهایی</value>
+    </data>
+    <data name="Comments To Author" xml:space="preserve">
+        <value>توضیحات برای نویسنده</value>
+    </data>
+    <data name="Comments To Editor" xml:space="preserve">
+        <value>توضیحات برای سردبیر</value>
+    </data>
+    <data name="Review Status (Decision)" xml:space="preserve">
+        <value>نتیجه داوری (تصمیم)</value>
+    </data>
+    <data name="Accept Type" xml:space="preserve">
+        <value>نوع پذیرش</value>
+    </data>
+    <data name="Question (En)" xml:space="preserve">
+        <value>پرسش (En)</value>
+    </data>
+    <data name="Question (Fa)" xml:space="preserve">
+        <value>پرسش (فا)</value>
+    </data>
+    <data name="Session Type" xml:space="preserve">
+        <value>نوع نشست</value>
+    </data>
+    <data name="Presenter Name &amp; Family (En)" xml:space="preserve">
+        <value>نام و نام خانوادگی ارائه‌دهنده (En)</value>
+    </data>
+    <data name="Presenter Name &amp; Family (Fa)" xml:space="preserve">
+        <value>نام و نام خانوادگی ارائه‌دهنده (فا)</value>
+    </data>
+    <data name="Keynote Speaker or Paper Id" xml:space="preserve">
+        <value>شماره سخنران کلیدی یا مقاله</value>
+    </data>
+    <data name="Session" xml:space="preserve">
+        <value>نشست</value>
+    </data>
+    <data name="Name" xml:space="preserve">
+        <value>نام</value>
+    </data>
+    <data name="Homepage (or other link)" xml:space="preserve">
+        <value>وبگاه (یا لینک دیگر)</value>
+    </data>
+    <data name="Start Time" xml:space="preserve">
+        <value>زمان آغاز</value>
+    </data>
+    <data name="End Time" xml:space="preserve">
+        <value>زمان خاتمه</value>
+    </data>
+    <data name="Remember me?" xml:space="preserve">
+        <value>مرا به خاطر بسپار؟</value>
+    </data>
+    <data name="Recovery Code" xml:space="preserve">
+        <value>کد بازیابی</value>
+    </data>
+    <data name="Questions" xml:space="preserve">
+        <value>پرسش‌ها</value>
+    </data>
+    <data name="Username (Email)" xml:space="preserve">
+        <value>نام کاربری (ایمیل)</value>
+    </data>
+    <data name="Home Page" xml:space="preserve">
+        <value>خانه</value>
+    </data>
+    <data name="Conference Topics" xml:space="preserve">
+        <value>محورهای کنفرانس</value>
+    </data>
+    <data name="News" xml:space="preserve">
+        <value>اطلاعیه‌ها</value>
+    </data>
+    <data name="Read More ..." xml:space="preserve">
+        <value>بیشتر بخوانید ...</value>
+    </data>
+    <data name="Read More" xml:space="preserve">
+        <value>بیشتر بخوانید</value>
+    </data>
+    <data name="Scientific &amp; Executive Committee" xml:space="preserve">
+        <value>کمیته علمی و اجرایی</value>
+    </data>
+    <data name="Scientific Committee" xml:space="preserve">
+        <value>کمیته علمی</value>
+    </data>
+    <data name="Chief" xml:space="preserve">
+        <value>دبیر</value>
+    </data>
+    <data name="Executive Committee" xml:space="preserve">
+        <value>کمیته اجرایی</value>
+    </data>
+    <data name="Days" xml:space="preserve">
+        <value>روزها</value>
+    </data>
+    <data name="People" xml:space="preserve">
+        <value>افراد</value>
+    </data>
+    <data name="Papers" xml:space="preserve">
+        <value>مقاله‌ها</value>
+    </data>
+    <data name="Accepted" xml:space="preserve">
+        <value>پذیرش‌شده</value>
+    </data>
+    <data name="Keynote Speakers" xml:space="preserve">
+        <value>سخنرانان کلیدی</value>
+    </data>
+    <data name="Program Schedule" xml:space="preserve">
+        <value>زمان‌بندی برنامه‌ها</value>
+    </data>
+    <data name="Join Meeting" xml:space="preserve">
+        <value>پیوستن به جلسه</value>
+    </data>
+    <data name="Selected Posters ... " xml:space="preserve">
+        <value>پوسترهای انتخابی</value>
+    </data>
+    <data name="Conference Sponsors" xml:space="preserve">
+        <value>حامیان کنفرانس</value>
+    </data>
+    <data name="Contact Us" xml:space="preserve">
+        <value>تماس با ما</value>
+    </data>
+    <data name="Your message has been sent. Thank you!" xml:space="preserve">
+        <value>پیام شما ارسال شد. سپاسگزاریم!</value>
+    </data>
+    <data name="Send Message" xml:space="preserve">
+        <value>ارسال پیام</value>
+    </data>
+    <data name="Useful Links" xml:space="preserve">
+        <value>لینک‌های مفید</value>
+    </data>
+    <data name="Terms of service" xml:space="preserve">
+        <value>شرایط خدمت رسانی</value>
+    </data>
+    <data name="Privacy policy" xml:space="preserve">
+        <value>سیاست محرمانگی</value>
+    </data>
+    <data name="Dashboard" xml:space="preserve">
+        <value>داشبورد</value>
+    </data>
+    <data name="Manage" xml:space="preserve">
+        <value>مدیریت</value>
+    </data>
+    <data name="Logout" xml:space="preserve">
+        <value>خروج</value>
+    </data>
+    <data name="Register" xml:space="preserve">
+        <value>ثبت‌نام</value>
+    </data>
+    <data name="Login" xml:space="preserve">
+        <value>ورود</value>
+    </data>
+    <data name="Home" xml:space="preserve">
+        <value>خانه</value>
+    </data>
+    <data name="Committees" xml:space="preserve">
+        <value>کمیته‌ها</value>
+    </data>
+    <data name="Speakers" xml:space="preserve">
+        <value>سخنرانان</value>
+    </data>
+    <data name="Scheduling" xml:space="preserve">
+        <value>زمان‌بندی</value>
+    </data>
+    <data name="Conference Scheduling" xml:space="preserve">
+        <value>زمان‌بندی کنفرانس</value>
+    </data>
+    <data name="Guides" xml:space="preserve">
+        <value>راهنما</value>
+    </data>
+    <data name="Paper Template (En)" xml:space="preserve">
+        <value>قالب مقاله (En)</value>
+    </data>
+    <data name="Paper Template (Fa)" xml:space="preserve">
+        <value>قالب مقاله (فا)</value>
+    </data>
+    <data name="Poster Template" xml:space="preserve">
+        <value>قالب پوستر</value>
+    </data>
+    <data name="Graphical Abstract Template" xml:space="preserve">
+        <value>قالب چکیده گرافیکی</value>
+    </data>
+    <data name="Sponsors" xml:space="preserve">
+        <value>حامیان</value>
+    </data>
+    <data name="Submit Paper" xml:space="preserve">
+        <value>ارسال مقاله</value>
+    </data>
+    <data name="Inbox" xml:space="preserve">
+        <value>صندوق پیام‌های دریافتی</value>
+    </data>
+    <data name="My Papers" xml:space="preserve">
+        <value>مقاله‌های من</value>
+    </data>
+    <data name="My Reviews" xml:space="preserve">
+        <value>داوری‌های من</value>
+    </data>
+    <data name="Submitted Paper List" xml:space="preserve">
+        <value>لیست مقاله‌های ارسال‌شده</value>
+    </data>
+    <data name="Final Acceptance" xml:space="preserve">
+        <value>پذیرش نهایی مقاله‌ها</value>
+    </data>
+    <data name="Poster Session Assignment" xml:space="preserve">
+        <value>تعیین نشست برای پوستر</value>
+    </data>
+    <data name="Users Management" xml:space="preserve">
+        <value>مدیریت کاربران</value>
+    </data>
+    <data name="Blog Posts Management" xml:space="preserve">
+        <value>مدیریت پست‌های بلاگ</value>
+    </data>
+    <data name="Session Management" xml:space="preserve">
+        <value>مدیریت نشست‌ها</value>
+    </data>
+    <data name="Reviewer Management" xml:space="preserve">
+        <value>مدیریت داوران</value>
+    </data>
+    <data name="Conference Administration" xml:space="preserve">
+        <value>مدیریت کنفرانس</value>
+    </data>
+    <data name="Site Design" xml:space="preserve">
+        <value>ظاهر سایت</value>
+    </data>
+    <data name="Conference Fields" xml:space="preserve">
+        <value>محورهای کنفرانس</value>
+    </data>
+    <data name="Sponsors List" xml:space="preserve">
+        <value>لیست حامیان</value>
+    </data>
+    <data name="Keynote Speakers List" xml:space="preserve">
+        <value>لیست سخنرانان کلیدی</value>
+    </data>
+    <data name="Review Questions List" xml:space="preserve">
+        <value>لیست پرسش‌های داوری</value>
+    </data>
+    <data name="Venue" xml:space="preserve">
+        <value>محل برگزاری</value>
+    </data>
+    <data name="Phone" xml:space="preserve">
+        <value>تلفن</value>
+    </data>
+    <data name="Save" xml:space="preserve">
+        <value>ذخیره</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+        <value>لغو و بازگشت</value>
+    </data>
+    <data name="Assign Field" xml:space="preserve">
+        <value>انتساب فیلد تخصصی</value>
+    </data>
+    <data name="Current Fields" xml:space="preserve">
+        <value>فیلدهای تخصصی فعلی</value>
+    </data>
+    <data name="Current Roles" xml:space="preserve">
+        <value>نقش‌های کاربری فعلی</value>
+    </data>
+    <data name="Assign" xml:space="preserve">
+        <value>انتساب</value>
+    </data>
+    <data name="Name &amp; Family" xml:space="preserve">
+        <value>نام و نام خانوادگی</value>
+    </data>
+    <data name="Reviewer" xml:space="preserve">
+        <value>داور</value>
+    </data>
+    <data name="Author" xml:space="preserve">
+        <value>نویسنده</value>
+    </data>
+    <data name="Save Information" xml:space="preserve">
+        <value>ذخیره اطلاعات</value>
+    </data>
+    <data name="Actions" xml:space="preserve">
+        <value>اقدامات</value>
+    </data>
+    <data name="Update User Info" xml:space="preserve">
+        <value>ویرایش اطلاعات کاربری</value>
+    </data>
+    <data name="Update" xml:space="preserve">
+        <value>به‌روزرسانی</value>
+    </data>
+    <data name="Change Password" xml:space="preserve">
+        <value>تغییر رمز عبور</value>
+    </data>
+    <data name="Add Keynote Speaker" xml:space="preserve">
+        <value>اضافه نمودن سخنران کلیدی</value>
+    </data>
+    <data name="Change Image" xml:space="preserve">
+        <value>تغییر تصویر</value>
+    </data>
+    <data name="Edit" xml:space="preserve">
+        <value>ویرایش</value>
+    </data>
+    <data name="Delete" xml:space="preserve">
+        <value>حذف</value>
+    </data>
+    <data name="Upload Image" xml:space="preserve">
+        <value>بارگذاری تصویر</value>
+    </data>
+    <data name="Add Guide Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایلهای راهنما</value>
+    </data>
+    <data name="Upload File" xml:space="preserve">
+        <value>بارگذاری فایل</value>
+    </data>
+    <data name="Logo" xml:space="preserve">
+        <value>لوگو</value>
+    </data>
+    <data name="Change Logo" xml:space="preserve">
+        <value>تغییر لوگو</value>
+    </data>
+    <data name="'{0}' is required." xml:space="preserve">
+        <value>'{0}' اجباری است.</value>
+    </data>
+    <data name="Paper Info" xml:space="preserve">
+        <value>اطلاعات مقاله</value>
+    </data>
+    <data name="Add Author" xml:space="preserve">
+        <value>اضافه‌نمودن نویسنده</value>
+    </data>
+    <data name="Order" xml:space="preserve">
+        <value>ردیف</value>
+    </data>
+    <data name="Affiliation" xml:space="preserve">
+        <value>وابستگی علمی</value>
+    </data>
+    <data name="Register Info" xml:space="preserve">
+        <value>ثبت اطلاعات</value>
+    </data>
+    <data name="Please Wait!!!" xml:space="preserve">
+        <value>لطفا منتظر بمانید!!!</value>
+    </data>
+    <data name="Add New Author" xml:space="preserve">
+        <value>اضافه‌نمودن نویسنده جدید</value>
+    </data>
+    <data name="Add Required Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل‌های مورد نیاز</value>
+    </data>
+    <data name="Accepted File Type" xml:space="preserve">
+        <value>فرمت قابل قبول فایل‌ها</value>
+    </data>
+    <data name="File Type" xml:space="preserve">
+        <value>نوع فایل</value>
+    </data>
+    <data name="Filename" xml:space="preserve">
+        <value>نام فایل</value>
+    </data>
+    <data name="Add Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل</value>
+    </data>
+    <data name="Edit Files" xml:space="preserve">
+        <value>ویرایش فایل‌ها</value>
+    </data>
+    <data name="View Files" xml:space="preserve">
+        <value>مشاهده فایل‌ها</value>
+    </data>
+    <data name="Paper Files" xml:space="preserve">
+        <value>فایل‌های مقاله</value>
+    </data>
+    <data name="Paper No." xml:space="preserve">
+        <value>مقاله شماره</value>
+    </data>
+    <data name="Manuscript" xml:space="preserve">
+        <value>نسخه اصلی</value>
+    </data>
+    <data name="ReviewedManuscript" xml:space="preserve">
+        <value>نسخه بازنگری‌شده</value>
+    </data>
+    <data name="ReplyToReviewer" xml:space="preserve">
+        <value>پاسخ به داوران</value>
+    </data>
+    <data name="Poster" xml:space="preserve">
+        <value>پوستر</value>
+    </data>
+    <data name="Audio" xml:space="preserve">
+        <value>فایل صوتی</value>
+    </data>
+    <data name="Submit Reply" xml:space="preserve">
+        <value>ارسال پاسخ</value>
+    </data>
+    <data name="Congratulation! Your paper has been accepted " xml:space="preserve">
+        <value>تبریک! مقاله شما پذیرفته شده است </value>
+    </data>
+    <data name="Submitting" xml:space="preserve">
+        <value>در حال آماده‌سازی</value>
+    </data>
+    <data name="Pending" xml:space="preserve">
+        <value>منتظر تصمیم‌گیری</value>
+    </data>
+    <data name="ReviewBackToAuthor" xml:space="preserve">
+        <value>منتظر بازنگری نویسنده</value>
+    </data>
+    <data name="ReviewBackDone" xml:space="preserve">
+        <value>پایان بازنگری نویسنده</value>
+    </data>
+    <data name="UnderReview" xml:space="preserve">
+        <value>تحت داوری</value>
+    </data>
+    <data name="Accept" xml:space="preserve">
+        <value>پذیرفته‌شده</value>
+    </data>
+    <data name="Reject" xml:space="preserve">
+        <value>ردشده</value>
+    </data>
+    <data name="Add Presentation Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل‌های ارائه</value>
+    </data>
+    <data name="Upload Audio" xml:space="preserve">
+        <value>بارگذلری فایل صوتی</value>
+    </data>
+    <data name="Add Audio Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل صوتی</value>
+    </data>
+    <data name="Upload Receipt" xml:space="preserve">
+        <value>بارگذاری رسید پرداخت</value>
+    </data>
+    <data name="Add Payment Receipt" xml:space="preserve">
+        <value>اضافه‌نمودن رسید پرداخت</value>
+    </data>
+    <data name="Oral" xml:space="preserve">
+        <value>ارائه شفاهی</value>
+    </data>
+    <data name="None" xml:space="preserve">
+        <value>هیچ‌کدام</value>
+    </data>
+    <data name="Return To Paper Info" xml:space="preserve">
+        <value>بازگشت به صفحه اطلاعات مقاله</value>
+    </data>
+    <data name="Your paper has been submitted successfully." xml:space="preserve">
+        <value>مقاله شما با موفقیت ارسال شد.</value>
+    </data>
+    <data name="Error! Your paper has not been submitted. Please try again later." xml:space="preserve">
+        <value>خطا! متاسفانه مقاله شما ارسال نشده است. لطفا دوباره سعی کنید.</value>
+    </data>
+    <data name="Current password" xml:space="preserve">
+        <value>رمز عبور فعلی</value>
+    </data>
+    <data name="New password" xml:space="preserve">
+        <value>رمز عبور جدید</value>
+    </data>
+    <data name="Confirm new password" xml:space="preserve">
+        <value>تایید رمز عبور جدید</value>
+    </data>
+    <data name="Update password" xml:space="preserve">
+        <value>بازنشانی رمز عبور</value>
+    </data>
+    <data name="Admin" xml:space="preserve">
+        <value>مدیر سیستم</value>
+    </data>
+    <data name="Compose Message" xml:space="preserve">
+        <value>ارسال پیام</value>
+    </data>
+    <data name="Send Notification" xml:space="preserve">
+        <value>ارسال اطلاعیه</value>
+    </data>
+    <data name="Outbox" xml:space="preserve">
+        <value>صندوق پیام‌های ارسال‌شده</value>
+    </data>
+    <data name="Notifications" xml:space="preserve">
+        <value>اطلاعیه‌ها</value>
+    </data>
+    <data name="Search ..." xml:space="preserve">
+        <value>جستجو ...</value>
+    </data>
+    <data name="Date" xml:space="preserve">
+        <value>تاریخ</value>
+    </data>
+    <data name="Replied By" xml:space="preserve">
+        <value>جواب داده‌شده توسط</value>
+    </data>
+    <data name="Reply" xml:space="preserve">
+        <value>پاسخ</value>
+    </data>
+    <data name="View Message" xml:space="preserve">
+        <value>مشاهده پیام</value>
+    </data>
+    <data name="Set as Read" xml:space="preserve">
+        <value>علامت زدن به عنوان خوانده‌شده</value>
+    </data>
+    <data name="Delete Message" xml:space="preserve">
+        <value>حذف پیام</value>
+    </data>
+    <data name="Reply Message" xml:space="preserve">
+        <value>پاسخ به پیام</value>
+    </data>
+    <data name="Send" xml:space="preserve">
+        <value>ارسال</value>
+    </data>
+    <data name="Set as UnRead" xml:space="preserve">
+        <value>علامت زدن به عنوان خوانده‌نشده</value>
+    </data>
+    <data name="Back To Inbox" xml:space="preserve">
+        <value>بازگشت به صندوق پیام</value>
+    </data>
+    <data name="Log in" xml:space="preserve">
+        <value>ورود</value>
+    </data>
+    <data name="Welcome To Conference" xml:space="preserve">
+        <value>به کنفرانس خوش آمدید</value>
+    </data>
+    <data name="Forgot your password?" xml:space="preserve">
+        <value>رمز عبور خود را فراموش کرده‌اید؟</value>
+    </data>
+    <data name="Register as a new user" xml:space="preserve">
+        <value>ثبت‌نام به عنوان کاربر جدید</value>
+    </data>
+    <data name="Resend email confirmation" xml:space="preserve">
+        <value>ارسال مجدد ایمیل تایید</value>
+    </data>
+    <data name="Submit" xml:space="preserve">
+        <value>ارسال</value>
+    </data>
+    <data name="Forgot password confirmation" xml:space="preserve">
+        <value>تایید فراموشی رمز عبور</value>
+    </data>
+    <data name="Please check your email to reset your password." xml:space="preserve">
+        <value>لطفا ایمیل خود را برای بازنشانی رمزعبور بررسی کنید</value>
+    </data>
+    <data name="Access denied" xml:space="preserve">
+        <value>دسترسی غیرمجاز</value>
+    </data>
+    <data name="You do not have access to this resource." xml:space="preserve">
+        <value>شما به این صفحه یا اطلاعات دسترسی ندارید.</value>
+    </data>
+    <data name="Thank you for confirming your email." xml:space="preserve">
+        <value>از تایید ایمیل شما سپاسگزاریم.</value>
+    </data>
+    <data name="Error confirming your email." xml:space="preserve">
+        <value>متاسفانه در تایید ایمیل شما خطایی رخدادهاست.</value>
+    </data>
+    <data name="Register confirmation" xml:space="preserve">
+        <value>تایید ثبت‌نام</value>
+    </data>
+    <data name="Please check your email to confirm your account." xml:space="preserve">
+        <value>لطفا ایمیل خود را برای تایید حساب کاربری چک نمایید.</value>
+    </data>
+    <data name="Reset password" xml:space="preserve">
+        <value>بازنشانی رمز عبور</value>
+    </data>
+    <data name="Reset" xml:space="preserve">
+        <value>بازنشانی</value>
+    </data>
+    <data name="Error" xml:space="preserve">
+        <value>خطا!</value>
+    </data>
+    <data name="An error occurred while processing your request." xml:space="preserve">
+        <value>متاسفانه در اجرای درخواست شما مشکلی پیش آمده است.</value>
+    </data>
+    <data name="Reset password confirmation" xml:space="preserve">
+        <value>تایید بازنشلنی رمز عبور</value>
+    </data>
+    <data name="Your password has been reset." xml:space="preserve">
+        <value>رمز عبور شما با موفقیت بازنشانی شد.</value>
+    </data>
+    <data name="Please click here to log in" xml:space="preserve">
+        <value>لطفا برای ورود اینجا را کلیک کنید</value>
+    </data>
+    <data name="Please Select Field ..." xml:space="preserve">
+        <value>لطفا فیلد تخصصی را انتخاب کنید ...</value>
+    </data>
+    <data name="Log out" xml:space="preserve">
+        <value>خروج</value>
+    </data>
+    <data name="Click here to Logout" xml:space="preserve">
+        <value>برای خروج کلیک کنید</value>
+    </data>
+    <data name="You have successfully logged out of the application." xml:space="preserve">
+        <value>شما با موفقیت از سیستم خارج شدید.</value>
+    </data>
+    <data name="Paper List" xml:space="preserve">
+        <value>لیست مقاله‌ها</value>
+    </data>
+    <data name="Submit New Paper" xml:space="preserve">
+        <value>ارسال مقاله جدید</value>
+    </data>
+    <data name="Id" xml:space="preserve">
+        <value>شماره</value>
+    </data>
+    <data name="Title" xml:space="preserve">
+        <value>عنوان</value>
+    </data>
+    <data name="Authors" xml:space="preserve">
+        <value>نویسندگان</value>
+    </data>
+    <data name="Status" xml:space="preserve">
+        <value>وضعیت</value>
+    </data>
+    <data name="No Paper Submitted" xml:space="preserve">
+        <value>هیچ مقاله‌ای ارسال نشده است</value>
+    </data>
+    <data name="Review Result" xml:space="preserve">
+        <value>نتیجه داوری</value>
+    </data>
+    <data name="View" xml:space="preserve">
+        <value>مشاهده</value>
+    </data>
+    <data name="Add Extra Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل‌های ارائه</value>
+    </data>
+    <data name="Review" xml:space="preserve">
+        <value>داوری</value>
+    </data>
+    <data name="Review No." xml:space="preserve">
+        <value>نتیجه داوری شماره</value>
+    </data>
+    <data name="ReviewerAssigned" xml:space="preserve">
+        <value>منتظر داوری</value>
+    </data>
+    <data name="MinorCorrections" xml:space="preserve">
+        <value>ایراد جزئی</value>
+    </data>
+    <data name="MajorCorrections" xml:space="preserve">
+        <value>ایراد کلی</value>
+    </data>
+    <data name="Add User" xml:space="preserve">
+        <value>اضافه‌نمودن کاربر</value>
+    </data>
+    <data name="Payment" xml:space="preserve">
+        <value>پرداخت</value>
+    </data>
+    <data name="Send Email" xml:space="preserve">
+        <value>ارسال ایمیل</value>
+    </data>
+    <data name="Send Group Email" xml:space="preserve">
+        <value>ارسال ایمیل گروهی</value>
+    </data>
+    <data name="Roles" xml:space="preserve">
+        <value>نقش‌ها</value>
+    </data>
+    <data name="Review Back To Author" xml:space="preserve">
+        <value>منتظر بازنگری نویسنده</value>
+    </data>
+    <data name="Review Back Done" xml:space="preserve">
+        <value>پایان بازنگری نویسنده</value>
+    </data>
+    <data name="Under Review" xml:space="preserve">
+        <value>تحت داوری</value>
+    </data>
+    <data name="Reviewed Manuscript" xml:space="preserve">
+        <value>نسخه بازنگری‌شده</value>
+    </data>
+    <data name="Reply To Reviewer" xml:space="preserve">
+        <value>پاسخ به داوران</value>
+    </data>
+    <data name="Coffee Break" xml:space="preserve">
+        <value>استراحت و پذیرایی</value>
+    </data>
+    <data name="CoffeeBreak" xml:space="preserve">
+        <value>استراحت و پذیرایی</value>
+    </data>
+    <data name="Keynote Speaker" xml:space="preserve">
+        <value>سخنران کلیدی</value>
+    </data>
+    <data name="KeynoteSpeaker" xml:space="preserve">
+        <value>سخنران کلیدی</value>
+    </data>
+    <data name="General" xml:space="preserve">
+        <value>عمومی</value>
+    </data>
+    <data name="OralPaper" xml:space="preserve">
+        <value>مقاله ارائه شفاهی</value>
+    </data>
+    <data name="Oral Paper" xml:space="preserve">
+        <value>مقاله ارائه شفاهی</value>
+    </data>
+    <data name="Change Presenter" xml:space="preserve">
+        <value>تغییر ارائه دهنده</value>
+    </data>
+    <data name="Set Virtual Link" xml:space="preserve">
+        <value>تعیین لینک جلسه مجازی</value>
+    </data>
+    <data name="Main Menu" xml:space="preserve">
+        <value>فهرست اصلی</value>
+    </data>
+    <data name="Pending Papers" xml:space="preserve">
+        <value>مقاله‌های منتظر تصمیم‌گیری</value>
+    </data>
+    <data name="Filter By Scientific Field ..." xml:space="preserve">
+        <value>فیلتر با فیلد تخصصی</value>
+    </data>
+    <data name="Info" xml:space="preserve">
+        <value>اطلاعات</value>
+    </data>
+    <data name="Assign Reviewer" xml:space="preserve">
+        <value>انتساب داور</value>
+    </data>
+    <data name="Abstract" xml:space="preserve">
+        <value>چکیده</value>
+    </data>
+    <data name="Keywords" xml:space="preserve">
+        <value>کلمات کلیدی</value>
+    </data>
+    <data name="Submitting Papers" xml:space="preserve">
+        <value>مقاله‌های در حال آماده‌سازی</value>
+    </data>
+    <data name="Review Back To Author Papers" xml:space="preserve">
+        <value>مقاله‌های منتظر بازنگری</value>
+    </data>
+    <data name="Review Back Date" xml:space="preserve">
+        <value>تاریخ ارسال بازنگری</value>
+    </data>
+    <data name="Review Back Done Papers" xml:space="preserve">
+        <value>مقاله‌های بازنگری شده</value>
+    </data>
+    <data name="Change Field" xml:space="preserve">
+        <value>تغییر فیلد تصصی</value>
+    </data>
+    <data name="Assign New Reviewer" xml:space="preserve">
+        <value>انتساب داور جدید</value>
+    </data>
+    <data name="Review Again" xml:space="preserve">
+        <value>داوری مجدد</value>
+    </data>
+    <data name="Make Decision" xml:space="preserve">
+        <value>تصمیم‌گیری</value>
+    </data>
+    <data name="Under Review Papers" xml:space="preserve">
+        <value>مقاله‌های تحت داوری</value>
+    </data>
+    <data name="Review Done" xml:space="preserve">
+        <value>داوری‌های پایان‌یافته</value>
+    </data>
+    <data name="Accept Papers" xml:space="preserve">
+        <value>مقاله‌های پذیرفته‌شده</value>
+    </data>
+    <data name="Change Decision" xml:space="preserve">
+        <value>تغییر تصمیم</value>
+    </data>
+    <data name="Reject Papers" xml:space="preserve">
+        <value>مقاله‌های ردشده</value>
+    </data>
+    <data name="No Review Submitted" xml:space="preserve">
+        <value>هیچ نتیجه داوری ارسال نشده است</value>
+    </data>
+    <data name="Click to see the Review" xml:space="preserve">
+        <value>برای دیدن نتیجه داوری کلیک کنید</value>
+    </data>
+    <data name="Question Replies" xml:space="preserve">
+        <value>پاسخ پرسش‌ها</value>
+    </data>
+    <data name="Question" xml:space="preserve">
+        <value>پرسش</value>
+    </data>
+    <data name="Canceled By Reviewer" xml:space="preserve">
+        <value>لغوشده توسط داور</value>
+    </data>
+    <data name="Reviewer List" xml:space="preserve">
+        <value>لیست داوران</value>
+    </data>
+    <data name="Add Reviewer" xml:space="preserve">
+        <value>اضافه‌نمودن داور</value>
+    </data>
+    <data name="No Reviewer Exist" xml:space="preserve">
+        <value>هیچ داوری تعریف نشده است</value>
+    </data>
+    <data name="Out of My Field" xml:space="preserve">
+        <value>خارج ار فیلد من</value>
+    </data>
+    <data name="Choose from Registered Users" xml:space="preserve">
+        <value>انتخاب داور از میان کاربران ثبت‌نام شده</value>
+    </data>
+    <data name="Make Reviewer" xml:space="preserve">
+        <value>انتساب نقش داوری</value>
+    </data>
+    <data name="Reviewer Assigned" xml:space="preserve">
+        <value>منتظر داوری</value>
+    </data>
+    <data name="Minor Corrections" xml:space="preserve">
+        <value>ایراد جزئی</value>
+    </data>
+    <data name="Major Corrections" xml:space="preserve">
+        <value>ایراد کلی</value>
+    </data>
+    <data name="Send Back To Author For Review" xml:space="preserve">
+        <value>ارسال به نویسنده جهت بازنگری</value>
+    </data>
+    <data name="Blog Post" xml:space="preserve">
+        <value>اطلاعیه بلاگ</value>
+    </data>
+    <data name="Blog Posts List" xml:space="preserve">
+        <value>لیست اطلاعیه‌های بلاگ</value>
+    </data>
+    <data name="Add Blog Post" xml:space="preserve">
+        <value>اضافه‌نمودن اطلاعیه بلاگ</value>
+    </data>
+    <data name="Body" xml:space="preserve">
+        <value>پیام</value>
+    </data>
+    <data name="Session Item" xml:space="preserve">
+        <value>آیتم نشست</value>
+    </data>
+    <data name="Name (En)" xml:space="preserve">
+        <value>نام (En)</value>
+    </data>
+    <data name="Name (Fa)" xml:space="preserve">
+        <value>نام (فا)</value>
+    </data>
+    <data name="No Post Submitted" xml:space="preserve">
+        <value>هیچ اطلاعیه‌ای ارسال نشده است</value>
+    </data>
+    <data name="Select" xml:space="preserve">
+        <value>انتخاب</value>
+    </data>
+    <data name="No Keynote Speaker Defined" xml:space="preserve">
+        <value>هیچ سخنران کلیدی تعریف نشده است</value>
+    </data>
+    <data name="Oral Papers" xml:space="preserve">
+        <value>مقاله‌های ارائه شفاهی</value>
+    </data>
+    <data name="No Paid Oral Papers Found" xml:space="preserve">
+        <value>هیچ مقاله ارائه شفاهی پرداخت‌شده یافت نشد</value>
+    </data>
+    <data name="Sessions List" xml:space="preserve">
+        <value>لیست نشست‌ها</value>
+    </data>
+    <data name="Add Session" xml:space="preserve">
+        <value>اضافه‌نمودن نشست</value>
+    </data>
+    <data name="About" xml:space="preserve">
+        <value>درباره</value>
+    </data>
+    <data name="Items" xml:space="preserve">
+        <value>آیتم‌ها</value>
+    </data>
+    <data name="No Session Defined" xml:space="preserve">
+        <value>هیچ نشستی تعریف نشده است</value>
+    </data>
+    <data name="Session Items List" xml:space="preserve">
+        <value>لیست آیتم‌های نشست</value>
+    </data>
+    <data name="Please define a Session first!!!" xml:space="preserve">
+        <value>لطفا ابتدا یک نشست تعریف کنید!!!</value>
+    </data>
+    <data name="Back to Sessions" xml:space="preserve">
+        <value>بازگشت به نشست‌ها</value>
+    </data>
+    <data name="Add Item" xml:space="preserve">
+        <value>اضافه‌نمودن آیتم</value>
+    </data>
+    <data name="No Session Item Defined" xml:space="preserve">
+        <value>هیچ آیتمی برای نشست تعریف نشده است</value>
+    </data>
+    <data name="Receipt" xml:space="preserve">
+        <value>رسید پرداخت</value>
+    </data>
+    <data name="No Paper Accepted Yet" xml:space="preserve">
+        <value>هیچ مقاله‌ای هنوز پذیرفته نشده است</value>
+    </data>
+    <data name="No Paid Poster Found" xml:space="preserve">
+        <value>هیچ مقاله پوستر پرداخت‌شده یافت نشد</value>
+    </data>
+    <data name="Final Decision" xml:space="preserve">
+        <value>تصمیم نهایی</value>
+    </data>
+    <data name="User List" xml:space="preserve">
+        <value>لیست کاربران</value>
+    </data>
+    <data name="Add via Excel" xml:space="preserve">
+        <value>اضافه‌نمودن با فایل اکسل</value>
+    </data>
+    <data name="Download Excel Template" xml:space="preserve">
+        <value>دانلود قالب اکسل</value>
+    </data>
+    <data name="Filter By Role ..." xml:space="preserve">
+        <value>فیلتر با نقش ...</value>
+    </data>
+    <data name="Legend" xml:space="preserve">
+        <value>راهنما</value>
+    </data>
+    <data name="No User Accounts Found" xml:space="preserve">
+        <value>هیچ حساب کاربری یافت نشد</value>
+    </data>
+    <data name="Fields" xml:space="preserve">
+        <value>فیلدهای تخصصی</value>
+    </data>
+    <data name="Assign Roles" xml:space="preserve">
+        <value>انتساب نقش‌ها</value>
+    </data>
+    <data name="Assign Fields" xml:space="preserve">
+        <value>انتساب فیلدهای تخصصی</value>
+    </data>
+    <data name="Scientific Field" xml:space="preserve">
+        <value>فیلد تخصصی علمی</value>
+    </data>
+    <data name="Review of Paper No." xml:space="preserve">
+        <value>داوری مقاله شماره</value>
+    </data>
+    <data name="Previous Reviews" xml:space="preserve">
+        <value>داوری‌های قبلی</value>
+    </data>
+    <data name="Assign Date" xml:space="preserve">
+        <value>تاریخ انتساب</value>
+    </data>
+    <data name="Comments" xml:space="preserve">
+        <value>توضیحات</value>
+    </data>
+    <data name="Decision" xml:space="preserve">
+        <value>تصمیم نهایی</value>
+    </data>
+    <data name="Submit Review" xml:space="preserve">
+        <value>ارسال داوری</value>
+    </data>
+    <data name="Save for later" xml:space="preserve">
+        <value>ذخیره برای بعد</value>
+    </data>
+    <data name="Paper List for Review" xml:space="preserve">
+        <value>لیست مقاله‌های برای داوری</value>
+    </data>
+    <data name="Assigned Review" xml:space="preserve">
+        <value>داوری‌های انتساب‌یافته</value>
+    </data>
+    <data name="Decided Review" xml:space="preserve">
+        <value>داوری‌های تصمیم‌گیری‌شده</value>
+    </data>
+    <data name="No Review Assigned" xml:space="preserve">
+        <value>هیچ داوری انتساب داده نشده است</value>
+    </data>
+    <data name="Reject the Review" xml:space="preserve">
+        <value>نپذیرفتن داوری</value>
+    </data>
+    <data name="No Review Decided" xml:space="preserve">
+        <value>هیچ داوری تصمیم‌گیری نشده است</value>
+    </data>
+    <data name="Guide for Authors" xml:space="preserve">
+        <value>راهنمای نویسندگان</value>
+    </data>
+    <data name="No Paper Found" xml:space="preserve">
+        <value>هیچ مقاله‌ای یافت نشده است</value>
+    </data>
+    <data name="Recent Posts" xml:space="preserve">
+        <value>اطلاعیه‌های اخیر</value>
+    </data>
+    <data name="Blog" xml:space="preserve">
+        <value>بلاگ</value>
+    </data>
+    <data name="By" xml:space="preserve">
+        <value>توسط</value>
+    </data>
+    <data name="On" xml:space="preserve">
+        <value>در تاریخ</value>
+    </data>
+    <data name="Poster Info" xml:space="preserve">
+        <value>اطلاعات پوستر</value>
+    </data>
+    <data name="Accepted Poster List" xml:space="preserve">
+        <value>لیست پوسترهای پذیرفته‌شده</value>
+    </data>
+    <data name="Votes" xml:space="preserve">
+        <value>آرا</value>
+    </data>
+    <data name="Your password has been changed." xml:space="preserve">
+        <value>رمز عبور شما با موفقیت تغییر یافت.</value>
+    </data>
+    <data name="Submit Deadline" xml:space="preserve">
+        <value>مهلت ارسال</value>
+    </data>
+    <data name="Review Deadline" xml:space="preserve">
+        <value>مهلت داوری</value>
+    </data>
+    <data name="Scientific &amp; Executive Committee Members" xml:space="preserve">
+        <value>اعضای کمیته علمی و اجرایی</value>
+    </data>
+    <data name="Scientific Committee Members" xml:space="preserve">
+        <value>اعضای کمیته علمی</value>
+    </data>
+    <data name="Executive Committee Members" xml:space="preserve">
+        <value>اعضای کمیته اجرایی</value>
+    </data>
+    <data name="Return To Author" xml:space="preserve">
+        <value>برگشت به نویسنده</value>
+    </data>
+    <data name="Reviews" xml:space="preserve">
+        <value>داوری‌ها</value>
+    </data>
+    <data name="Last Review Date" xml:space="preserve">
+        <value>آخرین تاریخ داوری</value>
+    </data>
+    <data name="Review Status" xml:space="preserve">
+        <value>وضعیت داوری</value>
+    </data>
+    <data name="Important Info (Price, Registration, Accommodation, ...)" xml:space="preserve">
+        <value>اطلاعات ضروری (هزینه، ثبت‌نام، اقامت و ...)</value>
+    </data>
+    <data name="Important Information" xml:space="preserve">
+        <value>اطلاعات ضروری</value>
+    </data>
+    <data name="Information (Fa)" xml:space="preserve">
+        <value>اطلاعات (فا)</value>
+    </data>
+    <data name="Information (En)" xml:space="preserve">
+        <value>اطلاعات (En)</value>
+    </data>
+    <data name="Final Manuscript" xml:space="preserve">
+        <value>نسخه نهایی مقاله</value>
+    </data>
+    <data name="Unfortunately Your paper has been rejected!!!" xml:space="preserve">
+        <value>متاسفانه مقاله شما مورد پذیرش قرار نگرفت!!!</value>
+    </data>
+    <data name="Final (Paid)" xml:space="preserve">
+        <value>نهایی (پرداخت)</value>
+    </data>
+    <data name="Publish In Journal" xml:space="preserve">
+        <value>چاپ در مجله</value>
+    </data>
+    <data name="Change Admin Account Information" xml:space="preserve">
+        <value>تغییر اطلاعات حساب کاربری ادمین</value>
+    </data>
+    <data name="Current File" xml:space="preserve">
+        <value>فایل فعلی</value>
+    </data>
+    <data name="Submit To Author" xml:space="preserve">
+        <value>ارسال به نویسنده</value>
+    </data>
+    <data name="Reviewer No." xml:space="preserve">
+        <value>داور شماره </value>
+    </data>
+    <data name="Certificate" xml:space="preserve">
+        <value>گواهی</value>
+    </data>
+    <data name="No Certificate found!!!" xml:space="preserve">
+        <value>گواهینامه‌ای با مشخصات فوق صادر نشده است</value>
+    </data>
+    <data name="Download Template" xml:space="preserve">
+        <value>دانلود قالب</value>
+    </data>
+    <data name="Time" xml:space="preserve">
+        <value>زمان</value>
+    </data>
+    <data name="Presentation Certificate" xml:space="preserve">
+        <value>گواهی ارائه</value>
+    </data>
+    <data name="Accept Certificate" xml:space="preserve">
+        <value>گواهی پذیرش</value>
+    </data>
+    <data name="Edit Paper Files" xml:space="preserve">
+        <value>ویرایش فایل‌های مقاله</value>
+    </data>
+    <data name="File Size" xml:space="preserve">
+        <value>حجم فایل</value>
+    </data>
+    <data name="Certificate Setting" xml:space="preserve">
+        <value>تنظیمات گواهی‌</value>
+    </data>
+    <data name="Certificate Background" xml:space="preserve">
+        <value>پس‌زمینه گواهی‌</value>
+    </data>
+    <data name="Accept Certificate Text (Fa)" xml:space="preserve">
+        <value>متن گواهی پذیرش (فا)</value>
+    </data>
+    <data name="Accept Certificate Text (En)" xml:space="preserve">
+        <value>متن گواهی پذیرش (En)</value>
+    </data>
+    <data name="Presentation Certificate Text (Fa)" xml:space="preserve">
+        <value>متن گواهی ارائه (فا)</value>
+    </data>
+    <data name="Presentation Certificate Text (En)" xml:space="preserve">
+        <value>متن گواهی ارائه (En)</value>
+    </data>
+    <data name="Font Size" xml:space="preserve">
+        <value>اندازه فونت</value>
+    </data>
+    <data name="Width (mm)" xml:space="preserve">
+        <value>عرض (میلی‌متر)</value>
+    </data>
+    <data name="Height (mm)" xml:space="preserve">
+        <value>ارتفاع (میلی‌متر)</value>
+    </data>
+    <data name="Margin Top (mm)" xml:space="preserve">
+        <value>فاصله از بالا (میلی‌متر)</value>
+    </data>
+    <data name="Preview Certificates" xml:space="preserve">
+        <value>پیش‌نمایش گواهی‌ها</value>
+    </data>
+    <data name="Show Accept Type (Oral or Poster)" xml:space="preserve">
+        <value>نوع پذیرش نمایش داده شود (شفاهی یا پوستر)</value>
+    </data>
+    <data name="Reports" xml:space="preserve">
+        <value>گزارش‌ها</value>
+    </data>
+    <data name="Users" xml:space="preserve">
+        <value>کاربران</value>
+    </data>
+    <data name="Download As Excel" xml:space="preserve">
+        <value>دانلود با فرمت اکسل</value>
+    </data>
+    <data name="Selected Fields" xml:space="preserve">
+        <value>فیلدهای انتخابی</value>
+    </data>
+    <data name="Papers Files Download" xml:space="preserve">
+        <value>دانلود فایل‌های مقالات</value>
+    </data>
+    <data name="Files" xml:space="preserve">
+        <value>فایل‌ها</value>
+    </data>
+    <data name="Final Manuscripts" xml:space="preserve">
+        <value>نسخه‌های نهایی</value>
+    </data>
+    <data name="Manuscripts" xml:space="preserve">
+        <value>نسخه‌های ارسالی</value>
+    </data>
+    <data name="Extra" xml:space="preserve">
+        <value>فایل‌های اضافی</value>
+    </data>
+    <data name="Posters" xml:space="preserve">
+        <value>پوسترها</value>
+    </data>
+    <data name="Audios" xml:space="preserve">
+        <value>فایل‌های صوتی</value>
+    </data>
+    <data name="Receipts" xml:space="preserve">
+        <value>رسیدهای پرداخت</value>
+    </data>
+    <data name="All" xml:space="preserve">
+        <value>همه</value>
+    </data>
+    <data name="Download As ZIP" xml:space="preserve">
+        <value>دانلود به صورت فشرده</value>
+    </data>
+    <data name="Edit Email Texts" xml:space="preserve">
+        <value>ویرایش متن ایمیل‌ها</value>
+    </data>
+    <data name="Use these |Code Guide| to write respective info in email. (Click to Copy)" xml:space="preserve">
+        <value>از این |کدهای راهنما| جهت قرار دادن اطلاعات متناظر در متن ایمیل استفاده کنید. (برای کپی کلیک کنید)</value>
+    </data>
+    <data name="Email to Users after Registration" xml:space="preserve">
+        <value>ایمیل به کاربران بعد از ثبت‌نام</value>
+    </data>
+    <data name="Email to Authors after Submit" xml:space="preserve">
+        <value>ایمیل به نویسندگان بعد از ارسال مقاله</value>
+    </data>
+    <data name="Text Code Copied" xml:space="preserve">
+        <value>کد متنی کپی شد</value>
+    </data>
+    <data name="Conference Abbreviation" xml:space="preserve">
+        <value>واژه اختصاری کنفرانس</value>
+    </data>
+    <data name="Conference Title" xml:space="preserve">
+        <value>عنوان کنفرانس</value>
+    </data>
+    <data name="Conference URL" xml:space="preserve">
+        <value>لینک کنفرانس</value>
+    </data>
+    <data name="Paper ID" xml:space="preserve">
+        <value>شماره مقاله</value>
+    </data>
+    <data name="Paper Title" xml:space="preserve">
+        <value>عنوان مقاله</value>
+    </data>
+    <data name="Author Name" xml:space="preserve">
+        <value>نام و نام خانوادگی نویسنده</value>
+    </data>
+    <data name="Reviewer Name" xml:space="preserve">
+        <value>نام و نام خانوادگی داور</value>
+    </data>
+    <data name="Current Date" xml:space="preserve">
+        <value>تاریخ جاری</value>
+    </data>
+    <data name="Conference Logo" xml:space="preserve">
+        <value>لوگوی کنفرانس</value>
+    </data>
+    <data name="Review Id" xml:space="preserve">
+        <value>شماره داوری</value>
+    </data>
+    <data name="Users Registration" xml:space="preserve">
+        <value>ثبت‌نام کاربران</value>
+    </data>
+    <data name="Email Confirmation Link" xml:space="preserve">
+        <value>لینک تایید ایمیل</value>
+    </data>
+    <data name="Reviewer Accept Link" xml:space="preserve">
+        <value>لینک پذیرش داوری</value>
+    </data>
+    <data name="Reviewer Reject Link" xml:space="preserve">
+        <value>لینک رد داوری</value>
+    </data>
+    <data name="Review Confirmation" xml:space="preserve">
+        <value>تایید داوری</value>
+    </data>
+    <data name="Review ID is invalid!!!" xml:space="preserve">
+        <value>شماره داوری نامعتبر است !!!</value>
+    </data>
+    <data name="Token is invalid!!!" xml:space="preserve">
+        <value>توکن ارسالی نامعتبر است !!!</value>
+    </data>
+    <data name="Thanks for accepting the review, Please login to site for review." xml:space="preserve">
+        <value>با سپاس فراوان از پذیرش داوری، لطفا جهت انجام داوری وارد سایت شوید.</value>
+    </data>
+    <data name="Thanks for your attention, We hope to use your expertise in next reviews." xml:space="preserve">
+        <value>با سپاس فراوان از توجه شما، امیدواریم از تخصص شما در داوری‌های بعدی بهره‌مند گردیم.</value>
+    </data>
+    <data name="Unaccepted Review" xml:space="preserve">
+        <value>داوری‌های پذیرفته‌نشده </value>
+    </data>
+    <data name="No Review Unaccepted" xml:space="preserve">
+        <value>هیچ داوری پذیرفته‌نشده وجود ندارد.</value>
+    </data>
+    <data name="Accept the Review" xml:space="preserve">
+        <value>پذیرش داوری</value>
+    </data>
+    <data name="Email to Authors after Accept" xml:space="preserve">
+        <value>ایمیل به نویسندگان بعد از پذیرش مقاله</value>
+    </data>
+    <data name="Email to Authors after Reject" xml:space="preserve">
+        <value>ایمیل به نویسندگان بعد از رد مقاله</value>
+    </data>
+    <data name="Email to Authors to Revise" xml:space="preserve">
+        <value>ایمیل به نویسندگان برای بازنگری مقاله</value>
+    </data>
+    <data name="Email to Reviewer to Review" xml:space="preserve">
+        <value>ایمیل به داور برای داوری مقاله</value>
+    </data>
+    <data name="Email to Reviewer to Revise" xml:space="preserve">
+        <value>ایمیل به داور برای داوری مجدد مقاله</value>
+    </data>
+    <data name="Email to Reviewer after Decision" xml:space="preserve">
+        <value>ایمیل به داور بعد از داوری مقاله</value>
+    </data>
+    <data name="Email to Editor after Submit" xml:space="preserve">
+        <value>ایمیل به سردبیر بعد از ارسال مقاله</value>
+    </data>
+    <data name="Email to Editor after Revise" xml:space="preserve">
+        <value>ایمیل به سردبیر بعد از بازنگری مقاله</value>
+    </data>
+    <data name="Email to Editor after Review" xml:space="preserve">
+        <value>ایمیل به سردبیر بعد از داوری مقاله</value>
+    </data>
+    <data name="Email to Authors to Resubmit" xml:space="preserve">
+        <value>ایمیل به نویسندگان برای اصلاح و ارسال مجدد مقاله</value>
+    </data>
+    <data name="Text Width (%)" xml:space="preserve">
+        <value>عرض متن (٪)</value>
+    </data>
+    <data name="Text Center Position (%)" xml:space="preserve">
+        <value>مرکز متن (٪)</value>
+    </data>
+    <data name="Accept Certificate (Fa)" xml:space="preserve">
+        <value>گواهی پذیرش (فا)</value>
+    </data>
+    <data name="Accept Certificate (En)" xml:space="preserve">
+        <value>گواهی پذیرش (En)</value>
+    </data>
+    <data name="Presentation Certificate (Fa)" xml:space="preserve">
+        <value>گواهی ارائه (فا)</value>
+    </data>
+    <data name="Presentation Certificate (En)" xml:space="preserve">
+        <value>گواهی ارائه (En)</value>
+    </data>
+    <data name="Edit Paper" xml:space="preserve">
+        <value>ویرایش مقاله</value>
+    </data>
+    <data name="Edit Paper Info" xml:space="preserve">
+        <value>ویرایش اطلاعات مقاله</value>
+    </data>
+    <data name="Preview Emails" xml:space="preserve">
+        <value>پیش‌نمایش ایمیل‌ها</value>
+    </data>
+    <data name="Preview Email" xml:space="preserve">
+        <value>پیش‌نمایش ایمیل</value>
+    </data>
+    <data name="Email to Reviewer for Reminder" xml:space="preserve">
+        <value>ایمیل به داور برای یادآوری</value>
+    </data>
+    <data name="Send Group Email To Reviewers" xml:space="preserve">
+        <value>ارسال ایمیل گروهی به داوران</value>
+    </data>
+    <data name="Send Reminder Email" xml:space="preserve">
+        <value>ارسال ایمیل یادآوری</value>
+    </data>
+    <data name="Reviewers" xml:space="preserve">
+        <value>داوران</value>
+    </data>
+    <data name="Authors (Regular Users)" xml:space="preserve">
+        <value>نویسندگان (کاربران عادی)</value>
+    </data>
+    <data name="Acceptance" xml:space="preserve">
+        <value>پذیرش</value>
+    </data>
+    <data name="Presentation" xml:space="preserve">
+        <value>ارائه</value>
+    </data>
+    <data name="First page main background" xml:space="preserve">
+        <value>پس‌زمینه اصلی صفحه اول</value>
+    </data>
+    <data name="First page main image" xml:space="preserve">
+        <value>تصویر اصلی صفحه اول</value>
+    </data>
+    <data name="Conference Poster" xml:space="preserve">
+        <value>پوستر کنفرانس</value>
+    </data>
+    <data name="Conference Poster (En)" xml:space="preserve">
+        <value>پوستر کنفرانس (En)</value>
+    </data>
+    <data name="Conference Poster (Fa)" xml:space="preserve">
+        <value>پوستر کنفرانس (Fa)</value>
+    </data>
+    <data name="Scheduling section background" xml:space="preserve">
+        <value>پس‌زمینه بخش زمان‌بندی</value>
+    </data>
+    <data name="Conference favicon" xml:space="preserve">
+        <value>آیکون کنفرانس</value>
+    </data>
+    <data name="Conference mobile icon" xml:space="preserve">
+        <value>آیکون موبایل کنفرانس</value>
+    </data>
+    <data name="Paid" xml:space="preserve">
+        <value>پرداخت‌شده</value>
+    </data>
+    <data name="Important Dates (Fa)" xml:space="preserve">
+        <value>تاریخ‌های مهم (فا)</value>
+    </data>
+    <data name="Important Dates (En)" xml:space="preserve">
+        <value>تاریخ‌های مهم (En)</value>
+    </data>
+    <data name="Email to Reviewer to Stop Review" xml:space="preserve">
+        <value>ایمیل به داور جهت توقف داوری</value>
+    </data>
+    <data name="Paper Details" xml:space="preserve">
+        <value>جزئیات مقاله</value>
+    </data>
+    <data name="Blind Review" xml:space="preserve">
+        <value>داوری ناشناس</value>
+    </data>
+    <data name="Scientific Editors" xml:space="preserve">
+        <value>سردبیران علمی</value>
+    </data>
+    <data name="Paper Created" xml:space="preserve">
+        <value>مقاله ایجاد شد</value>
+    </data>
+    <data name="Paper Edited" xml:space="preserve">
+        <value>مقاله ویرایش شد</value>
+    </data>
+    <data name="Paper Submitted" xml:space="preserve">
+        <value>مقاله ارسال گردید</value>
+    </data>
+    <data name="Paper Field Assigned" xml:space="preserve">
+        <value>فیلد تخصصی مقاله انتساب یافت</value>
+    </data>
+    <data name="Paper Returned To Author" xml:space="preserve">
+        <value>مقاله به نویسنده بازگرداننده شد</value>
+    </data>
+    <data name="Paper Revised By Author" xml:space="preserve">
+        <value>مقاله توسط نویسنده بازبینی شد</value>
+    </data>
+    <data name="Paper Decided" xml:space="preserve">
+        <value>مقاله تصمیم‌گیری شد</value>
+    </data>
+    <data name="Paper Receipt Uploaded" xml:space="preserve">
+        <value>رسید پرداخت ارسال شد</value>
+    </data>
+    <data name="Paper Payment Accepted" xml:space="preserve">
+        <value>پرداخت مقاله تایید شد</value>
+    </data>
+    <data name="Paper Finalized" xml:space="preserve">
+        <value>مقاله نهایی شد</value>
+    </data>
+    <data name="Paper Certificate Issued" xml:space="preserve">
+        <value>گواهی مقاله صادر گردید</value>
+    </data>
+    <data name="File Uploaded" xml:space="preserve">
+        <value>فایل ارسال شد</value>
+    </data>
+    <data name="File Deleted" xml:space="preserve">
+        <value>فایل حذف شد</value>
+    </data>
+    <data name="Review Declined" xml:space="preserve">
+        <value>داوری پذیرفته نشد</value>
+    </data>
+    <data name="Review Sent To Reviewer Again" xml:space="preserve">
+        <value>داوری برای بازبینی مجدد به داور ارسال گردید</value>
+    </data>
+    <data name="Review Deleted" xml:space="preserve">
+        <value>داوری حذف گردید</value>
+    </data>
+    <data name="Review Done By Reviewer" xml:space="preserve">
+        <value>داوری توسط داور انجام شد</value>
+    </data>
+    <data name="New Reviewer Assigned" xml:space="preserve">
+        <value>داور جدید تعیین گردید</value>
+    </data>
+    <data name="Paper Publish In Journal Changed" xml:space="preserve">
+        <value>حق چاپ در مجله تغییر یافت</value>
+    </data>
+    <data name="Agree" xml:space="preserve">
+        <value>موافقم</value>
+    </data>
+    <data name="Not Agree" xml:space="preserve">
+        <value>مخالفم</value>
+    </data>
+    <data name="Paper Presenter Changed" xml:space="preserve">
+        <value>ارائه‌دهنده مقاله تغییر یافت</value>
+    </data>
+    <data name="Paper Virtual Link Changed" xml:space="preserve">
+        <value>لینک مجازی مقاله تغییر یافت</value>
+    </data>
+    <data name="Paper Session Assigned" xml:space="preserve">
+        <value>نشست مقاله تعیین گردید</value>
+    </data>
+    <data name="Creator" xml:space="preserve">
+        <value>اقدام‌کننده</value>
+    </data>
+    <data name="Recipient" xml:space="preserve">
+        <value>مخاطب</value>
+    </data>
+    <data name="Action" xml:space="preserve">
+        <value>اقدام</value>
+    </data>
+    <data name="Page Name" xml:space="preserve">
+        <value>نام صفحه</value>
+    </data>
+    <data name="Menu Subject (En)" xml:space="preserve">
+        <value>عنوان منو (En)</value>
+    </data>
+    <data name="Menu Subject (Fa)" xml:space="preserve">
+        <value>عنوان منو (فا)</value>
+    </data>
+    <data name="Page Text (En)" xml:space="preserve">
+        <value>متن صفحه (En)</value>
+    </data>
+    <data name="Page Text (Fa)" xml:space="preserve">
+        <value>متن صفحه (فا)</value>
+    </data>
+    <data name="Add Custom Page" xml:space="preserve">
+        <value>اضافه‌نمودن صفحات سفارشی</value>
+    </data>
+    <data name="Note that this pages will add to the Guide menu after publish." xml:space="preserve">
+        <value>توجه داشته باشید این صفحات به منوی راهنما بعد از انتشار اضافه خواهند شد.</value>
+    </data>
+    <data name="New Page" xml:space="preserve">
+        <value>صفحه جدید</value>
+    </data>
+    <data name="Save Page Content" xml:space="preserve">
+        <value>ذخیره محتوای صفحه</value>
+    </data>
+    <data name="Preview Page" xml:space="preserve">
+        <value>پیش‌نمایش صفحه</value>
+    </data>
+    <data name="Publish Page" xml:space="preserve">
+        <value>انتشار صفحه</value>
+    </data>
+    <data name="Comment To Author" xml:space="preserve">
+        <value>توضیح برای نویسنده</value>
+    </data>
+    <data name="Comment To Editor" xml:space="preserve">
+        <value>توضیح برای سردبیر</value>
+    </data>
+    <data name="Colors" xml:space="preserve">
+        <value>رنگ‌ها</value>
+    </data>
+    <data name="Images" xml:space="preserve">
+        <value>تصاویر</value>
+    </data>
+    <data name="Theme Name" xml:space="preserve">
+        <value>نام قالب</value>
+    </data>
+    <data name="Default Setting" xml:space="preserve">
+        <value>تنظیمات پیش‌فرض</value>
+    </data>
+    <data name="Text Color" xml:space="preserve">
+        <value>رنگ متن</value>
+    </data>
+    <data name="Heading Text Color" xml:space="preserve">
+        <value>رنگ متن عناوین</value>
+    </data>
+    <data name="Link Color" xml:space="preserve">
+        <value>رنگ متن لینک</value>
+    </data>
+    <data name="Menu Text Color" xml:space="preserve">
+        <value>رنگ متن منو</value>
+    </data>
+    <data name="Side Menu Text Color" xml:space="preserve">
+        <value>رنگ متن منو جانبی</value>
+    </data>
+    <data name="Menu Background Color" xml:space="preserve">
+        <value>رنگ پس‌زمینه منو</value>
+    </data>
+    <data name="Side Menu Background Color" xml:space="preserve">
+        <value>رنگ پس‌زمینه منو جنبی</value>
+    </data>
+    <data name="Section Background Color" xml:space="preserve">
+        <value>رنگ پس‌زمینه بخش</value>
+    </data>
+    <data name="Footer Background Color" xml:space="preserve">
+        <value>رنگ پس‌زمینه پاورقی</value>
+    </data>
+    <data name="Background Color" xml:space="preserve">
+        <value>رنگ پس‌زمینه</value>
+    </data>
+    <data name="Farsi Font" xml:space="preserve">
+        <value>فونت فارسی</value>
+    </data>
+    <data name="English Font" xml:space="preserve">
+        <value>فونت انگلیسی</value>
+    </data>
+    <data name="Change Theme" xml:space="preserve">
+        <value>تغییر قالب</value>
+    </data>
+    <data name="Site Themes" xml:space="preserve">
+        <value>قالب‌های سایت</value>
+    </data>
+    <data name="Add Link" xml:space="preserve">
+        <value>اضافه‌نمودن لینک</value>
+    </data>
+    <data name="Messages Box" xml:space="preserve">
+        <value>صندوق پیام</value>
+    </data>
+    <data name="Add Admin" xml:space="preserve">
+        <value>ایجاد مدیر سیستم</value>
+    </data>
+    <data name="Go to Dashboard" xml:space="preserve">
+        <value>برو به داشبورد</value>
+    </data>
+    <data name="Visits" xml:space="preserve">
+        <value>بازدیدها</value>
+    </data>
+    <data name="Visits Today" xml:space="preserve">
+        <value>بازدیدهای امروز</value>
+    </data>
+    <data name="Your paper is under review." xml:space="preserve">
+        <value>مقاله شما تحت داوری است.</value>
+    </data>
+    <data name="Slide" xml:space="preserve">
+        <value>اسلاید</value>
+    </data>
+    <data name="Add Slide Files" xml:space="preserve">
+        <value>اضافه‌نمودن فایل اسلاید</value>
+    </data>
+    <data name="Upload Slide" xml:space="preserve">
+        <value>بارگذاری اسلاید</value>
+    </data>
+    <data name="Slides" xml:space="preserve">
+        <value>اسلایدها</value>
+    </data>
+    <data name="Payment Link" xml:space="preserve">
+        <value>لینک پرداخت</value>
+    </data>
+    <data name="Card" xml:space="preserve">
+        <value>کارت</value>
+    </data>
+    <data name="Admission" xml:space="preserve">
+        <value>پذیرش</value>
+    </data>
+    <data name="Congratulation. Presenter card has been issued." xml:space="preserve">
+        <value>تبریک. کارت ارايه دهنده مقاله صادر شده است.</value>
+    </data>
+    <data name="The payment receipt is under review and not yet confirmed." xml:space="preserve">
+        <value>رسید پرداخت در حال بررسی است و هنوز تایید نشده است.</value>
+    </data>
+    <data name="Payment has not yet been made by the sender of the paper." xml:space="preserve">
+        <value>هنوز پرداخت توسط فرستنده مقاله صورت نگرفته است.</value>
+    </data>
+    <data name="I would like to attend the conference as an audience." xml:space="preserve">
+        <value>من دوست دارم به عنوان مخاطب آزاد در کنفرانس شرکت کنم.</value>
+    </data>
+    <data name="Add Profile Photo" xml:space="preserve">
+        <value>اضافه‌نمودن تصویر پروفایل</value>
+    </data>
+    <data name="View Card" xml:space="preserve">
+        <value>مشاهده کارت</value>
+    </data>
+    <data name="Audience" xml:space="preserve">
+        <value>شرکت‌کننده</value>
+    </data>
+    <data name="Card Issuance" xml:space="preserve">
+        <value>صدور کارت</value>
+    </data>
+    <data name="Cards" xml:space="preserve">
+        <value>کارتها</value>
+    </data>
+    <data name="Description" xml:space="preserve">
+        <value>توضیحات</value>
+    </data>
+    <data name="Description (Fa)" xml:space="preserve">
+        <value>توضیحات (فا)</value>
+    </data>
+    <data name="Description (En)" xml:space="preserve">
+        <value>توضیحات (En)</value>
+    </data>
+    <data name="Confirm" xml:space="preserve">
+        <value>تایید</value>
+    </data>
+    <data name="Guest" xml:space="preserve">
+        <value>مهمان</value>
+    </data>
+    <data name="Role" xml:space="preserve">
+        <value>نقش‌</value>
+    </data>
+    <data name="Print" xml:space="preserve">
+        <value>چاپ</value>
+    </data>
+    <data name="Print Cards" xml:space="preserve">
+        <value>چاپ کارت</value>
+    </data>
+    <data name="Please do not send the article payment receipt in this section." xml:space="preserve">
+        <value>لطفاً از ارسال رسید پرداخت مقاله در این بخش خودداری فرمایید.</value>
+    </data>
+    <data name="This section is for authors other than those presenting papers at conferences or open audiences." xml:space="preserve">
+        <value>این بخش مخصوص شرکت نویسندگان غیر از ارائه کننده مقاله در کنفرانس یا مخاطبین آزاد می‌باشد.</value>
+    </data>
+    <data name="Review List" xml:space="preserve">
+        <value>لیست داوری</value>
+    </data>
+</root>

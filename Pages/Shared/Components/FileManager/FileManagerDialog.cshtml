@@ -1,0 +1,325 @@
+@page
+@model FileManagerDialog
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>File Manager Dialog</title>
+    
+    @* CSS Style Sheets *@
+    <link rel="stylesheet" href="~/lib/FileManager/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/FileManager/css/bootstrap-lightbox.min.css" />
+    <link rel="stylesheet" href="~/lib/FileManager/css/dropzone.css" />
+    
+    <link rel="stylesheet" href="~/lib/FileManager/css/style.css" />
+    
+    @* JS *@
+    <script type="text/javascript" src="~/lib/FileManager/js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="~/lib/FileManager/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/lib/FileManager/js/bootstrap-lightbox.min.js"></script>
+    <script type="text/javascript" src="~/lib/FileManager/js/dropzone.min.js"></script>
+
+</head>
+
+<body>
+
+<!----- uploader div start ------->
+<div class="uploader">            
+    <form method="post" enctype="multipart/form-data" id="myAwesomeDropzone" class="dropzone">
+        <input type="hidden" name="currPath" value="@Model.CurrPath"/>
+        <input type="hidden" name="type" value="@Model.Type"/>
+        <div class="fallback">
+            <input name="file" type="file" multiple />
+            <br />
+            <input type="submit" name="submit" value="Upload" />
+        </div>
+    </form>
+    <div class="text-center">
+        <button class="btn btn-large btn-primary close-uploader">
+            <i class="icon-backward icon-white"></i> Return to files list
+        </button>
+    </div>
+    <div class="space10">
+    </div>
+    <div class="space10">
+    </div>
+</div>
+<!----- uploader div end ------->
+
+<div class="container-fluid">
+        
+    <!----- header div start ------->
+    <div class="filters">
+        @if (Model.AllowUploadFile) 
+        { 
+            <button class="btn btn-sm btn-primary upload-btn" style="margin-left:5px;">
+                <i class="icon-upload icon-white"></i> Upload a file
+            </button>
+                            
+        }
+        @if (Model.AllowCreateFolder)
+        {
+            <button class="btn btn-sm new-folder" style="margin-left:5px;" onclick="document.getElementById('new-folder-dialog').showModal()">
+                <i class="icon-folder-open"></i> New Folder
+            </button>
+            <!-- Modal -->
+            <dialog id="new-folder-dialog" tabindex="-1">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create New Folder</h5>
+                </div>
+                <div class="modal-body">
+                    <form method="post" style="display: inline">
+                        <input type="text" name="folder" value="New Folder" />
+                        <button class="btn btn-sm btn-primary" asp-route-currPath="@Model.CurrPath" 
+                                asp-route-type="@Model.Type" asp-page-handler="NewFolder">
+                            Create
+                        </button>
+                    </form>
+                    <button class="btn btn-sm btn-secondary" onclick="document.getElementById('new-folder-dialog').close()">Cancel</button>
+                </div>
+            </dialog>
+        }
+        
+        <div class="pull-right">Filter: &nbsp;&nbsp;
+            <input id="select-type-all" name="radio-sort" type="radio" data-item="ff-item-type-all" class="hide"  checked="checked"/>
+            <label id="ff-item-type-all" for="select-type-all" class="btn btn-sm btn-info ff-label-type-all">All</label>
+            &nbsp;
+            <input id="select-type-1" name="radio-sort" type="radio" data-item="ff-item-type-1"  class="hide" />
+            <label id="ff-item-type-1" for="select-type-1" class="btn btn-sm ff-label-type-1">Files</label>
+            &nbsp;
+            <input id="select-type-2" name="radio-sort" type="radio" data-item="ff-item-type-2" class="hide"  />
+            <label id="ff-item-type-2" for="select-type-2" class="btn btn-sm ff-label-type-2">Images</label>
+            &nbsp;
+            <input id="select-type-3" name="radio-sort" type="radio" data-item="ff-item-type-3" class="hide"  />
+            <label id="ff-item-type-3" for="select-type-3" class="btn btn-sm ff-label-type-3">Archives</label>
+            &nbsp;
+            <input id="select-type-4" name="radio-sort" type="radio" data-item="ff-item-type-4" class="hide"  />
+            <label id="ff-item-type-4" for="select-type-4" class="btn btn-sm ff-label-type-4">Media</label>
+        </div>
+
+    </div>
+    <!----- header div end ------->
+
+    <!----- breadcrumb div start ------->
+    <div class="row-fluid">
+        <ul class="breadcrumb">
+            @Html.Raw(Model.getBreadCrumb())
+        </ul>
+    </div>
+    <!----- breadcrumb div end ------->
+            
+    <div class="row-fluid ff-container">
+        <div class="span12 pull-right">
+            <ul class="thumbnails ff-items">                
+                @{ var i = 1; }
+                @* loop through folder/file list that we have already created *@
+                @foreach (ClsFileItem item in Model.ObjFItems)
+                {
+                    //get start of line html, if necessary
+                    Model.getStartOfLine(item.ColNum);
+
+                    // start of item
+                    <li class="span2 ff-item-type-@item.ClassType">
+                        <div class="boxes thumbnail">
+                                
+                            @if (item.IsFolder)
+                            {
+                                // if folder
+                                if (Model.AllowDeleteFolder && !item.IsFolderUp)
+                                {
+                                    <button class="btn erase-button top-right" title="Erase" onclick="document.getElementById('del-folder-dialog-@i').showModal()">
+                                        <i class="icon-trash"></i>
+                                    </button>
+                                    <dialog id="del-folder-dialog-@i">
+                                        <h5>Are you sure to delete the folder and all the objects in it?</h5>
+                                        <form method="post" style="display: inline">
+                                            <button class="btn btn-sm btn-danger" asp-route-folder="@item.Path" 
+                                                    asp-route-currPath="@Model.CurrPath" 
+                                                    asp-route-type="@Model.Type" 
+                                                    asp-page-handler="DelFolder">
+                                                Delete
+                                            </button>
+                                        </form>
+                                        <button class="btn btn-sm btn-secondary" onclick="document.getElementById('del-folder-dialog-@i').close()">Cancel</button>
+                                   </dialog>
+                                }
+                                <a title=Open href="FileManagerDialog?type=@Model.Type&currpath=@(item.Path)">
+                                    <img class="directory-img" src="@item.ThumbImage" alt="folder" />
+                                    <h3>@item.Name</h3>
+                                </a>
+                            }
+                            else
+                            {
+                                // if file
+                                <div class="btn-group toolbox">
+                                    <a href="/@Model.UploadPath@item.Path" title="Download" class="btn btn-sm" target="_blank">
+                                        <i class="icon-download"></i>
+                                    </a>
+                                    @if (item.ClassType == "2")
+                                    {
+                                        <a class="btn preview" title="Preview" data-url="/@((Model.UploadPath + item.Path).Replace('\\', '/'))" 
+                                           data-toggle="lightbox" href="#previewLightbox">
+                                            <i class="icon-eye-open"></i>
+                                        </a>
+                                    }
+                                    @if (Model.AllowDeleteFile)
+                                    {
+                                        <button class="btn erase-button top-right" title="Erase" onclick="document.getElementById('del-file-dialog-@i').showModal()">
+                                            <i class="icon-trash"></i>
+                                        </button>
+                                        <dialog id="del-file-dialog-@i">
+                                      <h5>Are you sure to delete the file?</h5>
+                                      <form method="post" style="display: inline">
+                                          <button class="btn btn-sm btn-danger" asp-route-file="@item.Path"
+                                                  asp-route-currPath="@Model.CurrPath" 
+                                                  asp-route-type="@Model.Type" 
+                                                  asp-page-handler="DelFile">
+                                              Delete
+                                          </button>
+                                      </form>
+                                      <button class="btn btn-sm btn-secondary" onclick="document.getElementById('del-file-dialog-@i').close()">Cancel</button>
+                                  </dialog>
+                                   }
+                                </div>
+                                <a href="#" title="Select" 
+                                   onclick="apply('@((Request.Scheme + "://" + Request.Host + "/" + Model.UploadPath + item.Path).Replace("\\", "/"))')" >
+                                    <img class="directory-img" data-src="holder.js/140x100" alt="140x100" src="@item.ThumbImage" height="100" />
+                                    <h4>@item.Name</h4>
+                                </a>
+                            }
+
+                            @* end of item *@
+                                
+                        </div>
+                    </li>
+                                
+                    //get end of line html, if necessary
+                    Model.getEndOfLine(item.ColNum);
+                    i++;
+                }
+
+            </ul>
+        </div>
+    </div>
+        
+</div>
+
+<!----- lightbox div end ------->    
+<div id="previewLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="lightbox-content">
+        <img id="full-img" src="" alt="" />
+    </div>    
+</div>
+
+<!----- lightbox div end ------->
+
+<script type="text/javascript">
+
+let allowed_ext = "@Model.AllowedFileExt".split(",");
+let type = @Model.Type;
+type++;
+
+$(document).ready(function () {
+
+    //dropzone iSarvig
+    Dropzone.options.myAwesomeDropzone = {
+        //forceFallback: true,
+        dictInvalidFileType: "File extension is not allowed",
+        dictFileTooBig: "The upload exceeds the max filesize allowed",
+        dictResponseError: "SERVER ERROR",
+        paramName: "file", // The name that will be used to transfer the file
+        maxFilesize: @Model.MaxUploadSizeMb, // MB
+        accept: function(file, done) {
+            let extension = file.name.split('.').pop();
+            if ($.inArray(extension.toLowerCase(), allowed_ext) > -1) {
+                done();
+            } else {
+                done("File extension is not allowed");
+            }
+        }
+    };
+
+    $('input[name=radio-sort]').click(function(){
+        let li = $(this).data('item');
+        $('.filters label').removeClass("btn-info");
+        $('#'+li).addClass("btn-info");
+        if(li === 'ff-item-type-all'){
+            $('.thumbnails li').fadeTo(500,1);
+        }else{
+            if($(this).is(':checked')){
+                $('.thumbnails li').not('.'+li).not('.ff-item-type-dir').fadeTo(500,0.1);
+                $('.thumbnails li.'+li).fadeTo(500,1);
+            }
+        }
+    });
+
+    if (type === 2 || type === 4){
+        $("#select-type-" + type).trigger("click");
+        $('[id^=ff-item-type-]').attr("disabled", true);
+        $('input[name=radio-sort]').attr("disabled", true);
+        $('#ff-item-type-' + type).attr("disabled", false);
+    }
+
+    $('#full-img').click(function () {
+        $('#previewLightbox').lightbox('hide');
+    });
+    $('.upload-btn').click(function(){
+        $('.uploader').show(500);
+    });
+    $('.close-uploader').click(function(){
+        $('.uploader').hide(500);
+        window.location = removeVariableFromURL(window.location, 'cmd');
+    });
+    $('.preview').click(function(){
+        $('#full-img').attr('src',$(this).data('url'));
+        return true;
+    });
+
+    let boxes = $('.boxes');
+    boxes.height('auto');
+    let maxHeight = Math.max.apply(
+        Math, boxes.map(function() {
+            return $(this).height();
+        }).get());
+    boxes.height(maxHeight);
+});
+
+//********************************************
+// functions
+//********************************************
+function apply(file) {
+    let extension = file.split('.').pop();
+    if (allowed_ext[0] !== "" && allowed_ext.indexOf(extension) === -1)
+        switch (@Model.Type){
+            case 1 : alert("Please select an Image file");
+                return;
+            case 3 : alert("Please select a Media file");
+                return;
+        }
+    else{
+        window.parent.$("input[type=url]").val(file);
+        window.parent.@Model.PopupCloseCode;
+    }
+}
+
+function removeVariableFromURL(url_string, variable_name) {
+    let URL = String(url_string);
+    let regex = new RegExp("\\?" + variable_name + "=[^&]*&?", "gi");
+    URL = URL.replace(regex, '?');
+    regex = new RegExp("\\&" + variable_name + "=[^&]*&?", "gi");
+    URL = URL.replace(regex, '&');
+    URL = URL.replace(/(\?|&)$/, '');
+    regex = null;
+    return URL;
+}
+
+</script>    
+
+</body>
+</html>
