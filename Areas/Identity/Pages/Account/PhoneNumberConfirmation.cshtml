@@ -1,0 +1,60 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model PhoneNumberConfirmationModel
+@{
+    ViewData["Title"] = @Localizer.Text("Phone confirmation");
+}
+
+<form asp-route-returnUrl="@Model.ReturnUrl" asp-route-phoneNumber="@Model.PhoneNumber" method="post"
+      id="PhoneNumberConfirmationForm" autocomplete="nope" aria-autocomplete="nope">
+    <div asp-validation-summary="All" class="text-danger mb-1"></div>
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.Token" class="form-control form-control-lg" minlength="6" maxlength="6" autocomplete="nope"/>
+        <label asp-for="Input.Token" class="form-label"></label>
+    </div>
+    <span asp-validation-for="Input.Token" class="text-danger mb-1 small"></span>
+    
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.Password" class="form-control form-control-lg" minlength="6" autocomplete="nope"/>
+        <label asp-for="Input.Password" class="form-label"></label>
+    </div>
+    <span asp-validation-for="Input.Password" class="text-danger mb-1 small"></span>
+    
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.ConfirmPassword" class="form-control form-control-lg" minlength="6"/>
+        <label asp-for="Input.ConfirmPassword" class="form-label"></label>
+    </div>
+    <span asp-validation-for="Input.ConfirmPassword" class="text-danger mb-1 small"></span>
+    
+    <div class="mb-1 d-grid">
+        <button type="submit" class="btn btn-primary">@Localizer.Text("Register")</button>
+    </div>
+</form>
+<form method="post" class="d-grid">
+    <div class="progress" style="height: 20px">
+        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" 
+             aria-valuenow="180" aria-valuemin="0" aria-valuemax="180" style="width: 100%"></div>
+    </div>
+    <input type="hidden" name="returnUrl" value="@Model.ReturnUrl"/>
+    <input type="hidden" name="phoneNumber" value="@Model.PhoneNumber"/>
+    <button id="resend-confirmation" class="btn btn-warning d-none" asp-page-handler="ResendSmsConfirmation">
+        @Localizer.Text("Resend SMS confirmation")
+    </button>
+</form>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptPartial"/>
+    <script>
+        let progressbar = $('.progress-bar');
+        let max = progressbar.attr('aria-valuemax');
+        function progress(){
+            let valueNow = parseInt(progressbar.attr('aria-valuenow')) - 1;
+            progressbar.attr('aria-valuenow', valueNow).css('width' , valueNow*100/max + '%');
+            progressbar.html(valueNow + 's');
+            window.setTimeout("progress()", 1000);
+        }
+        window.setTimeout("progress()", 1000);
+        window.setTimeout("$('#resend-confirmation').removeClass('d-none')", max * 1000);
+    </script>
+}

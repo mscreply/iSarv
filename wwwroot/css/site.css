@@ -20,3 +20,80 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.field-truncate {
+  max-width: 150px;
+  display: inline-block;
+}
+
+span.input-group-text {
+  min-width: 32px;
+}
+
+.content-fa {
+  direction: rtl;
+}
+
+.content-en {
+  direction: ltr;
+}
+
+.content-multiline {
+  white-space: pre-line;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.btn-upload {}
+
+.file-validation {}
+
+.content-num-fa {}
+
+.btn-upload {
+}
+
+.hidden-file-input-upload {}
+
+.hidden-file-btn-upload {}
+
+.img-upload {
+}
+
+.img-upload:hover + .btn-img-upload {
+  display: block;
+}
+
+.btn-img-upload {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: none;
+}
+
+.btn-img-upload:hover {
+  display: block;
+}
+
+.btn-img-upload:after {
+  content: "\f083";
+  font-family: 'Font Awesome 6 Pro', serif;
+  color: #757575;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.btn-delete {
+}
+
+/* ARK styles
+-------------------------------------------------- */
+
+.ark {
+  max-height: 25px;
+}

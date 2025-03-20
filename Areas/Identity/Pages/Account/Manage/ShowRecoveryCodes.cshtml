@@ -1,12 +1,13 @@
 ﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model ShowRecoveryCodesModel
 @{
     ViewData["Title"] = "Recovery codes";
-    ViewData["ActivePage"] = "TwoFactorAuthentication";
+    ViewData["Menu"] = "Index";
 }
 
-<partial name="_StatusMessage" for="StatusMessage" />
-<h3>@ViewData["Title"]</h3>
+<partial name="_ToastMessage" for="ToastMessage" />
+<h4>@ViewData["Title"]</h4>
 <div class="alert alert-warning" role="alert">
     <p>
         <strong>Put these codes in a safe place.</strong>

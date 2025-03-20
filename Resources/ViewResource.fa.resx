@@ -1797,4 +1797,397 @@
     <data name="Review List" xml:space="preserve">
         <value>لیست داوری</value>
     </data>
+    <data name="Send SMS" xml:space="preserve">
+    <value>ارسال پیامک</value>
+  </data>
+    <data name="Confirm User" xml:space="preserve">
+    <value>تایید کاربر</value>
+  </data>
+    <data name="Username already exists." xml:space="preserve">
+    <value>نام کاربری از قبل وجود دارد.</value>
+  </data>
+    <data name="Error: Username already exists." xml:space="preserve">
+    <value>خطا: نام کاربری از قبل وجود دارد.</value>
+  </data>
+    <data name="Error: Email already exists." xml:space="preserve">
+    <value>خطا: ایمیل از قبل وجود دارد.</value>
+  </data>
+    <data name="Error: Phone Number already exists." xml:space="preserve">
+    <value>خطا: شماره تماس از قبل وجود دارد.</value>
+  </data>
+    <data name="Biography (Fa)" xml:space="preserve">
+    <value>بیوگرافی</value>
+  </data>
+    <data name="Skills" xml:space="preserve">
+    <value>مهارت‌ها</value>
+  </data>
+    <data name="Syllabus (Fa)" xml:space="preserve">
+    <value>سرفصل دوره</value>
+  </data>
+    <data name="Duration (Fa)" xml:space="preserve">
+    <value>مدت دوره</value>
+  </data>
+    <data name="Location (Fa)" xml:space="preserve">
+    <value>محل برگزاری دوره</value>
+  </data>
+    <data name="Prerequisites" xml:space="preserve">
+    <value>پیش‌نیازها</value>
+  </data>
+    <data name="Prerequisite" xml:space="preserve">
+    <value>پیش‌نیاز</value>
+  </data>
+    <data name="Training Course" xml:space="preserve">
+    <value>دوره آموزشی</value>
+  </data>
+    <data name="Create New Course" xml:space="preserve">
+    <value>ایجاد دوره جدید</value>
+  </data>
+    <data name="Farsi Information" xml:space="preserve">
+    <value>اطلاعات فارسی</value>
+  </data>
+    <data name="Extra Information" xml:space="preserve">
+    <value>اطلاعات اضافی</value>
+  </data>
+    <data name="Farsi Calendar" xml:space="preserve">
+    <value>تقویم فارسی</value>
+  </data>
+    <data name="Instructor" xml:space="preserve">
+    <value>مدرس</value>
+  </data>
+  <data name="Create New Instructor" xml:space="preserve">
+    <value>ایجاد مدرس جدید</value>
+  </data>
+  <data name="Course Instructors" xml:space="preserve">
+    <value>مدرسان دوره</value>
+  </data>
+  <data name="Instructor Management" xml:space="preserve">
+    <value>مديريت مدرس</value>
+  </data>
+  <data name="Instructors Management" xml:space="preserve">
+    <value>مدیریت مدرسان</value>
+  </data>
+  <data name="Edit Instructor" xml:space="preserve">
+    <value>ویرایش اطلاعات مدرس</value>
+  </data>
+  <data name="Instructor Information" xml:space="preserve">
+    <value>اطلاعات مدرس</value>
+  </data>
+  <data name="Instructor Rating" xml:space="preserve">
+    <value>امتیاز مدرس</value>
+  </data>
+  <data name="Students" xml:space="preserve">
+    <value>دانش آموزان</value>
+  </data>
+  <data name="Courses" xml:space="preserve">
+    <value>دوره‌های آموزشی</value>
+  </data>
+  <data name="Course" xml:space="preserve">
+    <value>دوره آموزشی</value>
+  </data>
+  <data name="Student" xml:space="preserve">
+    <value>دانش‌آموز</value>
+  </data>
+  <data name="Edit Course" xml:space="preserve">
+    <value>ویرایش دوره آموزشی</value>
+  </data>
+  <data name="Delete Course" xml:space="preserve">
+    <value>حذف دوره</value>
+  </data>
+  <data name="Course Details" xml:space="preserve">
+    <value>جزئیات دوره آموزشی</value>
+  </data>
+  <data name="Check our Courses" xml:space="preserve">
+    <value>دوره های ما را بررسی کنید</value>
+  </data>
+  <data name="Click to see more of our training courses." xml:space="preserve">
+    <value>جهت مشاهده دوره‌های آموزشی بیشتر ما کلیک کنید.</value>
+  </data>
+  <data name="Held Training Courses" xml:space="preserve">
+    <value>دوره‌های آموزشی برگزارشده</value>
+  </data>
+  <data name="Ongoing Training Courses" xml:space="preserve">
+    <value>دوره‌های آموزشی در حال برگزاری</value>
+  </data>
+  <data name="Upcoming Training Courses" xml:space="preserve">
+    <value>دوره‌های آموزشی آتی</value>
+  </data>
+  <data name="About Training Course" xml:space="preserve">
+    <value>درباره دوره آموزشی</value>
+  </data>
+  <data name="Course Syllabus" xml:space="preserve">
+    <value>برنامه درسی دوره</value>
+  </data>
+  <data name="Course Information" xml:space="preserve">
+    <value>اطلاعات دوره</value>
+  </data>
+  <data name="Course Instructor" xml:space="preserve">
+    <value>مدرس دوره</value>
+  </data>
+  <data name="Training Courses " xml:space="preserve">
+    <value>دوره‌های آموزشی</value>
+  </data>
+  <data name="Author (Fa)" xml:space="preserve">
+    <value>نویسنده</value>
+  </data>
+  <data name="More Articles" xml:space="preserve">
+    <value>مقالات بیشتر</value>
+  </data>
+  <data name="Written By" xml:space="preserve">
+    <value>نوشته شده توسط</value>
+  </data>
+  <data name="Send New Article" xml:space="preserve">
+    <value>ارسال مقاله جدید</value>
+  </data>
+  <data name="Upload Author Image" xml:space="preserve">
+    <value>بارگذاری تصویر نویسنده</value>
+  </data>
+  <data name="Technical Information (Fa)" xml:space="preserve">
+    <value>اطلاعات فنی</value>
+  </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>گالری</value>
+  </data>
+  <data name="Image Gallery" xml:space="preserve">
+    <value>گالری تصاویر</value>
+  </data>
+  <data name="Event" xml:space="preserve">
+    <value>رویداد</value>
+  </data>
+  <data name="Events" xml:space="preserve">
+    <value>رویدادها</value>
+  </data>
+  <data name="Create New Event" xml:space="preserve">
+    <value>ایجاد رویداد جدید</value>
+  </data>
+  <data name="Delete Event" xml:space="preserve">
+    <value>حذف رویداد</value>
+  </data>
+  <data name="Edit Event" xml:space="preserve">
+    <value>ویرایش رویداد</value>
+  </data>
+  <data name="Event Details" xml:space="preserve">
+    <value>جزئیات رویداد</value>
+  </data>
+  <data name="Image &amp; Video Gallery" xml:space="preserve">
+    <value>گالری تصویر و ویدئو</value>
+  </data>
+  <data name="Events Management" xml:space="preserve">
+    <value>مدیریت رویدادها</value>
+  </data>
+  <data name="Back to List" xml:space="preserve">
+    <value>بازگشت به لیست</value>
+  </data>
+  <data name="Click to view all articles." xml:space="preserve">
+    <value>برای مشاهده همه مقالات کلیک کنید.</value>
+  </data>
+  <data name="More Events" xml:space="preserve">
+    <value>رویدادهای بیشتر</value>
+  </data>
+  <data name="About Event" xml:space="preserve">
+    <value>درباره رویداد</value>
+  </data>
+  <data name="Event Information" xml:space="preserve">
+    <value>اطلاعات رویداد</value>
+  </data>
+  <data name="Held Events" xml:space="preserve">
+    <value>رویدادهای برگزار شده</value>
+  </data>
+  <data name="Ongoing Events" xml:space="preserve">
+    <value>رویدادهای در حال برگزاری</value>
+  </data>
+  <data name="Technical Information" xml:space="preserve">
+    <value>اطلاعات فنی</value>
+  </data>
+  <data name="Upcoming Events" xml:space="preserve">
+    <value>رویدادهای آتی</value>
+  </data>
+  <data name="Check our Gallery" xml:space="preserve">
+    <value>گالری تصاویر را مشاهده کنید</value>
+  </data>
+  <data name="Comment" xml:space="preserve">
+    <value>اظهارنظر</value>
+  </data>
+  <data name="Opinion" xml:space="preserve">
+    <value>دیدگاه</value>
+  </data>
+  <data name="Users Comments" xml:space="preserve">
+    <value>نظرات کاربران</value>
+  </data>
+  <data name="Write your opinion" xml:space="preserve">
+    <value>دیدگاه خود را بنویسید</value>
+  </data>
+  <data name="Send Comment" xml:space="preserve">
+    <value>ارسال دیدگاه</value>
+  </data>
+  <data name="Unconfirmed Comments" xml:space="preserve">
+    <value>دیدگاه‌های تاییدنشده</value>
+  </data>
+  <data name="Industrial Town At A Glance" xml:space="preserve">
+    <value>شهرک صنعتی در یک نگاه</value>
+  </data>
+  <data name="Important information and statistics of the industrial town in summary" xml:space="preserve">
+    <value>اطلاعات و آمار مهم شهرک صنعتی به صورت خلاصه </value>
+  </data>
+  <data name="Industrial companies active on the site" xml:space="preserve">
+    <value>شرکت‌های صنعتی فعال در سایت </value>
+  </data>
+  <data name="Job advertisements and employment" xml:space="preserve">
+    <value>آگهی‌های شغلی و استخدام </value>
+  </data>
+  <data name="Events held" xml:space="preserve">
+    <value>رویدادهای برگزارشده</value>
+  </data>
+  <data name="Training courses held" xml:space="preserve">
+    <value>دوره‌های آموزشی برگزارشده</value>
+  </data>
+  <data name="See all the news" xml:space="preserve">
+    <value>مشاهده کلیه اخبار</value>
+  </data>
+  <data name="See all events" xml:space="preserve">
+    <value>مشاهده همه رویدادها</value>
+  </data>
+    <data name="Subscribe to our newsletter. You will be kept informed about latest news, activities and developments." xml:space="preserve">
+    <value>در خبرنامه ما مشترک شوید. شما از آخرین اخبار، فعالیت ها و پیشرفت ها مطلع خواهید شد.</value>
+  </data>
+    <data name="Location" xml:space="preserve">
+    <value>موقعیت مکانی</value>
+  </data>
+    <data name="Services" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+    <data name="Portfolio" xml:space="preserve">
+    <value>نمونه کارها</value>
+  </data>
+    <data name="Team" xml:space="preserve">
+    <value>همکاران</value>
+  </data>
+    <data name="Contact" xml:space="preserve">
+    <value>تماس</value>
+  </data>
+    <data name="Loading ..." xml:space="preserve">
+    <value>در حال بارگذاری ...</value>
+  </data>
+    <data name="Site Management" xml:space="preserve">
+    <value>مدیریت سایت</value>
+  </data>
+    <data name="Save Site Setting" xml:space="preserve">
+    <value>ذخیره تنظیمات سایت</value>
+  </data>
+    <data name="Administration" xml:space="preserve">
+    <value>مدیریت</value>
+  </data>
+    <data name="Check our new News" xml:space="preserve">
+    <value>اخبار جدید ما را چک کنید</value>
+  </data>
+    <data name="Farsi Logo" xml:space="preserve">
+    <value>لوگوی فارسی</value>
+  </data>
+    <data name="Site Images" xml:space="preserve">
+    <value>تصاویر سایت</value>
+  </data>
+    <data name="Ind-Town" xml:space="preserve">
+    <value>شهرک</value>
+  </data>
+    <data name="Register Your Company" xml:space="preserve">
+    <value>ثبت شرکت شما</value>
+  </data>
+    <data name="Job Seekers" xml:space="preserve">
+    <value>افراد جویای کار</value>
+  </data>
+    <data name="Job Wall" xml:space="preserve">
+    <value>دیوار شغل </value>
+  </data>
+    <data name="Training Courses" xml:space="preserve">
+    <value>دوره‌های آموزشی </value>
+  </data>
+    <data name="Future Plans" xml:space="preserve">
+    <value>طرح‌های آینده</value>
+  </data>
+    <data name="Hashtags" xml:space="preserve">
+    <value>هشتگ</value>
+  </data>
+    <data name="Send New Post" xml:space="preserve">
+    <value>ارسال پست جدید</value>
+  </data>
+    <data name="Phone Number or Email" xml:space="preserve">
+        <value>شماره تماس یا ایمیل</value>
+    </data>
+    <data name="Register by mobile" xml:space="preserve">
+        <value>ثبت‌نام با موبایل</value>
+    </data>
+    <data name="Forgot your mobile password?" xml:space="preserve">
+        <value>رمز عبور موبایل خود را فراموش کرده‌اید؟</value>
+    </data>
+    <data name="Register by email" xml:space="preserve">
+        <value>ثبت‌نام با ایمیل</value>
+    </data>
+    <data name="Forgot your email password?" xml:space="preserve">
+        <value>رمز عبور ایمیل خود را فراموش کرده‌اید؟</value>
+    </data>
+    <data name="Resend" xml:space="preserve">
+        <value>ارسال مجدد</value>
+    </data>
+    <data name="click here to log in" xml:space="preserve">
+        <value>برای ورود کلیک کنید</value>
+    </data>
+    <data name="Send Register Code" xml:space="preserve">
+        <value>ارسال کد ثبت‌نام</value>
+    </data>
+    <data name="Token" xml:space="preserve">
+        <value>کد ارسالی</value>
+    </data>
+    <data name="Profile" xml:space="preserve">
+        <value>پروفایل</value>
+    </data>
+    <data name="Personal data" xml:space="preserve">
+        <value>داده‌های شخصی</value>
+    </data>
+    <data name="Personal Data" xml:space="preserve">
+        <value>داده‌های شخصی</value>
+    </data>
+    <data name="Delete Personal Data" xml:space="preserve">
+        <value>حذف داده های شخصی</value>
+    </data>
+    <data name="Deleting this data will permanently remove your account, and this cannot be recovered." xml:space="preserve">
+        <value>حذف این داده ها حساب شما را برای همیشه حذف می کند و این مورد بازیابی نمی شود.</value>
+    </data>
+    <data name="Delete data and close my account" xml:space="preserve">
+        <value>داده ها را حذف کنید و حساب من را ببندید</value>
+    </data>
+    <data name="Download Your Data" xml:space="preserve">
+        <value>داده های خود را دانلود کنید</value>
+    </data>
+    <data name="Manage Email" xml:space="preserve">
+        <value>مدیریت ایمیل</value>
+    </data>
+    <data name="Send verification email" xml:space="preserve">
+        <value>ارسال ایمیل تایید</value>
+    </data>
+    <data name="Change email" xml:space="preserve">
+        <value>تغییر ایمیل</value>
+    </data>
+    <data name="New email" xml:space="preserve">
+        <value>ایمیل جدید</value>
+    </data>
+    <data name="Your account contains personal data that you have given us. This page allows you to download or delete that data." xml:space="preserve">
+        <value>حساب شما حاوی اطلاعات شخصی است که به ما داده اید. این صفحه به شما امکان می دهد آن داده ها را دانلود یا حذف کنید.</value>
+    </data>
+    <data name="Download" xml:space="preserve">
+        <value>دانلود</value>
+    </data>
+    <data name="Set password" xml:space="preserve">
+        <value>تعیین رمز عبور</value>
+    </data>
+    <data name="Set your password" xml:space="preserve">
+        <value>رمز عبور خود را تعیین کنید</value>
+    </data>
+    <data name="Manage your account" xml:space="preserve">
+        <value>حساب کاربری خود را مدیریت کنید</value>
+    </data>
+    <data name="Change your account settings" xml:space="preserve">
+        <value>تنظیمات حساب کاربری خود را تغییر دهید</value>
+    </data>
+    <data name="Verification Code" xml:space="preserve">
+        <value>کد تایید</value>
+    </data>
 </root>

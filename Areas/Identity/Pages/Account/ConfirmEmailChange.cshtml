@@ -1,8 +1,9 @@
-﻿@page
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model ConfirmEmailChangeModel
 @{
-    ViewData["Title"] = "Confirm email change";
+    ViewData["Title"] = Localizer.Text("Confirm email change");
 }
 
 <h1>@ViewData["Title"]</h1>
-<partial name="_StatusMessage" model="Model.StatusMessage" />
+<partial name="_ToastMessage" for="ToastMessage" />

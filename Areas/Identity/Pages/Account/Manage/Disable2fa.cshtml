@@ -1,12 +1,13 @@
 ﻿@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model Disable2faModel
 @{
     ViewData["Title"] = "Disable two-factor authentication (2FA)";
-    ViewData["ActivePage"] = ManageNavPages.TwoFactorAuthentication;
+    ViewData["Menu"] = "Index";
 }
 
-<partial name="_StatusMessage" for="StatusMessage" />
-<h3>@ViewData["Title"]</h3>
+<partial name="_ToastMessage" for="ToastMessage" />
+<h2>@ViewData["Title"]</h2>
 
 <div class="alert alert-warning" role="alert">
     <p>
@@ -19,7 +20,7 @@
 </div>
 
 <div>
-    <form method="post">
+    <form method="post" class="form-outline mb-1">
         <button class="btn btn-danger" type="submit">Disable 2FA</button>
     </form>
 </div>

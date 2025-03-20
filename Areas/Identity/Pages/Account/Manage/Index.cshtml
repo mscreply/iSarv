@@ -1,7 +1,9 @@
 ﻿@page
-@model IndexModel
+@using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Manage.Internal
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model iSarv.Areas.Identity.Pages.Account.Manage.IndexModel
 @{
-    ViewData["Title"] = "Profile";
+    ViewData["Title"] = Localizer.Text("Profile");
     ViewData["ActivePage"] = ManageNavPages.Index;
 }
 
@@ -18,13 +20,14 @@
             <div class="form-floating mb-3">
                 <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
                 <label asp-for="Input.PhoneNumber" class="form-label"></label>
-                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
             </div>
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            
+            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">@Localizer.Text("Save")</button>
         </form>
     </div>
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    <partial name="_ValidationScriptPartial" />
 }

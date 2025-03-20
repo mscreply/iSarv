@@ -1,12 +1,4 @@
-﻿<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>@ViewData["Title"] - iSarv</title>
-    <partial name="_CSSPartial"/>
-</head>
-<body>
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
 <header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
         <div class="container">
@@ -29,20 +21,3 @@
         </div>
     </nav>
 </header>
-<div class="container">
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
-</div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2025 - iSarv - <a asp-area="" asp-page="/Privacy">Privacy</a>
-    </div>
-</footer>
-
-<partial name="_JsPartial"/>
-
-@await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>

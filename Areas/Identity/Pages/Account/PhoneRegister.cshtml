@@ -1,0 +1,23 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model PhoneRegisterModel
+@{
+    ViewData["Title"] = Localizer.Text("Phone Register");
+}
+
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.PhoneNumber" class="form-control form-control-lg"/>
+        <label asp-for="Input.PhoneNumber" class="form-label"></label>
+    </div>
+    <span asp-validation-for="Input.PhoneNumber" class="text-danger small mb-1"></span>
+
+    <div class="mb-1 d-grid">
+        <button type="submit" class="btn btn-primary" data-mdb-ripple-init>@Localizer.Text("Send Register Code")</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptPartial"/>
+}

@@ -1,5 +1,9 @@
 @using Microsoft.AspNetCore.Identity
 @using iSarv.Areas.Identity
 @using iSarv.Areas.Identity.Pages
+@using iSarv.Data
+@using iSarv.Data.CultureModels
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-@using iSarv.Areas.Identity.Data
+@addTagHelper *, iSarv
+
+@inject CultureLocalizer Localizer

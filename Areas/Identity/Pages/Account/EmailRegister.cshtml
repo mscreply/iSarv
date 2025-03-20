@@ -1,0 +1,35 @@
+@page
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model EmailRegisterModel
+@{
+    ViewData["Title"] = Localizer.Text("Email Register");
+}
+
+<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+    <div asp-validation-summary="All" class="text-danger mb-1"></div>
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.Email" class="form-control"/>
+        <label asp-for="Input.Email" class="form-label"></label>
+    </div>
+        <span asp-validation-for="Input.Email" class="text-danger mb-1"></span>
+ 
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.Password" class="form-control"/>
+        <label asp-for="Input.Password" class="form-label"></label>
+    </div>
+        <span asp-validation-for="Input.Password" class="text-danger mb-1"></span>
+
+    <div class="form-outline mb-1" data-mdb-input-init>
+        <input asp-for="Input.ConfirmPassword" class="form-control"/>
+        <label asp-for="Input.ConfirmPassword" class="form-label"></label>
+    </div>
+        <span asp-validation-for="Input.ConfirmPassword" class="text-danger mb-1"></span>
+
+    <div class="mb-1 d-grid">
+        <button type="submit" class="btn btn-primary">@Localizer.Text("Register")</button>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptPartial"/>
+}
