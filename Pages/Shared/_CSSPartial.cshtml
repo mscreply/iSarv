@@ -1,8 +1,0 @@
-﻿@using System.Globalization
-@using Microsoft.AspNetCore.Mvc.TagHelpers
-@{
-    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-    <link rel="stylesheet" href="/lib/mdb/dist/css/mdb@(lang == "en" ? "" : ".rtl").min.css"/>
-}
-
-<link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>

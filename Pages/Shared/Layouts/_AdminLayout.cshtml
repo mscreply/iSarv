@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Globalization
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - iSarv</title>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon"/>
+
+    <partial name="Partials/_CSSPartial"/>
+    @{
+        var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        <link rel="stylesheet" href="/lib/mdb/dist/css/mdb@(lang == "en" ? "" : ".rtl").min.css"/>
+    }
+    <link rel="stylesheet" href="~/css/admin.css"/>
+</head>
+<body>
+
+<div class="main-admin-content">
+    <partial name="Partials/_AdminNavPartial"/>
+    <div class="row admin-content">
+        <div class="col-auto">
+            <partial name="Partials/_AdminSidebarPartial"/>
+        </div>
+        <div class="col pt-4">
+            @RenderBody()
+        </div>
+    </div>
+    <partial name="Partials/_FooterCreditPartial"/>
+</div>
+<!--Main layout-->
+
+
+<partial name="Partials/_JsPartial"/>
+<script src="~/lib/mdb/dist/js/mdb.umd.min.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

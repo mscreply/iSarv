@@ -1,0 +1,373 @@
+@font-face {
+    font-family: Yekan;
+    src: url(BYekan.ttf);
+}
+
+@font-face {
+    font-family: Koodak;
+    src: url(BKoodakBold.ttf);
+}
+
+@font-face {
+    font-family: Dima;
+    src: url(DimaHallFetica.ttf);
+}
+
+/* IRANSans */
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: bold;
+    src: url('IRANSans/IRANSansWeb_Bold.eot');
+    src: url('IRANSans/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_Bold.woff2') format('woff2'), 
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_Bold.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 900;
+    src: url('IRANSans/IRANSansWeb_Black.eot');
+    src: url('IRANSans/IRANSansWeb_Black.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_Black.woff2') format('woff2'), 
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_Black.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 500;
+    src: url('IRANSans/IRANSansWeb_Medium.eot');
+    src: url('IRANSans/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_Medium.woff2') format('woff2'), 
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_Medium.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 400;
+    src: url('IRANSans/IRANSansWeb_Light.eot');
+    src: url('IRANSans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_Light.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_Light.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 300;
+    src: url('IRANSans/IRANSansWeb_Light.eot');
+    src: url('IRANSans/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_Light.woff2') format('woff2'),
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_Light.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: 200;
+    src: url('IRANSans/IRANSansWeb_UltraLight.eot');
+    src: url('IRANSans/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('IRANSans/IRANSansWeb_UltraLight.woff2') format('woff2'), 
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb_UltraLight.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb_UltraLight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: IRANSans;
+    font-style: normal;
+    font-weight: normal;
+    src: url('IRANSans/IRANSansWeb.eot');
+    src: url('IRANSans/IRANSansWeb.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('IRANSans/IRANSansWeb.woff2') format('woff2'), 
+        /* FF39+,Chrome36+, Opera24+*/ url('IRANSans/IRANSansWeb.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('IRANSans/IRANSansWeb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'IRANSansWebFarsiNumbers';
+    src: url('IRANSans/iransansweb(fanum).woff') format('woff');
+    font-weight: normal;
+}
+
+/* IranYekan */
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: bold;
+    src: url('iranyekan/iranyekanwebbold.eot');
+    src: url('iranyekan/iranyekanwebbold.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebbold.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebbold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 100;
+    src: url('iranyekan/iranyekanwebthin.eot');
+    src: url('iranyekan/iranyekanwebthin.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebthin.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebthin.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 300;
+    src: url('iranyekan/iranyekanweblight.eot');
+    src: url('iranyekan/iranyekanweblight.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanweblight.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: normal;
+    src: url('iranyekan/iranyekanwebregular.eot');
+    src: url('iranyekan/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('iranyekan/iranyekanwebregular.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 400;
+    src: url('iranyekan/iranyekanwebregular.eot');
+    src: url('iranyekan/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+        /* IE6-8 */ url('iranyekan/iranyekanwebregular.woff') format('woff'),
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 500;
+    src: url('iranyekan/iranyekanwebmedium.eot');
+    src: url('iranyekan/iranyekanwebmedium.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebmedium.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebmedium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 800;
+    src: url('iranyekan/iranyekanwebextrabold.eot');
+    src: url('iranyekan/iranyekanwebextrabold.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebextrabold.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebextrabold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 900;
+    src: url('iranyekan/iranyekanwebblack.eot');
+    src: url('iranyekan/iranyekanwebblack.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebblack.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebblack.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: iranyekan;
+    font-style: normal;
+    font-weight: 950;
+    src: url('iranyekan/iranyekanwebextrablack.eot');
+    src: url('iranyekan/iranyekanwebextrablack.eot?#iefix') format('embedded-opentype'), 
+        /* IE6-8 */ url('iranyekan/iranyekanwebextrablack.woff') format('woff'), 
+        /* FF3.6+, IE9, Chrome6+, Saf5.1+*/ url('iranyekan/iranyekanwebextrablack.ttf') format('truetype');
+}
+
+/* Vazir */
+@font-face {
+    font-family: Vazir;
+    src: url('vazir/Vazir-Bold.eot');
+    src: url('vazir/Vazir-Bold.eot?#iefix') format('embedded-opentype'),
+    url('vazir/Vazir-Bold.woff2') format('woff2'),
+    url('vazir/Vazir-Bold.woff') format('woff'),
+    url('vazir/Vazir-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('vazir/Vazir-Black.eot');
+    src: url('vazir/Vazir-Black.eot?#iefix') format('embedded-opentype'),
+    url('vazir/Vazir-Black.woff2') format('woff2'),
+    url('vazir/Vazir-Black.woff') format('woff'),
+    url('vazir/Vazir-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('vazir/Vazir-Medium.eot');
+    src: url('vazir/Vazir-Medium.eot?#iefix') format('embedded-opentype'),
+    url('vazir/Vazir-Medium.woff2') format('woff2'),
+    url('vazir/Vazir-Medium.woff') format('woff'),
+    url('vazir/Vazir-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('vazir/Vazir-Light.eot');
+    src: url('vazir/Vazir-Light.eot?#iefix') format('embedded-opentype'),
+    url('vazir/Vazir-Light.woff2') format('woff2'),
+    url('vazir/Vazir-Light.woff') format('woff'),
+    url('vazir/Vazir-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Vazir;
+    src: url('vazir/Vazir-Thin.eot');
+    src: url('vazir/Vazir-Thin.eot?#iefix') format('embedded-opentype'),
+    url('vazir/Vazir-Thin.woff2') format('woff2'),
+    url('vazir/Vazir-Thin.woff') format('woff'),
+    url('vazir/Vazir-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/* Sahel */
+@font-face {
+    font-family: Sahel;
+    src: url('sahel/Sahel.eot');
+    src: url('sahel/Sahel.eot?#iefix') format('embedded-opentype'),
+    url('sahel/Sahel.woff2') format('woff2'),
+    url('sahel/Sahel.woff') format('woff'),
+    url('sahel/Sahel.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('sahel/Sahel-Bold.eot');
+    src: url('sahel/Sahel-Bold.eot?#iefix') format('embedded-opentype'),
+    url('sahel/Sahel-Bold.woff2') format('woff2'),
+    url('sahel/Sahel-Bold.woff') format('woff'),
+    url('sahel/Sahel-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('sahel/Sahel-Light.eot');
+    src: url('sahel/Sahel-Light.eot?#iefix') format('embedded-opentype'),
+    url('sahel/Sahel-Light.woff2') format('woff2'),
+    url('sahel/Sahel-Light.woff') format('woff'),
+    url('sahel/Sahel-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('sahel/Sahel-SemiBold.eot');
+    src: url('sahel/Sahel-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('sahel/Sahel-SemiBold.woff2') format('woff2'),
+    url('sahel/Sahel-SemiBold.woff') format('woff'),
+    url('sahel/Sahel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('sahel/Sahel-Black.eot');
+    src: url('sahel/Sahel-Black.eot?#iefix') format('embedded-opentype'),
+    url('sahel/Sahel-Black.woff2') format('woff2'),
+    url('sahel/Sahel-Black.woff') format('woff'),
+    url('sahel/Sahel-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+/* Parasto */
+@font-face {
+    font-family: Parastoo;
+    src: url('parastoo/Parastoo.eot');
+    src: url('parastoo/Parastoo.eot?#iefix') format('embedded-opentype'),
+    url('parastoo/Parastoo.woff2') format('woff2'),
+    url('parastoo/Parastoo.woff') format('woff'),
+    url('parastoo/Parastoo.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Parastoo;
+    src: url('parastoo/Parastoo-Bold.eot');
+    src: url('parastoo/Parastoo-Bold.eot?#iefix') format('embedded-opentype'),
+    url('parastoo/Parastoo-Bold.woff2') format('woff2'),
+    url('parastoo/Parastoo-Bold.woff') format('woff'),
+    url('parastoo/Parastoo-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+/* Anjoman */
+@font-face {
+    font-family: Anjoman;
+    font-display: swap;
+    src: url(Anjoman/Anjoman-ExtraLight.eot);
+    src: url("Anjoman/Anjoman-ExtraLight.eot?#iefix") format("embedded-opentype"), 
+    url(Anjoman/Anjoman-ExtraLight.woff2) format("woff2"), 
+    url(Anjoman/Anjoman-ExtraLight.woff) format("woff");
+    font-weight: 200;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Anjoman;
+    font-display: swap;
+    src: url(Anjoman/Anjoman-Medium.eot);
+    src: url("Anjoman/Anjoman-Medium.eot?#iefix") format("embedded-opentype"), 
+    url(Anjoman/Anjoman-Medium.woff2) format("woff2"), 
+    url(Anjoman/Anjoman-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Anjoman;
+    font-display: swap;
+    src: url(Anjoman/Anjoman-ExtraBold.eot);
+    src: url("Anjoman/Anjoman-ExtraBold.eot?#iefix") format("embedded-opentype"), 
+    url(Anjoman/Anjoman-ExtraBold.woff2) format("woff2"), 
+    url(Anjoman/Anjoman-ExtraBold.woff) format("woff");
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Anjoman;
+    font-display: swap;
+    src: url(Anjoman/Anjoman-Black.eot);
+    src: url("Anjoman/Anjoman-Black.eot?#iefix") format("embedded-opentype"), 
+    url(Anjoman/Anjoman-Black.woff2) format("woff2"), 
+    url(Anjoman/Anjoman-Black.woff) format("woff");
+    font-weight: 900;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Anjoman;
+    font-display: swap;
+    src: url(Anjoman/Anjoman-Heavy.eot);
+    src: url("Anjoman/Anjoman-Heavy.eot?#iefix") format("embedded-opentype"), 
+    url(Anjoman/Anjoman-Heavy.woff2) format("woff2"), 
+    url(Anjoman/Anjoman-Heavy.woff) format("woff");
+    font-weight: 950;
+    font-style: normal
+}

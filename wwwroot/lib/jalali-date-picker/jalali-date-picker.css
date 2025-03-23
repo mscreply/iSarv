@@ -1,0 +1,102 @@
+﻿/* jalali calendar ------------------------------------- */
+.btn-j-calendar {
+}
+
+.btn-j-calendar::before {
+    font-family: FontAwesome, serif;
+    content: "\f073";
+}
+
+.btn-j-calendar-time {
+}
+
+.btn-j-calendar-time::before {
+    font-family: FontAwesome, serif;
+    content: "\f64a";
+}
+
+.modal-j-calendar {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    background-color: white;
+    border-radius: 1px;
+    border: 1px solid #ced4da;
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+    padding: 5px;
+    width: 210px;
+}
+
+.modal-with-time {
+    width: 300px!important;
+}
+
+.calendar-div {
+    width: 210px!important;
+}
+
+.time-div {
+    width: 90px!important;
+}
+
+#hour, #minute {
+    scrollbar-width: none;
+    padding: 1px;
+    text-align: center;
+    margin-right: 2px;
+    border: none;
+}
+
+#hour option:checked, #minute option:checked {
+    color: white;
+    background-color: #0d6efd;
+}
+
+#hour option:hover, #minute option:hover {
+    background-color: #b2dbff;
+}
+
+.year-error, .year-error:focus {
+    background-color: #fce4e4;
+    border: 1px solid #fcc2c3;
+    color: #cc0033;
+    animation: year-blinker 1s step-start infinite;
+}
+
+.year-blink {
+    animation: year-blinker 1s step-start infinite;
+}
+
+@keyframes year-blinker {
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.calendar-table {
+    font-weight: bold;
+    font-size: small;
+}
+
+.calendar-table tr:nth-child(even) {
+    background-color: lavender;
+}
+
+.calendar-table td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.calendar-table tbody td.selected {
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 50%;
+}
+
+.calendar-table tbody td:hover {
+    cursor: pointer;
+    background-color: #b2dbff;
+    border-radius: 50%;
+}

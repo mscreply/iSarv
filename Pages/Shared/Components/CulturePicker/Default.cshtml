@@ -8,7 +8,7 @@
             {
                 <input class="btn-check btn-sm" type="radio" name="culture" id="culture-picker-@culture.Name"
                        value="@culture.Name" checked="@(Model.CurrentUICulture.Name == culture.Name)" onchange="$(this).closest('form').submit();">
-                <label class="btn btn-light btn-sm p-1" for="culture-picker-@culture.Name">
+                <label class="btn-sm p-1" for="culture-picker-@culture.Name">
                     @culture.TwoLetterISOLanguageName.ToUpper()
                 </label>
             }

@@ -52,7 +52,7 @@
         return new bootstrap.Popover(popoverTriggerEl)
     });
 
-    $('[name=culture]:checked').next('label').removeClass('btn-light').addClass('btn-primary');
+    $('[name=culture]:checked').next('label').removeClass('text-secondary').addClass('text-warning');
 
     const arabicNumbers = ['۰', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
     $(".content-num-fa").text(function(idx, v) {

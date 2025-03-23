@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using System.Globalization
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - iSarv</title>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon"/>
+
+    <partial name="Partials/_CSSPartial"/>
+    @{
+        var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+        <link rel="stylesheet" href="/lib/mdb/dist/css/mdb@(lang == "en" ? "" : ".rtl").min.css"/>
+    }
+    <link rel="stylesheet" href="~/css/sign.css"/>
+</head>
+<body>
+
+<div class="sign-content">
+    <partial name="Partials/_HeaderCreditPartial"/>
+    <partial name="Partials/_HeaderPartial"/>
+
+    <div class="sign-info row col-lg-3 col-md-4 col-11">
+        <div class="sign-form">
+            <div class="sign-title">
+                <h4>@ViewData["Title"]</h4>
+                <div class="d-flex justify-content-center pt-2">
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-youtube"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </div>
+            @RenderBody()
+            <div style="height: 50px"></div>
+        </div>
+    </div>
+
+    <partial name="Partials/_FooterCreditPartial"/>
+</div>
+
+<partial name="Partials/_JsPartial"/>
+<script src="~/lib/mdb/dist/js/mdb.umd.min.js"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

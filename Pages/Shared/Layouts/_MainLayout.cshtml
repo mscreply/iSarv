@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - iSarv</title>
+
+    <!-- Favicon -->
+    <link href="/favicon.ico" rel="icon" />
+
+    <partial name="Partials/_CSSPartial"/>
+</head>
+<body>
+
+<partial name="Partials/_HeaderCreditPartial"/>
+<partial name="Partials/_HeaderPartial"/>
+
+@RenderBody()
+
+<partial name="Partials/_FooterPartial"/>
+<partial name="Partials/_FooterCreditPartial"/>
+<partial name="Partials/_JsPartial"/>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

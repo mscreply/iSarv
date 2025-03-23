@@ -1,0 +1,38 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap@(lang == "en" ? "" : ".rtl").min.css">
+}
+
+<!-- Google Web Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+<!-- Icon Font Stylesheet -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+<!-- Farsi Fonts -->
+<link href="/lib/font/fonts.css" rel="stylesheet" />
+
+<!-- Libraries Stylesheet -->
+<link rel="stylesheet" href="~/lib/animate/animate.min.css" />
+<link rel="stylesheet" href="~/lib/owlcarousel/css/owl.carousel.min.css" />
+
+<!-- Site Stylesheet -->
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+<link rel="stylesheet" href="~/css/template.css" />
+
+@{
+    if (lang == "fa")
+    {
+        <style>
+            body {
+                  font-family: "Koodak", serif !important;
+            }
+        </style>
+    }
+}
