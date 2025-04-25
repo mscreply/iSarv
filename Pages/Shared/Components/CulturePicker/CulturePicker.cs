@@ -19,8 +19,8 @@ namespace iSarv.Pages.Shared.Components.CulturePicker
             var cultureFeature = HttpContext.Features.Get<IRequestCultureFeature>();
             var model = new CulturePickerModel
             {
-                SupportedCultures = _localizationOptions.Value.SupportedUICultures.ToList(),
-                CurrentUICulture = cultureFeature.RequestCulture.UICulture
+                SupportedCultures = _localizationOptions.Value.SupportedUICultures!.ToList(),
+                CurrentUICulture = cultureFeature!.RequestCulture.UICulture
             };
 
             return View(model);
@@ -36,7 +36,7 @@ namespace iSarv.Pages.Shared.Components.CulturePicker
         {
             country = country
                 .Split('-')
-                .LastOrDefault();
+                .LastOrDefault()!;
 
             if (country == null)
                 return "⁉️️";

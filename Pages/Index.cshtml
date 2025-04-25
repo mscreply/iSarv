@@ -1,7 +1,7 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = @Localizer.Text("Home page");
+    ViewData["Title"] = Localizer.Text("Home page");
 }
 
 <!-- Carousel Start -->
@@ -15,16 +15,14 @@
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <h1 class="display-3 text-dark mb-4 animated slideInDown">
-                                    Insurance Creates Wealth For Everyone
+                                    @Localizer.TextIgnoreCase("Discover Your Career Aptitude")
                                 </h1>
                                 <p class="fs-5 text-body mb-5">
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                                    duo justo magna dolore erat amet
+                                    @Localizer.TextIgnoreCase("Find your ideal career path by taking validated psychological tests and AI analysis.")
                                 </p>
-                                <a href="" class="btn btn-primary py-3 px-5">
-                                    More Details
-                                </a
-                                >
+                                <a href="#tests" class="btn btn-primary py-3 px-5">
+                                    @Localizer.TextIgnoreCase("Start Tests")
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -37,16 +35,14 @@
                         <div class="row">
                             <div class="col-12 col-lg-6">
                                 <h1 class="display-3 text-dark mb-4 animated slideInDown">
-                                    The Best Insurance Begins Here
+                                    @Localizer.TextIgnoreCase("Build Your Career Future Intelligently")
                                 </h1>
                                 <p class="fs-5 text-body mb-5">
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita
-                                    duo justo magna dolore erat amet
+                                    @Localizer.TextIgnoreCase("Accurate and personalized analysis of test results using advanced artificial intelligence.")
                                 </p>
-                                <a href="" class="btn btn-primary py-3 px-5">
-                                    More Details
-                                </a
-                                >
+                                <a href="#about" class="btn btn-primary py-3 px-5">
+                                    @Localizer.TextIgnoreCase("Learn More")
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -74,7 +70,7 @@
 <!-- Carousel End -->
 
 <!-- About Start -->
-<div class="container-xxl py-5">
+<div class="container-xxl py-5" id="about">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -92,8 +88,8 @@
                         <div
                             class="d-flex flex-column justify-content-center text-center bg-primary rounded h-100 p-3">
                             <h1 class="text-white mb-0">25</h1>
-                            <h2 class="text-white">Years</h2>
-                            <h5 class="text-white mb-0">Experience</h5>
+                            <h2 class="text-white">@Localizer.TextIgnoreCase("Years")</h2>
+                            <h5 class="text-white mb-0">@Localizer.TextIgnoreCase("Experience")</h5>
                         </div>
                     </div>
                 </div>
@@ -101,11 +97,10 @@
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="h-100">
                     <h1 class="display-6 mb-5">
-                        We're Here To Assist You With Exploring Protection
+                        @Localizer.TextIgnoreCase("Understand Your Strengths for the Right Career")
                     </h1>
                     <p class="fs-5 text-primary mb-4">
-                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem sed stet
-                        lorem sit clita duo justo erat amet
+                        @Localizer.TextIgnoreCase("Our platform uses scientifically validated tests and AI to provide deep insights into your professional potential.")
                     </p>
                     <div class="row g-4 mb-4">
                         <div class="col-sm-6">
@@ -114,31 +109,26 @@
                                     class="flex-shrink-0 me-3"
                                     src="img/icon/icon-04-primary.png"
                                     alt=""/>
-                                <h5 class="mb-0">Flexible Insurance Plans</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("Validated Psychometric Tests")</h5>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="d-flex align-items-center">
                                 <img
                                     class="flex-shrink-0 me-3"
-                                    src="img/icon/icon-03-primary.png"
+                                    src="img/icon/icon-02-primary.png"
                                     alt=""/>
-                                <h5 class="mb-0">Money Back Guarantee</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("AI-Powered Analysis")</h5>
                             </div>
                         </div>
                     </div>
                     <p class="mb-4">
-                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                        sed stet lorem sit clita duo justo magna dolore erat amet
+                        @Localizer.TextIgnoreCase("Gain clarity on your skills, personality traits, and interests to make informed decisions about your career path. Our AI analyzes your results to suggest suitable job roles and industries.")
                     </p>
                     <div class="border-top mt-4 pt-4">
                         <div class="d-flex align-items-center">
-                            <img
-                                class="flex-shrink-0 rounded-circle me-3"
-                                src="img/profile.jpg"
-                                alt=""/>
-                            <h5 class="mb-0">Call Us: +012 345 6789</h5>
+                            <i class="fas fa-headset fa-2x text-primary me-3"></i>
+                            <h5 class="mb-0">@Localizer.TextIgnoreCase("Contact Us for More Info")</h5> @* Generic contact text *@
                         </div>
                     </div>
                 </div>
@@ -153,15 +143,13 @@
     <div class="container facts px-lg-0">
         <div class="row g-0 mx-lg-0">
             <div class="col-lg-6 facts-text wow fadeIn" data-wow-delay="0.1s">
-                <div class="h-100 px-4 ps-lg-0">
-                    <h1 class="text-white mb-4">For Individuals And Organisations</h1>
+                <div class="h-100 px-4 pe-lg-0">
+                    <h1 class="text-white mb-4">@Localizer.TextIgnoreCase("Insights for Your Career Journey")</h1>
                     <p class="text-light mb-5">
-                        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                        Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit,
-                        sed stet lorem sit clita duo justo magna dolore erat amet
+                        @Localizer.TextIgnoreCase("Whether you are a student, a recent graduate, or a professional seeking change, our assessments provide valuable guidance for your next steps.")
                     </p>
-                    <a href="" class="align-self-start btn btn-secondary py-3 px-5">
-                        More Details
+                    <a href="#features" class="align-self-start btn btn-secondary py-3 px-5">
+                        @Localizer.TextIgnoreCase("Discover Features")
                     </a
                     >
                 </div>
@@ -170,20 +158,20 @@
                 <div class="h-100 px-4 pe-lg-0">
                     <div class="row g-5">
                         <div class="col-sm-6">
-                            <h1 class="display-5" data-toggle="counter-up">1234</h1>
-                            <p class="fs-5 text-primary">Happy Clients</p>
+                            <h1 class="display-5" data-toggle="counter-up">5000</h1> @* Example Number *@
+                            <p class="fs-5 text-primary">@Localizer.TextIgnoreCase("Tests Completed")</p>
                         </div>
                         <div class="col-sm-6">
-                            <h1 class="display-5" data-toggle="counter-up">1234</h1>
-                            <p class="fs-5 text-primary">Projects Succeed</p>
+                            <h1 class="display-5" data-toggle="counter-up">95</h1> @* Example Percentage *@
+                            <p class="fs-5 text-primary">@Localizer.TextIgnoreCase("User Satisfaction Rate")</p>
                         </div>
                         <div class="col-sm-6">
-                            <h1 class="display-5" data-toggle="counter-up">1234</h1>
-                            <p class="fs-5 text-primary">Awards Achieved</p>
+                            <h1 class="display-5" data-toggle="counter-up">10</h1> @* Example Number *@
+                            <p class="fs-5 text-primary">@Localizer.TextIgnoreCase("Different Assessment Types")</p>
                         </div>
                         <div class="col-sm-6">
-                            <h1 class="display-5" data-toggle="counter-up">1234</h1>
-                            <p class="fs-5 text-primary">Team Members</p>
+                            <h1 class="display-5" data-toggle="counter-up">2</h1> @* Example Number *@
+                            <p class="fs-5 text-primary">@Localizer.TextIgnoreCase("AI Analysis Models")</p>
                         </div>
                     </div>
                 </div>
@@ -198,11 +186,9 @@
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <h1 class="display-6 mb-5">Few Reasons Why People Choosing Us!</h1>
+                <h1 id="features" class="display-6 mb-5">@Localizer.TextIgnoreCase("Key Features of Our Platform")</h1>
                 <p class="mb-4">
-                    Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                    diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                    lorem sit clita duo justo magna dolore erat amet
+                    @Localizer.TextIgnoreCase("We offer a comprehensive suite of tools and analyses designed to provide clear, actionable insights for your career development.")
                 </p>
                 <div class="row g-3">
                     <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
@@ -211,9 +197,9 @@
                                 class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
                                 <img
                                     class="align-self-center mb-3"
-                                    src="img/icon/icon-06-primary.png"
+                                    src="img/icon/icon-04-primary.png" @* Reusing icon *@
                                     alt=""/>
-                                <h5 class="mb-0">Easy Process</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("Diverse Tests")</h5>
                             </div>
                         </div>
                     </div>
@@ -223,9 +209,9 @@
                                 class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
                                 <img
                                     class="align-self-center mb-3"
-                                    src="img/icon/icon-03-primary.png"
+                                    src="img/icon/icon-02-primary.png" @* Reusing icon *@
                                     alt=""/>
-                                <h5 class="mb-0">Fast Delivery</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("AI Analysis")</h5>
                             </div>
                         </div>
                     </div>
@@ -235,9 +221,9 @@
                                 class="bg-white d-flex flex-column justify-content-center text-center rounded py-4 px-3">
                                 <img
                                     class="align-self-center mb-3"
-                                    src="img/icon/icon-04-primary.png"
+                                    src="img/icon/icon-05-primary.png" @* Reusing icon *@
                                     alt=""/>
-                                <h5 class="mb-0">Policy Controlling</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("Personalized Reports")</h5>
                             </div>
                         </div>
                     </div>
@@ -247,9 +233,9 @@
                                 class="bg-white d-flex flex-column justify-content-center text-center rounded h-100 py-4 px-3">
                                 <img
                                     class="align-self-center mb-3"
-                                    src="img/icon/icon-07-primary.png"
+                                    src="img/icon/icon-08-primary.png" @* Reusing icon *@
                                     alt=""/>
-                                <h5 class="mb-0">Money Saving</h5>
+                                <h5 class="mb-0">@Localizer.TextIgnoreCase("Career Suggestions")</h5>
                             </div>
                         </div>
                     </div>
@@ -272,11 +258,11 @@
 <!-- Features End -->
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
+<div id="tests" class="container-xxl py-5"> @* Added id="tests" for navigation *@
     <div class="container">
         <div class="text-center mx-auto" style="max-width: 500px">
             <h1 class="display-6 mb-5">
-                We Provide professional Insurance Services
+                @Localizer.TextIgnoreCase("Our Assessment Services")
             </h1>
         </div>
         <div class="row g-4 justify-content-center">
@@ -287,16 +273,16 @@
                             class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
                             <img
                                 class="img-fluid"
-                                src="img/icon/icon-10-light.png"
+                                src="img/icon/icon-01-light.png" @* Changed icon *@
                                 alt=""/>
                         </div>
-                        <h4 class="mb-0">Life Insurance</h4>
+                        <h4 class="mb-0">@Localizer.TextIgnoreCase("Personality Assessment")</h4>
                     </div>
                     <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
+                        @Localizer.TextIgnoreCase("Understand your core personality traits and how they align with different work environments.")
                     </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
+                    <a class="btn btn-light px-3"
+                       href="#">@Localizer.TextIgnoreCase("Take Test")</a> @* Updated link/text *@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -306,16 +292,16 @@
                             class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
                             <img
                                 class="img-fluid"
-                                src="img/icon/icon-01-light.png"
+                                src="img/icon/icon-09-light.png" @* Changed icon *@
                                 alt=""/>
                         </div>
-                        <h4 class="mb-0">Health Insurance</h4>
+                        <h4 class="mb-0">@Localizer.TextIgnoreCase("Skills & Aptitude Test")</h4>
                     </div>
                     <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
+                        @Localizer.TextIgnoreCase("Measure your cognitive abilities and specific skills relevant to various job roles.")
                     </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
+                    <a class="btn btn-light px-3"
+                       href="#">@Localizer.TextIgnoreCase("Take Test")</a> @* Updated link/text *@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
@@ -325,110 +311,47 @@
                             class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
                             <img
                                 class="img-fluid"
-                                src="img/icon/icon-05-light.png"
+                                src="img/icon/icon-02-light.png" @* Changed icon *@
                                 alt=""/>
                         </div>
-                        <h4 class="mb-0">Home Insurance</h4>
+                        <h4 class="mb-0">@Localizer.TextIgnoreCase("AI Career Matching")</h4>
                     </div>
                     <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
+                        @Localizer.TextIgnoreCase("Receive personalized career suggestions based on your combined test results analyzed by AI.")
                     </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
+                    <a class="btn btn-light px-3"
+                       href="#">@Localizer.TextIgnoreCase("View Results")</a> @* Updated link/text *@
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-item rounded h-100 p-5">
-                    <div class="d-flex align-items-center ms-n5 mb-4">
-                        <div
-                            class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                            <img
-                                class="img-fluid"
-                                src="img/icon/icon-08-light.png"
-                                alt=""/>
-                        </div>
-                        <h4 class="mb-0">Vehicle Insurance</h4>
-                    </div>
-                    <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
-                    </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-item rounded h-100 p-5">
-                    <div class="d-flex align-items-center ms-n5 mb-4">
-                        <div
-                            class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                            <img
-                                class="img-fluid"
-                                src="img/icon/icon-07-light.png"
-                                alt=""/>
-                        </div>
-                        <h4 class="mb-0">Business Insurance</h4>
-                    </div>
-                    <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
-                    </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-item rounded h-100 p-5">
-                    <div class="d-flex align-items-center ms-n5 mb-4">
-                        <div
-                            class="service-icon flex-shrink-0 bg-primary rounded-end me-4">
-                            <img
-                                class="img-fluid"
-                                src="img/icon/icon-06-light.png"
-                                alt=""/>
-                        </div>
-                        <h4 class="mb-0">Property Insurance</h4>
-                    </div>
-                    <p class="mb-4">
-                        Aliqu diam amet eos erat ipsum et lorem et sit, sed stet lorem
-                        sit clita duo justo erat amet
-                    </p>
-                    <a class="btn btn-light px-3" href="">Read More</a>
-                </div>
-            </div>
+            @* Removed the other 3 service items as 3 are enough for example *@
         </div>
     </div>
 </div>
 <!-- Service End -->
 
 <!-- Appointment Start -->
-<div
-    class="container-fluid appointment my-5 py-5 wow fadeIn"
-    data-wow-delay="0.1s">
+<div id="contact"
+     class="container-fluid appointment my-5 py-5 wow fadeIn"
+     data-wow-delay="0.1s">
     <div class="container py-5">
         <div class="row g-5">
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.3s">
                 <h1 class="display-6 text-white mb-5">
-                    We're Award Winning Insurance Company
+                    @Localizer.TextIgnoreCase("Ready to Start Your Career Discovery?")
                 </h1>
                 <p class="text-white mb-5">
-                    Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
-                    stet lorem sit clita duo justo magna dolore erat amet. Tempor erat
-                    elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet
-                    diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit
-                    clita duo justo magna.
+                    @Localizer.TextIgnoreCase("Take the first step towards a fulfilling career. Register or log in to access our assessments. If you have questions, feel free to reach out using the form.")
                 </p>
                 <div class="bg-white rounded p-3">
                     <div class="d-flex align-items-center bg-primary rounded p-3">
-                        <img
-                            class="flex-shrink-0 rounded-circle me-3"
-                            src="img/profile.jpg"
-                            alt=""/>
-                        <h5 class="text-white mb-0">Call Us: +012 345 6789</h5>
+                        <i class="fas fa-headset fa-2x me-3 text-light"></i>
+                        <h5 class="text-white mb-0">@Localizer.TextIgnoreCase("Contact Support")</h5> @* Generic contact text *@
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                 <div class="bg-white rounded p-5">
-                    <form>
+                    <form> @* This form might need backend logic later *@
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
@@ -436,7 +359,7 @@
                                         type="text"
                                         class="form-control"
                                         id="gname"/>
-                                    <label for="gname">Your Name</label>
+                                    <label for="gname">@Localizer.TextIgnoreCase("Your Name")</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -445,7 +368,7 @@
                                         type="email"
                                         class="form-control"
                                         id="gmail"/>
-                                    <label for="gmail">Your Email</label>
+                                    <label for="gmail">@Localizer.TextIgnoreCase("Your Email")</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -454,7 +377,7 @@
                                         type="text"
                                         class="form-control"
                                         id="cname"/>
-                                    <label for="cname">Your Mobile</label>
+                                    <label for="cname">@Localizer.TextIgnoreCase("Your Mobile")</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
@@ -462,23 +385,23 @@
                                     <input
                                         type="text"
                                         class="form-control"
-                                        id="cage"/>
-                                    <label for="cage">Service Type</label>
+                                        id="cage"/> @* Consider changing ID if not relevant *@
+                                    <label for="cage">@Localizer.TextIgnoreCase("Subject")</label> @* Changed label *@
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea
-                        class="form-control"
-                        id="message"
-                        style="height: 80px"
-                      ></textarea>
-                                    <label for="message">Message</label>
+                                        class="form-control"
+                                        id="message"
+                                        style="height: 80px"
+                                    ></textarea>
+                                    <label for="message">@Localizer.TextIgnoreCase("Message")</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary py-3 px-5" type="submit">
-                                    Get Appointment
+                                    @Localizer.TextIgnoreCase("Send Message") @* Changed button text *@
                                 </button>
                             </div>
                         </div>
@@ -494,145 +417,73 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto" style="max-width: 500px">
-            <h1 class="display-6 mb-5">Meet Our Professional Team Members</h1>
+            <h1 class="display-6 mb-5">@Localizer.TextIgnoreCase("Meet Our Experts")</h1> @* Changed Title *@
         </div>
         <div class="row g-4">
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="team-item rounded">
-                    <img class="img-fluid" src="img/team-1.jpg" alt=""/>
+                    <img class="img-fluid" src="img/team-1.jpg" alt=""/> @* Keep placeholder image for now *@
                     <div class="text-center p-4">
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
+                        <h5>@Localizer.TextIgnoreCase("Dr. Career Advisor")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("Lead Psychologist")</span> @* Placeholder Title *@
                     </div>
                     <div class="team-text text-center bg-white p-4">
-                        <h5>Full Name</h5>
-                        <p>Designation</p>
+                        <h5>@Localizer.TextIgnoreCase("Dr. Career Advisor")</h5>
+                        <p>@Localizer.TextIgnoreCase("Expert in psychometric assessments and career counseling.")</p> @* Placeholder Desc *@
                         <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-twitter">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-facebook-f">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-youtube">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-linkedin-in">
-                                </i
-                                >
-                            </a>
+                            <a class="btn btn-square btn-light m-1" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a> @* Example Link *@
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="team-item rounded">
-                    <img class="img-fluid" src="img/team-2.jpg" alt=""/>
+                    <img class="img-fluid" src="img/team-2.jpg" alt=""/> @* Keep placeholder image for now *@
                     <div class="text-center p-4">
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
+                        <h5>@Localizer.TextIgnoreCase("Prof. AI Specialist")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("AI & Data Science Lead")</span> @* Placeholder Title *@
                     </div>
                     <div class="team-text text-center bg-white p-4">
-                        <h5>Full Name</h5>
-                        <p>Designation</p>
+                        <h5>@Localizer.TextIgnoreCase("Prof. AI Specialist")</h5>
+                        <p>@Localizer.TextIgnoreCase("Specializes in AI algorithms for data analysis and prediction.")</p> @* Placeholder Desc *@
                         <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-twitter">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-facebook-f">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-youtube">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-linkedin-in">
-                                </i
-                                >
-                            </a>
+                            <a class="btn btn-square btn-light m-1" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a> @* Example Link *@
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                 <div class="team-item rounded">
-                    <img class="img-fluid" src="img/team-3.jpg" alt=""/>
+                    <img class="img-fluid" src="img/team-3.jpg" alt=""/> @* Keep placeholder image for now *@
                     <div class="text-center p-4">
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
+                        <h5>@Localizer.TextIgnoreCase("Ms. Industry Analyst")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("Market Trends Expert")</span> @* Placeholder Title *@
                     </div>
                     <div class="team-text text-center bg-white p-4">
-                        <h5>Full Name</h5>
-                        <p>Designation</p>
+                        <h5>@Localizer.TextIgnoreCase("Ms. Industry Analyst")</h5>
+                        <p>@Localizer.TextIgnoreCase("Provides insights into current job market demands and trends.")</p> @* Placeholder Desc *@
                         <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-twitter">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-facebook-f">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-youtube">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-linkedin-in">
-                                </i
-                                >
-                            </a>
+                            <a class="btn btn-square btn-light m-1" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a> @* Example Link *@
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                 <div class="team-item rounded">
-                    <img class="img-fluid" src="img/team-4.jpg" alt=""/>
+                    <img class="img-fluid" src="img/team-4.jpg" alt=""/> @* Keep placeholder image for now *@
                     <div class="text-center p-4">
-                        <h5>Full Name</h5>
-                        <span>Designation</span>
+                        <h5>@Localizer.TextIgnoreCase("Mr. Tech Lead")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("Platform Architect")</span> @* Placeholder Title *@
                     </div>
                     <div class="team-text text-center bg-white p-4">
-                        <h5>Full Name</h5>
-                        <p>Designation</p>
+                        <h5>@Localizer.TextIgnoreCase("Mr. Tech Lead")</h5>
+                        <p>@Localizer.TextIgnoreCase("Ensures the smooth operation and development of the platform.")</p> @* Placeholder Desc *@
                         <div class="d-flex justify-content-center">
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-twitter">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-facebook-f">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-youtube">
-                                </i
-                                >
-                            </a>
-                            <a class="btn btn-square btn-light m-1" href="">
-                                <i class="fab fa-linkedin-in">
-                                </i
-                                >
-                            </a>
+                            <a class="btn btn-square btn-light m-1" href="#"><i
+                                    class="fab fa-linkedin-in"></i></a> @* Example Link *@
                         </div>
                     </div>
                 </div>
@@ -646,7 +497,7 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto" style="max-width: 500px">
-            <h1 class="display-6 mb-5">What They Say About Our Insurance</h1>
+            <h1 class="display-6 mb-5">@Localizer.TextIgnoreCase("What Our Users Say")</h1> @* Changed Title *@
         </div>
         <div class="row g-5">
             <div class="col-lg-3 d-none d-lg-block">
@@ -670,41 +521,35 @@
                     <div class="testimonial-item text-center">
                         <img
                             class="img-fluid rounded mx-auto mb-4"
-                            src="img/testimonial-1.jpg"
+                            src="img/testimonial-1.jpg" @* Keep placeholder image *@
                             alt=""/>
                         <p class="fs-5">
-                            Dolores sed duo clita tempor justo dolor et stet lorem kasd
-                            labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
-                            et labore et tempor diam tempor erat.
+                            @Localizer.TextIgnoreCase("This platform gave me the clarity I needed to switch careers confidently. The AI analysis was surprisingly accurate!")
                         </p>
-                        <h5>Client Name</h5>
-                        <span>Profession</span>
+                        <h5>@Localizer.TextIgnoreCase("User A")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("Software Developer")</span> @* Placeholder Profession *@
                     </div>
                     <div class="testimonial-item text-center">
                         <img
                             class="img-fluid rounded mx-auto mb-4"
-                            src="img/testimonial-2.jpg"
+                            src="img/testimonial-2.jpg" @* Keep placeholder image *@
                             alt=""/>
                         <p class="fs-5">
-                            Dolores sed duo clita tempor justo dolor et stet lorem kasd
-                            labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
-                            et labore et tempor diam tempor erat.
+                            @Localizer.TextIgnoreCase("As a student, I was unsure about my major. The assessments helped me identify my strengths and choose a path I'm excited about.")
                         </p>
-                        <h5>Client Name</h5>
-                        <span>Profession</span>
+                        <h5>@Localizer.TextIgnoreCase("User B")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("University Student")</span> @* Placeholder Profession *@
                     </div>
                     <div class="testimonial-item text-center">
                         <img
                             class="img-fluid rounded mx-auto mb-4"
-                            src="img/testimonial-3.jpg"
+                            src="img/testimonial-3.jpg" @* Keep placeholder image *@
                             alt=""/>
                         <p class="fs-5">
-                            Dolores sed duo clita tempor justo dolor et stet lorem kasd
-                            labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy
-                            et labore et tempor diam tempor erat.
+                            @Localizer.TextIgnoreCase("The detailed reports provided actionable insights that helped me understand my potential and explore new opportunities.")
                         </p>
-                        <h5>Client Name</h5>
-                        <span>Profession</span>
+                        <h5>@Localizer.TextIgnoreCase("User C")</h5> @* Placeholder Name *@
+                        <span>@Localizer.TextIgnoreCase("Marketing Manager")</span> @* Placeholder Profession *@
                     </div>
                 </div>
             </div>

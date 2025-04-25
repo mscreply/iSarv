@@ -1,24 +1,25 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using iSarv.Areas.Identity.Data;
+using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account
 {
     [AllowAnonymous]
     public class PhoneRegisterModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly ILogger<PhoneRegisterModel> _logger;
+        private readonly ISmsService _smsService;
 
         public PhoneRegisterModel(
-            UserManager<ApplicationUser> userManager,
-            ILogger<PhoneRegisterModel> logger)
+            ApplicationUserManager userManager,
+            ILogger<PhoneRegisterModel> logger, ISmsService smsService)
         {
             _userManager = userManager;
             _logger = logger;
+            _smsService = smsService;
         }
 
         [BindProperty] public InputModel Input { get; set; }
@@ -59,6 +60,7 @@ namespace iSarv.Areas.Identity.Pages.Account
 
                 var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
                 // send the code by SMS
+                _smsService.SendSms($"کد تایید شما در آی‌سرو: {code}", Input.PhoneNumber);
                 Console.WriteLine(code);
                 return RedirectToPage("PhoneNumberConfirmation",
                     new { phoneNumber = Input.PhoneNumber, returnUrl = returnUrl });

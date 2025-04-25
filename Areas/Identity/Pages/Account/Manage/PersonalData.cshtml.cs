@@ -1,5 +1,4 @@
-using iSarv.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
+using iSarv.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,11 +6,11 @@ namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
     public class PersonalDataModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly ILogger<PersonalDataModel> _logger;
 
         public PersonalDataModel(
-            UserManager<ApplicationUser> userManager,
+            ApplicationUserManager userManager,
             ILogger<PersonalDataModel> logger)
         {
             _userManager = userManager;

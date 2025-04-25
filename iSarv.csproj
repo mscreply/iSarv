@@ -4,6 +4,8 @@
         <TargetFramework>net8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+		<SatelliteResourceLanguages>fa</SatelliteResourceLanguages>
     </PropertyGroup>
 
     <ItemGroup>
@@ -18,6 +20,11 @@
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+      <PackageReference Include="RestSharp" Version="112.1.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Areas\User\" />
     </ItemGroup>
 
 </Project>

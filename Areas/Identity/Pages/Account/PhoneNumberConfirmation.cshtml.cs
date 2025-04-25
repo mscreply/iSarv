@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using iSarv.Areas.Identity.Data;
 using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account
@@ -12,12 +11,14 @@ namespace iSarv.Areas.Identity.Pages.Account
     public class PhoneNumberConfirmationModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
+        private ISmsService _smsService;
 
-        public PhoneNumberConfirmationModel(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager, IEmailService Service)
+        public PhoneNumberConfirmationModel(SignInManager<ApplicationUser> signInManager, ApplicationUserManager userManager, IEmailService Service, ISmsService smsService)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _smsService = smsService;
         }
 
         public string PhoneNumber { get; set; }
@@ -68,7 +69,7 @@ namespace iSarv.Areas.Identity.Pages.Account
                 var user = phoneNumber != null ? await _userManager.FindByNameAsync(phoneNumber) : null;
                 if (user == null)
                     return RedirectToPage("PhoneRegister", new { returnUrl = returnUrl });
-                var result = await _userManager.VerifyChangePhoneNumberTokenAsync(user, Input.Token, phoneNumber);
+                var result = await _userManager.ConfirmPhoneNumberAsync(user, Input.Token);
                 if (result)
                 {
                     await _userManager.RemovePasswordAsync(user);
@@ -90,6 +91,7 @@ namespace iSarv.Areas.Identity.Pages.Account
             returnUrl ??= "~/";
             var user = await _userManager.FindByNameAsync(phoneNumber);
             var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
+            _smsService.SendSms($"کد تایید شما در آی‌سرو: {code}", user.PhoneNumber);
             // send the code by SMS
             Console.WriteLine(code);
             return RedirectToPage("PhoneNumberConfirmation",

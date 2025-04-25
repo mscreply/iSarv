@@ -1,5 +1,4 @@
-﻿using iSarv.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Data
 {
@@ -9,8 +8,8 @@ namespace iSarv.Data
             serviceProvider, IConfiguration configuration)
         {
             serviceProvider = serviceProvider.CreateScope().ServiceProvider;
-            UserManager<ApplicationUser> userManager =
-                serviceProvider.GetRequiredService<UserManager<ApplicationUser>>();
+            ApplicationUserManager userManager =
+                serviceProvider.GetRequiredService<ApplicationUserManager>();
             RoleManager<IdentityRole> roleManager =
                 serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
             string username = configuration["AdminUser:UserName"] ?? "09377899377";
@@ -40,11 +39,13 @@ namespace iSarv.Data
 
                 var result = await userManager
                     .CreateAsync(user, password);
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(user, "Admin");
-                    await userManager.AddToRoleAsync(user, "Administrator");
-                }
+            }
+
+            var admin = await userManager.FindByNameAsync(username);
+            if (admin != null)
+            {
+                await userManager.AddToRoleAsync(admin, "Admin");
+                await userManager.AddToRoleAsync(admin, "Administrator");
             }
         }
     }

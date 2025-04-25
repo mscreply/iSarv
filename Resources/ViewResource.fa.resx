@@ -156,9 +156,6 @@
     <data name="To" xml:space="preserve">
         <value>گیرنده</value>
     </data>
-    <data name="Subject" xml:space="preserve">
-        <value>موضوع</value>
-    </data>
     <data name="Field" xml:space="preserve">
         <value>فیلد تخصصی</value>
     </data>
@@ -2190,4 +2187,307 @@
     <data name="Verification Code" xml:space="preserve">
         <value>کد تایید</value>
     </data>
+    <data name="Phone Register" xml:space="preserve">
+        <value>ثبت‌نام با موبایل</value>
+    </data>
+    <data name="Phone confirmation" xml:space="preserve">
+        <value>تایید موبایل</value>
+    </data>
+    <data name="Discover Your Career Aptitude" xml:space="preserve">
+        <value>استعداد شغلی خود را کشف کنید</value>
+    </data>
+    <data name="Find your ideal career path by taking validated psychological tests and AI analysis." xml:space="preserve">
+        <value>با انجام تست‌های روانشناسی معتبر و تحلیل هوش مصنوعی، مسیر شغلی ایده‌آل خود را بیابید.</value>
+    </data>
+    <data name="Start Tests" xml:space="preserve">
+        <value>شروع تست‌ها</value>
+    </data>
+    <data name="Build Your Career Future Intelligently" xml:space="preserve">
+        <value>آینده شغلی خود را هوشمندانه بسازید</value>
+    </data>
+    <data name="Accurate and personalized analysis of test results using advanced artificial intelligence." xml:space="preserve">
+        <value>تحلیل دقیق و شخصی‌سازی شده نتایج تست‌ها به کمک هوش مصنوعی پیشرفته.</value>
+    </data>
+    <data name="Learn More" xml:space="preserve">
+        <value>بیشتر بدانید</value>
+    </data>
+    <data name="Understand Your Strengths for the Right Career" xml:space="preserve">
+        <value>استعدادهای خود را برای انتخاب شغل مناسب بشناسید</value>
+    </data>
+    <data name="Our platform uses scientifically validated tests and AI to provide deep insights into your professional potential." xml:space="preserve">
+        <value>پلتفرم ما از تست‌های علمی و هوش مصنوعی برای ارائه دیدگاه‌های عمیق در مورد پتانسیل حرفه‌ای شما استفاده می‌کند.</value>
+    </data>
+    <data name="Validated Psychometric Tests" xml:space="preserve">
+        <value>تست‌های روان‌سنجی معتبر</value>
+    </data>
+    <data name="AI-Powered Analysis" xml:space="preserve">
+        <value>تحلیل مبتنی بر هوش مصنوعی</value>
+    </data>
+    <data name="Gain clarity on your skills, personality traits, and interests to make informed decisions about your career path. Our AI analyzes your results to suggest suitable job roles and industries." xml:space="preserve">
+        <value>مهارت‌ها، ویژگی‌های شخصیتی و علایق خود را بشناسید تا بتوانید تصمیمات آگاهانه‌ای در مورد مسیر شغلی خود بگیرید. هوش مصنوعی ما نتایج شما را تحلیل می‌کند تا نقش‌ها و صنایع شغلی مناسب را پیشنهاد دهد.</value>
+    </data>
+    <data name="Contact Us for More Info" xml:space="preserve">
+        <value>برای اطلاعات بیشتر با ما تماس بگیرید</value>
+    </data>
+    <data name="Insights for Your Career Journey" xml:space="preserve">
+        <value>بینش‌هایی برای سفر شغلی شما</value>
+    </data>
+    <data name="Whether you are a student, a recent graduate, or a professional seeking change, our assessments provide valuable guidance for your next steps." xml:space="preserve">
+        <value>چه دانشجو باشید، چه فارغ‌التحصیل جدید یا یک متخصص به دنبال تغییر، ارزیابی‌های ما راهنمایی‌های ارزشمندی برای گام‌های بعدی شما ارائه می‌دهند.</value>
+    </data>
+    <data name="Discover Features" xml:space="preserve">
+        <value>کشف ویژگی‌ها</value>
+    </data>
+    <data name="Tests Completed" xml:space="preserve">
+        <value>تست‌های انجام‌شده</value>
+    </data>
+    <data name="User Satisfaction Rate" xml:space="preserve">
+        <value>نرخ رضایت کاربران</value>
+    </data>
+    <data name="Different Assessment Types" xml:space="preserve">
+        <value>انواع مختلف ارزیابی</value>
+    </data>
+    <data name="AI Analysis Models" xml:space="preserve">
+        <value>مدل‌های تحلیل هوش مصنوعی</value>
+    </data>
+    <data name="Key Features of Our Platform" xml:space="preserve">
+        <value>ویژگی‌های کلیدی پلتفرم ما</value>
+    </data>
+    <data name="We offer a comprehensive suite of tools and analyses designed to provide clear, actionable insights for your career development." xml:space="preserve">
+        <value>ما مجموعه‌ای جامع از ابزارها و تحلیل‌ها را ارائه می‌دهیم که برای ارائه بینش‌های واضح و عملی برای توسعه شغلی شما طراحی شده‌اند.</value>
+    </data>
+    <data name="Diverse Tests" xml:space="preserve">
+        <value>تست‌های متنوع</value>
+    </data>
+    <data name="Personalized Reports" xml:space="preserve">
+        <value>گزارش‌های شخصی‌سازی‌شده</value>
+    </data>
+    <data name="Career Suggestions" xml:space="preserve">
+        <value>پیشنهادات شغلی</value>
+    </data>
+    <data name="Our Assessment Services" xml:space="preserve">
+        <value>خدمات ارزیابی ما</value>
+    </data>
+    <data name="Personality Assessment" xml:space="preserve">
+        <value>ارزیابی شخصیت</value>
+    </data>
+    <data name="Understand your core personality traits and how they align with different work environments." xml:space="preserve">
+        <value>ویژگی‌های اصلی شخصیتی خود و نحوه همسویی آن‌ها با محیط‌های کاری مختلف را درک کنید.</value>
+    </data>
+    <data name="Take Test" xml:space="preserve">
+        <value>انجام تست</value>
+    </data>
+    <data name="Skills &amp; Aptitude Test" xml:space="preserve">
+        <value>تست مهارت‌ها و استعداد</value>
+    </data>
+    <data name="Measure your cognitive abilities and specific skills relevant to various job roles." xml:space="preserve">
+        <value>توانایی‌های شناختی و مهارت‌های خاص خود را که مربوط به نقش‌های شغلی مختلف هستند، اندازه‌گیری کنید.</value>
+    </data>
+    <data name="AI Career Matching" xml:space="preserve">
+        <value>تطبیق شغلی با هوش مصنوعی</value>
+    </data>
+    <data name="Receive personalized career suggestions based on your combined test results analyzed by AI." xml:space="preserve">
+        <value>بر اساس نتایج ترکیبی تست‌های خود که توسط هوش مصنوعی تحلیل شده‌اند، پیشنهادات شغلی شخصی‌سازی‌شده دریافت کنید.</value>
+    </data>
+    <data name="View Results" xml:space="preserve">
+        <value>مشاهده نتایج</value>
+    </data>
+    <data name="Ready to Start Your Career Discovery?" xml:space="preserve">
+        <value>آماده شروع کشف مسیر شغلی خود هستید؟</value>
+    </data>
+    <data name="Take the first step towards a fulfilling career. Register or log in to access our assessments. If you have questions, feel free to reach out using the form." xml:space="preserve">
+        <value>اولین قدم را به سوی یک شغل رضایت‌بخش بردارید. ثبت‌نام کنید یا وارد شوید تا به ارزیابی‌های ما دسترسی پیدا کنید. اگر سوالی دارید، از طریق فرم با ما تماس بگیرید.</value>
+    </data>
+    <data name="Your Name" xml:space="preserve">
+        <value>نام شما</value>
+    </data>
+    <data name="Your Email" xml:space="preserve">
+        <value>ایمیل شما</value>
+    </data>
+    <data name="Your Mobile" xml:space="preserve">
+        <value>شماره موبایل شما</value>
+    </data>
+    <data name="Subject" xml:space="preserve">
+        <value>موضوع</value>
+    </data>
+    <data name="Send Message" xml:space="preserve">
+        <value>ارسال پیام</value>
+    </data>
+    <data name="Meet Our Experts" xml:space="preserve">
+        <value>با متخصصان ما آشنا شوید</value>
+    </data>
+    <data name="Dr. Career Advisor" xml:space="preserve">
+        <value>دکتر مشاور شغلی</value>
+    </data>
+    <data name="Lead Psychologist" xml:space="preserve">
+        <value>روانشناس ارشد</value>
+    </data>
+    <data name="Expert in psychometric assessments and career counseling." xml:space="preserve">
+        <value>متخصص در ارزیابی‌های روان‌سنجی و مشاوره شغلی.</value>
+    </data>
+    <data name="Prof. AI Specialist" xml:space="preserve">
+        <value>پروفسور متخصص هوش مصنوعی</value>
+    </data>
+    <data name="AI &amp; Data Science Lead" xml:space="preserve">
+        <value>رهبر هوش مصنوعی و علم داده</value>
+    </data>
+    <data name="Specializes in AI algorithms for data analysis and prediction." xml:space="preserve">
+        <value>متخصص در الگوریتم‌های هوش مصنوعی برای تحلیل داده و پیش‌بینی.</value>
+    </data>
+    <data name="Ms. Industry Analyst" xml:space="preserve">
+        <value>خانم تحلیلگر صنعت</value>
+    </data>
+    <data name="Market Trends Expert" xml:space="preserve">
+        <value>کارشناس روندهای بازار</value>
+    </data>
+    <data name="Provides insights into current job market demands and trends." xml:space="preserve">
+        <value>ارائه دهنده بینش در مورد تقاضاها و روندهای فعلی بازار کار.</value>
+    </data>
+    <data name="Mr. Tech Lead" xml:space="preserve">
+        <value>آقای رهبر فنی</value>
+    </data>
+    <data name="Platform Architect" xml:space="preserve">
+        <value>معمار پلتفرم</value>
+    </data>
+    <data name="Ensures the smooth operation and development of the platform." xml:space="preserve">
+        <value>تضمین عملکرد روان و توسعه پلتفرم.</value>
+    </data>
+    <data name="What Our Users Say" xml:space="preserve">
+        <value>نظر کاربران ما</value>
+    </data>
+    <data name="This platform gave me the clarity I needed to switch careers confidently. The AI analysis was surprisingly accurate!" xml:space="preserve">
+        <value>این پلتفرم به من وضوح لازم برای تغییر شغل با اطمینان را داد. تحلیل هوش مصنوعی به طرز شگفت انگیزی دقیق بود!</value>
+    </data>
+    <data name="User A" xml:space="preserve">
+        <value>کاربر الف</value>
+    </data>
+    <data name="Software Developer" xml:space="preserve">
+        <value>توسعه‌دهنده نرم‌افزار</value>
+    </data>
+    <data name="As a student, I was unsure about my major. The assessments helped me identify my strengths and choose a path I'm excited about." xml:space="preserve">
+        <value>من به عنوان یک دانشجو، در مورد رشته تحصیلی خود مطمئن نبودم. ارزیابی‌ها به من کمک کردند تا نقاط قوت خود را شناسایی کنم و مسیری را انتخاب کنم که از آن هیجان‌زده هستم.</value>
+    </data>
+    <data name="User B" xml:space="preserve">
+        <value>کاربر ب</value>
+    </data>
+    <data name="University Student" xml:space="preserve">
+        <value>دانشجوی دانشگاه</value>
+    </data>
+    <data name="The detailed reports provided actionable insights that helped me understand my potential and explore new opportunities." xml:space="preserve">
+        <value>گزارش‌های دقیق بینش‌های عملی ارائه دادند که به من کمک کردند پتانسیل خود را درک کنم و فرصت‌های جدید را کشف کنم.</value>
+    </data>
+    <data name="User C" xml:space="preserve">
+        <value>کاربر ج</value>
+    </data>
+    <data name="Marketing Manager" xml:space="preserve">
+        <value>مدیر بازاریابی</value>
+    </data>
+    <data name="AI Analysis" xml:space="preserve">
+        <value>تحلیل با هوش مصنوعی</value>
+    </data>    
+    <data name="Contact Support" xml:space="preserve">
+        <value>با پشتیبانی تماس بگیرید</value>
+    </data>
+    <data name="About Us" xml:space="preserve">
+        <value>درباره ما</value>
+    </data>
+    <data name="Our Services" xml:space="preserve">
+        <value>خدمات ما</value>
+    </data>
+    <data name="Full Name" xml:space="preserve">
+        <value>نام کامل</value>
+    </data>
+    <data name="Enter Full Name" xml:space="preserve">
+        <value>نام کامل را وارد کنید</value>
+    </data>
+    <data name="Date of Birth" xml:space="preserve">
+        <value>تاریخ تولد</value>
+    </data>
+    <data name="Enter Date of Birth" xml:space="preserve">
+        <value>تاریخ تولد را وارد کنید</value>
+    </data>
+    <data name="Gender" xml:space="preserve">
+        <value>جنسیت</value>
+    </data>
+    <data name="Select Gender" xml:space="preserve">
+        <value>جنسیت را انتخاب کنید</value>
+    </data>
+    <data name="Address" xml:space="preserve">
+        <value>آدرس</value>
+    </data>
+    <data name="Enter Address" xml:space="preserve">
+        <value>آدرس را وارد کنید</value>
+    </data>
+    <data name="Biography" xml:space="preserve">
+        <value>بیوگرافی</value>
+    </data>
+    <data name="Enter Biography" xml:space="preserve">
+        <value>بیوگرافی را وارد کنید</value>
+    </data>
+    <data name="Is Active" xml:space="preserve">
+        <value>فعال است</value>
+    </data>
+    <data name="Created Date" xml:space="preserve">
+        <value>تاریخ ایجاد</value>
+    </data>
+    <data name="Enter Created Date" xml:space="preserve">
+        <value>تاریخ ایجاد را وارد کنید</value>
+    </data>
+    <data name="Last Login Date" xml:space="preserve">
+        <value>تاریخ آخرین ورود</value>
+    </data>
+    <data name="Enter Last Login Date" xml:space="preserve">
+        <value>تاریخ آخرین ورود را وارد کنید</value>
+    </data>
+    <data name="Occupation" xml:space="preserve">
+        <value>شغل</value>
+    </data>
+    <data name="Enter Occupation" xml:space="preserve">
+        <value>شغل را وارد کنید</value>
+    </data>
+    <data name="Field of Study" xml:space="preserve">
+        <value>رشته تحصیلی</value>
+    </data>
+    <data name="Enter Field of Study" xml:space="preserve">
+        <value>رشته تحصیلی را وارد کنید</value>
+    </data>
+    <data name="University" xml:space="preserve">
+        <value>دانشگاه</value>
+    </data>
+    <data name="Enter University" xml:space="preserve">
+        <value>دانشگاه را وارد کنید</value>
+    </data>
+    <data name="Empowering individuals to make informed career decisions through AI-driven insights and personalized guidance." xml:space="preserve">
+        <value>توانمندسازی افراد برای تصمیم‌گیری آگاهانه شغلی از طریق بینش‌های مبتنی بر هوش مصنوعی و راهنمایی شخصی‌سازی‌شده.</value>
+    </data>
+    <data name="Quick Links" xml:space="preserve">
+        <value>لینک‌های سریع</value>
+    </data>
+    <data name="Contact Us" xml:space="preserve">
+        <value>تماس با ما</value>
+    </data>
+    <data name="Terms &amp; Condition" xml:space="preserve">
+        <value>شرایط و ضوابط</value>
+    </data>
+    <data name="Support" xml:space="preserve">
+        <value>پشتیبانی</value>
+    </data>
+    <data name="Newsletter" xml:space="preserve">
+        <value>خبرنامه</value>
+    </data>
+    <data name="Subscribe to our newsletter for the latest updates and insights." xml:space="preserve">
+        <value>در خبرنامه ما مشترک شوید تا از آخرین به‌روزرسانی‌ها و بینش‌ها مطلع شوید.</value>
+    </data>
+    <data name="Sign Up" xml:space="preserve">
+        <value>ثبت‌نام</value>
+    </data>    
+    <data name="Years" xml:space="preserve">
+        <value>سال</value>
+    </data>    
+    <data name="Experience" xml:space="preserve">
+        <value>تجربه</value>
+    </data>    
+    <data name="Sat - Wed : 09 AM - 09 PM" xml:space="preserve">
+        <value>شنبه - چهارشنبه: ۰۹ صبح - ۰۹ شب</value>
+    </data>    
 </root>

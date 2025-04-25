@@ -1,12 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
-using iSarv.Areas.Identity.Data;
 using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account
@@ -14,10 +12,10 @@ namespace iSarv.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ForgotPasswordModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly IEmailService _emailService;
 
-        public ForgotPasswordModel(UserManager<ApplicationUser> userManager, IEmailService emailService)
+        public ForgotPasswordModel(ApplicationUserManager userManager, IEmailService emailService)
         {
             _userManager = userManager;
             _emailService = emailService;

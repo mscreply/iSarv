@@ -1,5 +1,10 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=iSarv_002FResources_002FViewResource/@EntryIndexedValue">False</s:Boolean>
+	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AExceptionDispatchInfo_002Ecs_002Fl_003AC_0021_003FUsers_003FASUS_003FAppData_003FLocal_003FSymbols_003Fsrc_003Fdotnet_003Fruntime_003F1584e493603cfc4e9b36b77d6d4afe97de6363f9_003Fsrc_003Flibraries_003FSystem_002EPrivate_002ECoreLib_003Fsrc_003FSystem_003FRuntime_003FExceptionServices_003FExceptionDispatchInfo_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
+	
+	
+	<s:String x:Key="/Default/Monitoring/StartMode/@EntryValue">Disabled</s:String>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=iSarv_002FResources_002FViewResource/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=Miscellaneous_0020Files_002FViewResource/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean></wpf:ResourceDictionary>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/ShowOnlyErrors/@EntryValue">False</s:Boolean>
+	</wpf:ResourceDictionary>

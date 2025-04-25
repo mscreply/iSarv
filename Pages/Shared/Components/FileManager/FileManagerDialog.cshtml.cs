@@ -252,13 +252,13 @@ namespace iSarv.Pages.Shared.Components.FileManager
 
     public class ClsFileItem
     {
-        public string Name;
+        public string Name = "";
         public int ColNum;       // list is 6 columns wide, which one is ?
         public bool IsFolder;
         public bool IsFolderUp;
-        public string Path;
-        public string ClassType;
-        public string ThumbImage;
+        public string Path = "";
+        public string ClassType = "";
+        public string ThumbImage = "";
     }
 
 }

@@ -1,5 +1,4 @@
-using iSarv.Areas.Identity.Data;
-using Microsoft.AspNetCore.Identity;
+using iSarv.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -7,11 +6,11 @@ namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
     public class Disable2faModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly ILogger<Disable2faModel> _logger;
 
         public Disable2faModel(
-            UserManager<ApplicationUser> userManager,
+            ApplicationUserManager userManager,
             ILogger<Disable2faModel> logger)
         {
             _userManager = userManager;

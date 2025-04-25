@@ -7,4 +7,8 @@ riderModule.iml
 /.vs/
 iSarv/.vs/
 iSarv/.vs
+.vscode/
+/.vscode/
+iSarv/.vscode/
+iSarv/.vscode
 node_modules/

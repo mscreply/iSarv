@@ -19,9 +19,9 @@ namespace iSarv.Data.CultureModels
             return mvc.AddMvcOptions(o =>
             {
                 var type = typeof(ViewResource);
-                var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName);
+                var assemblyName = new AssemblyName(type.GetTypeInfo().Assembly.FullName!);
                 var factory = services.BuildServiceProvider().GetService<IStringLocalizerFactory>();
-                var localizer = factory.Create("MyDataAnnotations", assemblyName.Name);
+                var localizer = factory!.Create("MyDataAnnotations", assemblyName.Name!);
 
                 o.ModelBindingMessageProvider
                     .SetAttemptedValueIsInvalidAccessor((x, y) => localizer["'{0}' is not a valid value for '{1}'", x, y]);

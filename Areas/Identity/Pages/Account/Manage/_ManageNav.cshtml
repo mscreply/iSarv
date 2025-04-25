@@ -1,6 +1,4 @@
-@using iSarv.Areas.Identity.Data
 @using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Manage.Internal
-@using Microsoft.AspNetCore.Mvc.TagHelpers
 @inject SignInManager<ApplicationUser> SignInManager
 @{
     var hasExternalLogins = (await SignInManager.GetExternalAuthenticationSchemesAsync()).Any();

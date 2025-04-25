@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.ComponentModel.DataAnnotations;
-using iSarv.Areas.Identity.Data;
+using iSarv.Data;
 using SignInResult = Microsoft.AspNetCore.Identity.SignInResult;
 
 namespace iSarv.Areas.Identity.Pages.Account
@@ -13,14 +13,14 @@ namespace iSarv.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class LoginModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
         private readonly CultureLocalizer _localizer;
 
         public LoginModel(SignInManager<ApplicationUser> signInManager,
             ILogger<LoginModel> logger,
-            UserManager<ApplicationUser> userManager, CultureLocalizer localizer)
+            ApplicationUserManager userManager, CultureLocalizer localizer)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -78,7 +78,7 @@ namespace iSarv.Areas.Identity.Pages.Account
             {
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var user = Input.Username.Contains('@') ? await _userManager.FindByEmailAsync(Input.Username) : await _userManager.FindByNameAsync(Input.Username);
+                var user = Input.Username.Contains('@') ? await _userManager.FindByEmailAsync(Input.Username) : await _userManager.FindByPhoneNumberAsync(Input.Username);
                 if (user == null)
                 {
                     _logger.LogError("User doesn't exist");
@@ -93,7 +93,7 @@ namespace iSarv.Areas.Identity.Pages.Account
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in");
-                    return LocalRedirect("/Identity/Account/Manage/");
+                    return LocalRedirect(returnUrl ?? "/Identity/Account/Manage/");
                 }
                 if (result.RequiresTwoFactor)
                 {

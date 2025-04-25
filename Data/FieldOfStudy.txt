@@ -1,0 +1,95 @@
+Computer Science|علوم کامپیوتر
+Electrical Engineering|مهندسی برق
+Mechanical Engineering|مهندسی مکانیک
+Civil Engineering|مهندسی عمران
+Chemical Engineering|مهندسی شیمی
+Mathematics|ریاضیات
+Physics|فیزیک
+Biology|زیست شناسی
+Chemistry|شیمی
+Economics|اقتصاد
+Business Administration|مدیریت بازرگانی
+Accounting|حسابداری
+Marketing|بازاریابی
+Finance|امور مالی
+History|تاریخ
+Political Science|علوم سیاسی
+Sociology|جامعه شناسی
+Psychology|روانشناسی
+English Literature|ادبیات انگلیسی
+Philosophy|فلسفه
+Aerospace Engineering|مهندسی هوافضا
+Agricultural Engineering|مهندسی کشاورزی
+Anthropology|مردم شناسی
+Archaeology|باستان شناسی
+Architecture|معماری
+Art History|تاریخ هنر
+Astronomy|ستاره شناسی
+Biochemistry|بیوشیمی
+Bioinformatics|بیوانفورماتیک
+Biomedical Engineering|مهندسی پزشکی
+Botany|گیاه شناسی
+Cell Biology|زیست شناسی سلولی
+Cognitive Science|علوم شناختی
+Communications|ارتباطات
+Criminology|جرم شناسی
+Culinary Arts|هنرهای آشپزی
+Dance|رقص
+Data Science|علم داده
+Dentistry|دندانپزشکی
+Drama|نمایش
+Early Childhood Education|آموزش در دوران کودکی
+Ecology|اکولوژی
+Environmental Science|علوم محیطی
+Epidemiology|اپیدمیولوژی
+Film Studies|مطالعات فیلم
+Food Science|علوم غذایی
+Forestry|جنگلداری
+Gender Studies|مطالعات جنسیت
+Genetics|ژنتیک
+Geography|جغرافیا
+Geology|زمین شناسی
+Graphic Design|طراحی گرافیک
+Health Sciences|علوم بهداشتی
+Hospitality Management|مدیریت هتلداری
+Human Resources|منابع انسانی
+Industrial Engineering|مهندسی صنایع
+Information Technology|فناوری اطلاعات
+International Relations|روابط بین الملل
+Journalism|روزنامه نگاری
+Law|حقوق
+Library Science|کتابداری
+Linguistics|زبان شناسی
+Management|مدیریت
+Marine Biology|زیست شناسی دریایی
+Materials Science|علم مواد
+Medical Technology|تکنولوژی پزشکی
+Medicine|پزشکی
+Microbiology|میکروبیولوژی
+Molecular Biology|زیست شناسی مولکولی
+Music|موسیقی
+Nanotechnology|فناوری نانو
+Nursing|پرستاری
+Nutrition|تغذیه
+Occupational Therapy|کاردرمانی
+Oceanography|اقیانوس شناسی
+Optometry|بینایی سنجی
+Pharmacy|داروسازی
+Photography|عکاسی
+Physical Therapy|فیزیوتراپی
+Physiology|فیزیولوژی
+Plant Science|علوم گیاهی
+Public Health|بهداشت عمومی
+Radiology|رادیولوژی
+Religious Studies|مطالعات دینی
+Respiratory Therapy|تراپی تنفسی
+Social Work|مددکاری اجتماعی
+Software Engineering|مهندسی نرم افزار
+Speech Therapy|گفتار درمانی
+Statistics|آمار
+Theology|الهیات
+Tourism Management|مدیریت گردشگری
+Urban Planning|برنامه ریزی شهری
+Veterinary Medicine|دامپزشکی
+Zoology|جانورشناسی
+Other|سایر

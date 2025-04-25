@@ -1,13 +1,11 @@
 using iSarv.Data.CultureModels;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
-using iSarv.Areas.Identity.Data;
 using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account
@@ -15,11 +13,11 @@ namespace iSarv.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class ResendEmailConfirmationModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly IEmailService _emailService;
         private readonly CultureLocalizer _localizer;
 
-        public ResendEmailConfirmationModel(UserManager<ApplicationUser> userManager, IEmailService emailService,
+        public ResendEmailConfirmationModel(ApplicationUserManager userManager, IEmailService emailService,
             CultureLocalizer localizer)
         {
             _userManager = userManager;

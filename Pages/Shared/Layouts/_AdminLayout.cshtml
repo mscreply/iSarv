@@ -1,5 +1,4 @@
-﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
-@using System.Globalization
+﻿@using System.Globalization
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -11,10 +10,12 @@
     <link href="/favicon.ico" rel="icon"/>
 
     <partial name="Partials/_CSSPartial"/>
+    @*
     @{
         var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
         <link rel="stylesheet" href="/lib/mdb/dist/css/mdb@(lang == "en" ? "" : ".rtl").min.css"/>
     }
+    *@
     <link rel="stylesheet" href="~/css/admin.css"/>
 </head>
 <body>
@@ -35,7 +36,7 @@
 
 
 <partial name="Partials/_JsPartial"/>
-<script src="~/lib/mdb/dist/js/mdb.umd.min.js"></script>
+@* <script src="~/lib/mdb/dist/js/mdb.umd.min.js"></script> *@
 
 @await RenderSectionAsync("Scripts", required: false)
 </body>

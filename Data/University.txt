@@ -1,0 +1,46 @@
+University of Tehran|دانشگاه تهران
+Sharif University of Technology|دانشگاه صنعتی شریف
+Amirkabir University of Technology|دانشگاه صنعتی امیرکبیر
+University of Isfahan|دانشگاه اصفهان
+Ferdowsi University of Mashhad|دانشگاه فردوسی مشهد
+Tarbiat Modares University|دانشگاه تربیت مدرس
+Shahid Beheshti University|دانشگاه شهید بهشتی
+Iran University of Science and Technology|دانشگاه علم و صنعت ایران
+Khajeh Nasir Toosi University of Technology|دانشگاه صنعتی خواجه نصیرالدین طوسی
+Shiraz University|دانشگاه شیراز
+Isfahan University of Technology|دانشگاه صنعتی اصفهان
+Allameh Tabataba'i University|دانشگاه علامه طباطaba'i
+Guilan University|دانشگاه گیلان
+Mazandaran University|دانشگاه مازندران
+Babol Noshirvani University of Technology|دانشگاه صنعتی نوشیروانی بابل
+Urmia University|دانشگاه ارومیه
+Tabriz University|دانشگاه تبریز
+Bu-Ali Sina University|دانشگاه بوعلی سینا
+Razi University|دانشگاه رازی
+Yazd University|دانشگاه یزد
+Kashan University|دانشگاه کاشان
+Semnan University|دانشگاه سمنان
+Shahrekord University|دانشگاه شهرکرد
+Zanjan University|دانشگاه زنجان
+Islamic Azad University|دانشگاه آزاد اسلامی
+Azarbaijan Shahid Madani University|دانشگاه شهید مدنی آذربایجان
+K. N. Toosi University of Technology, Gorgan Faculty of Engineering|دانشکده مهندسی گرگان دانشگاه صنعتی خواجه نصیرالدین طوسی
+University of Kurdistan|دانشگاه کردستان
+Lorestan University|دانشگاه لرستان
+Kermanshah University of Technology|دانشگاه صنعتی کرمانشاه
+Arak University|دانشگاه اراک
+Ardabil University of Medical Sciences|دانشگاه علوم پزشکی اردبیل
+Bojnord University|دانشگاه بجنورد
+Gonbad Kavous University|دانشگاه گنبد کاووس
+Hormozgan University|دانشگاه هرمزگان
+Ilam University|دانشگاه ایلام
+Jiroft University|دانشگاه جیرفت
+Kharazmi University|دانشگاه خوارزمی
+Yasouj University|دانشگاه یاسوج
+Vali-e-Asr University of Rafsanjan|دانشگاه ولی‌عصر رفسنجان
+Shahed University|دانشگاه شاهد
+Shahid Rajaee Teacher Training University|دانشگاه تربیت دبیر شهید رجایی
+Shiraz University of Technology|دانشگاه صنعتی شیراز
+Sistan and Baluchestan University|دانشگاه سیستان و بلوچستان
+یاسوج|دانشگاه علوم پزشکی یاسوج
+Other|سایر

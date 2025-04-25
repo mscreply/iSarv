@@ -24,7 +24,7 @@ namespace iSarv.Data.CultureModels
                     .RequestCultureProviders
                     .Where(x => x is CookieRequestCultureProvider)
                     .Cast<CookieRequestCultureProvider>()
-                    .FirstOrDefault();
+                    .FirstOrDefault()!;
         }
 
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)

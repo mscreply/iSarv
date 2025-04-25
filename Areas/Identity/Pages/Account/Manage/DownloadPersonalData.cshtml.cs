@@ -2,17 +2,17 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.Json;
-using iSarv.Areas.Identity.Data;
+using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
     public class DownloadPersonalDataModel : PageModel
     {
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly ILogger<DownloadPersonalDataModel> _logger;
 
         public DownloadPersonalDataModel(
-            UserManager<ApplicationUser> userManager,
+            ApplicationUserManager userManager,
             ILogger<DownloadPersonalDataModel> logger)
         {
             _userManager = userManager;

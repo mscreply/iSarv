@@ -1,0 +1,89 @@
+Software Engineer|مهندس نرم افزار
+Data Scientist|دانشمند داده
+Project Manager|مدیر پروژه
+Teacher|معلم
+Accountant|حسابدار
+Doctor|دکتر
+Nurse|پرستار
+Lawyer|وکیل
+Sales Representative|نماینده فروش
+Marketing Manager|مدیر بازاریابی
+Business Analyst|تحلیلگر کسب و کار
+Financial Analyst|تحلیلگر مالی
+Human Resources Manager|مدیر منابع انسانی
+Customer Service Representative|نماینده خدمات مشتری
+Administrative Assistant|دستیار اداری
+Electrician|برقکار
+Carpenter|نجار
+Plumber|لوله کش
+Mechanic|مکانیک
+Construction Worker|کارگر ساختمانی
+Chef|آشپز
+Web Developer|توسعه دهنده وب
+Graphic Designer|طراح گرافیک
+Musician|موسیقیدان
+Writer|نویسنده
+Actor|بازیگر
+Architect|معمار
+Athlete|ورزشکار
+Baker|نانوا
+Barista|باریستا
+Biologist|زیست شناس
+Bookkeeper|دفتردار
+Bus Driver|راننده اتوبوس
+Cashier|صندوقدار
+Chemist|شیمیدان
+Civil Engineer|مهندس عمران
+Cleaner|نظافتچی
+Computer Programmer|برنامه نویس کامپیوتر
+Consultant|مشاور
+Cook|آشپز
+Dancer|رقاص
+Dental Hygienist|بهداشت کار دهان و دندان
+Dentist|دندانپزشک
+Designer|طراح
+Dietitian|متخصص تغذیه
+Economist|اقتصاددان
+Editor|ویراستار
+Engineer|مهندس
+Farmer|کشاورز
+Firefighter|آتش نشان
+Flight Attendant|مهماندار هواپیما
+Gardener|باغبان
+Hairdresser|آرایشگر
+Historian|تاریخ شناس
+Illustrator|تصویرگر
+Insurance Agent|نماینده بیمه
+Interior Designer|طراح داخلی
+Interpreter|مترجم
+Journalist|روزنامه نگار
+Librarian|کتابدار
+Mail Carrier|نامه رسان
+Manager|مدیر
+Mathematician|ریاضیدان
+Model|مدل
+Optometrist|چشم پزشک
+Painter|نقاش
+Pharmacist|داروساز
+Photographer|عکاس
+Physician|پزشک
+Pilot|خلبان
+Police Officer|افسر پلیس
+Politician|سیاستمدار
+Professor|استاد دانشگاه
+Psychologist|روانشناس
+Real Estate Agent|مشاور املاک
+Receptionist|پذیرشگر
+Researcher|محقق
+Sales Manager|مدیر فروش
+Scientist|دانشمند
+Security Guard|نگهبان
+Social Worker|مددکار اجتماعی
+Statistician|آمارشناس
+Surgeon|جراح
+Therapist|درمانگر
+Translator|مترجم
+Travel Agent|نماینده آژانس مسافرتی
+Veterinarian|دامپزشک
+Welder|جوشکار
+Other|سایر

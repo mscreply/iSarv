@@ -1,0 +1,155 @@
+@page
+@using System.Globalization
+@model CreateModel
+
+@{
+    ViewData["Title"] = @Localizer.Text("Create User");
+    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+
+<div class="container">
+    <h2>@Localizer.Text("Create User")</h2>
+
+    <h4>@Localizer.Text("ApplicationUser")</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.Email" id="email" class="form-control" placeholder="@Localizer.Text("Email")"/>
+                    <label asp-for="ApplicationUser.Email">@Localizer.Text("Email")</label>
+                    <span asp-validation-for="ApplicationUser.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.PhoneNumber" id="phoneNumber" class="form-control" placeholder="@Localizer.Text("Phone Number")"/>
+                    <label asp-for="ApplicationUser.PhoneNumber">@Localizer.Text("Phone Number")</label>
+                    <span asp-validation-for="ApplicationUser.PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.FullName" id="fullName" class="form-control" placeholder="@Localizer.Text("Full Name")"/>
+                    <label asp-for="ApplicationUser.FullName">@Localizer.Text("Full Name")</label>
+                    <span asp-validation-for="ApplicationUser.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating input-group mb-3">
+                    <input asp-for="ApplicationUser.DateOfBirth" class="form-control" type="date" id="date-of-birth"/>
+                    <span class="input-group-text btn-j-calendar" calendar-for="date-of-birth"></span>
+                    <label asp-for="ApplicationUser.DateOfBirth" class="form-label"></label>
+                    <span asp-validation-for="ApplicationUser.DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select asp-for="ApplicationUser.Gender" id="gender" class="form-control">
+                        <option value="">@Localizer.Text("Select Gender")</option>
+                        <option value="Male">@Localizer.Text("Male")</option>
+                        <option value="Female">@Localizer.Text("Female")</option>
+                    </select>
+                    <label asp-for="ApplicationUser.Gender">@Localizer.Text("Gender")</label>
+                    <span asp-validation-for="ApplicationUser.Gender" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.Address" id="address" class="form-control" placeholder="@Localizer.Text("Address")"/>
+                    <label asp-for="ApplicationUser.Address">@Localizer.Text("Address")</label>
+                    <span asp-validation-for="ApplicationUser.Address" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <textarea asp-for="ApplicationUser.Bio" id="bio" class="form-control" placeholder="@Localizer.Text("Bio")"></textarea>
+                    <label asp-for="ApplicationUser.Bio">@Localizer.Text("Bio")</label>
+                    <span asp-validation-for="ApplicationUser.Bio" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select asp-for="ApplicationUser.Occupation" id="occupation" class="form-control">
+                        <option value="">@Localizer.Text("Select Occupation")</option>
+                        @foreach (var occupation in Model.OccupationOptions)
+                        {
+                            <option value="@occupation.Farsi">
+                                @if (lang == "fa")
+                                {
+                                    @occupation.Farsi
+                                }
+                                else
+                                {
+                                    @occupation.English
+                                }
+                            </option>
+                        }
+                    </select>
+                    <label asp-for="ApplicationUser.Occupation">@Localizer.Text("Occupation")</label>
+                    <span asp-validation-for="ApplicationUser.Occupation" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select asp-for="ApplicationUser.FieldOfStudy" id="fieldOfStudy" class="form-control">
+                        <option value="">@Localizer.Text("Select Field of Study")</option>
+                        @foreach (var fieldOfStudy in Model.FieldOfStudyOptions)
+                        {
+                            <option value="@fieldOfStudy.Farsi">
+                                @if (lang == "fa")
+                                {
+                                    @fieldOfStudy.Farsi
+                                }
+                                else
+                                {
+                                    @fieldOfStudy.English
+                                }
+                            </option>
+                        }
+                    </select>
+                    <label asp-for="ApplicationUser.FieldOfStudy">@Localizer.Text("Field of Study")</label>
+                    <span asp-validation-for="ApplicationUser.FieldOfStudy" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <select asp-for="ApplicationUser.University" id="university" class="form-control">
+                        <option value="">@Localizer.Text("Select University")</option>
+                        @foreach (var university in Model.UniversityOptions)
+                        {
+                            <option value="@university.Farsi">
+                                @if (lang == "fa")
+                                {
+                                    @university.Farsi
+                                }
+                                else
+                                {
+                                    @university.English
+                                }
+                            </option>
+                        }
+                    </select>
+                    <label asp-for="ApplicationUser.University">@Localizer.Text("University")</label>
+                    <span asp-validation-for="ApplicationUser.University" class="text-danger"></span>
+                </div>
+
+                 <div class="mb-3">
+                    <label class="form-label">@Localizer.Text("Roles")</label>
+                    @foreach (var role in Model.AvailableRoles)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="@role" id="@role" name="SelectedRoles">
+                            <label class="form-check-label" for="@role">
+                                @role
+                            </label>
+                        </div>
+                    }
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">@Localizer.Text("Create")</button>
+                    <a asp-page="./UserList" class="btn btn-secondary">@Localizer.Text("Back to List")</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptPartial"/>
+    <script src="/lib/jalali-date-picker/jalali-date-picker.js"></script>
+}

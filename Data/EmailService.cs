@@ -40,7 +40,7 @@ public class EmailService : IEmailService
             client.Dispose();
             return true;
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             // Exception Details
             return false;
@@ -66,7 +66,7 @@ public class EmailService : IEmailService
             await client.DisconnectAsync(true);
             client.Dispose();
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             // Exception Details
         }

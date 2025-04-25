@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.WebUtilities;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
-using iSarv.Areas.Identity.Data;
 using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account
@@ -16,12 +15,12 @@ namespace iSarv.Areas.Identity.Pages.Account
     public class EmailRegisterModel : PageModel
     {
         private readonly SignInManager<ApplicationUser> _signInManager;
-        private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ApplicationUserManager _userManager;
         private readonly ILogger<EmailRegisterModel> _logger;
         private readonly IEmailService _emailService;
 
         public EmailRegisterModel(
-            UserManager<ApplicationUser> userManager,
+            ApplicationUserManager userManager,
             SignInManager<ApplicationUser> signInManager,
             ILogger<EmailRegisterModel> logger,
             IEmailService emailService)

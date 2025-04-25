@@ -1,4 +1,4 @@
-﻿<!-- Navbar -->
+﻿﻿﻿﻿﻿﻿<!-- Navbar -->
 <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white position-sticky top-0">
     <!-- Container wrapper -->
     <div class="container-fluid">
@@ -9,7 +9,7 @@
         </button>
 
         <!-- Brand -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="/img/logo.png" height="25" alt="" loading="lazy"/>
         </a>
         <!-- Search form -->
@@ -28,7 +28,7 @@
                 <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#"
                    role="button" data-mdb-dropdown-init aria-expanded="false">
                     <i class="fas fa-bell"></i>
-                    <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                    <span class="badge rounded-pill position-absolute top-0 start-0 bg-danger">1</span>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
@@ -73,18 +73,20 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
                    role="button" data-mdb-dropdown-init aria-expanded="false">
-                    <img src="https://mdbootstrap.com/img/Photos/Avatars/img (31).jpg" class="rounded-circle" height="22"
-                         alt="" loading="lazy"/>
+                    <img src="/img/avatars/@(UserManager.GetUserId(User)).png" class="rounded-circle" height="22"
+                         alt="" loading="lazy" onerror="this.src='/img/avatars/0.png'"/>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="#">My profile</a>
+                        <a class="dropdown-item" href="/User/Edit/@(UserManager.GetUserId(User))">@Localizer.Text("My profile")</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="/Identity/Account/Manage/ChangePassword">@Localizer.Text("Change Password")</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="#">Logout</a>
+                        <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
+                            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">@Localizer.Text("Logout")</button>
+                        </form>
                     </li>
                 </ul>
             </li>
