@@ -1,0 +1,29 @@
+@page
+@model iSarv.Areas.Test.Pages.Neo.Question.CreateModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Create");
+}
+
+<h1>@Localizer.TextIgnoreCase("Create")</h1>
+
+<form method="post" class="needs-validation" novalidate>
+    <div class="form-floating mb-3">
+        <input asp-for="NeoTestQuestion.Statement" class="form-control"
+               placeholder="@Localizer.TextIgnoreCase("Statement")">
+        <label asp-for="NeoTestQuestion.Statement">@Localizer.TextIgnoreCase("Statement")</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="NeoTestQuestion.Facet" class="form-select" asp-items="Html.GetEnumSelectList<iSarv.Data.Tests.NeoFacets>()">
+            <option value="">@Localizer.TextIgnoreCase("Select Facet")</option>
+        </select>
+        <label asp-for="NeoTestQuestion.Facet">@Localizer.TextIgnoreCase("Facet")</label>
+    </div>
+    <div class="form-check mb-3">
+        <input asp-for="NeoTestQuestion.ScoreIsReversed" class="form-check-input" type="checkbox" id="scoreIsReversed">
+        <label asp-for="NeoTestQuestion.ScoreIsReversed"
+               class="form-check-label">@Localizer.TextIgnoreCase("Score Is Reversed")</label>
+    </div>
+    <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Cancel")</a>
+</form>

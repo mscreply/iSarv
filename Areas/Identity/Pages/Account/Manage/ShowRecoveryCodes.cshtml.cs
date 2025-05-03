@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class ShowRecoveryCodesModel : PageModel
     {
         [TempData]

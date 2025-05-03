@@ -9,15 +9,15 @@
 
 <div class="row">
     <div class="col-md-6">
-        <p>@Localizer.Text("Your account contains personal data that you have given us. This page allows you to download or delete that data.")</p>
+        <p>@Localizer.TextIgnoreCase("Your account contains personal data that you have given us. This page allows you to download or delete that data.")</p>
         <p>
-            <strong>@Localizer.Text("Deleting this data will permanently remove your account, and this cannot be recovered.")</strong>
+            <strong>@Localizer.TextIgnoreCase("Deleting this data will permanently remove your account, and this cannot be recovered.")</strong>
         </p>
         <form id="download-data" asp-page="DownloadPersonalData" method="post" class="form-outline mb-1">
-            <button class="btn btn-primary" type="submit">@Localizer.Text("Download")</button>
+            <button class="btn btn-primary" type="submit">@Localizer.TextIgnoreCase("Download")</button>
         </form>
         <p>
-            <a id="delete" asp-page="DeletePersonalData" class="btn btn-secondary">@Localizer.Text("Delete")</a>
+            <a id="delete" asp-page="DeletePersonalData" class="btn btn-secondary">@Localizer.TextIgnoreCase("Delete")</a>
         </p>
     </div>
 </div>

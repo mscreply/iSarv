@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Text.Json;
 using iSarv.Data;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class DownloadPersonalDataModel : PageModel
     {
         private readonly ApplicationUserManager _userManager;

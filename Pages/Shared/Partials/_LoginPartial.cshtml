@@ -11,17 +11,17 @@
         </li>
         <li class="nav-item">
             <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-                <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">@Localizer.Text("Logout")</button>
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">@Localizer.TextIgnoreCase("Logout")</button>
             </form>
         </li>
     }
     else
     {
         <li class="nav-item">
-            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/PhoneRegister">@Localizer.Text("Register")</a>
+            <a class="nav-link text-dark" id="register" asp-area="Identity" asp-page="/Account/PhoneRegister">@Localizer.TextIgnoreCase("Register")</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">@Localizer.Text("Login")</a>
+            <a class="nav-link text-dark" id="login" asp-area="Identity" asp-page="/Account/Login">@Localizer.TextIgnoreCase("Login")</a>
         </li>
     }
 </ul>

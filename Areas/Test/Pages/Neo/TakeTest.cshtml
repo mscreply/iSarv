@@ -1,0 +1,78 @@
+@page "{testId:int}"
+@model iSarv.Areas.Test.Pages.Neo.TakeTestModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Take Neo Test");
+}
+
+<h1>@Localizer.TextIgnoreCase("Take Neo Test")</h1>
+
+@if (Model.IsNotStarted)
+{
+    <div>@Localizer.TextIgnoreCase("Your Neo Test has not been started!")</div>
+}
+else if (Model.IsDoneOrExpired)
+{
+    <div>@Localizer.TextIgnoreCase("Your Neo Test has been completed or expired!")</div>
+}
+else
+{
+    <form method="post">
+        <div id="step-container">
+            <div class="step" id="step-1">
+                <p>@Localizer.TextIgnoreCase("Welcome to the Neo NEO Personality Test (NEO PI-R)!")</p>
+                <p>@Localizer.TextIgnoreCase("This questionnaire consists of 60 questions. Read each statement carefully and mark the answer that most closely matches your thoughts or feelings.")</p>
+                <p>@Localizer.TextIgnoreCase("Note that there is no right or wrong answer, so try to choose an answer that reflects your true feelings.")</p>
+                <p>@Localizer.TextIgnoreCase("Ensure you answer all questions before submitting.")</p>
+                <p>@Localizer.TextIgnoreCase("Click \"Next\" to begin.")</p>
+                <button class="btn btn-primary next-step" data-next="2">@Localizer.TextIgnoreCase("Next")</button>
+            </div>
+
+            @for (int i = 0; i < Model.Questions.Count; i++)
+            {
+                var question = Model.Questions[i];
+                <div class="step p-5" id="step-@(i + 2)" style="display: none;">
+                    <h3>@Localizer.TextIgnoreCase("Question") @question.Id</h3>
+                    <h3 class="mt-4">@Localizer.TextIgnoreCase(question.Statement)</h3>
+                    <div class="p-5">
+                        @for (int j = 0; j < 5; j++)
+                        {
+                            var value = question.ScoreIsReversed ? 4 - j : j;
+                            var labels = new[] { "Fully Agree", "Agree", "Neutral", "Disagree", "Fully Disagree" };
+                            <div class="form-check mb-2">
+                                <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]" value="@value" id="answers-@question.Id-@j" @(j == 2 ? "checked" : "")/>
+                                <label class="btn btn-outline-success w-50" for="answers-@question.Id-@j"> @Localizer.Text(labels[j])</label>
+                            </div>
+                        }
+                    </div>
+                    @if (i < Model.Questions.Count - 1)
+                    {
+                        <button class="btn btn-primary next-step" data-next="@(i + 3)">@Localizer.TextIgnoreCase("Next")</button>
+                    }
+                    else
+                    {
+                        <button class="btn btn-success" id="submit-test">@Localizer.TextIgnoreCase("Submit Test")</button>
+                    }
+                </div>
+            }
+        </div>
+    </form>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".next-step").on("click", function (e) {
+                e.preventDefault();
+                var nextStep = $(this).data("next");
+                $(".step").hide();
+                $("#step-" + nextStep).show();
+            });
+
+            $("#submit-test").on("click", function () {
+                alert("@Localizer.TextIgnoreCase("Test submitted successfully!")");
+                // Add form submission logic here
+            });
+        });
+    </script>
+}

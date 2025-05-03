@@ -1,7 +1,7 @@
 @page
 @model PhoneNumberConfirmationModel
 @{
-    ViewData["Title"] = @Localizer.Text("Phone confirmation");
+    ViewData["Title"] = @Localizer.TextIgnoreCase("Phone confirmation");
 }
 
 <form asp-route-returnUrl="@Model.ReturnUrl" asp-route-phoneNumber="@Model.PhoneNumber" method="post"
@@ -26,7 +26,7 @@
     <span asp-validation-for="Input.ConfirmPassword" class="text-danger mb-1 small"></span>
     
     <div class="mb-1 d-grid">
-        <button type="submit" class="btn btn-primary">@Localizer.Text("Register")</button>
+        <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Register")</button>
     </div>
 </form>
 <form method="post" class="d-grid">
@@ -37,7 +37,7 @@
     <input type="hidden" name="returnUrl" value="@Model.ReturnUrl"/>
     <input type="hidden" name="phoneNumber" value="@Model.PhoneNumber"/>
     <button id="resend-confirmation" class="btn btn-warning d-none" asp-page-handler="ResendSmsConfirmation">
-        @Localizer.Text("Resend SMS confirmation")
+        @Localizer.TextIgnoreCase("Resend SMS confirmation")
     </button>
 </form>
 

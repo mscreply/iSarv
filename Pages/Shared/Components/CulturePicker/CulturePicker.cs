@@ -11,7 +11,7 @@ namespace iSarv.Pages.Shared.Components.CulturePicker
 
         public CulturePicker(IOptions<RequestLocalizationOptions> localizationOptions)
         {
-            this._localizationOptions = localizationOptions;
+            _localizationOptions = localizationOptions;
         }
 
         public IViewComponentResult Invoke()

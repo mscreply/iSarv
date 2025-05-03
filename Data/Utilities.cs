@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Text.Encodings.Web;
 using iSarv.Data.CultureModels;
 
-namespace RIMS.Data
+namespace iSarv.Data
 {
     public static class Utilities
     {
@@ -37,6 +37,54 @@ namespace RIMS.Data
             using var writer = new StringWriter();
             content.WriteTo(writer, HtmlEncoder.Default);
             return writer.ToString();
+        }
+
+        public static string ToCultureDate(this DateTime d, string lang)
+        {
+            try
+            {
+                return d.ToString("dd MMMM yyyy", new CultureInfo(lang));
+            }
+            catch
+            {
+                return "-";
+            }
+        }
+
+        public static string ToShortCultureDate(this DateTime d, string lang)
+        {
+            try
+            {
+                return d.ToString("yyyy/MM/dd", new CultureInfo(lang));
+            }
+            catch
+            {
+                return "-";
+            }
+        }
+
+        public static string ToCultureDateTime(this DateTime d, string lang)
+        {
+            try
+            {
+                return d.ToString("dd MMMM yyyy | ساعت HH:mm", new CultureInfo(lang));
+            }
+            catch
+            {
+                return "-";
+            }
+        }
+
+        public static string ToShortCultureDateTime(this DateTime d, string lang)
+        {
+            try
+            {
+                return d.ToString("yyyy/MM/dd | HH:mm", new CultureInfo(lang));
+            }
+            catch
+            {
+                return "-";
+            }
         }
 
         public static string ToPersianDate(this DateTime d)
@@ -110,7 +158,7 @@ namespace RIMS.Data
             var result = new List<(string English, string Farsi)>();
             try
             {
-                var lines = System.IO.File.ReadAllLines(filePath).ToList();
+                var lines = File.ReadAllLines(filePath).ToList();
                 foreach (var line in lines)
                 {
                     var parts = line.Split('|');

@@ -6,9 +6,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Text.Encodings.Web;
 using iSarv.Data;
+using iSarv.Data.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public partial class EmailModel : PageModel
     {
         private readonly ApplicationUserManager _userManager;

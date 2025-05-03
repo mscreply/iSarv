@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.Options;
 using RestSharp;
 
-namespace iSarv.Data;
+namespace iSarv.Data.Services;
 
 public interface ISmsService
 {

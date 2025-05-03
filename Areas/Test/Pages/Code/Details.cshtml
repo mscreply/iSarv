@@ -1,0 +1,43 @@
+@page
+@model iSarv.Areas.Test.Pages.Code.DetailsModel
+
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("Details");
+}
+
+<h1>@Localizer.TextIgnoreCase("Details")</h1>
+
+<div>
+    <h4>@Localizer.TextIgnoreCase("Activation Code")</h4>
+    <hr />
+ <dl class="row">
+        <dt class="col-sm-2">
+            @Localizer.TextIgnoreCase("Code")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivationCode.Code)
+        </dd>
+        <dt class="col-sm-2">
+            @Localizer.TextIgnoreCase("Email")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivationCode.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Localizer.TextIgnoreCase("Phone Number")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivationCode.PhoneNumber)
+        </dd>
+        <dt class="col-sm-2">
+            @Localizer.TextIgnoreCase("National Id")
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ActivationCode.NationalId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ActivationCode.Id" class="btn btn-primary">@Localizer.TextIgnoreCase("Edit")</a>
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+</div>

@@ -160,6 +160,8 @@ function retModalDate(dateModal) {
 $("input[type=date]").on("change", function () {
     let d = new Date($(this).val());
     let el = $(this).closest(".form-group").find("label").eq(0);
+    if(el.length === 0)
+        el = $(this).closest(".form-floating").find("label").eq(0);
     let txt = d.toLocaleDateString('fa-IR', {
         year: 'numeric',
         month: 'long',

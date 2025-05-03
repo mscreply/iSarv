@@ -1,0 +1,23 @@
+﻿@page
+@model iSarv.Areas.Test.Pages.Activation
+
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("Package Activation");
+}
+
+<h4>@ViewData["Title"]</h4>
+
+<main class="d-flex justify-content-center">
+    <div class="p-5 rounded" style="background-color: #fffbea;width: 75%;">
+        <p>@Localizer.TextIgnoreCase("Please enter the activation code below to activate your package.")</p>
+        <partial name="_ToastMessage" for="ToastMessage" />
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="input-group">
+                <input type="text" id="activationCode" name="activationCode" class="form-control" placeholder="@Localizer.TextIgnoreCase("Enter Activation Code")" required/>
+                <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Submit")</button>
+            </div>
+             <span asp-validation-for="activationCode" class="text-danger"></span>
+        </form>
+    </div>
+</main>

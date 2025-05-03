@@ -12,7 +12,7 @@
     </div>
     <span asp-validation-for="Input.Email" class="text-danger mb-1"></span>
     
-    <div class="d-grid"><button type="submit" class="btn btn-primary">@Localizer.Text("Resend")</button></div>
+    <div class="d-grid"><button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Resend")</button></div>
 </form>
 
 @section Scripts {

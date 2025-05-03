@@ -10,13 +10,13 @@
         if (User.Identity!.IsAuthenticated)
         {
             <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })" method="post">
-                <button type="submit" class="nav-link btn btn-link text-dark">@Localizer.Text("Click here to Logout")</button>
+                <button type="submit" class="nav-link btn btn-link text-dark">@Localizer.TextIgnoreCase("Click here to Logout")</button>
             </form>
         }
         else
         {
             <p>
-                @Localizer.Text("You have successfully logged out of the application.")
+                @Localizer.TextIgnoreCase("You have successfully logged out of the application.")
                 <a class="btn-primary" href="/"><i class="fad fa-home"></i></a>
                 <a class="btn-success" asp-page="Login"><i class="fad fa-sign-in"></i></a>
             </p>

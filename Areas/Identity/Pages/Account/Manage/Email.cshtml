@@ -25,7 +25,7 @@
                  else
                 {
                     <input asp-for="Email" class="form-control" disabled />
-                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">@Localizer.Text("Send verification email")</button>
+                    <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">@Localizer.TextIgnoreCase("Send verification email")</button>
                 }
             </div>
             <div class="form-outline mb-1" data-mdb-input-init>
@@ -34,7 +34,7 @@
             </div>
             <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
             
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">@Localizer.Text("Change email")</button>
+            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">@Localizer.TextIgnoreCase("Change email")</button>
         </form>
     </div>
 </div>

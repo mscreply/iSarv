@@ -17,7 +17,7 @@ namespace iSarv.Data
             string phone = configuration["AdminUser:Phone"] ?? "09377899377";
             string password = configuration["AdminUser:Password"] ?? "123456";
 
-            string[] roles = {"Admin", "Administrator"};
+            string[] roles = {"Admin", "Administrator", "Psychologist"};
             foreach (var role in roles)
             {
                 if (await roleManager.FindByNameAsync(role) == null)
@@ -46,6 +46,7 @@ namespace iSarv.Data
             {
                 await userManager.AddToRoleAsync(admin, "Admin");
                 await userManager.AddToRoleAsync(admin, "Administrator");
+                await userManager.AddToRoleAsync(admin, "Psychologist");
             }
         }
     }

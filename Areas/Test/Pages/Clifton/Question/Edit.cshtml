@@ -1,0 +1,33 @@
+@page
+@model iSarv.Areas.Test.Pages.Clifton.Question.EditModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Edit");
+}
+
+<h1>@Localizer.TextIgnoreCase("Edit")</h1>
+
+<form method="post" class="needs-validation" novalidate>
+    <div class="form-floating mb-3">
+        <input asp-for="CliftonTestQuestion.StatementA" class="form-control" placeholder="@Localizer.TextIgnoreCase("Statement A")">
+        <label asp-for="CliftonTestQuestion.StatementA">@Localizer.TextIgnoreCase("Statement A")</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="CliftonTestQuestion.ThemeA" class="form-select" asp-items="Html.GetEnumSelectList<iSarv.Data.Tests.CliftonTheme>()">
+            <option value="">@Localizer.TextIgnoreCase("Select Theme A")</option>
+        </select>
+        <label asp-for="CliftonTestQuestion.ThemeA">@Localizer.TextIgnoreCase("Theme A")</label>
+    </div>
+    <div class="form-floating mb-3">
+        <input asp-for="CliftonTestQuestion.StatementB" class="form-control" placeholder="@Localizer.TextIgnoreCase("Statement B")">
+        <label asp-for="CliftonTestQuestion.StatementB">@Localizer.TextIgnoreCase("Statement B")</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="CliftonTestQuestion.ThemeB" class="form-select" asp-items="Html.GetEnumSelectList<iSarv.Data.Tests.CliftonTheme>()">
+            <option value="">@Localizer.TextIgnoreCase("Select Theme B")</option>
+        </select>
+        <label asp-for="CliftonTestQuestion.ThemeB">@Localizer.TextIgnoreCase("Theme B")</label>
+    </div>
+    <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Cancel")</a>
+</form>

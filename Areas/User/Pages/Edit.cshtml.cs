@@ -2,11 +2,11 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using iSarv.Data;
 using Microsoft.AspNetCore.Authorization;
-using RIMS.Data;
+using iSarv.Data;
 
 namespace iSarv.Areas.User.Pages;
 
-[Authorize]
+[Authorize(Roles = "Administrator")]
 public class EditApplicationUserModel : PageModel
 {
     private readonly ApplicationUserManager _userManager;
@@ -44,15 +44,7 @@ public class EditApplicationUserModel : PageModel
         catch (Exception e)
         {
             // Handle the exception, e.g., log it or display an error message
-            StatusMessage = "Error reading Field of Study options: " + e.Message;
-        }
-
-        var userId = _userManager.GetUserId(User);
-        var isAdmin = User.IsInRole("Admin");
-
-        if (userId != id && !isAdmin)
-        {
-            return RedirectToPage("/Error"); // Redirect to error page
+            StatusMessage = "Error reading Fields: " + e.Message;
         }
 
         return Page();
@@ -72,6 +64,7 @@ public class EditApplicationUserModel : PageModel
         }
 
         user.FullName = ApplicationUser.FullName;
+        user.NationalId = ApplicationUser.NationalId;
         user.DateOfBirth = ApplicationUser.DateOfBirth;
         user.Gender = ApplicationUser.Gender;
         user.Address = ApplicationUser.Address;

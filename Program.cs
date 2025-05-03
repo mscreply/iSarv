@@ -3,6 +3,7 @@ using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using iSarv.Data;
 using iSarv.Data.CultureModels;
+using iSarv.Data.Services;
 using iSarv.Resources;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Localization;
@@ -34,7 +35,7 @@ builder.Services.ConfigureApplicationCookie(options =>
 {
     // Cookie settings
     options.Cookie.HttpOnly = true;
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    options.ExpireTimeSpan = TimeSpan.FromHours(24);
     options.LoginPath = "/Identity/Account/Login";
     options.LogoutPath = "/Identity/Account/Logout";
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
@@ -78,7 +79,7 @@ builder.Services.AddSingleton<CultureLocalizer>();
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options =>
 {
-    options.IdleTimeout = TimeSpan.FromMinutes(10);
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });
@@ -97,6 +98,10 @@ builder.Services.AddTransient<IEmailService, EmailService>();
 // Sms Configuration
 builder.Services.Configure<SmsSettings>(builder.Configuration.GetSection("SmsSettings"));
 builder.Services.AddTransient<ISmsService, SmsService>();
+
+// ChatGPT Configuration
+builder.Services.Configure<AISettings>(builder.Configuration.GetSection("AISettings"));
+builder.Services.AddTransient<IAIService, AIService>();
 
 var app = builder.Build();
 

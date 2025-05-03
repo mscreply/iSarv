@@ -201,6 +201,11 @@ namespace iSarv.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("NationalId")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
@@ -246,6 +251,233 @@ namespace iSarv.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.ActivationCode", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("NationalId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ActivationCodes");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.CliftonTest", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Response")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Result")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CliftonTests");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.CliftonTestQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("StatementA")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("StatementB")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("ThemeA")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ThemeB")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CliftonTestQuestions");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.HollandsTest", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Response")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Result")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HollandsTests");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.NeoTest", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Response")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Result")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NeoTests");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.NeoTestQuestion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Facet")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("ScoreIsReversed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Statement")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("NeoTestQuestions");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.RavensTest", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("IsConfirmed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Response")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Result")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RavensTests");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.TestPackage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("Deadline")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("FinalResult")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("SubmitDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("TestPackages");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -296,6 +528,81 @@ namespace iSarv.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.CliftonTest", b =>
+                {
+                    b.HasOne("iSarv.Data.Tests.TestPackage", "TestPackage")
+                        .WithOne("CliftonTest")
+                        .HasForeignKey("iSarv.Data.Tests.CliftonTest", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TestPackage");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.HollandsTest", b =>
+                {
+                    b.HasOne("iSarv.Data.Tests.TestPackage", "TestPackage")
+                        .WithOne("HollandsTest")
+                        .HasForeignKey("iSarv.Data.Tests.HollandsTest", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TestPackage");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.NeoTest", b =>
+                {
+                    b.HasOne("iSarv.Data.Tests.TestPackage", "TestPackage")
+                        .WithOne("NeoTest")
+                        .HasForeignKey("iSarv.Data.Tests.NeoTest", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TestPackage");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.RavensTest", b =>
+                {
+                    b.HasOne("iSarv.Data.Tests.TestPackage", "TestPackage")
+                        .WithOne("RavensTest")
+                        .HasForeignKey("iSarv.Data.Tests.RavensTest", "Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("TestPackage");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.TestPackage", b =>
+                {
+                    b.HasOne("iSarv.Data.ApplicationUser", "User")
+                        .WithMany("TestPackages")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("iSarv.Data.ApplicationUser", b =>
+                {
+                    b.Navigation("TestPackages");
+                });
+
+            modelBuilder.Entity("iSarv.Data.Tests.TestPackage", b =>
+                {
+                    b.Navigation("CliftonTest")
+                        .IsRequired();
+
+                    b.Navigation("HollandsTest")
+                        .IsRequired();
+
+                    b.Navigation("NeoTest")
+                        .IsRequired();
+
+                    b.Navigation("RavensTest")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

@@ -1,32 +1,177 @@
 ﻿@page
+@using System.Globalization
 @using Microsoft.AspNetCore.Identity.UI.V4.Pages.Account.Manage.Internal
+@using Microsoft.AspNetCore.Mvc.TagHelpers
 @model iSarv.Areas.Identity.Pages.Account.Manage.IndexModel
 @{
     ViewData["Title"] = Localizer.Text("Profile");
     ViewData["ActivePage"] = ManageNavPages.Index;
+    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
 <h3>@ViewData["Title"]</h3>
 <partial name="_StatusMessage" for="StatusMessage" />
 <div class="row">
     <div class="col-md-6">
-        <form id="profile-form" method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+        <form method="post" class="needs-validation">
+            <div asp-validation-summary="All" class="text-danger mb-1"></div>
+            
+            <input type="hidden" asp-for="ApplicationUser.Id"/>
+            
             <div class="form-floating mb-3">
-                <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled />
+                <input asp-for="Username" class="form-control" placeholder="Please choose your username." disabled/>
                 <label asp-for="Username" class="form-label"></label>
             </div>
+            @if (Model.Username.Contains('@'))
+            {
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.PhoneNumber" class="form-control"/>
+                    <label asp-for="ApplicationUser.PhoneNumber" class="form-label"></label>
+                </div>
+                <span asp-validation-for="ApplicationUser.PhoneNumber" class="text-danger"></span>
+            }
+            else
+            {
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.Email" class="form-control"/>
+                    <label asp-for="ApplicationUser.Email" class="form-label"></label>
+                </div>
+                <span asp-validation-for="ApplicationUser.Email" class="text-danger"></span>
+            }
+
             <div class="form-floating mb-3">
-                <input asp-for="Input.PhoneNumber" class="form-control" placeholder="Please enter your phone number."/>
-                <label asp-for="Input.PhoneNumber" class="form-label"></label>
+                <input asp-for="ApplicationUser.FullName" class="form-control"/>
+                <label asp-for="ApplicationUser.FullName" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.FullName" class="text-danger"></span>
             </div>
-            <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
-            
-            <button id="update-profile-button" type="submit" class="w-100 btn btn-lg btn-primary">@Localizer.Text("Save")</button>
+
+            <div class="form-floating mb-3">
+                <input asp-for="ApplicationUser.NationalId" class="form-control"/>
+                <label asp-for="ApplicationUser.NationalId" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.NationalId" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating input-group mb-3">
+                <input asp-for="ApplicationUser.DateOfBirth" class="form-control" type="date" id="date-of-birth"/>
+                <span class="input-group-text btn-j-calendar" calendar-for="date-of-birth"></span>
+                <label asp-for="ApplicationUser.DateOfBirth" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.DateOfBirth" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="ApplicationUser.Gender" class="form-control">
+                    <option value="">@Localizer.TextIgnoreCase("Select Gender")</option>
+                    <option value="Male">@Localizer.TextIgnoreCase("Male")</option>
+                    <option value="Female">@Localizer.TextIgnoreCase("Female")</option>
+                </select>
+                <label asp-for="ApplicationUser.Gender" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <input asp-for="ApplicationUser.Address" class="form-control"/>
+                <label asp-for="ApplicationUser.Address" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <textarea asp-for="ApplicationUser.Bio" class="form-control"></textarea>
+                <label asp-for="ApplicationUser.Bio" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.Bio" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="ApplicationUser.Occupation" class="form-control">
+                    <option value="">@Localizer.TextIgnoreCase("Select Occupation")</option>
+                    @foreach (var occupation in Model.OccupationOptions)
+                    {
+                        <option value="@occupation.Farsi">
+                            @if (lang == "fa")
+                            {
+                                @occupation.Farsi
+                            }
+                            else
+                            {
+                                @occupation.English
+                            }
+                        </option>
+                    }
+                </select>
+                <label asp-for="ApplicationUser.Occupation" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.Occupation" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="ApplicationUser.FieldOfStudy" class="form-control">
+                    <option value="">@Localizer.TextIgnoreCase("Select Field of Study")</option>
+                    @foreach (var fieldOfStudy in Model.FieldOfStudyOptions)
+                    {
+                        <option value="@fieldOfStudy.Farsi">
+                            @if (lang == "fa")
+                            {
+                                @fieldOfStudy.Farsi
+                            }
+                            else
+                            {
+                                @fieldOfStudy.English
+                            }
+                        </option>
+                    }
+                </select>
+                <label asp-for="ApplicationUser.FieldOfStudy" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.FieldOfStudy" class="text-danger"></span>
+            </div>
+
+            <div class="form-floating mb-3">
+                <select asp-for="ApplicationUser.University" class="form-control">
+                    <option value="">@Localizer.TextIgnoreCase("Select University")</option>
+                    @foreach (var university in Model.UniversityOptions)
+                    {
+                        <option value="@university.Farsi">
+                            @if (lang == "fa")
+                            {
+                                @university.Farsi
+                            }
+                            else
+                            {
+                                @university.English
+                            }
+                        </option>
+                    }
+                </select>
+                <label asp-for="ApplicationUser.University" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.University" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
         </form>
+    </div>
+    <div class="col-md-6">
+        <div class="col text-center d-flex justify-content-center align-items-center flex-column">
+            <div class="profile-lg">
+                <img class="h-100" src="~/img/avatars/@(Model.ApplicationUser.Id).png?@(new Random().NextDouble())" alt="" onerror="this.src='/img/avatars/0.png'"/>
+            </div>
+            <div class="row mt-2">
+                <form enctype="multipart/form-data" method="post">
+                    <input type="hidden" name="id" value="@Model.ApplicationUser.Id"/>
+                    <input type="hidden" name="filesize" value="10240"/>
+                    <div class="input-group">
+                        <input class="form-control form-control-sm" type="file" name="file" id="file" accept=".jpg,.jpeg,.png"/>
+                        <div class="input-group-append">
+                            <button class="btn btn-sm btn-primary btn-upload" asp-page-handler="AddPhoto">
+                                <i class="fas fa-upload"></i> @Localizer.TextIgnoreCase("Upload Image")
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-danger file-validation"></p>
+                </form>
+            </div>
+        </div>
     </div>
 </div>
 
-@section Scripts {
-    <partial name="_ValidationScriptPartial" />
+@section Scripts
+{
+    <partial name="_ValidationScriptPartial"/>
+    <script src="/lib/jalali-date-picker/jalali-date-picker.js"></script>
 }

@@ -72,7 +72,7 @@ namespace iSarv.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            returnUrl ??= Url.Content("~/");
+            returnUrl ??= "/User/Dashboard";
 
             if (ModelState.IsValid)
             {
@@ -89,11 +89,22 @@ namespace iSarv.Areas.Identity.Pages.Account
                 SignInResult result = SignInResult.Failed;
                 if ((!user.UserName.Contains("@") && await _userManager.IsPhoneNumberConfirmedAsync(user))
                    || (user.UserName.Contains("@") && await _userManager.IsEmailConfirmedAsync(user)))
+                {
                     result = await _signInManager.PasswordSignInAsync(user, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+
+                    // Ensure session persistence if "Remember Me" is checked
+                    if (result.Succeeded && Input.RememberMe)
+                    {
+                        await _signInManager.SignInAsync(user, new AuthenticationProperties
+                        {
+                            IsPersistent = true
+                        });
+                    }
+                }
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in");
-                    return LocalRedirect(returnUrl ?? "/Identity/Account/Manage/");
+                    return LocalRedirect(returnUrl);
                 }
                 if (result.RequiresTwoFactor)
                 {

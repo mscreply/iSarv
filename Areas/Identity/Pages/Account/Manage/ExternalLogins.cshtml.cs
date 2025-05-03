@@ -4,8 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class ExternalLoginsModel : PageModel
     {
         private readonly ApplicationUserManager _userManager;

@@ -1,0 +1,49 @@
+@page
+@model iSarv.Areas.Test.Pages.Code.EditModel
+
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("Edit");
+}
+
+<h1>@Localizer.TextIgnoreCase("Edit")</h1>
+
+<h4>@Localizer.TextIgnoreCase("Activation Code")</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ActivationCode.Id" />
+            <div class="form-floating input-group mb-3">
+                <input asp-for="ActivationCode.Code" class="form-control"
+                       placeholder="@Localizer.TextIgnoreCase("Code")" id="activationCodeInput"/>
+                <label asp-for="ActivationCode.Code" class="control-label">@Localizer.TextIgnoreCase("Code")</label>
+                <span asp-validation-for="ActivationCode.Code" class="text-danger"></span>
+                <button type="button" class="btn btn-primary" onclick="function generateRandomCode() {
+                        document.getElementById('activationCodeInput').value = Math.random().toString(36).substring(2, 10).toUpperCase();
+                    } generateRandomCode()">
+                    <i class="fas fa-random"></i>
+                </button>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="ActivationCode.Email" class="form-control" placeholder="@Localizer.TextIgnoreCase("Email")" />
+                <label asp-for="ActivationCode.Email" class="control-label">@Localizer.TextIgnoreCase("Email")</label>
+                <span asp-validation-for="ActivationCode.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+<input asp-for="ActivationCode.PhoneNumber" class="form-control" placeholder="@Localizer.TextIgnoreCase("Phone Number")" />
+                <label asp-for="ActivationCode.PhoneNumber" class="control-label">@Localizer.TextIgnoreCase("Phone Number")</label>
+                <span asp-validation-for="ActivationCode.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+<input asp-for="ActivationCode.NationalId" class="form-control" placeholder="@Localizer.TextIgnoreCase("National Id")" />
+                <label asp-for="ActivationCode.NationalId" class="control-label">@Localizer.TextIgnoreCase("National Id")</label>
+                <span asp-validation-for="ActivationCode.NationalId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+            </div>
+        </form>
+    </div>
+</div>

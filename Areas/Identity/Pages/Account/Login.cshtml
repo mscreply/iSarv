@@ -2,7 +2,7 @@
 @model LoginModel
 
 @{
-    ViewData["Title"] = @Localizer.Text("Log in");
+    ViewData["Title"] = @Localizer.TextIgnoreCase("Log in");
 }
 
 <form id="account" method="post">
@@ -28,13 +28,13 @@
         </div>
     </div>
     <div class="mb-1 d-grid">
-        <button type="submit" class="btn btn-primary">@Localizer.Text("Log in")</button>
+        <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Log in")</button>
     </div>
     <div class="form-outline mb-1" data-mdb-input-init>
-        <a asp-page="./PhoneRegister" asp-route-returnUrl="@Model.ReturnUrl">@Localizer.Text("Register by mobile")</a><br/>
-        <a asp-page="./PhoneRegister">@Localizer.Text("Forgot your mobile password?")</a><br/>
-        <a asp-page="./EmailRegister" asp-route-returnUrl="@Model.ReturnUrl">@Localizer.Text("Register by email")</a><br/>
-        <a asp-page="./ForgotPassword">@Localizer.Text("Forgot your email password?")</a><br/>
+        <a asp-page="./PhoneRegister" asp-route-returnUrl="@Model.ReturnUrl">@Localizer.TextIgnoreCase("Register by mobile")</a><br/>
+        <a asp-page="./PhoneRegister">@Localizer.TextIgnoreCase("Forgot your mobile password?")</a><br/>
+        <a asp-page="./EmailRegister" asp-route-returnUrl="@Model.ReturnUrl">@Localizer.TextIgnoreCase("Register by email")</a><br/>
+        <a asp-page="./ForgotPassword">@Localizer.TextIgnoreCase("Forgot your email password?")</a><br/>
     </div>
 </form>
 

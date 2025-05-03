@@ -3,12 +3,12 @@ using Microsoft.Extensions.Options;
 using MimeKit;
 using MimeKit.Text;
 
-namespace iSarv.Data;
+namespace iSarv.Data.Services;
 
 public interface IEmailService
 {
-    public bool SendEmail(string email, string subject, string htmlMessage);
-    public Task SendEmailAsync(string email, string subject, string htmlMessage);
+    public string SendEmail(string email, string subject, string htmlMessage);
+    public Task<string> SendEmailAsync(string email, string subject, string htmlMessage);
 }
 
 public class EmailService : IEmailService
@@ -20,7 +20,7 @@ public class EmailService : IEmailService
         _mailSettings = options.Value;
     }
 
-    public bool SendEmail(string email, string subject, string htmlMessage)
+    public string SendEmail(string email, string subject, string htmlMessage)
     {
         try
         {
@@ -38,16 +38,16 @@ public class EmailService : IEmailService
             client.Send(message);
             client.Disconnect(true);
             client.Dispose();
-            return true;
+            return "Ok";
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             // Exception Details
-            return false;
+            return ex.Message;
         }
     }
 
-    public async Task SendEmailAsync(string email, string subject, string htmlMessage)
+    public async Task<string> SendEmailAsync(string email, string subject, string htmlMessage)
     {
         try
         {
@@ -65,10 +65,12 @@ public class EmailService : IEmailService
             await client.SendAsync(message);
             await client.DisconnectAsync(true);
             client.Dispose();
+            return "Ok";
         }
-        catch (Exception)
+        catch (Exception ex)
         {
             // Exception Details
+            return ex.Message;
         }
     }
 }

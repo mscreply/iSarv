@@ -1,0 +1,32 @@
+@page
+@model iSarv.Areas.Test.Pages.Neo.Question.DetailsModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Details");
+}
+
+<h1>@Localizer.TextIgnoreCase("Details")</h1>
+
+<div>
+    <h4>@Localizer.TextIgnoreCase("Neo Test Question")</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NeoTestQuestion.Statement)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NeoTestQuestion.Statement)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NeoTestQuestion.Facet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NeoTestQuestion.Facet)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.NeoTestQuestion.Id" class="btn btn-primary">@Localizer.TextIgnoreCase("Edit")</a> 
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+</div>
+

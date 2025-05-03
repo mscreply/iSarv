@@ -1,13 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using iSarv.Data;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Areas.User.Pages
 {
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class UserListModel : PageModel
     {
         private readonly ApplicationDbContext _context;
@@ -24,8 +23,7 @@ namespace iSarv.Areas.User.Pages
         public int PageSize { get; set; } = 10;
         public int TotalPages { get; set; }
 
-        [BindProperty(SupportsGet = true)]
-        public string SearchTerm { get; set; }
+        [BindProperty(SupportsGet = true)] public string SearchTerm { get; set; }
 
         [TempData] public string ToastMessage { get; set; }
 
@@ -39,7 +37,8 @@ namespace iSarv.Areas.User.Pages
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                allUsers = allUsers.Where(u => u.FullName.Contains(searchTerm) || u.Email.Contains(searchTerm) || u.PhoneNumber.Contains(searchTerm));
+                allUsers = allUsers.Where(u => u.FullName.Contains(searchTerm) || u.Email.Contains(searchTerm) ||
+                                               u.PhoneNumber.Contains(searchTerm) || u.NationalId.Contains(searchTerm));
             }
 
             TotalPages = (int)Math.Ceiling(allUsers.Count() / (double)PageSize);
@@ -57,7 +56,9 @@ namespace iSarv.Areas.User.Pages
                     FullName = user.FullName,
                     PhoneNumber = user.PhoneNumber,
                     Id = user.Id,
+                    NationalId = user.NationalId,
                     IsAdmin = await _userManager.IsInRoleAsync(user, "Administrator"),
+                    IsPsychologist = await _userManager.IsInRoleAsync(user, "Psychologist"),
                     IsActive = user.IsActive,
                     EmailConfirmed = user.EmailConfirmed,
                     PhoneNumberConfirmed = user.PhoneNumberConfirmed
@@ -71,10 +72,12 @@ namespace iSarv.Areas.User.Pages
             public string Email { get; set; }
             public string FullName { get; set; }
             public string PhoneNumber { get; set; }
+            public string NationalId { get; set; }
             public bool IsAdmin { get; set; }
             public bool IsActive { get; set; }
             public bool EmailConfirmed { get; set; }
             public bool PhoneNumberConfirmed { get; set; }
+            public bool IsPsychologist { get; set; }
         }
 
         public async Task<IActionResult> OnPostAssignAdminAsync(string id)
@@ -217,6 +220,32 @@ namespace iSarv.Areas.User.Pages
 
             ToastMessage = $"Phone number confirmation toggled successfully.";
             return RedirectToPage("./UserList", new { area = "User", currentPage = CurrentPage });
+        }
+
+        public async Task<IActionResult> OnPostTogglePsychologistAsync(string id, int currentPage)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                TempData["ToastMessage"] = "User not found.";
+                return RedirectToPage(new { currentPage });
+            }
+
+            var isPsychologist = await _userManager.IsInRoleAsync(user, "Psychologist");
+            var result = isPsychologist
+                ? await _userManager.RemoveFromRoleAsync(user, "Psychologist")
+                : await _userManager.AddToRoleAsync(user, "Psychologist");
+
+            if (result.Succeeded)
+            {
+                TempData["ToastMessage"] = "Psychologist status updated successfully.";
+            }
+            else
+            {
+                TempData["ToastMessage"] = "Failed to update psychologist status.";
+            }
+
+            return RedirectToPage(new { currentPage });
         }
     }
 }

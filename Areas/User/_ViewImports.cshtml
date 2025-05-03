@@ -1,7 +1,9 @@
 @using iSarv.Areas.User
 @using iSarv.Areas.User.Pages
+@using iSarv.Data
 @using iSarv.Data.CultureModels
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @addTagHelper *, iSarv
 
 @inject CultureLocalizer Localizer;
+@inject ApplicationUserManager UserManager;

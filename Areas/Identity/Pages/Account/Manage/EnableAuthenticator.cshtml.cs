@@ -5,8 +5,11 @@ using System.Text;
 using System.Text.Encodings.Web;
 using iSarv.Data;
 
+using Microsoft.AspNetCore.Authorization;
+
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class EnableAuthenticatorModel : PageModel
     {
         private readonly ApplicationUserManager _userManager;

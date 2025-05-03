@@ -18,16 +18,24 @@ namespace iSarv.Data.CultureModels
         }
 
         // if we have formatted string we can provide arguments         
-        // e.g.: @Localizer.Text("Hello {0}", User.Name)
+        // e.g.: @Localizer.TextIgnoreCase("Hello {0}", User.Name)
         public LocalizedString Text(string key, params string[] arguments)
         {
-            return arguments == null
-                ? _localizer[key]
-                : _localizer[key, arguments];
+            try
+            {
+                return arguments == null
+                    ? _localizer[key]
+                    : _localizer[key, arguments];
+            }
+            catch (Exception e)
+            {
+                return new LocalizedString("", key);
+            }
         }
 
         public string TextIgnoreCase(string key)
         {
+            _resourceManager.IgnoreCase = true;
             try
             {
                 return _resourceManager.GetString(key) ?? key;

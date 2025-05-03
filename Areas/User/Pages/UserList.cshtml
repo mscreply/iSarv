@@ -4,16 +4,16 @@
     ViewData["Title"] = Localizer.Text("User List");
 }
 
-<h1>@Localizer.Text("User List")</h1>
+<h1>@Localizer.TextIgnoreCase("User List")</h1>
 
 <form method="get">
     <div class="d-inline-flex">
         <div class="input-group">
-            <label class="input-group-text" for="searchTerm">@Localizer.Text("Search")</label>
+            <label class="input-group-text" for="searchTerm">@Localizer.TextIgnoreCase("Search")</label>
             <input type="text" class="form-control" id="searchTerm" name="searchTerm" value="@Model.SearchTerm">
             <button type="submit" class="btn btn-success"><i class="fas fa-search"></i></button>
         </div>
-        <a asp-page="./Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.Text("Create New User")</a>
+        <a asp-page="./Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New User")</a>
     </div>
 </form>
 
@@ -22,25 +22,28 @@
 <table class="table">
     <thead>
     <tr>
-        <th>@Localizer.Text("Email")</th>
-        <th>@Localizer.Text("Full Name")</th>
-        <th>@Localizer.Text("Phone Number")</th>
-        <th>@Localizer.Text("Is Admin")</th>
-        <th>@Localizer.Text("Is Active")</th>
-        <th>@Localizer.Text("Actions")</th>
+        <th>@Localizer.TextIgnoreCase("National id")</th>
+        <th>@Localizer.TextIgnoreCase("Email")</th>
+        <th>@Localizer.TextIgnoreCase("Full Name")</th>
+        <th>@Localizer.TextIgnoreCase("Phone Number")</th>
+        <th>@Localizer.TextIgnoreCase("Is Admin")</th>
+        <th>@Localizer.TextIgnoreCase("Is Active")</th>
+        <th>@Localizer.TextIgnoreCase("Is Psychologist")</th>
+        <th>@Localizer.TextIgnoreCase("Actions")</th>
     </tr>
     </thead>
     <tbody>
     @foreach (var user in Model.Users)
     {
         <tr>
+            <td>@user.NationalId</td>
             <td>
-                <span class="@(user.EmailConfirmed ? "text-success" : "text-danger")">@user.Email</span>
+                <span class="@(user.EmailConfirmed ? "text-success" : "text-danger")">@user.Email</span>|
                 <form method="post" asp-page-handler="ToggleEmailConfirmed" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage"
                       style="display:inline;">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Toggle Email Confirmed")">
+                            title="@Localizer.TextIgnoreCase("Toggle Email Confirmed")">
                         @if (user.EmailConfirmed)
                         {
                             <i class="fas fa-envelope-circle-check text-success"></i>
@@ -54,12 +57,12 @@
             </td>
             <td>@user.FullName</td>
             <td>
-                <span class="@(user.PhoneNumberConfirmed ? "text-success" : "text-danger")">@user.PhoneNumber</span>
+                <span class="@(user.PhoneNumberConfirmed ? "text-success" : "text-danger")">@user.PhoneNumber</span>|
                 <form method="post" asp-page-handler="TogglePhoneNumberConfirmed" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage"
                       style="display:inline;">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Toggle Phone Number Confirmed")">
+                            title="@Localizer.TextIgnoreCase("Toggle Phone Number Confirmed")">
                         @if (user.PhoneNumberConfirmed)
                         {
                             <i class="fas fa-phone text-success"></i>
@@ -80,6 +83,12 @@
                 {
                     <i class="fas fa-times"></i>
                 }
+                |
+                <form method="post" asp-page-handler="AssignAdmin" asp-route-id="@user.Id"
+                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
+                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
+                            title="@Localizer.TextIgnoreCase("Toggle Admin")"><i class="fas fa-user-shield"></i></button>
+                </form>
             </td>
             <td>
                 @if (user.IsActive)
@@ -90,33 +99,45 @@
                 {
                     <i class="fas fa-times"></i>
                 }
+                |
+                <form method="post" asp-page-handler="ToggleActive" asp-route-id="@user.Id"
+                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
+                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
+                            title="@Localizer.TextIgnoreCase("Toggle Active")"><i class="fas fa-power-off"></i></button>
+                </form>
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@user.Id" title="@Localizer.Text("Edit")"><i class="fas fa-edit"></i></a>
+                @if (user.IsPsychologist)
+                {
+                    <i class="fas fa-check"></i>
+                }
+                else
+                {
+                    <i class="fas fa-times"></i>
+                }
+                |
+                <form method="post" asp-page-handler="TogglePsychologist" asp-route-id="@user.Id"
+                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
+                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
+                            title="@Localizer.TextIgnoreCase("Toggle Psychologist")">
+                        <i class="fas fa-user-md"></i>
+                    </button>
+                </form>
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@user.Id" title="@Localizer.TextIgnoreCase("Edit")"><i class="fas fa-edit"></i></a>
                 |
                 <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage" style="display:inline;"
-                      onsubmit="return confirm(@Localizer.Text("Are you sure you want to delete this user?"));">
+                      onsubmit="return confirm(@Localizer.TextIgnoreCase("Are you sure you want to delete this user?"));">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Delete")"><i class="fas fa-trash"></i></button>
-                </form>
-                |
-                <form method="post" asp-page-handler="AssignAdmin" asp-route-id="@user.Id"
-                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
-                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Toggle Admin")"><i class="fas fa-user-shield"></i></button>
+                            title="@Localizer.TextIgnoreCase("Delete")"><i class="fas fa-trash"></i></button>
                 </form>
                 |
                 <form method="post" asp-page-handler="ResetPassword" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Reset Password")"><i class="fas fa-key"></i></button>
-                </form>
-                |
-                <form method="post" asp-page-handler="ToggleActive" asp-route-id="@user.Id"
-                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
-                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.Text("Toggle Active")"><i class="fas fa-power-off"></i></button>
+                            title="@Localizer.TextIgnoreCase("Reset Password")"><i class="fas fa-key"></i></button>
                 </form>
             </td>
         </tr>
@@ -128,7 +149,7 @@
     <ul class="pagination">
         <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
             <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(Model.CurrentPage - 1)"
-               asp-area="User">@Localizer.Text("Previous")</a>
+               asp-area="User">@Localizer.TextIgnoreCase("Previous")</a>
         </li>
         @for (int i = 1; i <= Model.TotalPages; i++)
         {
@@ -139,7 +160,7 @@
         }
         <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
             <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(Model.CurrentPage + 1)"
-               asp-area="User">@Localizer.Text("Next")</a>
+               asp-area="User">@Localizer.TextIgnoreCase("Next")</a>
         </li>
     </ul>
 </nav>

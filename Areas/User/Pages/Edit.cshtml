@@ -44,6 +44,12 @@
                 <span asp-validation-for="ApplicationUser.FullName" class="text-danger"></span>
             </div>
 
+            <div class="form-floating mb-3">
+                <input asp-for="ApplicationUser.NationalId" class="form-control"/>
+                <label asp-for="ApplicationUser.NationalId" class="form-label"></label>
+                <span asp-validation-for="ApplicationUser.NationalId" class="text-danger"></span>
+            </div>
+
             <div class="form-floating input-group mb-3">
                 <input asp-for="ApplicationUser.DateOfBirth" class="form-control" type="date" id="date-of-birth"/>
                 <span class="input-group-text btn-j-calendar" calendar-for="date-of-birth"></span>
@@ -137,7 +143,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
-             <a asp-page="./UserList" class="btn btn-secondary">@Localizer.Text("Back to List")</a>
+             <a asp-page="./UserList" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
         </form>
     </div>
     <div class="col-md-6">
@@ -153,7 +159,7 @@
                         <input class="form-control form-control-sm" type="file" name="file" id="file" accept=".jpg,.jpeg,.png"/>
                         <div class="input-group-append">
                             <button class="btn btn-sm btn-primary btn-upload" asp-page-handler="AddPhoto">
-                                <i class="fas fa-upload"></i> @Localizer.Text("Upload Image")
+                                <i class="fas fa-upload"></i> @Localizer.TextIgnoreCase("Upload Image")
                             </button>
                         </div>
                     </div>

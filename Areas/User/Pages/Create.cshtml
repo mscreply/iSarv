@@ -3,14 +3,14 @@
 @model CreateModel
 
 @{
-    ViewData["Title"] = @Localizer.Text("Create User");
+    ViewData["Title"] = @Localizer.TextIgnoreCase("Create User");
     var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 }
 
 <div class="container">
-    <h2>@Localizer.Text("Create User")</h2>
+    <h2>@Localizer.TextIgnoreCase("Create User")</h2>
 
-    <h4>@Localizer.Text("ApplicationUser")</h4>
+    <h4>@Localizer.TextIgnoreCase("ApplicationUser")</h4>
     <hr />
     <div class="row">
         <div class="col-md-6">
@@ -18,21 +18,27 @@
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="ApplicationUser.Email" id="email" class="form-control" placeholder="@Localizer.Text("Email")"/>
-                    <label asp-for="ApplicationUser.Email">@Localizer.Text("Email")</label>
+                    <input asp-for="ApplicationUser.Email" id="email" class="form-control" placeholder="@Localizer.TextIgnoreCase("Email")"/>
+                    <label asp-for="ApplicationUser.Email">@Localizer.TextIgnoreCase("Email")</label>
                     <span asp-validation-for="ApplicationUser.Email" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="ApplicationUser.PhoneNumber" id="phoneNumber" class="form-control" placeholder="@Localizer.Text("Phone Number")"/>
-                    <label asp-for="ApplicationUser.PhoneNumber">@Localizer.Text("Phone Number")</label>
+                    <input asp-for="ApplicationUser.PhoneNumber" id="phoneNumber" class="form-control" placeholder="@Localizer.TextIgnoreCase("Phone Number")"/>
+                    <label asp-for="ApplicationUser.PhoneNumber">@Localizer.TextIgnoreCase("Phone Number")</label>
                     <span asp-validation-for="ApplicationUser.PhoneNumber" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="ApplicationUser.FullName" id="fullName" class="form-control" placeholder="@Localizer.Text("Full Name")"/>
-                    <label asp-for="ApplicationUser.FullName">@Localizer.Text("Full Name")</label>
+                    <input asp-for="ApplicationUser.FullName" id="fullName" class="form-control" placeholder="@Localizer.TextIgnoreCase("Full Name")"/>
+                    <label asp-for="ApplicationUser.FullName">@Localizer.TextIgnoreCase("Full Name")</label>
                     <span asp-validation-for="ApplicationUser.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="ApplicationUser.NationalId" id="nationalId" class="form-control" placeholder="@Localizer.TextIgnoreCase("National Id")"/>
+                    <label asp-for="ApplicationUser.NationalId">@Localizer.TextIgnoreCase("National Id")</label>
+                    <span asp-validation-for="ApplicationUser.NationalId" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating input-group mb-3">
@@ -44,29 +50,29 @@
 
                 <div class="form-floating mb-3">
                     <select asp-for="ApplicationUser.Gender" id="gender" class="form-control">
-                        <option value="">@Localizer.Text("Select Gender")</option>
-                        <option value="Male">@Localizer.Text("Male")</option>
-                        <option value="Female">@Localizer.Text("Female")</option>
+                        <option value="">@Localizer.TextIgnoreCase("Select Gender")</option>
+                        <option value="Male">@Localizer.TextIgnoreCase("Male")</option>
+                        <option value="Female">@Localizer.TextIgnoreCase("Female")</option>
                     </select>
-                    <label asp-for="ApplicationUser.Gender">@Localizer.Text("Gender")</label>
+                    <label asp-for="ApplicationUser.Gender">@Localizer.TextIgnoreCase("Gender")</label>
                     <span asp-validation-for="ApplicationUser.Gender" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <input asp-for="ApplicationUser.Address" id="address" class="form-control" placeholder="@Localizer.Text("Address")"/>
-                    <label asp-for="ApplicationUser.Address">@Localizer.Text("Address")</label>
+                    <input asp-for="ApplicationUser.Address" id="address" class="form-control" placeholder="@Localizer.TextIgnoreCase("Address")"/>
+                    <label asp-for="ApplicationUser.Address">@Localizer.TextIgnoreCase("Address")</label>
                     <span asp-validation-for="ApplicationUser.Address" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
-                    <textarea asp-for="ApplicationUser.Bio" id="bio" class="form-control" placeholder="@Localizer.Text("Bio")"></textarea>
-                    <label asp-for="ApplicationUser.Bio">@Localizer.Text("Bio")</label>
+                    <textarea asp-for="ApplicationUser.Bio" id="bio" class="form-control" placeholder="@Localizer.TextIgnoreCase("Bio")"></textarea>
+                    <label asp-for="ApplicationUser.Bio">@Localizer.TextIgnoreCase("Bio")</label>
                     <span asp-validation-for="ApplicationUser.Bio" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
                     <select asp-for="ApplicationUser.Occupation" id="occupation" class="form-control">
-                        <option value="">@Localizer.Text("Select Occupation")</option>
+                        <option value="">@Localizer.TextIgnoreCase("Select Occupation")</option>
                         @foreach (var occupation in Model.OccupationOptions)
                         {
                             <option value="@occupation.Farsi">
@@ -81,13 +87,13 @@
                             </option>
                         }
                     </select>
-                    <label asp-for="ApplicationUser.Occupation">@Localizer.Text("Occupation")</label>
+                    <label asp-for="ApplicationUser.Occupation">@Localizer.TextIgnoreCase("Occupation")</label>
                     <span asp-validation-for="ApplicationUser.Occupation" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
                     <select asp-for="ApplicationUser.FieldOfStudy" id="fieldOfStudy" class="form-control">
-                        <option value="">@Localizer.Text("Select Field of Study")</option>
+                        <option value="">@Localizer.TextIgnoreCase("Select Field of Study")</option>
                         @foreach (var fieldOfStudy in Model.FieldOfStudyOptions)
                         {
                             <option value="@fieldOfStudy.Farsi">
@@ -102,13 +108,13 @@
                             </option>
                         }
                     </select>
-                    <label asp-for="ApplicationUser.FieldOfStudy">@Localizer.Text("Field of Study")</label>
+                    <label asp-for="ApplicationUser.FieldOfStudy">@Localizer.TextIgnoreCase("Field of Study")</label>
                     <span asp-validation-for="ApplicationUser.FieldOfStudy" class="text-danger"></span>
                 </div>
 
                 <div class="form-floating mb-3">
                     <select asp-for="ApplicationUser.University" id="university" class="form-control">
-                        <option value="">@Localizer.Text("Select University")</option>
+                        <option value="">@Localizer.TextIgnoreCase("Select University")</option>
                         @foreach (var university in Model.UniversityOptions)
                         {
                             <option value="@university.Farsi">
@@ -123,12 +129,12 @@
                             </option>
                         }
                     </select>
-                    <label asp-for="ApplicationUser.University">@Localizer.Text("University")</label>
+                    <label asp-for="ApplicationUser.University">@Localizer.TextIgnoreCase("University")</label>
                     <span asp-validation-for="ApplicationUser.University" class="text-danger"></span>
                 </div>
 
                  <div class="mb-3">
-                    <label class="form-label">@Localizer.Text("Roles")</label>
+                    <label class="form-label">@Localizer.TextIgnoreCase("Roles")</label>
                     @foreach (var role in Model.AvailableRoles)
                     {
                         <div class="form-check">
@@ -141,8 +147,8 @@
                 </div>
 
                 <div>
-                    <button type="submit" class="btn btn-primary">@Localizer.Text("Create")</button>
-                    <a asp-page="./UserList" class="btn btn-secondary">@Localizer.Text("Back to List")</a>
+                    <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Create")</button>
+                    <a asp-page="./UserList" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
                 </div>
             </form>
         </div>

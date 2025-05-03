@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Data;
@@ -31,7 +32,7 @@ public class ApplicationUser : IdentityUser
 
     [Display(Name = "Is Active", Prompt = "Is Active")]
     public bool IsActive { get; set; }
-
+    
     [Display(Name = "Created Date", Prompt = "Enter Created Date")]
     [DataType(DataType.Date)]
     public DateTime CreatedDate { get; set; } = DateTime.Now;
@@ -48,6 +49,12 @@ public class ApplicationUser : IdentityUser
 
     [Display(Name = "University", Prompt = "Enter University")]
     public string University { get; set; } = "";
+    
+    [Display(Name = "National ID", Prompt = "National ID")]
+    [Required(ErrorMessage = "National ID is required")]
+    [StringLength(10, MinimumLength = 10, ErrorMessage = "National ID must be exactly 10 digits")]
+    [RegularExpression("^[0-9]{10}$", ErrorMessage = "National ID must contain only numbers")]
+    public string NationalId { get; set; }
 
     public List<TestPackage> TestPackages { get; set; }
 
@@ -55,6 +62,4 @@ public class ApplicationUser : IdentityUser
     {
         TestPackages = new List<TestPackage>();
     }
-
-    public bool IsPsychologist { get; set; }
 }

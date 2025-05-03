@@ -2,14 +2,16 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System.ComponentModel.DataAnnotations;
 using iSarv.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using iSarv.Data;
 
 namespace iSarv.Areas.Identity.Pages.Account.Manage
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
         private readonly ApplicationUserManager _userManager;
@@ -23,63 +25,37 @@ namespace iSarv.Areas.Identity.Pages.Account.Manage
             _signInManager = signInManager;
         }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
         public string Username { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
-        [TempData]
-        public string StatusMessage { get; set; }
+        [TempData] public string StatusMessage { get; set; }
 
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
-        [BindProperty]
-        public InputModel Input { get; set; }
-
-        /// <summary>
-        ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-        ///     directly from your code. This API may change or be removed in future releases.
-        /// </summary>
-        public class InputModel
-        {
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-            [Phone]
-            [Display(Name = "Phone number")]
-            public string PhoneNumber { get; set; }
-        }
-
-        private async Task LoadAsync(ApplicationUser user)
-        {
-            var userName = await _userManager.GetUserNameAsync(user);
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-
-            Username = userName;
-
-            Input = new InputModel
-            {
-                PhoneNumber = phoneNumber
-            };
-        }
+        [BindProperty] public ApplicationUser ApplicationUser { get; set; } = new();
+        public List<(string English, string Farsi)> FieldOfStudyOptions { get; set; } = new();
+        public List<(string English, string Farsi)> OccupationOptions { get; set; } = new();
+        public List<(string English, string Farsi)> UniversityOptions { get; set; } = new();
 
         public async Task<IActionResult> OnGetAsync()
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            ApplicationUser = await _userManager.GetUserAsync(User);
+            if (ApplicationUser == null)
             {
                 return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
             }
 
-            await LoadAsync(user);
+            Username = ApplicationUser.UserName;
+
+            try
+            {
+                FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("Data/FieldOfStudy.txt");
+                OccupationOptions = Utilities.ReadTextFileWithTranslations("Data/Occupation.txt");
+                UniversityOptions = Utilities.ReadTextFileWithTranslations("Data/University.txt");
+            }
+            catch (Exception e)
+            {
+                // Handle the exception, e.g., log it or display an error message
+                StatusMessage = "Error reading Fields: " + e.Message;
+            }
+
             return Page();
         }
 
@@ -93,23 +69,62 @@ namespace iSarv.Areas.Identity.Pages.Account.Manage
 
             if (!ModelState.IsValid)
             {
-                await LoadAsync(user);
                 return Page();
             }
 
-            var phoneNumber = await _userManager.GetPhoneNumberAsync(user);
-            if (Input.PhoneNumber != phoneNumber)
+            user.FullName = ApplicationUser.FullName;
+            user.NationalId = ApplicationUser.NationalId;
+            user.DateOfBirth = ApplicationUser.DateOfBirth;
+            user.Gender = ApplicationUser.Gender;
+            user.Address = ApplicationUser.Address;
+            user.Bio = ApplicationUser.Bio;
+            user.Occupation = ApplicationUser.Occupation;
+            user.FieldOfStudy = ApplicationUser.FieldOfStudy;
+            user.University = ApplicationUser.University;
+
+            if (user.UserName.Contains('@'))
             {
-                var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
-                if (!setPhoneResult.Succeeded)
+                if (user.PhoneNumber != ApplicationUser.PhoneNumber)
                 {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
-                    return RedirectToPage();
+                    user.PhoneNumberConfirmed = false;
+                    await _userManager.SetPhoneNumberAsync(user, ApplicationUser.PhoneNumber);
+                }
+            }
+            else
+            {
+                if (user.Email != ApplicationUser.Email)
+                {
+                    user.EmailConfirmed = false;
+                    await _userManager.SetEmailAsync(user, ApplicationUser.Email);
                 }
             }
 
-            await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+
+                return RedirectToPage();
+            }
+
+            return Redirect("/User/Dashboard");
+        }
+
+        public async Task<IActionResult> OnPostAddPhotoAsync(string id, IFormFile file)
+        {
+            try
+            {
+                await Utilities.SaveToFileAsync($"img/avatars/{id}.png", file);
+                StatusMessage = SuccessMessages.OperationSuccessful;
+            }
+            catch
+            {
+                StatusMessage = ErrorMessages.OperationFailed;
+            }
+
             return RedirectToPage();
         }
     }

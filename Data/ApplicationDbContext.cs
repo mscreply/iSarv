@@ -1,3 +1,4 @@
+using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,9 +14,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     protected override void OnModelCreating(ModelBuilder builder)
     {
         base.OnModelCreating(builder);
-        // Customize the ASP.NET Identity model and override the defaults if needed.
-        // For example, you can rename the ASP.NET Identity table names and more.
-        // Add your customizations after calling base.OnModelCreating(builder);
 
         builder.Entity<ApplicationUser>()
             .HasMany(u => u.TestPackages)
@@ -23,14 +21,34 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .HasForeignKey(p => p.UserId);
 
         builder.Entity<TestPackage>()
-            .HasMany(p => p.Tests);
+            .HasOne(tp => tp.CliftonTest)
+            .WithOne(ct => ct.TestPackage)
+            .HasForeignKey<CliftonTest>();
 
+        builder.Entity<TestPackage>()
+            .HasOne(tp => tp.HollandsTest)
+            .WithOne(ht => ht.TestPackage)
+            .HasForeignKey<HollandsTest>();
+
+        builder.Entity<TestPackage>()
+            .HasOne(tp => tp.RavensTest)
+            .WithOne(rt => rt.TestPackage)
+            .HasForeignKey<RavensTest>();
+
+        builder.Entity<TestPackage>()
+            .HasOne(tp => tp.NeoTest)
+            .WithOne(nt => nt.TestPackage)
+            .HasForeignKey<NeoTest>();
+        
         base.OnModelCreating(builder);
     }
 
     public DbSet<TestPackage> TestPackages { get; set; }
     public DbSet<CliftonTest> CliftonTests { get; set; }
+    public DbSet<CliftonTestQuestion> CliftonTestQuestions { get; set; }
     public DbSet<RavensTest> RavensTests { get; set; }
     public DbSet<HollandsTest> HollandsTests { get; set; }
     public DbSet<NeoTest> NeoTests { get; set; }
+    public DbSet<NeoTestQuestion> NeoTestQuestions { get; set; }
+    public DbSet<ActivationCode> ActivationCodes { get; set; }
 }

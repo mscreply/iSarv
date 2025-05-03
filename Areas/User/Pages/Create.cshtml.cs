@@ -2,7 +2,7 @@ using iSarv.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
-using RIMS.Data;
+using iSarv.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Areas.User.Pages
@@ -76,9 +76,10 @@ namespace iSarv.Areas.User.Pages
 
             var user = new ApplicationUser
             {
-                UserName = ApplicationUser.Email,
+                UserName = ApplicationUser.PhoneNumber,
                 Email = ApplicationUser.Email,
                 FullName = ApplicationUser.FullName,
+                NationalId = ApplicationUser.NationalId,
                 DateOfBirth = ApplicationUser.DateOfBirth,
                 Gender = ApplicationUser.Gender,
                 Address = ApplicationUser.Address,

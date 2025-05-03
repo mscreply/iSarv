@@ -1,9 +1,9 @@
-﻿﻿﻿﻿﻿﻿<!-- Navbar -->
-<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white position-sticky top-0">
+﻿<!-- Navbar -->
+<nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white top-0">
     <!-- Container wrapper -->
     <div class="container-fluid">
         <!-- Toggle button -->
-        <button class="navbar-toggler" type="button" data-mdb-collapse-init data-mdb-target="#sidebarMenu"
+        <button class="navbar-toggler" type="button" data-bs-target="#sidebarMenu"
                 aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
             <i class="fas fa-bars"></i>
         </button>
@@ -26,7 +26,7 @@
             <!-- Notification dropdown -->
             <li class="nav-item dropdown">
                 <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#"
-                   role="button" data-mdb-dropdown-init aria-expanded="false">
+                   role="button" aria-expanded="false">
                     <i class="fas fa-bell"></i>
                     <span class="badge rounded-pill position-absolute top-0 start-0 bg-danger">1</span>
                 </a>
@@ -59,7 +59,7 @@
             <!-- Language -->
             <li class="nav-item dropdown">
                 <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#"
-                   role="button" data-mdb-dropdown-init aria-expanded="false">
+                   role="button" aria-expanded="false">
                     <i class="fas fa-globe"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
@@ -72,20 +72,20 @@
             <!-- Avatar -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
-                   role="button" data-mdb-dropdown-init aria-expanded="false">
+                   role="button" aria-expanded="false" data-bs-toggle="dropdown">
                     <img src="/img/avatars/@(UserManager.GetUserId(User)).png" class="rounded-circle" height="22"
                          alt="" loading="lazy" onerror="this.src='/img/avatars/0.png'"/>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="/User/Edit/@(UserManager.GetUserId(User))">@Localizer.Text("My profile")</a>
+                        <a class="dropdown-item" href="/Identity/Account/Manage/">@Localizer.TextIgnoreCase("My Profile")</a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="/Identity/Account/Manage/ChangePassword">@Localizer.Text("Change Password")</a>
+                        <a class="dropdown-item" href="/Identity/Account/Manage/ChangePassword">@Localizer.TextIgnoreCase("Change Password")</a>
                     </li>
                     <li>
                         <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/Index", new { area = "" })">
-                            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">@Localizer.Text("Logout")</button>
+                            <button id="logout" type="submit" class="nav-link btn btn-link text-dark border-0">@Localizer.TextIgnoreCase("Logout")</button>
                         </form>
                     </li>
                 </ul>

@@ -9,7 +9,7 @@
 
 <div class="alert alert-warning" role="alert">
     <p>
-        <strong>@Localizer.Text("Deleting this data will permanently remove your account, and this cannot be recovered.")</strong>
+        <strong>@Localizer.TextIgnoreCase("Deleting this data will permanently remove your account, and this cannot be recovered.")</strong>
     </p>
 </div>
 
@@ -24,7 +24,7 @@
             </div>
             <span asp-validation-for="Input.Password" class="text-danger"></span>
         }
-        <button class="btn btn-danger" type="submit">@Localizer.Text("Delete data and close my account")</button>
+        <button class="btn btn-danger" type="submit">@Localizer.TextIgnoreCase("Delete data and close my account")</button>
     </form>
 </div>
 

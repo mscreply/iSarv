@@ -1,0 +1,236 @@
+@page "{currentPage?}"
+@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model iSarv.Areas.Package.Pages.IndexModel
+
+@{
+    var lang = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    ViewData["Title"] = Localizer.TextIgnoreCase("Packages List");
+}
+
+<h1>@ViewData["Title"]</h1>
+<partial name="_ToastMessage" for="ToastMessage"/>
+
+<div class="d-inline-flex mb-3 w-100">
+    <form method="get" class="d-inline-flex">
+        <div class="input-group">
+            <label class="input-group-text" for="searchTerm">@Localizer.TextIgnoreCase("Search")</label>
+            <input type="text" class="form-control" id="searchTerm" name="searchTerm" value="@Model.SearchTerm">
+            <button type="submit" class="btn btn-success"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="input-group">
+            <select class="form-select" asp-for="Status" name="status" id="status">
+                <option value="">@Localizer.TextIgnoreCase("All")</option>
+                <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                <option value="Uncompleted">@Localizer.TextIgnoreCase("Uncompleted")</option>
+            </select>
+            <button type="submit" class="btn btn-info"><i class="fas fa-filter"></i></button>
+        </div>
+    </form>
+    @if (User.IsInRole("Administrator"))
+    {
+        <form asp-page-handler="LoadFromExcel" method="post" enctype="multipart/form-data">
+            <div class="input-group">
+                <input type="file" name="excelFile" class="form-control" accept=".xlsx, .xls">
+                <button type="submit" class="btn btn-success">@Localizer.TextIgnoreCase("Load from Excel")</button>
+            </div>
+        </form>
+        <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
+    }
+</div>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Localizer.TextIgnoreCase("Id")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestPackages[0].User.NationalId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestPackages[0].User.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestPackages[0].StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestPackages[0].Deadline)
+        </th>
+        <th>@Localizer.Text("Neo Test")</th>
+        <th>@Localizer.Text("Clifton Test")</th>
+        <th>@Localizer.Text("Hollands Test")</th>
+        <th>@Localizer.Text("Ravens Test")</th>
+        <th>
+            @Html.DisplayNameFor(model => model.TestPackages[0].SubmitDate)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.TestPackages)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.NationalId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User.FullName)
+            </td>
+            <td>
+                @item.StartDate.ToShortCultureDate(lang)
+            </td>
+            <td>
+                @item.Deadline.ToShortCultureDate(lang)
+            </td>
+            <td>
+                @if (item.NeoTest.IsCompleted)
+                {
+                    <i class="bi bi-check-circle text-success"></i>
+                    @item.NeoTest.SubmitDate.ToShortCultureDate(lang)
+                }
+                else if (DateTime.Now < item.NeoTest.StartDate)
+                {
+                    <i class="bi bi-hourglass text-secondary"></i>
+                    @Localizer.Text("Not Started")
+                }
+                else if (DateTime.Now <= item.NeoTest.Deadline)
+                {
+                    <i class="bi bi-play-circle text-primary"></i>
+                    @Localizer.Text("In Progress")
+                }
+                else
+                {
+                    <i class="bi bi-x-circle text-danger"></i>
+                    @Localizer.Text("Expired")
+                }
+            </td>
+            <td>
+                @if (item.CliftonTest.IsCompleted)
+                {
+                    <i class="bi bi-check-circle text-success"></i>
+                    @item.CliftonTest.SubmitDate.ToShortCultureDate(lang)
+                }
+                else if (DateTime.Now < item.CliftonTest.StartDate)
+                {
+                    <i class="bi bi-hourglass text-secondary"></i>
+                    @Localizer.Text("Not Started")
+                }
+                else if (DateTime.Now <= item.CliftonTest.Deadline)
+                {
+                    <i class="bi bi-play-circle text-primary"></i>
+                    @Localizer.Text("In Progress")
+                }
+                else
+                {
+                    <i class="bi bi-x-circle text-danger"></i>
+                    @Localizer.Text("Expired")
+                }
+            </td>
+            <td>
+                @if (item.HollandsTest.IsCompleted)
+                {
+                    <i class="bi bi-check-circle text-success"></i>
+                    @item.HollandsTest.SubmitDate.ToShortCultureDate(lang)
+                }
+                else if (DateTime.Now < item.HollandsTest.StartDate)
+                {
+                    <i class="bi bi-hourglass text-secondary"></i>
+                    @Localizer.Text("Not Started")
+                }
+                else if (DateTime.Now <= item.HollandsTest.Deadline)
+                {
+                    <i class="bi bi-play-circle text-primary"></i>
+                    @Localizer.Text("In Progress")
+                }
+                else
+                {
+                    <i class="bi bi-x-circle text-danger"></i>
+                    @Localizer.Text("Expired")
+                }
+            </td>
+            <td>
+                @if (item.RavensTest.IsCompleted)
+                {
+                    <i class="bi bi-check-circle text-success"></i>
+                    @item.RavensTest.SubmitDate.ToShortCultureDate(lang)
+                }
+                else if (DateTime.Now < item.RavensTest.StartDate)
+                {
+                    <i class="bi bi-hourglass text-secondary"></i>
+                    @Localizer.Text("Not Started")
+                }
+                else if (DateTime.Now <= item.RavensTest.Deadline)
+                {
+                    <i class="bi bi-play-circle text-primary"></i>
+                    @Localizer.Text("In Progress")
+                }
+                else
+                {
+                    <i class="bi bi-x-circle text-danger"></i>
+                    @Localizer.Text("Expired")
+                }
+            </td>
+            <td>
+                @if (item.IsCompleted)
+                {
+                    <i class="bi bi-check-circle text-success"></i>
+                    @item.SubmitDate.ToShortCultureDate(lang)
+                }
+                else if (DateTime.Now < item.StartDate)
+                {
+                    <i class="bi bi-hourglass text-secondary"></i>
+                    @Localizer.Text("Not Started")
+                }
+                else if (DateTime.Now <= item.Deadline)
+                {
+                    <i class="bi bi-play-circle text-primary"></i>
+                    @Localizer.Text("In Progress")
+                }
+                else
+                {
+                    <i class="bi bi-x-circle text-danger"></i>
+                    @Localizer.Text("Expired")
+                }
+            </td>
+            <td>
+                <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                    <i class="bi bi-eye"></i>
+                </a>
+                @if (User.IsInRole("Administrator"))
+                {
+                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                        <i class="bi bi-pencil"></i>
+                    </a>
+                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                        <i class="bi bi-trash"></i>
+                    </a>
+                }
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<nav aria-label="Package list pagination">
+    <ul class="pagination">
+        <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
+            <a class="page-link" asp-page="./Index" asp-route-currentPage="@(Model.CurrentPage - 1)"
+               asp-area="Package">@Localizer.TextIgnoreCase("Previous")</a>
+        </li>
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                <a class="page-link" asp-page="./Index" asp-route-currentPage="@(i.ToString())"
+                   asp-area="Package">@i</a>
+            </li>
+        }
+        <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
+            <a class="page-link" asp-page="./Index" asp-route-currentPage="@(Model.CurrentPage + 1)"
+               asp-area="Package">@Localizer.TextIgnoreCase("Next")</a>
+        </li>
+    </ul>
+</nav>

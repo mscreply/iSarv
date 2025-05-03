@@ -1,0 +1,44 @@
+@page
+@model iSarv.Areas.Test.Pages.Clifton.Question.DetailsModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Details");
+}
+
+<h1>@Localizer.TextIgnoreCase("Details")</h1>
+
+<div>
+    <h4>@Localizer.TextIgnoreCase("Clifton Test Question")</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CliftonTestQuestion.StatementA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CliftonTestQuestion.StatementA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CliftonTestQuestion.ThemeA)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CliftonTestQuestion.ThemeA)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CliftonTestQuestion.StatementB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CliftonTestQuestion.StatementB)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CliftonTestQuestion.ThemeB)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CliftonTestQuestion.ThemeB)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.CliftonTestQuestion.Id" class="btn btn-primary">@Localizer.TextIgnoreCase("Edit")</a> 
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+</div>
+
