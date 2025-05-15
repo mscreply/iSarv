@@ -10,6 +10,17 @@ public class TestPackage
     [Display(Name = "Package Name", Prompt = "Enter the package name")]
     public string Name { get; set; } = "Talent And Strength Package";
 
+    [Display(Name = "Final Result", Prompt = "Enter the final result")]
+    public string FinalResult { get; set; } = string.Empty;
+
+    [Display(Name = "User", Prompt = "Select the user")]
+    public ApplicationUser? User { get; set; } = null!;
+
+    [Display(Name = "User ID", Prompt = "Enter the user ID")]
+    public string UserId { get; set; } = string.Empty;
+
+    // Tests --------------------------------------------------------------------------------
+    
     [Display(Name = "Clifton Test", Prompt = "Select the Clifton test")]
     public CliftonTest CliftonTest { get; set; } = new();
 
@@ -17,19 +28,12 @@ public class TestPackage
     public RavensTest RavensTest { get; set; } = new();
 
     [Display(Name = "Hollands Test", Prompt = "Select the Hollands test")]
-    public HollandsTest HollandsTest { get; set; } = new();
+    public HollandsTest? HollandsTest { get; set; } = new();
 
     [Display(Name = "Neo Test", Prompt = "Select the Neo test")]
-    public NeoTest NeoTest { get; set; } = new();
-
-    [Display(Name = "Final Result", Prompt = "Enter the final result")]
-    public string FinalResult { get; set; } = string.Empty;
-
-    [Display(Name = "User", Prompt = "Select the user")]
-    public ApplicationUser User { get; set; } = null!;
-
-    [Display(Name = "User ID", Prompt = "Enter the user ID")]
-    public string UserId { get; set; } = string.Empty;
+    public NeoTest? NeoTest { get; set; } = new();
+    
+    // Dates ----------------------------------------------------------------------------------
 
     [Required]
     [DataType(DataType.DateTime)]
@@ -50,6 +54,6 @@ public class TestPackage
 
     public string Status => IsCompleted ? "Completed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now > Deadline ? "Expired" : "In Progress";
+        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
 
 }

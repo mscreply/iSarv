@@ -1,3 +1,4 @@
+Shahab Danesh University|دانشگاه شهاب دانش
 University of Tehran|دانشگاه تهران
 Sharif University of Technology|دانشگاه صنعتی شریف
 Amirkabir University of Technology|دانشگاه صنعتی امیرکبیر
@@ -9,7 +10,7 @@ Iran University of Science and Technology|دانشگاه علم و صنعت ای
 Khajeh Nasir Toosi University of Technology|دانشگاه صنعتی خواجه نصیرالدین طوسی
 Shiraz University|دانشگاه شیراز
 Isfahan University of Technology|دانشگاه صنعتی اصفهان
-Allameh Tabataba'i University|دانشگاه علامه طباطaba'i
+Allameh Tabataba'i University|دانشگاه علامه طباطبایی
 Guilan University|دانشگاه گیلان
 Mazandaran University|دانشگاه مازندران
 Babol Noshirvani University of Technology|دانشگاه صنعتی نوشیروانی بابل

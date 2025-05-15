@@ -1,8 +1,11 @@
+using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using iSarv.Data;
+using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace iSarv.Areas.User.Pages
 {
@@ -246,6 +249,75 @@ namespace iSarv.Areas.User.Pages
             }
 
             return RedirectToPage(new { currentPage });
+        }
+        
+        public async Task<IActionResult> OnPostLoadFromExcelAsync(IFormFile excelFile)
+        {
+            if (excelFile == null || excelFile.Length == 0)
+            {
+                ToastMessage = "Please upload a valid Excel file.";
+                return RedirectToPage();
+            }
+
+            try
+            {
+                using (var stream = new MemoryStream())
+                {
+                    await excelFile.CopyToAsync(stream);
+                    using (var workbook = new XLWorkbook(stream))
+                    {
+                        var worksheet = workbook.Worksheets.FirstOrDefault();
+                        if (worksheet == null)
+                        {
+                            ToastMessage = "The uploaded Excel file contains no worksheets.";
+                            return RedirectToPage();
+                        }
+
+                        var rowCount = worksheet.RowsUsed().Count();
+                        if (rowCount < 2) // Assuming the first row is the header
+                        {
+                            ToastMessage = "The uploaded Excel file is empty or has no data rows.";
+                            return RedirectToPage();
+                        }
+
+                        foreach (var row in worksheet.RowsUsed().Skip(1)) // Skip header row
+                        {
+                            var userName = row.Cell(1).GetString();
+                            var user = await _context.Users.FirstOrDefaultAsync(u => u.UserName == userName);
+                            if (user == null)
+                            {
+                                user = new ApplicationUser()
+                                {
+                                    UserName = row.Cell(1).GetString(),
+                                    Email = row.Cell(2).GetString() ?? "",
+                                    PhoneNumber = row.Cell(1).GetString(),
+                                    PhoneNumberConfirmed = true,
+                                    FullName = row.Cell(3).GetString() ?? "",
+                                    NationalId = row.Cell(4).GetString() ?? "",
+                                    DateOfBirth = DateTime.TryParse(row.Cell(5).GetString(), out var date) ? date : DateTime.Now,
+                                    Gender = Enum.TryParse<Gender>(row.Cell(6).GetString(), out var gender) ? gender : default,
+                                    Address = row.Cell(7).GetString() ?? "",
+                                    Bio = row.Cell(8).GetString() ?? "",
+                                    Occupation = row.Cell(9).GetString() ?? "",
+                                    FieldOfStudy = row.Cell(10).GetString() ?? "",
+                                    University = row.Cell(11).GetString() ?? ""
+                                };
+                                await _userManager.CreateAsync(user, "123456");
+                            }
+
+                            await _context.SaveChangesAsync();
+                        }
+                    }
+                }
+
+                ToastMessage = "Users loaded successfully from Excel.";
+            }
+            catch (Exception ex)
+            {
+                ToastMessage = $"An error occurred while processing the file: {ex.Message}";
+            }
+
+            return RedirectToPage();
         }
     }
 }

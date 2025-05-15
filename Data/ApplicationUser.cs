@@ -49,12 +49,12 @@ public class ApplicationUser : IdentityUser
 
     [Display(Name = "University", Prompt = "Enter University")]
     public string University { get; set; } = "";
-    
+
     [Display(Name = "National ID", Prompt = "National ID")]
     [Required(ErrorMessage = "National ID is required")]
     [StringLength(10, MinimumLength = 10, ErrorMessage = "National ID must be exactly 10 digits")]
     [RegularExpression("^[0-9]{10}$", ErrorMessage = "National ID must contain only numbers")]
-    public string NationalId { get; set; }
+    public string NationalId { get; set; } = "";
 
     public List<TestPackage> TestPackages { get; set; }
 

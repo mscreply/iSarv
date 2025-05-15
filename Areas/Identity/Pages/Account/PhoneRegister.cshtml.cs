@@ -23,6 +23,7 @@ namespace iSarv.Areas.Identity.Pages.Account
             _smsService = smsService;
         }
 
+        [TempData] public string ToastMessage { get; set; }
         [BindProperty] public InputModel Input { get; set; }
 
         public string ReturnUrl { get; set; }
@@ -61,11 +62,17 @@ namespace iSarv.Areas.Identity.Pages.Account
 
                 var code = await _userManager.GenerateChangePhoneNumberTokenAsync(user, user.PhoneNumber);
                 // send the code by SMS
-                _smsService.SendSms($"کد تایید شما در آی‌سرو: {code}", Input.PhoneNumber);
-                Console.WriteLine(code);
-                return RedirectToPage("PhoneNumberConfirmation",
-                    new { phoneNumber = Input.PhoneNumber, returnUrl = returnUrl });
-
+                var response = _smsService.SendSms($"کد تایید شما در آی‌سرو: {code}", Input.PhoneNumber);
+                if (response.IsSuccess)
+                {
+                    return RedirectToPage("PhoneNumberConfirmation",
+                        new { phoneNumber = Input.PhoneNumber, returnUrl = returnUrl });
+                }
+                else
+                {
+                    ToastMessage = response.Result;
+                    return RedirectToPage();
+                }
                 // If we got this far, something failed, redisplay form
             }
 

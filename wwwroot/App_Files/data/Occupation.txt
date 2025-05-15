@@ -1,3 +1,4 @@
+Student|دانشجو
 Software Engineer|مهندس نرم افزار
 Data Scientist|دانشمند داده
 Project Manager|مدیر پروژه

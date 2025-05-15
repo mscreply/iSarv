@@ -49,8 +49,8 @@ namespace iSarv.Areas.Test.Pages.Code
 
             try
             {
-                var result = _smsService.SendSms($"Your package activation code is: {activationCode.Code}",activationCode.PhoneNumber ); // Changed to SendSms and removed await
-                ToastMessage = (bool)JObject.Parse(result)["Success"]! ? "Activation code sent via SMS." : JObject.Parse(result)["Error"]!.ToString();
+                var response = _smsService.SendSms($"Your package activation code is: {activationCode.Code}",activationCode.PhoneNumber ); // Changed to SendSms and removed await
+                ToastMessage = response.IsSuccess ? "Activation code sent via SMS." : response.Result;
             }
             catch (Exception ex)
             {

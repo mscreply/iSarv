@@ -4,6 +4,8 @@
     ViewData["Title"] = Localizer.Text("Phone Register");
 }
 
+<partial name="_ToastMessage" for="ToastMessage"/>
+
 <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-outline mb-1" data-mdb-input-init>

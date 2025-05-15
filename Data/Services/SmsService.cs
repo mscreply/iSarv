@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 using RestSharp;
 
 namespace iSarv.Data.Services;
@@ -6,7 +7,7 @@ namespace iSarv.Data.Services;
 public interface ISmsService
 {
     public string SendSmsByPattern(string templateKey, long destination, string p1="", string p2="", string p3="");
-    public string SendSms(string text, string recipients);
+    public (bool IsSuccess, string Result) SendSms(string text, string recipients);
 }
 
 public class SmsService : ISmsService
@@ -29,12 +30,21 @@ public class SmsService : ISmsService
         return response.Content?? "Unknown";
     }
 
-    public string SendSms(string text, string recipients)
+    public (bool IsSuccess, string Result) SendSms(string text, string recipients)
     {
         var client = new RestClient($"{_smsSetting.SendSmsUri}?ApiKey={_smsSetting.ApiKey}&Text={text}&Sender={_smsSetting.Sender}&Recipients={recipients}");
         var request = new RestRequest();
         var response = client.Execute(request);
-        return response.Content?? "Unknown";
+        try
+        {
+            var jResponse = JObject.Parse(response.Content!);
+            return ((bool)jResponse["Success"]!,
+                (bool)jResponse["Success"]! ? jResponse["Result"]!.ToString() : jResponse["Error"]!.ToString());
+        }
+        catch (Exception e)
+        {
+            return (false, response.Content + " | " + e.Message);
+        }
     }
 }
 

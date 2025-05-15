@@ -26,9 +26,9 @@ namespace iSarv.Areas.User.Pages
         {
             try
             {
-                OccupationOptions = Utilities.ReadTextFileWithTranslations("Data/Occupation.txt");
-                FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("Data/FieldOfStudy.txt");
-                UniversityOptions = Utilities.ReadTextFileWithTranslations("Data/University.txt");
+                OccupationOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/Occupation.txt");
+                FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/FieldOfStudy.txt");
+                UniversityOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/University.txt");
                 AvailableRoles = _roleManager.Roles.Where(r => r.Name != "Admin").Select(r => r.Name).ToList();
             }
             catch (Exception e)
@@ -61,9 +61,9 @@ namespace iSarv.Areas.User.Pages
             {
                 try
                 {
-                    OccupationOptions = Utilities.ReadTextFileWithTranslations("Data/Occupation.txt");
-                    FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("Data/FieldOfStudy.txt");
-                    UniversityOptions = Utilities.ReadTextFileWithTranslations("Data/University.txt");
+                    OccupationOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/Occupation.txt");
+                    FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/FieldOfStudy.txt");
+                    UniversityOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/University.txt");
                     AvailableRoles = _roleManager.Roles.Where(r => r.Name != "Admin").Select(r => r.Name).ToList();
                 }
                 catch (Exception e)

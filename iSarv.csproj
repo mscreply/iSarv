@@ -31,6 +31,13 @@
       <Folder Include="Areas\Test\Pages\Clifton\Question\" />
       <Folder Include="Areas\Test\Pages\Neo\" />
       <Folder Include="Areas\User\" />
+      <Folder Include="wwwroot\App_Files\uploads\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="wwwroot\App_Files\data\FieldOfStudy.txt" />
+      <None Include="wwwroot\App_Files\data\Occupation.txt" />
+      <None Include="wwwroot\App_Files\data\University.txt" />
     </ItemGroup>
 
 </Project>

@@ -37,9 +37,9 @@ public class EditApplicationUserModel : PageModel
 
         try
         {
-            FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("Data/FieldOfStudy.txt");
-            OccupationOptions = Utilities.ReadTextFileWithTranslations("Data/Occupation.txt");
-            UniversityOptions = Utilities.ReadTextFileWithTranslations("Data/University.txt");
+            FieldOfStudyOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/FieldOfStudy.txt");
+            OccupationOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/Occupation.txt");
+            UniversityOptions = Utilities.ReadTextFileWithTranslations("App_Files/data/University.txt");
         }
         catch (Exception e)
         {

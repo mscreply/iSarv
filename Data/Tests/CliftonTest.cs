@@ -40,7 +40,7 @@ public class CliftonTest
 
     public string Status => IsCompleted ? "Completed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now > Deadline ? "Expired" : "In Progress";
+        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
 
     private ApplicationDbContext applicationDbContext { get; }
 

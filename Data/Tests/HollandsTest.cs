@@ -39,7 +39,7 @@ public class HollandsTest
 
     public string Status => IsCompleted ? "Completed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now > Deadline ? "Expired" : "In Progress";
+        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 

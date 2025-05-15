@@ -158,7 +158,7 @@ namespace iSarv.Data
             var result = new List<(string English, string Farsi)>();
             try
             {
-                var lines = File.ReadAllLines(filePath).ToList();
+                var lines = File.ReadAllLines(Path.Combine(WebRootPath!, filePath)).ToList();
                 foreach (var line in lines)
                 {
                     var parts = line.Split('|');

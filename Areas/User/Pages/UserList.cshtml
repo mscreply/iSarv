@@ -6,16 +6,22 @@
 
 <h1>@Localizer.TextIgnoreCase("User List")</h1>
 
-<form method="get">
-    <div class="d-inline-flex">
+<div class="d-inline-flex">
+    <form method="get">
         <div class="input-group">
             <label class="input-group-text" for="searchTerm">@Localizer.TextIgnoreCase("Search")</label>
             <input type="text" class="form-control" id="searchTerm" name="searchTerm" value="@Model.SearchTerm">
             <button type="submit" class="btn btn-success"><i class="fas fa-search"></i></button>
         </div>
-        <a asp-page="./Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New User")</a>
-    </div>
-</form>
+    </form>
+    <form asp-page-handler="LoadFromExcel" method="post" enctype="multipart/form-data">
+        <div class="input-group">
+            <input type="file" name="excelFile" class="form-control" accept=".xlsx, .xls">
+            <button type="submit" class="btn btn-success">@Localizer.TextIgnoreCase("Load from Excel")</button>
+        </div>
+    </form>
+    <a asp-page="./Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New User")</a>
+</div>
 
 <partial name="_ToastMessage" for="ToastMessage"/>
 
@@ -87,7 +93,8 @@
                 <form method="post" asp-page-handler="AssignAdmin" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.TextIgnoreCase("Toggle Admin")"><i class="fas fa-user-shield"></i></button>
+                            title="@Localizer.TextIgnoreCase("Toggle Admin")"><i class="fas fa-user-shield"></i>
+                    </button>
                 </form>
             </td>
             <td>
@@ -125,19 +132,20 @@
                 </form>
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@user.Id" title="@Localizer.TextIgnoreCase("Edit")"><i class="fas fa-edit"></i></a>
-                |
-                <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id"
-                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;"
-                      onsubmit="return confirm(@Localizer.TextIgnoreCase("Are you sure you want to delete this user?"));">
-                    <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                            title="@Localizer.TextIgnoreCase("Delete")"><i class="fas fa-trash"></i></button>
-                </form>
+                <a asp-page="./Edit" asp-route-id="@user.Id" title="@Localizer.TextIgnoreCase("Edit")"><i
+                        class="fas fa-edit"></i></a>
                 |
                 <form method="post" asp-page-handler="ResetPassword" asp-route-id="@user.Id"
                       asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
                     <button type="submit" class="btn btn-link" style="padding:0; border:none;"
                             title="@Localizer.TextIgnoreCase("Reset Password")"><i class="fas fa-key"></i></button>
+                </form>
+                |
+                <form method="post" asp-page-handler="Delete" asp-route-id="@user.Id"
+                      asp-route-currentPage="@Model.CurrentPage" style="display:inline;"
+                      onsubmit="return confirm(@Localizer.TextIgnoreCase("Are you sure you want to delete this user?"));">
+                    <button type="submit" class="btn btn-link text-danger" style="padding:0; border:none;"
+                            title="@Localizer.TextIgnoreCase("Delete")"><i class="fas fa-trash"></i></button>
                 </form>
             </td>
         </tr>

@@ -10,31 +10,107 @@
 <h4>@Localizer.TextIgnoreCase("TestPackage")</h4>
 <hr/>
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="TestPackage.Id"/>
-            <div class="form-floating mb-3">
-                <input asp-for="TestPackage.Name" class="form-control" placeholder="@Localizer.TextIgnoreCase("Name")" readonly/>
-                <label asp-for="TestPackage.Name">@Localizer.TextIgnoreCase("Name")</label>
-                <span asp-validation-for="TestPackage.Name" class="text-danger"></span>
+            <input type="hidden" asp-for="TestPackageEdit.Id"/>
+            
+            <div class="row">
+                <div class="col form-floating mb-3">
+                    <input asp-for="TestPackageEdit.Name" class="form-control" placeholder="@Localizer.TextIgnoreCase("Name")" readonly/>
+                    <label asp-for="TestPackageEdit.Name">@Localizer.TextIgnoreCase("Name")</label>
+                    <span asp-validation-for="TestPackageEdit.Name" class="text-danger"></span>
+                </div>
+                <div class="col form-floating mb-3">
+                    <select asp-for="TestPackageEdit.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+                    <label asp-for="TestPackageEdit.UserId" class="control-label">@Localizer.TextIgnoreCase("User Id")</label>
+                </div>
             </div>
-            <div class="form-group mb-3">
-                <label asp-for="TestPackage.UserId" class="control-label">@Localizer.TextIgnoreCase("User Id")</label>
-                <select asp-for="TestPackage.UserId" class="form-control" asp-items="ViewBag.UserId"></select>
+            
+            <hr/>
+            <h4>@Localizer.TextIgnoreCase("Neo Test")</h4>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.NeoStartDate" class="form-control" type="date" id="neo-start-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="neo-start-date" id="neo-start-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.NeoStartDate" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.NeoStartDate" class="text-danger mb-3"></span>
+                </div>
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.NeoDeadline" class="form-control col-md-6" type="date" id="neo-deadline-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="neo-deadline-date" id="neo-deadline-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.NeoDeadline" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.NeoDeadline" class="text-danger mb-3"></span>
+                </div>
             </div>
-            <div class="form-floating input-group mb-3">
-                <input asp-for="TestPackage.StartDate" class="form-control" type="date" id="start-date"/>
-                <span class="input-group-text btn-j-calendar" calendar-for="start-date"></span>
-                <label asp-for="TestPackage.StartDate" class="form-label"></label>
-                <span asp-validation-for="TestPackage.StartDate" class="text-danger"></span>
+
+            <hr/>
+            <h4>@Localizer.TextIgnoreCase("Clifton Test")</h4>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.CliftonStartDate" class="form-control col-md-6" type="date" id="clifton-start-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="clifton-start-date" id="clifton-start-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.CliftonStartDate" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.CliftonStartDate" class="text-danger mb-3"></span>
+                </div>
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.CliftonDeadline" class="form-control" type="date" id="clifton-deadline-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="clifton-deadline-date" id="clifton-deadline-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.CliftonDeadline" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.CliftonDeadline" class="text-danger mb-3"></span>
+                </div>
             </div>
-            <div class="form-floating input-group mb-3">
-                <input asp-for="TestPackage.Deadline" class="form-control" type="date" id="deadline-date"/>
-                <span class="input-group-text btn-j-calendar" calendar-for="deadline-date"></span>
-                <label asp-for="TestPackage.Deadline" class="form-label"></label>
-                <span asp-validation-for="TestPackage.Deadline" class="text-danger"></span>
+            
+            <hr/>
+            <h4>@Localizer.TextIgnoreCase("Hollands Test")</h4>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.HollandsStartDate" class="form-control col-md-6" type="date" id="hollands-start-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="hollands-start-date" id="hollands-start-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.HollandsStartDate" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.HollandsStartDate" class="text-danger mb-3"></span>
+                </div>
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.HollandsDeadline" class="form-control" type="date" id="hollands-deadline-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="hollands-deadline-date" id="hollands-deadline-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.HollandsDeadline" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.HollandsDeadline" class="text-danger mb-3"></span>
+                </div>
             </div>
+            
+            <hr/>
+            <h4>@Localizer.TextIgnoreCase("Ravens Test")</h4>
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.RavensStartDate" class="form-control col-md-6" type="date" id="ravens-start-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="ravens-start-date" id="ravens-start-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.RavensStartDate" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.RavensStartDate" class="text-danger mb-3"></span>
+                </div>
+                <div class="col">
+                    <div class="form-floating input-group mb-3">
+                        <input asp-for="TestPackageEdit.RavensDeadline" class="form-control" type="date" id="ravens-deadline-date"/>
+                        <span class="input-group-text btn-j-calendar" calendar-for="ravens-deadline-date" id="ravens-deadline-date-calendar"></span>
+                        <label asp-for="TestPackageEdit.RavensDeadline" class="form-label"></label>
+                    </div>
+                    <span asp-validation-for="TestPackageEdit.RavensDeadline" class="text-danger mb-3"></span>
+                </div>
+            </div>
+            
             <div class="form-group">
                 <input type="submit" value="@Localizer.TextIgnoreCase("Save")" class="btn btn-primary"/>
                 <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>

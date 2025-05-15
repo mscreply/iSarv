@@ -1,8 +1,8 @@
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Authorization;
 
 namespace iSarv.Areas.Package.Pages
@@ -17,8 +17,38 @@ namespace iSarv.Areas.Package.Pages
             _context = context;
         }
 
+        public class TestPackageEditModel
+        {
+            public int Id { get; set; }
+            public string Name { get; set; }
+            public string UserId { get; set; }
+            
+            [Display(Name = "Start Date")]
+            public DateTime NeoStartDate { get; set; }
+            
+            [Display(Name = "Deadline")]
+            public DateTime NeoDeadline { get; set; }
+            
+            [Display(Name = "Start Date")]
+            public DateTime CliftonStartDate { get; set; }
+            
+            [Display(Name = "Deadline")]
+            public DateTime CliftonDeadline { get; set; }
+            
+            [Display(Name = "Start Date")]
+            public DateTime HollandsStartDate { get; set; }
+            [Display(Name = "Deadline")]
+            public DateTime HollandsDeadline { get; set; }
+            
+            [Display(Name = "Start Date")]
+            public DateTime RavensStartDate { get; set; }
+            [Display(Name = "Deadline")] 
+            public DateTime RavensDeadline { get; set; }
+
+        }
+
         [BindProperty]
-        public TestPackage TestPackage { get; set; } = default!;
+        public TestPackageEditModel TestPackageEdit { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -27,12 +57,25 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            var testpackage =  await _context.TestPackages.FirstOrDefaultAsync(m => m.Id == id);
-            if (testpackage == null)
+            var testPackage =  await _context.TestPackages.FirstOrDefaultAsync(m => m.Id == id);
+            if (testPackage == null)
             {
                 return NotFound();
             }
-            TestPackage = testpackage;
+            TestPackageEdit = new TestPackageEditModel()
+            {
+                Id = testPackage.Id,
+                Name = testPackage.Name,
+                UserId = testPackage.UserId,
+                NeoStartDate = testPackage.NeoTest.StartDate,
+                NeoDeadline = testPackage.NeoTest.Deadline,
+                CliftonStartDate = testPackage.CliftonTest.StartDate,
+                CliftonDeadline = testPackage.CliftonTest.Deadline,
+                HollandsStartDate = testPackage.HollandsTest.StartDate,
+                HollandsDeadline = testPackage.HollandsTest.StartDate,
+                RavensStartDate = testPackage.RavensTest.StartDate,
+                RavensDeadline = testPackage.RavensTest.Deadline,
+            };
             ViewData["UserId"] = new SelectList(_context.Users.Select(u => new {u.Id, Name = u.NationalId + ": " + u.FullName})
                 , "Id", "Name");
             return Page();
@@ -40,14 +83,59 @@ namespace iSarv.Areas.Package.Pages
 
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more information, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostAsync(int? id)
         {
             if (!ModelState.IsValid)
             {
-                return Page();
+                return await OnGetAsync(id);
             }
 
-            _context.Attach(TestPackage).State = EntityState.Modified;
+            var testPackage =  await _context.TestPackages.FirstOrDefaultAsync(m => m.Id == TestPackageEdit.Id);
+            if (testPackage == null)
+            {
+                return NotFound();
+            }
+
+            testPackage.Name = TestPackageEdit.Name;
+            testPackage.UserId = TestPackageEdit.UserId;
+            if (TestPackageEdit.NeoStartDate >= TestPackageEdit.NeoDeadline ||
+                TestPackageEdit.CliftonStartDate >= TestPackageEdit.CliftonDeadline ||
+                TestPackageEdit.HollandsStartDate >= TestPackageEdit.HollandsDeadline ||
+                TestPackageEdit.RavensStartDate >= TestPackageEdit.RavensDeadline)
+            {
+                ModelState.AddModelError(string.Empty, "Deadline date must be after start date for all tests.");
+                return await OnGetAsync(id);
+            }
+
+            testPackage.NeoTest.StartDate = TestPackageEdit.NeoStartDate;
+            testPackage.NeoTest.Deadline = TestPackageEdit.NeoDeadline;
+
+            testPackage.CliftonTest.StartDate = TestPackageEdit.CliftonStartDate;
+            testPackage.CliftonTest.Deadline = TestPackageEdit.CliftonDeadline;
+
+            testPackage.HollandsTest.StartDate = TestPackageEdit.HollandsStartDate;
+            testPackage.HollandsTest.Deadline = TestPackageEdit.HollandsDeadline;
+
+            testPackage.RavensTest.StartDate = TestPackageEdit.RavensStartDate;
+            testPackage.RavensTest.Deadline = TestPackageEdit.RavensDeadline;
+
+            testPackage.StartDate = new List<DateTime>
+            {
+                testPackage.NeoTest.StartDate, testPackage.CliftonTest.StartDate, testPackage.HollandsTest.StartDate,
+                testPackage.RavensTest.StartDate
+            }.Min();
+            testPackage.Deadline = new List<DateTime>
+            {
+                testPackage.NeoTest.Deadline, testPackage.CliftonTest.Deadline, testPackage.HollandsTest.Deadline,
+                testPackage.RavensTest.Deadline
+            }.Max();
+
+            _context.Attach(testPackage.NeoTest).State = EntityState.Modified;
+            _context.Attach(testPackage.CliftonTest).State = EntityState.Modified;
+            _context.Attach(testPackage.HollandsTest).State = EntityState.Modified;
+            _context.Attach(testPackage.RavensTest).State = EntityState.Modified;
+            
+            _context.Attach(testPackage).State = EntityState.Modified;
 
             try
             {
@@ -55,7 +143,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(TestPackage.Id))
+                if (!TestPackageExists(TestPackageEdit.Id))
                 {
                     return NotFound();
                 }
