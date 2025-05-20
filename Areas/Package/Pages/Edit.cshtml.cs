@@ -36,14 +36,14 @@ namespace iSarv.Areas.Package.Pages
             public DateTime CliftonDeadline { get; set; }
             
             [Display(Name = "Start Date")]
-            public DateTime HollandsStartDate { get; set; }
+            public DateTime HollandStartDate { get; set; }
             [Display(Name = "Deadline")]
-            public DateTime HollandsDeadline { get; set; }
+            public DateTime HollandDeadline { get; set; }
             
             [Display(Name = "Start Date")]
-            public DateTime RavensStartDate { get; set; }
+            public DateTime RavenStartDate { get; set; }
             [Display(Name = "Deadline")] 
-            public DateTime RavensDeadline { get; set; }
+            public DateTime RavenDeadline { get; set; }
 
         }
 
@@ -59,7 +59,7 @@ namespace iSarv.Areas.Package.Pages
 
             var testPackage =  await _context.TestPackages
                 .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
-                .Include(tp=>tp.HollandsTest).Include(tp=>tp.RavensTest).FirstOrDefaultAsync(m => m.Id == id);
+                .Include(tp=>tp.HollandTest).Include(tp=>tp.RavenTest).FirstOrDefaultAsync(m => m.Id == id);
             if (testPackage == null)
             {
                 return NotFound();
@@ -73,10 +73,10 @@ namespace iSarv.Areas.Package.Pages
                 NeoDeadline = testPackage.NeoTest.Deadline,
                 CliftonStartDate = testPackage.CliftonTest.StartDate,
                 CliftonDeadline = testPackage.CliftonTest.Deadline,
-                HollandsStartDate = testPackage.HollandsTest.StartDate,
-                HollandsDeadline = testPackage.HollandsTest.Deadline,
-                RavensStartDate = testPackage.RavensTest.StartDate,
-                RavensDeadline = testPackage.RavensTest.Deadline,
+                HollandStartDate = testPackage.HollandTest.StartDate,
+                HollandDeadline = testPackage.HollandTest.Deadline,
+                RavenStartDate = testPackage.RavenTest.StartDate,
+                RavenDeadline = testPackage.RavenTest.Deadline,
             };
             ViewData["UserId"] = new SelectList(_context.Users.Select(u => new {u.Id, Name = u.NationalId + ": " + u.FullName})
                 , "Id", "Name");
@@ -94,7 +94,7 @@ namespace iSarv.Areas.Package.Pages
 
             var testPackage =  await _context.TestPackages
                 .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
-                .Include(tp=>tp.HollandsTest).Include(tp=>tp.RavensTest)
+                .Include(tp=>tp.HollandTest).Include(tp=>tp.RavenTest)
                 .FirstOrDefaultAsync(m => m.Id == TestPackageEdit.Id);
             if (testPackage == null)
             {
@@ -105,8 +105,8 @@ namespace iSarv.Areas.Package.Pages
             testPackage.UserId = TestPackageEdit.UserId;
             if (TestPackageEdit.NeoStartDate >= TestPackageEdit.NeoDeadline ||
                 TestPackageEdit.CliftonStartDate >= TestPackageEdit.CliftonDeadline ||
-                TestPackageEdit.HollandsStartDate >= TestPackageEdit.HollandsDeadline ||
-                TestPackageEdit.RavensStartDate >= TestPackageEdit.RavensDeadline)
+                TestPackageEdit.HollandStartDate >= TestPackageEdit.HollandDeadline ||
+                TestPackageEdit.RavenStartDate >= TestPackageEdit.RavenDeadline)
             {
                 ModelState.AddModelError(string.Empty, "Deadline date must be after start date for all tests.");
                 return await OnGetAsync(id);
@@ -118,27 +118,27 @@ namespace iSarv.Areas.Package.Pages
             testPackage.CliftonTest.StartDate = TestPackageEdit.CliftonStartDate;
             testPackage.CliftonTest.Deadline = TestPackageEdit.CliftonDeadline;
 
-            testPackage.HollandsTest.StartDate = TestPackageEdit.HollandsStartDate;
-            testPackage.HollandsTest.Deadline = TestPackageEdit.HollandsDeadline;
+            testPackage.HollandTest.StartDate = TestPackageEdit.HollandStartDate;
+            testPackage.HollandTest.Deadline = TestPackageEdit.HollandDeadline;
 
-            testPackage.RavensTest.StartDate = TestPackageEdit.RavensStartDate;
-            testPackage.RavensTest.Deadline = TestPackageEdit.RavensDeadline;
+            testPackage.RavenTest.StartDate = TestPackageEdit.RavenStartDate;
+            testPackage.RavenTest.Deadline = TestPackageEdit.RavenDeadline;
 
             testPackage.StartDate = new List<DateTime>
             {
-                testPackage.NeoTest.StartDate, testPackage.CliftonTest.StartDate, testPackage.HollandsTest.StartDate,
-                testPackage.RavensTest.StartDate
+                testPackage.NeoTest.StartDate, testPackage.CliftonTest.StartDate, testPackage.HollandTest.StartDate,
+                testPackage.RavenTest.StartDate
             }.Min();
             testPackage.Deadline = new List<DateTime>
             {
-                testPackage.NeoTest.Deadline, testPackage.CliftonTest.Deadline, testPackage.HollandsTest.Deadline,
-                testPackage.RavensTest.Deadline
+                testPackage.NeoTest.Deadline, testPackage.CliftonTest.Deadline, testPackage.HollandTest.Deadline,
+                testPackage.RavenTest.Deadline
             }.Max();
 
             _context.Attach(testPackage.NeoTest).State = EntityState.Modified;
             _context.Attach(testPackage.CliftonTest).State = EntityState.Modified;
-            _context.Attach(testPackage.HollandsTest).State = EntityState.Modified;
-            _context.Attach(testPackage.RavensTest).State = EntityState.Modified;
+            _context.Attach(testPackage.HollandTest).State = EntityState.Modified;
+            _context.Attach(testPackage.RavenTest).State = EntityState.Modified;
             
             _context.Attach(testPackage).State = EntityState.Modified;
 

@@ -2,10 +2,10 @@ using System.ComponentModel.DataAnnotations;
 
 namespace iSarv.Data.Tests;
 
-public class HollandsTest
+public class HollandTest
 {
     [Key] // Added primary key annotation
-    public int Id { get; set; } // Primary key for HollandsTest
+    public int Id { get; set; } // Primary key for HollandTest
 
     [Display(Name = "Test Result", Prompt = "Enter the test result")]
     public string Result { get; set; } = string.Empty;

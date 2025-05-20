@@ -49,16 +49,16 @@ namespace iSarv.Areas.Package.Pages
             var testpackage = await _context.TestPackages.FindAsync(id);
             var neoTest = await _context.NeoTests.FindAsync(id);
             var cliftonTest = await _context.CliftonTests.FindAsync(id);
-            var hollandsTest = await _context.HollandsTests.FindAsync(id);
-            var ravensTest = await _context.RavensTests.FindAsync(id);
+            var hollandTest = await _context.HollandTests.FindAsync(id);
+            var ravenTest = await _context.RavenTests.FindAsync(id);
             if (testpackage != null)
             {
                 TestPackage = testpackage;
                 _context.TestPackages.Remove(TestPackage);
                 _context.NeoTests.Remove(neoTest!);
                 _context.CliftonTests.Remove(cliftonTest!);
-                _context.HollandsTests.Remove(hollandsTest!);
-                _context.RavensTests.Remove(ravensTest!);
+                _context.HollandTests.Remove(hollandTest!);
+                _context.RavenTests.Remove(ravenTest!);
                 await _context.SaveChangesAsync();
             }
 

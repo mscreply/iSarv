@@ -37,15 +37,15 @@
         </button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="hollands-tab" data-bs-toggle="tab" data-bs-target="#hollands" type="button"
-                role="tab" aria-controls="hollands" aria-selected="false">
-            @Localizer.TextIgnoreCase("Hollands Test Result")
+        <button class="nav-link" id="holland-tab" data-bs-toggle="tab" data-bs-target="#holland" type="button"
+                role="tab" aria-controls="holland" aria-selected="false">
+            @Localizer.TextIgnoreCase("Holland Test Result")
         </button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link" id="ravens-tab" data-bs-toggle="tab" data-bs-target="#ravens" type="button" role="tab"
-                aria-controls="ravens" aria-selected="false">
-            @Localizer.TextIgnoreCase("Ravens Test Result")
+        <button class="nav-link" id="raven-tab" data-bs-toggle="tab" data-bs-target="#raven" type="button" role="tab"
+                aria-controls="raven" aria-selected="false">
+            @Localizer.TextIgnoreCase("Raven Test Result")
         </button>
     </li>
 </ul>
@@ -165,19 +165,19 @@
             </div>
         </form>
     </div>
-    <div class="tab-pane fade" id="hollands" role="tabpanel" aria-labelledby="hollands-tab">
-        <form method="post" asp-page-handler="EditHollandsResult">
+    <div class="tab-pane fade" id="holland" role="tabpanel" aria-labelledby="holland-tab">
+        <form method="post" asp-page-handler="EditHollandResult">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.HollandsTest.Status)
-                    <button type="submit" asp-page-handler="ResetHollandsTest" class="btn btn-sm btn-danger"
+                    @Localizer.TextIgnoreCase(Model.TestPackage.HollandTest.Status)
+                    <button type="submit" asp-page-handler="ResetHollandTest" class="btn btn-sm btn-danger"
                             title="Reset test and extend time"
                             onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.HollandsTest.Response))
+                    @if (!string.IsNullOrEmpty(Model.TestPackage.HollandTest.Response))
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">
@@ -192,15 +192,15 @@
                                     <option name="@aiModel">@aiModel</option>
                                 }
                             </select>
-                            <button type="submit" asp-page-handler="GetHollandsResultFromAI" class="btn btn-success">
+                            <button type="submit" asp-page-handler="GetHollandResultFromAI" class="btn btn-success">
                                 @Localizer.TextIgnoreCase("Get Result from AI")
                             </button>
                             <button type="submit" class="btn btn-primary">
                                 @Localizer.TextIgnoreCase("Confirm")
                             </button>
-                            @if (Model.TestPackage.HollandsTest.IsCompleted)
+                            @if (Model.TestPackage.HollandTest.IsCompleted)
                             {
-                                <a href="/Test/Hollands/Result/@Model.TestPackage.HollandsTest.Id" class="btn btn-secondary"
+                                <a href="/Test/Holland/Result/@Model.TestPackage.HollandTest.Id" class="btn btn-secondary"
                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
@@ -211,23 +211,23 @@
             </div>
             <div class="border rounded p-3">
                 <textarea name="result" rows="20" class="form-control"
-                          asp-for="TestPackage.HollandsTest.Result"></textarea>
+                          asp-for="TestPackage.HollandTest.Result"></textarea>
             </div>
         </form>
     </div>
-    <div class="tab-pane fade" id="ravens" role="tabpanel" aria-labelledby="ravens-tab">
-        <form method="post" asp-page-handler="EditRavensResult">
+    <div class="tab-pane fade" id="raven" role="tabpanel" aria-labelledby="raven-tab">
+        <form method="post" asp-page-handler="EditRavenResult">
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.RavensTest.Status)
-                    <button type="submit" asp-page-handler="ResetRavensTest" class="btn btn-sm btn-danger"
+                    @Localizer.TextIgnoreCase(Model.TestPackage.RavenTest.Status)
+                    <button type="submit" asp-page-handler="ResetRavenTest" class="btn btn-sm btn-danger"
                             title="Reset test and extend time"
                             onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.RavensTest.Response))
+                    @if (!string.IsNullOrEmpty(Model.TestPackage.RavenTest.Response))
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">
@@ -242,15 +242,15 @@
                                     <option name="@aiModel">@aiModel</option>
                                 }
                             </select>
-                            <button type="submit" asp-page-handler="GetRavensResultFromAI" class="btn btn-success">
+                            <button type="submit" asp-page-handler="GetRavenResultFromAI" class="btn btn-success">
                                 @Localizer.TextIgnoreCase("Get Result from AI")
                             </button>
                             <button type="submit" class="btn btn-primary">
                                 @Localizer.TextIgnoreCase("Confirm")
                             </button>
-                            @if (Model.TestPackage.RavensTest.IsCompleted)
+                            @if (Model.TestPackage.RavenTest.IsCompleted)
                             {
-                                <a href="/Test/Ravens/Result/@Model.TestPackage.RavensTest.Id" class="btn btn-secondary"
+                                <a href="/Test/Raven/Result/@Model.TestPackage.RavenTest.Id" class="btn btn-secondary"
                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
@@ -261,7 +261,7 @@
             </div>
             <div class="border rounded p-3">
                 <textarea name="result" rows="20" class="form-control"
-                          asp-for="TestPackage.RavensTest.Result"></textarea>
+                          asp-for="TestPackage.RavenTest.Result"></textarea>
             </div>
         </form>
     </div>

@@ -59,8 +59,8 @@
         </th>
         <th>@Localizer.Text("Neo Test")</th>
         <th>@Localizer.Text("Clifton Test")</th>
-        <th>@Localizer.Text("Hollands Test")</th>
-        <th>@Localizer.Text("Ravens Test")</th>
+        <th>@Localizer.Text("Holland Test")</th>
+        <th>@Localizer.Text("Raven Test")</th>
         <th>
             @Html.DisplayNameFor(model => model.TestPackages[0].SubmitDate)
         </th>
@@ -131,17 +131,17 @@
                 }
             </td>
             <td>
-                @if (item.HollandsTest.IsCompleted)
+                @if (item.HollandTest.IsCompleted)
                 {
                     <i class="bi bi-check-circle text-success"></i>
-                    @item.HollandsTest.SubmitDate.ToShortCultureDate(lang)
+                    @item.HollandTest.SubmitDate.ToShortCultureDate(lang)
                 }
-                else if (DateTime.Now < item.HollandsTest.StartDate)
+                else if (DateTime.Now < item.HollandTest.StartDate)
                 {
                     <i class="bi bi-hourglass text-secondary"></i>
                     @Localizer.Text("Not Started")
                 }
-                else if (DateTime.Now <= item.HollandsTest.Deadline)
+                else if (DateTime.Now <= item.HollandTest.Deadline)
                 {
                     <i class="bi bi-play-circle text-primary"></i>
                     @Localizer.Text("In Progress")
@@ -153,17 +153,17 @@
                 }
             </td>
             <td>
-                @if (item.RavensTest.IsCompleted)
+                @if (item.RavenTest.IsCompleted)
                 {
                     <i class="bi bi-check-circle text-success"></i>
-                    @item.RavensTest.SubmitDate.ToShortCultureDate(lang)
+                    @item.RavenTest.SubmitDate.ToShortCultureDate(lang)
                 }
-                else if (DateTime.Now < item.RavensTest.StartDate)
+                else if (DateTime.Now < item.RavenTest.StartDate)
                 {
                     <i class="bi bi-hourglass text-secondary"></i>
                     @Localizer.Text("Not Started")
                 }
-                else if (DateTime.Now <= item.RavensTest.Deadline)
+                else if (DateTime.Now <= item.RavenTest.Deadline)
                 {
                     <i class="bi bi-play-circle text-primary"></i>
                     @Localizer.Text("In Progress")

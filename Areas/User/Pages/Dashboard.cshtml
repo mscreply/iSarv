@@ -173,24 +173,24 @@
                                                         }
                                                     </p>
                                                     <p class="card-text">
-                                                        @Localizer.TextIgnoreCase("Hollands Test") -
-                                                        @if (package.HollandsTest.IsCompleted)
+                                                        @Localizer.TextIgnoreCase("Holland Test") -
+                                                        @if (package.HollandTest.IsCompleted)
                                                         {
                                                             <span>@Localizer.TextIgnoreCase("Completed")
-                                                                <a href="/Test/Hollands/Result/@package.Id"><i
+                                                                <a href="/Test/Holland/Result/@package.Id"><i
                                                                         class="fas fa-check-circle"></i></a>
                                                             </span>
                                                         }
                                                         else
                                                         {
-                                                            @if (package.HollandsTest.StartDate > DateTime.Now)
+                                                            @if (package.HollandTest.StartDate > DateTime.Now)
                                                             {
-                                                                <span>@Localizer.Text("Start Date") : @package.HollandsTest.StartDate.ToShortCultureDate(lang)</span>
+                                                                <span>@Localizer.Text("Start Date") : @package.HollandTest.StartDate.ToShortCultureDate(lang)</span>
                                                             }
-                                                            else if (package.HollandsTest.Deadline > DateTime.Now)
+                                                            else if (package.HollandTest.Deadline > DateTime.Now)
                                                             {
-                                                                <span>@Localizer.Text("Deadline") : @package.HollandsTest.Deadline.ToShortCultureDate(lang)</span>
-                                                                <a href="/Test/Hollands/TakeTest/@package.Id"
+                                                                <span>@Localizer.Text("Deadline") : @package.HollandTest.Deadline.ToShortCultureDate(lang)</span>
+                                                                <a href="/Test/Holland/TakeTest/@package.Id"
                                                                    class="btn btn-sm btn-primary"
                                                                    data-bs-toggle="tooltip"
                                                                    title="@Localizer.TextIgnoreCase("Click to take the test")">
@@ -204,24 +204,24 @@
                                                         }
                                                     </p>
                                                     <p class="card-text">
-                                                        @Localizer.TextIgnoreCase("Ravens Test") -
-                                                        @if (package.RavensTest.IsCompleted)
+                                                        @Localizer.TextIgnoreCase("Raven Test") -
+                                                        @if (package.RavenTest.IsCompleted)
                                                         {
                                                             <span>@Localizer.TextIgnoreCase("Completed")
-                                                                <a href="/Test/Ravens/Result/@package.Id"><i
+                                                                <a href="/Test/Raven/Result/@package.Id"><i
                                                                         class="fas fa-check-circle"></i></a>
                                                             </span>
                                                         }
                                                         else
                                                         {
-                                                            @if (package.RavensTest.StartDate > DateTime.Now)
+                                                            @if (package.RavenTest.StartDate > DateTime.Now)
                                                             {
-                                                                <span>@Localizer.Text("Start Date") : @package.RavensTest.StartDate.ToShortCultureDate(lang)</span>
+                                                                <span>@Localizer.Text("Start Date") : @package.RavenTest.StartDate.ToShortCultureDate(lang)</span>
                                                             }
-                                                            else if (package.RavensTest.Deadline > DateTime.Now)
+                                                            else if (package.RavenTest.Deadline > DateTime.Now)
                                                             {
-                                                                <span>@Localizer.Text("Deadline") : @package.RavensTest.Deadline.ToShortCultureDate(lang)</span>
-                                                                <a href="/Test/Ravens/TakeTest/@package.Id"
+                                                                <span>@Localizer.Text("Deadline") : @package.RavenTest.Deadline.ToShortCultureDate(lang)</span>
+                                                                <a href="/Test/Raven/TakeTest/@package.Id"
                                                                    class="btn btn-sm btn-primary"
                                                                    data-bs-toggle="tooltip"
                                                                    title="@Localizer.TextIgnoreCase("Click to take the test")">

@@ -59,8 +59,8 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
             .Where(u => u.Id == user!.Id)
             .SelectMany(u => u.TestPackages)
             .Include(tp => tp.CliftonTest)
-            .Include(tp => tp.RavensTest)
-            .Include(tp => tp.HollandsTest)
+            .Include(tp => tp.RavenTest)
+            .Include(tp => tp.HollandTest)
             .Include(tp => tp.NeoTest)
             .ToListAsync();
     }
@@ -73,9 +73,9 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
             .Include(u => u.TestPackages)
             .ThenInclude(tp => tp.CliftonTest)
             .Include(u => u.TestPackages)
-            .ThenInclude(tp => tp.RavensTest)
+            .ThenInclude(tp => tp.RavenTest)
             .Include(u => u.TestPackages)
-            .ThenInclude(tp => tp.HollandsTest)
+            .ThenInclude(tp => tp.HollandTest)
             .Include(u => u.TestPackages)
             .ThenInclude(tp => tp.NeoTest)
             .FirstOrDefaultAsync())!;
@@ -90,10 +90,10 @@ public class ApplicationUserManager : UserManager<ApplicationUser>
             {
                 case "clifton":
                     return tp.CliftonTest != null && tp.CliftonTest.Id == testId;
-                case "ravens":
-                    return tp.RavensTest != null && tp.RavensTest.Id == testId;
-                case "hollands":
-                    return tp.HollandsTest != null && tp.HollandsTest.Id == testId;
+                case "raven":
+                    return tp.RavenTest != null && tp.RavenTest.Id == testId;
+                case "holland":
+                    return tp.HollandTest != null && tp.HollandTest.Id == testId;
                 case "neo":
                     return tp.NeoTest != null && tp.NeoTest.Id == testId;
                 default:

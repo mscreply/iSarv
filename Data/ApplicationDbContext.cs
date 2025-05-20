@@ -26,14 +26,14 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .HasForeignKey<CliftonTest>();
 
         builder.Entity<TestPackage>()
-            .HasOne(tp => tp.HollandsTest)
+            .HasOne(tp => tp.HollandTest)
             .WithOne(ht => ht.TestPackage)
-            .HasForeignKey<HollandsTest>();
+            .HasForeignKey<HollandTest>();
 
         builder.Entity<TestPackage>()
-            .HasOne(tp => tp.RavensTest)
+            .HasOne(tp => tp.RavenTest)
             .WithOne(rt => rt.TestPackage)
-            .HasForeignKey<RavensTest>();
+            .HasForeignKey<RavenTest>();
 
         builder.Entity<TestPackage>()
             .HasOne(tp => tp.NeoTest)
@@ -44,11 +44,11 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     }
 
     public DbSet<TestPackage> TestPackages { get; set; }
-    public DbSet<CliftonTest> CliftonTests { get; set; }
-    public DbSet<CliftonTestQuestion> CliftonTestQuestions { get; set; }
-    public DbSet<RavensTest> RavensTests { get; set; }
-    public DbSet<HollandsTest> HollandsTests { get; set; }
     public DbSet<NeoTest> NeoTests { get; set; }
     public DbSet<NeoTestQuestion> NeoTestQuestions { get; set; }
+    public DbSet<CliftonTest> CliftonTests { get; set; }
+    public DbSet<CliftonTestQuestion> CliftonTestQuestions { get; set; }
+    public DbSet<HollandTest> HollandTests { get; set; }
+    public DbSet<RavenTest> RavenTests { get; set; }
     public DbSet<ActivationCode> ActivationCodes { get; set; }
 }

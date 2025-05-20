@@ -32,7 +32,7 @@ namespace iSarv.Areas.Package.Pages
 
             var testPackage = await _context.TestPackages.Include(tp => tp.User)
                 .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
-                .Include(tp=>tp.HollandsTest).Include(tp=>tp.RavensTest)
+                .Include(tp=>tp.HollandTest).Include(tp=>tp.RavenTest)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (testPackage == null)
             {
@@ -155,11 +155,11 @@ namespace iSarv.Areas.Package.Pages
             return RedirectToPage("./Details", new { id = id });
         }
 
-        public async Task<IActionResult> OnPostEditHollandsResultAsync(int id, string result)
+        public async Task<IActionResult> OnPostEditHollandResultAsync(int id, string result)
         {
-            var hollandsTest = await _context.HollandsTests.FindAsync(id);
+            var hollandTest = await _context.HollandTests.FindAsync(id);
 
-            if (hollandsTest == null)
+            if (hollandTest == null)
             {
                 return NotFound();
             }
@@ -169,9 +169,9 @@ namespace iSarv.Areas.Package.Pages
                 return Page();
             }
 
-            hollandsTest.Result = result;
-            hollandsTest.IsConfirmed = true;
-            _context.Attach(hollandsTest).State = EntityState.Modified;
+            hollandTest.Result = result;
+            hollandTest.IsConfirmed = true;
+            _context.Attach(hollandTest).State = EntityState.Modified;
 
             try
             {
@@ -179,7 +179,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(hollandsTest.Id))
+                if (!TestPackageExists(hollandTest.Id))
                 {
                     return NotFound();
                 }
@@ -192,11 +192,11 @@ namespace iSarv.Areas.Package.Pages
             return RedirectToPage("./Details", new { id = id });
         }
 
-        public async Task<IActionResult> OnPostEditRavensResultAsync(int id, string result)
+        public async Task<IActionResult> OnPostEditRavenResultAsync(int id, string result)
         {
-            var ravensTest = await _context.RavensTests.FindAsync(id);
+            var ravenTest = await _context.RavenTests.FindAsync(id);
 
-            if (ravensTest == null)
+            if (ravenTest == null)
             {
                 return NotFound();
             }
@@ -206,9 +206,9 @@ namespace iSarv.Areas.Package.Pages
                 return Page();
             }
 
-            ravensTest.Result = result;
-            ravensTest.IsConfirmed = true;
-            _context.Attach(ravensTest).State = EntityState.Modified;
+            ravenTest.Result = result;
+            ravenTest.IsConfirmed = true;
+            _context.Attach(ravenTest).State = EntityState.Modified;
 
             try
             {
@@ -216,7 +216,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(ravensTest.Id))
+                if (!TestPackageExists(ravenTest.Id))
                 {
                     return NotFound();
                 }
@@ -325,18 +325,18 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetHollandsResultFromAIAsync(int id, string server, string model)
+        public async Task<IActionResult> OnPostGetHollandResultFromAIAsync(int id, string server, string model)
         {
-            var hollandsTest = await _context.HollandsTests.FindAsync(id);
+            var hollandTest = await _context.HollandTests.FindAsync(id);
 
-            if (hollandsTest == null)
+            if (hollandTest == null)
             {
                 return NotFound();
             }
 
-            var score = hollandsTest.CalculateScores();
+            var score = hollandTest.CalculateScores();
             var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Holland Interest (HII)", server, model);
-            hollandsTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
+            hollandTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 
             try
@@ -345,7 +345,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(hollandsTest.Id))
+                if (!TestPackageExists(hollandTest.Id))
                 {
                     return NotFound();
                 }
@@ -357,18 +357,18 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetRavensResultFromAIAsync(int id, string server, string model)
+        public async Task<IActionResult> OnPostGetRavenResultFromAIAsync(int id, string server, string model)
         {
-            var ravensTest = await _context.RavensTests.FindAsync(id);
+            var ravenTest = await _context.RavenTests.FindAsync(id);
 
-            if (ravensTest == null)
+            if (ravenTest == null)
             {
                 return NotFound();
             }
 
-            var score = ravensTest.CalculateScores();
+            var score = ravenTest.CalculateScores();
             var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Raven IQ", server, model);
-            ravensTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
+            ravenTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 
             try
@@ -377,7 +377,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(ravensTest.Id))
+                if (!TestPackageExists(ravenTest.Id))
                 {
                     return NotFound();
                 }
@@ -458,20 +458,20 @@ namespace iSarv.Areas.Package.Pages
             return RedirectToPage("./Details", new { id = id });
         }
         
-        public async Task<IActionResult> OnPostResetHollandsTestAsync(int id)
+        public async Task<IActionResult> OnPostResetHollandTestAsync(int id)
         {
-            var hollandsTest = await _context.HollandsTests.FindAsync(id);
+            var hollandTest = await _context.HollandTests.FindAsync(id);
 
-            if (hollandsTest == null)
+            if (hollandTest == null)
             {
                 return NotFound();
             }
 
-            hollandsTest.Response = string.Empty;
-            hollandsTest.Result = string.Empty;
-            if(DateTime.Now > hollandsTest.Deadline)
-                hollandsTest.Deadline = DateTime.Now.AddDays(3);
-            hollandsTest.IsConfirmed = false;
+            hollandTest.Response = string.Empty;
+            hollandTest.Result = string.Empty;
+            if(DateTime.Now > hollandTest.Deadline)
+                hollandTest.Deadline = DateTime.Now.AddDays(3);
+            hollandTest.IsConfirmed = false;
 
             try
             {
@@ -479,7 +479,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(hollandsTest.Id))
+                if (!TestPackageExists(hollandTest.Id))
                 {
                     return NotFound();
                 }
@@ -492,20 +492,20 @@ namespace iSarv.Areas.Package.Pages
             return RedirectToPage("./Details", new { id = id });
         }
 
-        public async Task<IActionResult> OnPostResetRavensTestAsync(int id)
+        public async Task<IActionResult> OnPostResetRavenTestAsync(int id)
         {
-            var ravensTest = await _context.RavensTests.FindAsync(id);
+            var ravenTest = await _context.RavenTests.FindAsync(id);
 
-            if (ravensTest == null)
+            if (ravenTest == null)
             {
                 return NotFound();
             }
 
-            ravensTest.Response = string.Empty;
-            ravensTest.Result = string.Empty;
-            if(DateTime.Now > ravensTest.Deadline)
-                ravensTest.Deadline = DateTime.Now.AddDays(3);
-            ravensTest.IsConfirmed = false;
+            ravenTest.Response = string.Empty;
+            ravenTest.Result = string.Empty;
+            if(DateTime.Now > ravenTest.Deadline)
+                ravenTest.Deadline = DateTime.Now.AddDays(3);
+            ravenTest.IsConfirmed = false;
 
             try
             {
@@ -513,7 +513,7 @@ namespace iSarv.Areas.Package.Pages
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!TestPackageExists(ravensTest.Id))
+                if (!TestPackageExists(ravenTest.Id))
                 {
                     return NotFound();
                 }

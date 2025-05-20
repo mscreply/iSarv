@@ -16,3 +16,4 @@ iSarv/.idea
 iSarv/.vscode/
 iSarv/.vscode
 node_modules/
+/wwwroot/lib/fontawesome/

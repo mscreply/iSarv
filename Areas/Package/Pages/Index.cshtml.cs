@@ -36,7 +36,7 @@ namespace iSarv.Areas.Package.Pages
 
             TestPackages = _context.TestPackages.Include(tp => tp.User)
                 .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
-                .Include(tp => tp.HollandsTest).Include(tp => tp.RavensTest)
+                .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest)
                 .ToList();
 
             switch (status)
