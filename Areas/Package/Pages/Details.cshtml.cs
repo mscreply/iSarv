@@ -12,16 +12,16 @@ namespace iSarv.Areas.Package.Pages
     public class DetailsModel : PageModel
     {
         private readonly Data.ApplicationDbContext _context;
-        private readonly IAIService _AIService;
+        public readonly IAIService AiService;
 
         public DetailsModel(Data.ApplicationDbContext context, IAIService aiService)
         {
             _context = context;
-            _AIService = aiService;
+            AiService = aiService;
         }
 
         public TestPackage TestPackage { get; set; } = default!;
-        public string AiError { get; set; } = string.Empty;
+        [TempData] public string AiError { get; set; } = string.Empty;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
@@ -261,7 +261,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetNeoResultFromAIAsync(int id)
+        public async Task<IActionResult> OnPostGetNeoResultFromAIAsync(int id, string server, string model)
         {
             var neoTest = await _context.NeoTests.FindAsync(id);
 
@@ -271,7 +271,7 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var score = neoTest.CalculateScores();
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(score.ToJson(), "Neo PI-R");
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Neo PI-R", server, model);
             neoTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 
@@ -293,7 +293,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetCliftonResultFromAIAsync(int id)
+        public async Task<IActionResult> OnPostGetCliftonResultFromAIAsync(int id, string server, string model)
         {
             var cliftonTest = await _context.CliftonTests.FindAsync(id);
 
@@ -303,7 +303,7 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var score = cliftonTest.CalculateScores();
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(score.ToJson(), "Neo PI-R");
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Clifton Strengths (CSTA)", server, model);
             cliftonTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 
@@ -325,7 +325,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetHollandsResultFromAIAsync(int id)
+        public async Task<IActionResult> OnPostGetHollandsResultFromAIAsync(int id, string server, string model)
         {
             var hollandsTest = await _context.HollandsTests.FindAsync(id);
 
@@ -335,7 +335,7 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var score = hollandsTest.CalculateScores();
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(score.ToJson(), "Neo PI-R");
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Holland Interest (HII)", server, model);
             hollandsTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 
@@ -357,7 +357,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetRavensResultFromAIAsync(int id)
+        public async Task<IActionResult> OnPostGetRavensResultFromAIAsync(int id, string server, string model)
         {
             var ravensTest = await _context.RavensTests.FindAsync(id);
 
@@ -367,7 +367,7 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var score = ravensTest.CalculateScores();
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(score.ToJson(), "Neo PI-R");
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Raven IQ", server, model);
             ravensTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 

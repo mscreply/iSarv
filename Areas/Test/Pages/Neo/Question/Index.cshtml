@@ -45,10 +45,10 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Statement)
+                    @Localizer.TextIgnoreCase(item.Statement)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Facet)
+                    @Localizer.TextIgnoreCase(item.Facet.ToDescription())
                 </td>
                 <td class="text-center">
                     @if (item.ScoreIsReversed)

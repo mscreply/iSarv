@@ -57,7 +57,9 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            var testPackage =  await _context.TestPackages.FirstOrDefaultAsync(m => m.Id == id);
+            var testPackage =  await _context.TestPackages
+                .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
+                .Include(tp=>tp.HollandsTest).Include(tp=>tp.RavensTest).FirstOrDefaultAsync(m => m.Id == id);
             if (testPackage == null)
             {
                 return NotFound();
@@ -72,7 +74,7 @@ namespace iSarv.Areas.Package.Pages
                 CliftonStartDate = testPackage.CliftonTest.StartDate,
                 CliftonDeadline = testPackage.CliftonTest.Deadline,
                 HollandsStartDate = testPackage.HollandsTest.StartDate,
-                HollandsDeadline = testPackage.HollandsTest.StartDate,
+                HollandsDeadline = testPackage.HollandsTest.Deadline,
                 RavensStartDate = testPackage.RavensTest.StartDate,
                 RavensDeadline = testPackage.RavensTest.Deadline,
             };
@@ -90,7 +92,10 @@ namespace iSarv.Areas.Package.Pages
                 return await OnGetAsync(id);
             }
 
-            var testPackage =  await _context.TestPackages.FirstOrDefaultAsync(m => m.Id == TestPackageEdit.Id);
+            var testPackage =  await _context.TestPackages
+                .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
+                .Include(tp=>tp.HollandsTest).Include(tp=>tp.RavensTest)
+                .FirstOrDefaultAsync(m => m.Id == TestPackageEdit.Id);
             if (testPackage == null)
             {
                 return NotFound();

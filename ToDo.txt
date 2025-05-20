@@ -1,0 +1,178 @@
+Id|Statement A|Theme A|Statement B|Theme B
+1|I choose the most suitable gift for each of my friends|Individualization|I give gifts that most people will like|Includer
+2|I like to spend time with forward-thinking people|Futuristic|I like to spend time with historians|Context
+3|I like to be liked by everyone|Woo|I like to be praised|Significance
+4|In competitions, I try to be first|Competition|I enjoy playing games|Relator
+5|I have always worked hard and under pressure|Achiever|I work slowly but steadily|Discipline
+6|I think about what I do best|Maximizer|I think about what I need to improve|Developer
+7|I am an emotional person|Empathy|I am a logical person|Analytical
+8|I get to know the people around me one by one|Relator|I am comfortable with many different types of people.|Adaptability
+9|I am energized by starting a conversation|Communication|I find it exciting to open up to strangers|Activator
+10|I have a great sense of life|Self-assurance|I feel like I am a competent person|Responsibility
+11|I am a good team player|Harmony|I am someone who can achieve success on my own|Achiever
+12|I can make others feel that they are important to me|Developer|I have the ability to make others feel successful|Achiever
+13|Belief in humanity determines the direction of my life|Belief|My ambition and ambition define my life path|Achiever
+14|Being a confidant and confidant of others is satisfying for me|Relator|I like to be a leader for others|Command
+15|I like to follow things in order|Discipline|I like to look at things from different angles|Ideation
+16|I am committed to growing and improving|Developer|I am committed to sticking to my principles and values|Belief
+17|I want to have balance in my life|Harmony|I like to do what is best for my family|Responsibility
+18|I talk to people around me several times a day about I talk about my future vision|Communication|I set aside time to plan and think about the future|Futuristic
+19|I can excite others|Activator|I can put others at ease|Harmony
+20|The moment I make a decision, I have to start taking action|Activator|I need to make sure I am not making a mistake before I start an activity|Deliberative
+21|I focus more precisely than most people on what I want to do|Focus|I go with the flow of things as they arise and usually have a general understanding of all issues.|Adaptability
+22|I believe that simultaneous events are not coincidences; Everything happens for a reason|Connectedness|I believe that coincidences are either a coincidence or a coincidence of chance.|Analytical
+23|I am a good conversationalist|Communication|I am a good listener.|Relator
+24|I enjoy appreciating and admiring others|Positivity|I enjoy being appreciated.|Significance
+25|I like to compete|Competition|I like to work.|Achiever
+26|I have a very realistic mindset and rely on experts in every field, based on their experience and wisdom, to help me find the right path|Input|I think creatively and strategically, and patterns and issues that need to be addressed naturally emerge and become clear to me.|Strategic
+27|I am very lively, enthusiastic and happy|Positivity|I am aware of all the factors that influence the current situation.|Context
+28|I want to become the CEO of a large organization|Significance|I have the ability to create a bond and reconciliation between two opposing groups.|Harmony
+29|Sometimes my greatness affects others|Significance|I am impressed by the authority of famous leaders.|Command
+30|I can put myself in someone else's shoes and understand how they are going through life's difficulties|Empathy|I have the ability to love people, all people.|Connectedness
+31|I lead others to success|Developer|I make others happy.|Positivity
+32|I am a person who hardly gets anxious and hardly accepts responsibility|Adaptability|I am more mature than my friends and relatives.|Responsibility
+33|I like to do things with others as much as possible|Relator|I like to organize things for others.|Arranger
+34|By studying history, I can discover the future|Context|My future will be independent of my past.|Futuristic
+35|I am a drop in the infinite ocean of existence|Connectedness|I do not involve supernatural issues in making decisions in the ordinary affairs of life.|Analytical
+36|I like my work to be the path of my life|Belief|Working is not a principle in itself, it is just a model of how to live.|Adaptability
+37|When someone doesn't like me, I feel uncomfortable|Woo|I feel guilty when I do something I think is wrong|Responsibility
+38|I organize and regulate|Discipline|I analyze|Analytical
+39|I can make people feel good by picking out the important points from their words|Communication|I have the ability to listen to others and make them feel understood|Empathy
+40|I seek out philosophical people|Intellection|I like to associate with successful and hardworking people|Achiever
+41|I enjoy making others feel valued|Developer|I enjoy making others feel successful|Significance
+42|I use my instincts and intuition to solve problems|Self-assurance|I use accurate data backed by solid research to solve problems|Analytical
+43|I am generally cautious and have healthy doubts about life|Deliberative|I believe I am connected to all of humanity|Connectedness
+44|My friends ask me to tell stories|Communication|My friends ask me for advice and opinions|Relator
+45|I prefer to be around people who are like me|Relator|I feel bad when someone is left out of the team.|Includer
+46|I can work as hard as most people but I don't have the drive to work harder or harder|Consistency|I have a lot of perseverance and in the workplace, I am always known as the person who works harder and harder.|Achiever
+47|Anything that has to do with sports attracts my attention|Competition|Anything related to the ideas of humanity attracts my attention.|Ideation
+48|I am very organized|Discipline|I am very persistent.|Focus
+49|I grow when I share what I have|Developer|I grow when I learn something.|Learner
+50|I follow a plan I have written for my future|Futuristic|I discover my future over time.|Learner
+51|I focus on what I can achieve in the future.|Futuristic|I think about how I will react to what will happen in the future.|Strategic
+52|I relate better to others when I understand their weaknesses.|Empathy|I can relate better to others when I understand their goals.|Achiever
+53|I make friends with everyone so as not to break anyone's heart.|Includer|I choose my friends carefully.|Individualization
+54|I don't care about being recognized as a reputable, professional, and successful person.|Responsibility|It is very important to me to be known as a reliable, professional, and successful person.|Significance
+55|I enjoy understanding the causes and roots of world wars.|Context|I enjoy understanding where the world’s population will be in the next 50 years.|Futuristic
+56|I approach life's problems analytically.|Analytical|I am passionate about issues that affect my life.|Belief
+57|I progress by investing in my talents.|Maximizer|I make progress by overcoming my weaknesses.|Restorative
+58|For me, everything has to go according to plan.|Discipline|I prefer to live with what happens.|Adaptability
+59|I find different ways to do things.|Ideation|I use routines to get things done.|Discipline
+60|I hate crying.|Self-assurance|Crying is a part of my life.|Empathy
+61|I enjoy being relaxed.|Harmony|I enjoy cleaning.|Discipline
+62|Happiness is being rich.|Significance|Happiness is not about money.|Connectedness
+63|I ask for other people's opinions.|Input|People come to me and ask for my opinions.|Significance
+64|I believe it is very important to treat everyone equally and to have clear rules for people to follow.|Consistency|I believe in discovering each person's unique strengths and motivating each person based on their unique strengths.|Individualization
+65|I turn to experts to help me find the right answer.|Input|In every challenge, opportunities and threats usually come naturally to me.|Strategic
+66|I give everyone praise generously.|Positivity|I am selective in admiring others and do not praise everyone.|Deliberative
+67|In competitions, I am not completely satisfied until I come in first place.|Competition|I enjoy being among the winners of a competition.|Achiever
+68|I have a talent for discovering how very different people work together.|Individualization|I have the talent to treat very different people equally.|Consistency
+69|I try to stay within my comfort zone.|Deliberative|I am a thrill seeker.|Activator
+70|I can understand the feelings of those around me.|Empathy|I enjoy discussing big ideas with those around me.|Intellection
+71|What matters is how people are and my opinion of whether I like them or not.|Individualization|I do not like people who act against my nature.|Consistency
+72|I trust my heart for important decisions.|Empathy|I use my mind for important decisions.|Analytical
+73|I react to things as they arise.|Adaptability|I prioritize issues first, then take action.|Strategic
+74|I love everyone.|Connectedness|I want everyone to like me.|Woo
+75|My driving force is the goals I have in mind.|Focus|My driving force is my mission in life (what I was created for).|Belief
+76|Every week, I set performance goals for myself.|Achiever|What I do each day is determined by the demands of the day, not by previous plans.|Adaptability
+77|I like to be present and not in the past or future.|Adaptability|I live for the future.|Futuristic
+78|I have to force myself to study.|Discipline|I can focus on the things that are important and important to me.|Focus
+79|I love anything that has to do with children.|Developer|I prefer to deal with mature people.|Deliberative
+80|I like things that require attention to detail.|Analytical|I prefer to work as part of a team.|Relator
+81|I study what motivates others.|Intellection|I am an introvert.|Intellection
+82|I am a person with specific and repetitive daily activities.|Discipline|I am funny.|Positivity
+83|I am passionate about education.|Learner|I am passionate about ending violence.|Belief
+84|I like to be heard.|Communication|I like to listen.|Empathy
+85|I can tell stories well.|Communication|I am a good coach.|Developer
+86|I am satisfied with my progress in life.|Self-assurance|I am concerned about my future.|Futuristic
+87|I like to talk.|Communication|I like to think.|Intellection
+88|I am an idealist.|Ideation|I am a finisher who gets things done.|Achiever
+89|My way of thinking is very realistic and practical.|Analytical|My thinking is creative and strategic.|Strategic
+90|I look for people who are honest with me about my weaknesses.|Deliberative|I interact with people who value my strengths|Maximizer
+91|First of all, I have to take care of myself.|Self-assurance|I feel the need to make sacrifices for others.|Responsibility
+92|I am a very social person.|Woo|I like to work hard with my friends.|Relator
+93|I never fail to express myself and always get my point across.|Communication|I can hardly talk about myself and I have few words.|Deliberative
+94|I hardly get anxious and do not feel much responsibility.|Adaptability|I am a serious person.|Deliberative
+95|I love to study and learn.|Learner|I love social connections so much that I can't live without them.|Connectedness
+96|I am often forgetful.|Adaptability|I have a habit of checking everything to make sure everything is in its place.|Discipline
+97|I notice the differences between different people when dealing with them.|Individualization|I treat everyone equally.|Consistency
+98|My path to success is to overcome weaknesses and eliminate shortcomings.|Restorative|My path to success is to invest in my talents and abilities.|Maximizer
+99|When the going gets tough and I want everything to be done perfectly, I tend to do things myself.|Self-assurance|When the going gets tough and I want everything to be perfect, I prefer to rely on the abilities of my team members rather than trying to do it all myself.|Harmony
+100|I am a social person.|Woo|I can be social when I need to be.|Adaptability
+101|I want to have as many friends as possible.|Includer|I want to have a few friends who are very important to me and who I have deep friendships with.|Relator
+102|Sometimes, it can be justified to change the truth.|Adaptability|Lying is never justified.|Belief
+103|I want a few friends who I know a lot about.|Relator|I am always making new friends.|Woo
+104|I am always well-known.|Significance|I am known for my sense of humor.|Positivity
+105|The future is not predetermined, I create my own.|Self-assurance|I have the ability to analyze and analyze opportunities that will come my way.|Strategic
+106|I like to challenge others.|Command|I like to encourage others.|Developer
+107|I am a very conservative person.|Deliberative|My life story is not yet fully written and I am flexible in changing the direction of my life.|Adaptability
+108|I am a generous and giving person.|Developer|I am a thrifty person.|Discipline
+109|I am a leader.|Command|I am a high achiever and do not settle for less.|Achiever
+110|Sometimes I flatter others.|Woo|I am a conscientious and responsible person.|Responsibility
+111|I have the ability to study and research as much as possible.|Learner|I can't concentrate for long periods of time|Focus
+112|I only admire someone when there is a valid and important reason for it and I do not admire anyone too much.|Deliberative|I am generous in admiring and appreciating my colleagues|Positivity
+113|I am open to learning new things and topics.|Learner|My values ​​are stable and consistent.|Belief
+114|I have a purpose for my life.|Belief|My life is very enjoyable.|Positivity
+115|I enjoy philosophical discussions.|Intellection|I enjoy goal-setting meetings.|Achiever
+116|I like to be alone.|Intellection|I am losing friends.|Relator
+117|I have the ability to visualize the future.|Futuristic|I can understand what factors have caused the situation I am in today.|Context
+118|It is easy for me to admit a bitter truth about myself.|Self-assurance|I have to work at being honest with myself.|Deliberative
+119|If I were to talk about "who I am," I wouldn't mind.|Communication|I am very cautious about talking about my personal life.|Deliberative
+120|As a child, I was really playful and independent.|Activator|As a child, I was well-adjusted and didn't cause problems for my peers or adults.|Harmony
+121|I like to entertain others.|Woo|I like to go to fun events, such as sporting events.|Activator
+122|I hate being controlled.|Self-assurance|I want to avoid feeling empty.|Connectedness
+123|I avoid people who are disorganized.|Discipline|I don't interact with unreliable people.|Responsibility
+124|I tend to seek guidance from people who know what to do in uncertain situations.|Input|I usually always know what is right, regardless of the situation or place I am in.|Self-assurance
+125|People who haven't found their goals annoy me.|Focus|I don't like to be around people who can't keep their cool.|Harmony
+126|I choose easy courses.|Adaptability|I choose challenging and difficult courses.|Learner
+127|I hate deadlines.|Adaptability|What keeps me going is taking responsibility.|Responsibility
+128|I encourage others.|Developer|I empower others.|Command
+129|I trust others too much.|Adaptability|I am very ambitious.|Achiever
+130|What has happened to me in the past inspires me.|Context|I am inspired by the achievements I can achieve in the future.|Futuristic
+131|Last-minute pressures focus my thoughts.|Focus|The sooner I do things, the more open-minded and relaxed I feel.|Deliberative
+132|I think most people would steal if given the opportunity.|Deliberative|I believe that people who steal should be punished.|Belief
+133|My deepest desire is to be excited about my work.|Positivity|My greatest need and desire is to be accepted by others.|Woo
+134|I am a logical person.|Analytical|I like discussion groups.|Communication
+135|Most of my thoughts and energy are spent on the present.|Adaptability|I try to learn as much as I can by studying the past.|Context
+136|I am satisfied and content when I do the best I can.|Achiever|I am determined to make a difference in the world.|Significance
+137|I have a great desire to learn.|Learner|I need to be understood and understood.|Empathy
+138|I think a lot about cause and effect relationships.|Analytical|I accept things as they come.|Adaptability
+139|I always need to understand why I have failed.|Restorative|I enjoy my current successes.|Achiever
+140|There is a source of dissatisfaction in my life.|Restorative|I am content with my life.|Positivity
+141|I seek responsibility.|Responsibility|I strive for advancement.|Achiever
+142|I am gentle and accommodating with others.|Harmony|I am a risk taker.|Activator
+143|I spend 25% of my time thinking about the future.|Futuristic|I spend 70% of my time thinking about the future.|Futuristic
+144|I guide and inspire my friends to get things done.|Developer|I make people I work with compatible with each other.|Arranger
+145|I file a lawsuit if necessary.|Command|I find it necessary to focus others' attention only on what is right.|Belief
+146|In addition to the hours I work during the day, if I also count the work I do outside of office hours, my typical work week is between 40-50 hours.|Discipline|In addition to the hours I work during the day, if I also count the work I do outside of office hours, my typical work week would be over 60 hours.|Achiever
+147|I am a cheerful and cheerful person.|Positivity|I am a serious person.|Deliberative
+148|I find it easy to start new tasks and projects.|Activator|My problem is finishing projects.|Discipline
+149|I can get along with any type of person.|Adaptability|I choose my friends carefully.|Individualization
+150|I cry easily.|Empathy|I am determined and persistent.|Focus
+151|I observe life.|Intellection|I intend to control the events in my life.|Command
+152|When necessary, I can focus on my work for long hours, for example, all night long.|Focus|An hour is the most time I can concentrate on work or study.|Focus
+153|I am not satisfied with small successes and seek big successes.|Maximizer|I consistently achieve positive results.|Achiever
+154|I can be smarter and more cunning than other people.|Strategic|Some people scare me.|Deliberative
+155|I function best when I am doing several things at once.|Arranger|My method is to focus on one thing at a time.|Focus
+156|I have had a mentor or teacher who really paid attention to me, apart from others.|Developer|Whether a teacher likes me or not doesn't matter at all.|Self-assurance
+157|I am a good initiator.|Activator|I have the power to follow through on a task.|Achiever
+158|I am good at bringing people together to implement a project.|Relator|I am good at designing and creating new projects.|Ideation
+159|My mind is very involved in numbers and figures.|Analytical|I often think about the beauty I have seen.|Ideation
+160|I prefer topics that make me think.|Intellection|I prefer to talk about sports.|Competition
+161|The words I use engage and stimulate the mind and the mind.|Communication|My vocabulary is made up of practical words.|Communication
+162|My expression is made up of simple and short words.|Communication|I tend to use a lot of abstract and complex words.|Intellection
+163|It is easy for me to express my thoughts and express them.|Communication|Sometimes I struggle to express my ideas and my words fall short.|Deliberative
+164|I love to read.|Learner|I like to understand how things work.|Analytical
+165|My mind is always active and jumping.|Adaptability|I need to be physically active.|Activator
+166|I enjoy giving speeches.|Communication|I like discussion groups.|Communication
+167|I love studying.|Learner|I get excited about finding a pattern in data.|Analytical
+168|I have a strong desire to know more.|Learner|I have a strong desire to get rich.|Significance
+169|I always finish work before deadlines.|Discipline|I try my best and do what I set out to do.|Responsibility
+170|A new idea makes my day and makes me happy.|Ideation|Completing the tasks that are expected of me makes my day special and makes me happy.|Achiever
+171|When I am in a group, I seem to have more ideas than anyone else.|Ideation|I seem to be at my best when I am in a group.|Relator
+172|I never stop gathering and acquiring information.|Input|I have a talent for simplifying complex issues.|Strategic
+173|Winning is everything.|Competition|Doing things right is everything.|Consistency
+174|My mindset and philosophy determine the direction and direction of my life.|Belief|I set my own direction in life.|Self-assurance
+175|I spend 5 hours or more each week thinking alone.|Intellection|I like being with people.|Woo
+176|I know my strengths better than my weaknesses.|Self-assurance|I know my weaknesses better than my strengths.|Restorative
+177|I don’t really care whether other people like me or not.|Self-assurance|I love people.|Connectedness

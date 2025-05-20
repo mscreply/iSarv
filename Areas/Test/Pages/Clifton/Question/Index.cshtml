@@ -45,19 +45,19 @@
         {
             <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Id)
+                    @item.Id
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.StatementA)
+                    @Localizer.TextIgnoreCase(item.StatementA)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ThemeA)
+                    @Localizer.TextIgnoreCase(item.ThemeA.ToDescription())
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.StatementB)
+                    @Localizer.TextIgnoreCase(item.StatementB)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.ThemeB)
+                    @Localizer.TextIgnoreCase(item.ThemeB.ToDescription())
                 </td>
                 <td>
 

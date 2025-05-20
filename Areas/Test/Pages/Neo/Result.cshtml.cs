@@ -45,7 +45,7 @@ public class Result : PageModel
         if (NeoTest.Result == "Wait for AI" || string.IsNullOrEmpty(NeoTest.Result))
         {
             // Get result from AI
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(Score.ToJson(), "Neo PI-R");
+            var aiResponse = await _AIService.GetAIReplyForTestAsync(Score.ToJson(), "Neo PI-R");
             NeoTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             await _context.SaveChangesAsync();
             if(!aiResponse.IsSuccess) AIError = aiResponse.Reply;

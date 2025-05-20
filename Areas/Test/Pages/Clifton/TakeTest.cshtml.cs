@@ -58,7 +58,7 @@ namespace iSarv.Areas.Test.Pages.Clifton
             {
                 cliftonTest.Response = string.Join(",", answers);
                 cliftonTest.SubmitDate = DateTime.Now;
-                var aiResponse = await _aiService.GetAvalAIReplyForTestAsync(cliftonTest.CalculateScores().ToJson(), "Clifton Strengths");
+                var aiResponse = await _aiService.GetAIReplyForTestAsync(cliftonTest.CalculateScores().ToJson(), "Clifton Strengths");
                 cliftonTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
                 _context.CliftonTests.Update(cliftonTest);
                 await _context.SaveChangesAsync();

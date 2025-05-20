@@ -20,18 +20,18 @@ public class TestPackage
     public string UserId { get; set; } = string.Empty;
 
     // Tests --------------------------------------------------------------------------------
+
+    [Display(Name = "Neo Test", Prompt = "Select the Neo test")]
+    public NeoTest? NeoTest { get; set; } = new();
     
     [Display(Name = "Clifton Test", Prompt = "Select the Clifton test")]
     public CliftonTest CliftonTest { get; set; } = new();
 
-    [Display(Name = "Ravens Test", Prompt = "Select the Ravens test")]
-    public RavensTest RavensTest { get; set; } = new();
-
     [Display(Name = "Hollands Test", Prompt = "Select the Hollands test")]
     public HollandsTest? HollandsTest { get; set; } = new();
 
-    [Display(Name = "Neo Test", Prompt = "Select the Neo test")]
-    public NeoTest? NeoTest { get; set; } = new();
+    [Display(Name = "Ravens Test", Prompt = "Select the Ravens test")]
+    public RavensTest RavensTest { get; set; } = new();
     
     // Dates ----------------------------------------------------------------------------------
 

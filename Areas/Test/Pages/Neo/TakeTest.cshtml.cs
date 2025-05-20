@@ -58,7 +58,7 @@ namespace iSarv.Areas.Test.Pages.Neo
             {
                 neoTest.Response = string.Join(",", answers);
                 neoTest.SubmitDate = DateTime.Now;
-                var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(neoTest.CalculateScores().ToJson(), "Neo PI-R");
+                var aiResponse = await _AIService.GetAIReplyForTestAsync(neoTest.CalculateScores().ToJson(), "Neo PI-R");
                 neoTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
                 _context.NeoTests.Update(neoTest);
                 await _context.SaveChangesAsync();

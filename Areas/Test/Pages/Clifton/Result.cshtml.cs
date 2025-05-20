@@ -45,7 +45,7 @@ public class Result : PageModel
         if (CliftonTest.Result == "Wait for AI" || string.IsNullOrEmpty(CliftonTest.Result))
         {
             // Get result from AI
-            var aiResponse = await _AIService.GetAvalAIReplyForTestAsync(Score.ToJson(), "Clifton Strengths");
+            var aiResponse = await _AIService.GetAIReplyForTestAsync(Score.ToJson(), "Clifton Strengths");
             CliftonTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             await _context.SaveChangesAsync();
             if(!aiResponse.IsSuccess) AIError = aiResponse.Reply;
