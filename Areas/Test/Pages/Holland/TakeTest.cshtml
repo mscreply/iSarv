@@ -1,0 +1,122 @@
+@page "{testId:int}"
+@using iSarv.Data.Tests
+@model iSarv.Areas.Test.Pages.Holland.TakeTestModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Take Holland Test");
+}
+
+<h1>@Localizer.TextIgnoreCase("Take Holland Test")</h1>
+
+@if (Model.IsNotStarted)
+{
+    <div>@Localizer.TextIgnoreCase("Your Holland Test has not been started!")</div>
+}
+else if (Model.IsDoneOrExpired)
+{
+    <div>@Localizer.TextIgnoreCase("Your Holland Test has been completed or expired!")</div>
+}
+else
+{
+    <form method="post">
+        <div id="step-container">
+            <div class="step" id="step-1">
+                <p>@Localizer.TextIgnoreCase("Welcome to the Holland Interest Test (RIASEC)!")</p>
+                <p>@Localizer.TextIgnoreCase("Read each statement carefully and mark the answer that most closely matches your thoughts or feelings.")</p>
+                <p>@Localizer.TextIgnoreCase("Note that there is no right or wrong answer, so try to choose an answer that reflects your true feelings.")</p>
+                <p>@Localizer.TextIgnoreCase("Ensure you answer all questions before submitting.")</p>
+                <p>@Localizer.TextIgnoreCase("Click \"Next\" to begin.")</p>
+                <button class="btn btn-primary next-step" data-next="2">@Localizer.TextIgnoreCase("Next")</button>
+            </div>
+
+            @{ var i = 0; }
+            @foreach (var type in Enum.GetValues<HollandQuestionType>())
+            {
+                foreach (var personality in Enum.GetValues<HollandPersonality>())
+                {
+                    <div class="step p-5" id="step-@(i + 2)" style="display: none;">
+                        <h4 class="text-primary mb-">
+                            @{
+                                var statement = type switch
+                                {
+                                    HollandQuestionType.LikeTo => Localizer.TextIgnoreCase("Select as many of the following activities as you would like to do."),
+                                    HollandQuestionType.CanDo => Localizer.TextIgnoreCase("Select as many of the following activities that you have experienced and can do."),
+                                    HollandQuestionType.Skill => Localizer.TextIgnoreCase("Select jobs that you are interested in or find enjoyable."),
+                                    HollandQuestionType.Ability => Localizer.TextIgnoreCase("Rate your abilities and skills in comparison to your peers. Try to make the most accurate assessment of yourself, giving a score of 1 for the least ability and a score of 7 for the most ability, and avoid rating yourself the same for each ability as much as possible."),
+                                    _ => ""
+                                };
+                            }
+                            @statement
+                        </h4>
+                        <table class="table table-striped p-5">
+                            @foreach (var question in Model.Questions.Where(q => q.HollandPersonality == personality && q.Type == type))
+                            {
+                                <tr>
+                                    <td><h5> @Localizer.TextIgnoreCase(question.Statement)</h5></td>
+                                    <td>
+                                        @if (question.Type != HollandQuestionType.Ability)
+                                        {
+                                            <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
+                                                   value="0" id="answers-@question.Id-0" checked/>
+                                            <label class="btn btn-outline-danger" for="answers-@question.Id-0"><i
+                                                    class="fas fa-xmark"></i> </label>
+                                            <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
+                                                   value="1" id="answers-@question.Id-1"/>
+                                            <label class="btn btn-outline-success" for="answers-@question.Id-1"><i
+                                                    class="fas fa-check"></i> </label>
+                                        }
+                                        else
+                                        {
+                                            for (var j = 1; j <= 7; j++)
+                                            {
+                                                <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
+                                                       value="@j" id="answers-@question.Id-@j"
+                                                       @(j == 1 ? "checked" : "")/>
+                                                <label class="btn btn-outline-success"
+                                                       for="answers-@question.Id-@j"> @j </label>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        </table>
+                        @if (i > 0)
+                        {
+                            <button class="btn btn-primary next-step"
+                                    data-next="@(i + 1)">@Localizer.TextIgnoreCase("Previous")</button>
+                        }
+                        @if (i < 23)
+                        {
+                            <button class="btn btn-primary next-step"
+                                    data-next="@(i + 3)">@Localizer.TextIgnoreCase("Next")</button>
+                        }
+                        else
+                        {
+                            <button class="btn btn-success"
+                                    id="submit-test">@Localizer.TextIgnoreCase("Submit Test")</button>
+                        }
+                    </div>
+                    i++;
+                }
+            }
+        </div>
+    </form>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".next-step").on("click", function (e) {
+                e.preventDefault();
+                var nextStep = $(this).data("next");
+                $(".step").hide();
+                $("#step-" + nextStep).show();
+            });
+
+            $("#submit-test").on("click", function () {
+                alert($.parseHTML('@Localizer.TextIgnoreCase("Test submitted successfully!")')[0].textContent);
+                // Add form submission logic here
+            });
+        });
+    </script>
+}

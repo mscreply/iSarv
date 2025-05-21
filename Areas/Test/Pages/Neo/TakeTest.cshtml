@@ -70,7 +70,7 @@ else
             });
 
             $("#submit-test").on("click", function () {
-                alert("@Localizer.TextIgnoreCase("Test submitted successfully!")");
+                alert($.parseHTML('@Localizer.TextIgnoreCase("Test submitted successfully!")')[0].textContent);
                 // Add form submission logic here
             });
         });

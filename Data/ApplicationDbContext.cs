@@ -49,6 +49,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<CliftonTest> CliftonTests { get; set; }
     public DbSet<CliftonTestQuestion> CliftonTestQuestions { get; set; }
     public DbSet<HollandTest> HollandTests { get; set; }
+    public DbSet<HollandTestQuestion> HollandTestQuestions { get; set; }
     public DbSet<RavenTest> RavenTests { get; set; }
     public DbSet<ActivationCode> ActivationCodes { get; set; }
 }

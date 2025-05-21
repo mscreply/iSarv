@@ -40,4 +40,24 @@
       <None Include="wwwroot\App_Files\data\University.txt" />
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Question\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Question\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Question\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Question\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Question\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\Result.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Test\Pages\Holland\TakeTest.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Question\Create.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Question\Delete.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Question\Details.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Question\Edit.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Question\Index.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\Result.cshtml" />
+      <AdditionalFiles Include="Areas\Test\Pages\Holland\TakeTest.cshtml" />
+    </ItemGroup>
+
 </Project>

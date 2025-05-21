@@ -1,0 +1,32 @@
+@page
+@model iSarv.Areas.Test.Pages.Holland.Question.DetailsModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Details");
+}
+
+<h1>@Localizer.TextIgnoreCase("Details")</h1>
+
+<div>
+    <h4>@Localizer.TextIgnoreCase("Holland Test Question")</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HollandTestQuestion.Statement)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HollandTestQuestion.Statement)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HollandTestQuestion.HollandPersonality)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HollandTestQuestion.Type)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.HollandTestQuestion.Id" class="btn btn-primary">@Localizer.TextIgnoreCase("Edit")</a> 
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+</div>
+

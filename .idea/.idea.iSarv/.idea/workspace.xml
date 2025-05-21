@@ -9,26 +9,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="add AI myserver">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Create.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Create.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Delete.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Delete.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Details.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Details.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Edit.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Edit.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Tests/HollandTestQuestion.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Delete.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Delete.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Edit.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Edit.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Create.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Create.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Edit.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Edit.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApplicationUserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationUserManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/HollandsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/HollandsTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/RavensTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/RavensTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/HollandsTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/HollandTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/RavensTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSarv.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iSarv.db" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,12 +65,11 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/42347e6b97634007988f4665aae3611d26ac40/6a/f027e480/ModelValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/36f346b6c0454bc8a6afa7aed38119fe5bbffcc983298d9bfa4dbd5f49461f/Monitor.CoreCLR.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/db398e56b0886a44a1806fa88c6c6ab21566404a2791b87fc7ea2d74abfd863/ChatClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1584e493603cfc4e9b36b77d6d4afe97de6363f9/src/libraries/System.Private.CoreLib/src/System/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://D:/RiderProjects/ISarv-Project/iSarv/Pages/Shared/Partials/_HeaderPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/jquery/dist/jquery.min.map" root0="FORCE_HIGHLIGHTING" />
@@ -75,26 +87,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.iSarv: IIS Express.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.iSarv: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Launch Settings Profile.iSarv: https.executor&quot;: &quot;Debug&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Publish to IIS.Publish iSarv to IIS.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.github.copilot.settings.ApplicationConfigurable&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;D:/RiderProjects/RIMS-Project/RIMS/Areas/Identity/Pages/Account/Manage/Profile.cshtml&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.iSarv: IIS Express.executor": "Debug",
+    ".NET Launch Settings Profile.iSarv: http.executor": "Debug",
+    ".NET Launch Settings Profile.iSarv: https.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Publish to IIS.Publish iSarv to IIS.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.android.studio.ml.bot.mainConfigurable",
+    "two.files.diff.last.used.file": "D:/RiderProjects/RIMS-Project/RIMS/Areas/Identity/Pages/Account/Manage/Profile.cshtml"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.iSarv: http">
     <configuration name="Publish iSarv to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish configuration="Release" platform="Any CPU" publish_profile="&lt;no publish profile&gt;" uuid_high="-9159967781003247216" uuid_low="-7189944830166748072" />
@@ -187,7 +199,7 @@
       <workItem from="1747488131776" duration="492000" />
       <workItem from="1747504312107" duration="5720000" />
       <workItem from="1747574226604" duration="10597000" />
-      <workItem from="1747728854528" duration="2002000" />
+      <workItem from="1747728854528" duration="23547000" />
     </task>
     <task id="LOCAL-00001" summary="user management finish">
       <option name="closed" value="true" />
@@ -221,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747732444107</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="delete s from test names">
+      <option name="closed" value="true" />
+      <created>1747740913287</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747740913287</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,26 +267,8 @@
     <MESSAGE value="neo test ready to take" />
     <MESSAGE value="package pages improved and load from Excel enabled" />
     <MESSAGE value="add AI myserver" />
-    <option name="LAST_COMMIT_MESSAGE" value="add AI myserver" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs</url>
-          <line>462</line>
-          <properties documentPath="D:\RiderProjects\ISarv-Project\iSarv\Areas\Package\Pages\Details.cshtml.cs" containingFunctionPresentation="Method 'OnPostResetHollandsTestAsync'">
-            <startOffsets>
-              <option value="13699" />
-            </startOffsets>
-            <endOffsets>
-              <option value="13759" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="delete s from test names" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete s from test names" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

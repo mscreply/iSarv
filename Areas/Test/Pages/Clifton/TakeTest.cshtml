@@ -34,7 +34,7 @@ else
                 <p>@Localizer.TextIgnoreCase("The Clifton Strengths Talent Assessment Test (CSTA) consists of 177 pairs of statements. From each pair, select the statement that best matches your characteristics.")</p>
                 <p>@Localizer.TextIgnoreCase("Try to avoid neutral options as much as possible. Usually, one of the two statements is closer to you. If both statements match you, choose the one that better or more closely describes you.")</p>
                 <p>@Localizer.TextIgnoreCase("This test is timed. You have only 40 seconds for each question, so don’t overthink; trust your first instinct.")</p>
-                <p>@Localizer.TextIgnoreCase("Below is a sample question. Choose the statement that best describes you:")</p>
+                <p>@Localizer.TextIgnoreCase("Below is a sample question. Choose the statement that best describes you")</p>
                 <div class="container" style="display: flex;">
                     <table class="w-100 p-5 text-center bg-light m-2 mb-5">
                         <tr>
@@ -148,7 +148,7 @@ else
             });
 
             $("#submit-test").on("click", function () {
-                alert("@Localizer.TextIgnoreCase("Test submitted successfully!")");
+                alert($.parseHTML('@Localizer.TextIgnoreCase("Test submitted successfully!")')[0].textContent);
                 // Add form submission logic here
             });
 

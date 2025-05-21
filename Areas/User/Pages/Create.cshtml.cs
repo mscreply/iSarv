@@ -2,7 +2,6 @@ using iSarv.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Authorization;
-using iSarv.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Areas.User.Pages

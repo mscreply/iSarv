@@ -43,10 +43,34 @@ public class HollandTest
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
-    private ApplicationDbContext applicationDbContext { get; }
+    private readonly ApplicationDbContext _applicationDbContext;
 
-    public object CalculateScores()
+    public Dictionary<HollandPersonality, int> CalculateScores()
     {
-        throw new NotImplementedException();
+        // Parse the Response string into an array of integers
+        var scores = Response.Split(',').Select(int.Parse).ToArray();
+
+        // Retrieve all questions from the database
+        var questions = _applicationDbContext.HollandTestQuestions.ToList();
+
+        // Calculate the score for each Holland personality type
+        var personalityScores = new Dictionary<HollandPersonality, int>
+        {
+            { HollandPersonality.Realistic, 0 },
+            { HollandPersonality.Investigative, 0 },
+            { HollandPersonality.Artistic, 0 },
+            { HollandPersonality.Social, 0 },
+            { HollandPersonality.Enterprising, 0 },
+            { HollandPersonality.Conventional, 0 }
+        };
+
+        for (int i = 0; i < questions.Count; i++)
+        {
+            var question = questions[i];
+            var score = scores[i];
+            personalityScores[question.HollandPersonality] += score;
+        }
+
+        return personalityScores;
     }
 }

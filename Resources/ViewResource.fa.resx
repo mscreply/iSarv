@@ -209,6 +209,12 @@
     <data name="Access denied" xml:space="preserve">
         <value>دسترسی غیرمجاز</value>
     </data>
+    <data name="Accountant Educated" xml:space="preserve">
+        <value>حسابدار تحصیل كرده</value>
+    </data>
+    <data name="Accounting" xml:space="preserve">
+        <value>حسابداری</value>
+    </data>
     <data name="Accurate and personalized analysis of test results using advanced artificial intelligence." xml:space="preserve">
         <value>تحلیل دقیق و شخصی‌سازی شده نتایج تست‌ها به کمک هوش مصنوعی پیشرفته.</value>
     </data>
@@ -217,6 +223,9 @@
     </data>
     <data name="Achiever" xml:space="preserve">
         <value>موفقیت‌طلب</value>
+    </data>
+    <data name="Acting in theater or cinema" xml:space="preserve">
+        <value>بازیگری تئاتر یا سینما</value>
     </data>
     <data name="Action" xml:space="preserve">
         <value>اقدام</value>
@@ -250,6 +259,9 @@
     </data>
     <data name="Activator" xml:space="preserve">
         <value>فعال‌کننده</value>
+    </data>
+    <data name="Active participation in seminars" xml:space="preserve">
+        <value>شركت فعال در سمینارها</value>
     </data>
     <data name="Activities" xml:space="preserve">
         <value>فعالیت ها</value>
@@ -335,11 +347,23 @@
     <data name="Administration" xml:space="preserve">
         <value>مدیریت</value>
     </data>
+    <data name="Administrative financial inspector" xml:space="preserve">
+        <value>بازرسی مالی اداری</value>
+    </data>
     <data name="Administrator" xml:space="preserve">
         <value>مدیر سیستم</value>
     </data>
     <data name="Admission" xml:space="preserve">
         <value>پذیرش</value>
+    </data>
+    <data name="Advertising artist" xml:space="preserve">
+        <value>هنر مند آگهی های تبلیغاتی</value>
+    </data>
+    <data name="Advertising executive director and advertising manager" xml:space="preserve">
+        <value>مدیر اجرایی آگهی و مسئول تبلیغات</value>
+    </data>
+    <data name="Advertising manager or public relations manager" xml:space="preserve">
+        <value>مدیر تبلیغات یا مدیر روابط عمومی</value>
     </data>
     <data name="Aesthetics" xml:space="preserve">
         <value>زیبایی شناسی</value>
@@ -374,6 +398,9 @@
     <data name="AI-Powered Analysis" xml:space="preserve">
         <value>تحلیل مبتنی بر هوش مصنوعی</value>
     </data>
+    <data name="Aircraft mechanic" xml:space="preserve">
+        <value>مكانیك هواپیما</value>
+    </data>
     <data name="All" xml:space="preserve">
         <value>همه</value>
     </data>
@@ -392,6 +419,9 @@
     <data name="AngerHostility" xml:space="preserve">
         <value>خصومت خشم</value>
     </data>
+    <data name="Anthropologist" xml:space="preserve">
+        <value>مردم شناس</value>
+    </data>
     <data name="Anxiety" xml:space="preserve">
         <value>اضطراب</value>
     </data>
@@ -403,6 +433,9 @@
     </data>
     <data name="ApplicationUser" xml:space="preserve">
         <value>کاربر</value>
+    </data>
+    <data name="Archiving letters, reports, records, etc." xml:space="preserve">
+        <value>بایگانی نامه ها ، گزارشها ، سوابق و غیره</value>
     </data>
     <data name="Are you sure you want to delete this user?" xml:space="preserve">
         <value>آیا مطمئن هستید که می‌خواهید این کاربر را حذف کنید؟</value>
@@ -417,10 +450,16 @@
         <value>سازمان‌دهنده</value>
     </data>
     <data name="Art and aesthetics are not very important to me." xml:space="preserve">
-        <value>جنبه هاي هنري و زيبايي شناسي براي من زياد اهميت ندارند.</value>
+        <value>جنبه های هنری و زیبایی شناسی برای من زیاد اهمیت ندارند.</value>
+    </data>
+    <data name="Artistic" xml:space="preserve">
+        <value>هنر دوست</value>
+    </data>
+    <data name="Artistic ability" xml:space="preserve">
+        <value>توانایی هنری</value>
     </data>
     <data name="As a child, I rarely enjoyed games that involved acting and imagination." xml:space="preserve">
-        <value>در کودکی بندرت از بازيهای که جنبه نمايشی وتخليلی داشتند خوشم می آمد .</value>
+        <value>در کودکی بندرت از بازیهای که جنبه نمایشی وتخلیلی داشتند خوشم می آمد .</value>
     </data>
     <data name="As a child, I was really playful and independent." xml:space="preserve">
         <value>در زمان کودکی، واقعا بازیگوش و مستقل بودم.</value>
@@ -458,6 +497,12 @@
     <data name="Assigned Review" xml:space="preserve">
         <value>داوری‌های انتساب‌یافته</value>
     </data>
+    <data name="Astrologer" xml:space="preserve">
+        <value>ستاره شناس ( منجم )</value>
+    </data>
+    <data name="Attending meetings and seminars" xml:space="preserve">
+        <value>حضور در جلسات و سمینارها</value>
+    </data>
     <data name="Audience" xml:space="preserve">
         <value>شرکت‌کننده</value>
     </data>
@@ -485,6 +530,9 @@
     <data name="Authors (Regular Users)" xml:space="preserve">
         <value>نویسندگان (کاربران عادی)</value>
     </data>
+    <data name="Auto mechanic" xml:space="preserve">
+        <value>مكانیك اتومبیل</value>
+    </data>
     <data name="Avatar" xml:space="preserve">
         <value>آواتار</value>
     </data>
@@ -500,11 +548,17 @@
     <data name="Background Color" xml:space="preserve">
         <value>رنگ پس‌زمینه</value>
     </data>
+    <data name="Bank bailiff" xml:space="preserve">
+        <value>تحویلدار بانك</value>
+    </data>
+    <data name="Bank inspector" xml:space="preserve">
+        <value>بازرس بانك</value>
+    </data>
     <data name="Before making a decision, I think about all aspects of the matter." xml:space="preserve">
-        <value>قبل از اينکه تصميم بگيرم به همه جوانب کار فکر مي کنم.</value>
+        <value>قبل از اینکه تصمیم بگیرم به همه جوانب کار فکر می کنم.</value>
     </data>
     <data name="Before taking any action, I always consider its consequences." xml:space="preserve">
-        <value>هميشه قبل از دست زدن به عملي ، پيامد هاي آنرا در نظر می گيرم .</value>
+        <value>همیشه قبل از دست زدن به عملی ، پیامد های آنرا در نظر می گیرم .</value>
     </data>
     <data name="Before you begin, please read the instructions on the next page carefully. The test consists of 177 pairs of statements, each describing your individual characteristics. You must select only the one statement from each pair that best describes you." xml:space="preserve">
         <value>قبل از شروع، لطفاً دستورالعمل‌های صفحه بعد را با دقت بخوانید. این تست شامل ۱۷۷ جفت عبارت است که هر کدام ویژگی‌های فردی شما را توصیف می‌کنند. شما باید فقط یک عبارت از هر جفت را که بهترین توصیف از شما است انتخاب کنید.</value>
@@ -513,7 +567,7 @@
         <value>محرم اسرار و معتمد دیگران بودن برای من رضایت بخش است</value>
     </data>
     <data name="Being completely honest in business is not a suitable method." xml:space="preserve">
-        <value>کاملاً درستکار بودن در تجارت و کسب روش مناسبي نيست.</value>
+        <value>کاملاً درستکار بودن در تجارت و کسب روش مناسبی نیست.</value>
     </data>
     <data name="Belief" xml:space="preserve">
         <value>باورمند</value>
@@ -521,8 +575,8 @@
     <data name="Belief in humanity determines the direction of my life" xml:space="preserve">
         <value>اعتقاد به انسانیت، مسیر زندگی‌ من را مشخص می‌کند</value>
     </data>
-    <data name="Below is a sample question. Choose the statement that best describes you:" xml:space="preserve">
-        <value>در زیر یک سوال نمونه آورده شده است. عبارتی را انتخاب کنید که بهترین توصیف از شما است:</value>
+    <data name="Below is a sample question. Choose the statement that best describes you" xml:space="preserve">
+        <value>در زیر یک سوال نمونه آورده شده است. عبارتی را انتخاب کنید که بهترین توصیف از شما است</value>
     </data>
     <data name="Bio" xml:space="preserve">
         <value>بیوگرافی</value>
@@ -532,6 +586,9 @@
     </data>
     <data name="Biography (Fa)" xml:space="preserve">
         <value>بیوگرافی</value>
+    </data>
+    <data name="Biologist" xml:space="preserve">
+        <value>زیست شناس</value>
     </data>
     <data name="Blind Review" xml:space="preserve">
         <value>داوری ناشناس</value>
@@ -557,11 +614,23 @@
     <data name="Body (Fa)" xml:space="preserve">
         <value>پیام (فا)</value>
     </data>
+    <data name="Botanist" xml:space="preserve">
+        <value>گیاه شناس</value>
+    </data>
     <data name="Bright colors and flashy things attract me." xml:space="preserve">
-        <value>رنگ ها ی روشن وچيزهای پرزرق وبرق مرا به خود جلب می کند .</value>
+        <value>رنگ ها ی روشن وچیزهای پرزرق وبرق مرا به خود جلب می کند .</value>
+    </data>
+    <data name="Budget program manager (accountant)" xml:space="preserve">
+        <value>مسئول برنامه های بودجه ( ذی حساب )</value>
     </data>
     <data name="Build Your Career Future Intelligently" xml:space="preserve">
         <value>آینده شغلی خود را هوشمندانه بسازید</value>
+    </data>
+    <data name="Building inspector" xml:space="preserve">
+        <value>بازرس ساختمان</value>
+    </data>
+    <data name="Business company manager" xml:space="preserve">
+        <value>مدیر شركت های بازرگانی</value>
     </data>
     <data name="Buy New Package" xml:space="preserve">
         <value>خرید پکیج جدید</value>
@@ -590,8 +659,20 @@
     <data name="Cards" xml:space="preserve">
         <value>کارتها</value>
     </data>
+    <data name="Career guide and counselor" xml:space="preserve">
+        <value>راهنما و مشاور شغلی</value>
+    </data>
     <data name="Career Suggestions" xml:space="preserve">
         <value>پیشنهادات شغلی</value>
+    </data>
+    <data name="Carefully keeping books clean and stationery" xml:space="preserve">
+        <value>دقت در تمیز نگهداشتن كتابها و لوازم التحریر خود</value>
+    </data>
+    <data name="Carpenter" xml:space="preserve">
+        <value>نجار</value>
+    </data>
+    <data name="Ceremony manager" xml:space="preserve">
+        <value>مدیر مراسم وتشریفات</value>
     </data>
     <data name="Certificate" xml:space="preserve">
         <value>گواهی</value>
@@ -632,6 +713,9 @@
     <data name="Change your account settings" xml:space="preserve">
         <value>تنظیمات حساب کاربری خود را تغییر دهید</value>
     </data>
+    <data name="Charity affairs director" xml:space="preserve">
+        <value>مدیر امور خیریه</value>
+    </data>
     <data name="Check our Courses" xml:space="preserve">
         <value>دوره های ما را بررسی کنید</value>
     </data>
@@ -641,8 +725,14 @@
     <data name="Check our new News" xml:space="preserve">
         <value>اخبار جدید ما را چک کنید</value>
     </data>
+    <data name="Chemist" xml:space="preserve">
+        <value>شیمیدان</value>
+    </data>
     <data name="Chief" xml:space="preserve">
         <value>دبیر</value>
+    </data>
+    <data name="Children's literature writer" xml:space="preserve">
+        <value>نویصسنده ا دبیات كودكان</value>
     </data>
     <data name="Choose from Registered Users" xml:space="preserve">
         <value>انتخاب داور از میان کاربران ثبت‌نام شده</value>
@@ -749,6 +839,9 @@
     <data name="Compose Message" xml:space="preserve">
         <value>ارسال پیام</value>
     </data>
+    <data name="Computer operator" xml:space="preserve">
+        <value>اپراتور كامپیوتر</value>
+    </data>
     <data name="Conference Abbreviation" xml:space="preserve">
         <value>واژه اختصاری کنفرانس</value>
     </data>
@@ -813,7 +906,7 @@
         <value>تبریک! مقاله شما پذیرفته شده است</value>
     </data>
     <data name="Congratulation. Presenter card has been issued." xml:space="preserve">
-        <value>تبریک. کارت ارايه دهنده مقاله صادر شده است.</value>
+        <value>تبریک. کارت ارایه دهنده مقاله صادر شده است.</value>
     </data>
     <data name="Connectedness" xml:space="preserve">
         <value>پیوندگرا</value>
@@ -842,8 +935,17 @@
     <data name="Continue" xml:space="preserve">
         <value>ادامه دهید</value>
     </data>
+    <data name="Conventional" xml:space="preserve">
+        <value>قانونمند</value>
+    </data>
     <data name="Correspondent" xml:space="preserve">
         <value>نویسنده مسئول</value>
+    </data>
+    <data name="Cost estimator" xml:space="preserve">
+        <value>ارزیاب هزینه ها</value>
+    </data>
+    <data name="Counselor" xml:space="preserve">
+        <value>مشاور</value>
     </data>
     <data name="Course" xml:space="preserve">
         <value>دوره آموزشی</value>
@@ -865,6 +967,9 @@
     </data>
     <data name="Courses" xml:space="preserve">
         <value>دوره‌های آموزشی</value>
+    </data>
+    <data name="Court draftsman" xml:space="preserve">
+        <value>تند نویس دادگاه</value>
     </data>
     <data name="Create" xml:space="preserve">
         <value>ایجاد</value>
@@ -895,6 +1000,9 @@
     </data>
     <data name="Creator" xml:space="preserve">
         <value>اقدام‌کننده</value>
+    </data>
+    <data name="Criticizing a play" xml:space="preserve">
+        <value>نقد نمایشنامه</value>
     </data>
     <data name="Crying is a part of my life." xml:space="preserve">
         <value>گریه‌کردن بخشی از زندگی من است.</value>
@@ -1007,11 +1115,17 @@
     <data name="Discover Your Career Aptitude" xml:space="preserve">
         <value>استعداد شغلی خود را کشف کنید</value>
     </data>
+    <data name="Discussing political issues" xml:space="preserve">
+        <value>بحث درباره مسائل سیاسی</value>
+    </data>
     <data name="Diverse Tests" xml:space="preserve">
         <value>تست‌های متنوع</value>
     </data>
     <data name="Doing things right is everything." xml:space="preserve">
         <value>انجام درست کارها همه چیز است.</value>
+    </data>
+    <data name="Dorm supervisor" xml:space="preserve">
+        <value>سرپرست خوابگاه</value>
     </data>
     <data name="Download" xml:space="preserve">
         <value>دانلود</value>
@@ -1033,6 +1147,15 @@
     </data>
     <data name="Dr. Career Advisor" xml:space="preserve">
         <value>دکتر مشاور شغلی</value>
+    </data>
+    <data name="Drawing or calligraphy or music skills" xml:space="preserve">
+        <value>مهارت های نقاشی یا خط یا موسیقی</value>
+    </data>
+    <data name="Drawing, drawing, painting" xml:space="preserve">
+        <value>طراحی ، ترسیم ، نقاشی</value>
+    </data>
+    <data name="Driving trucks and tractors" xml:space="preserve">
+        <value>راندن كامیون و تراكتور</value>
     </data>
     <data name="Duration (Fa)" xml:space="preserve">
         <value>مدت دوره</value>
@@ -1072,6 +1195,15 @@
     </data>
     <data name="Edit User" xml:space="preserve">
         <value>ویرایش کاربر</value>
+    </data>
+    <data name="Editor-in-chief of a Scientific journal" xml:space="preserve">
+        <value>سردبیر یك مجله علمی</value>
+    </data>
+    <data name="Electric excavator driver, crane" xml:space="preserve">
+        <value>راننده خاك برداری برقی ، جرثقیل</value>
+    </data>
+    <data name="Electrician" xml:space="preserve">
+        <value>برقكار</value>
     </data>
     <data name="Email" xml:space="preserve">
         <value>ایمیل</value>
@@ -1182,10 +1314,10 @@
         <value>شغل را وارد کنید</value>
     </data>
     <data name="Enter Statement A" xml:space="preserve">
-        <value>شرح الف را وارد کنید</value>
+        <value>گویه الف را وارد کنید</value>
     </data>
     <data name="Enter Statement B" xml:space="preserve">
-        <value>شرح ب را وارد کنید</value>
+        <value>گویه ب را وارد کنید</value>
     </data>
     <data name="Enter the activation code" xml:space="preserve">
         <value>کد فعال سازی را وارد کنید</value>
@@ -1220,6 +1352,9 @@
     <data name="Enter your phone number" xml:space="preserve">
         <value>شماره تلفن خود را وارد کنید</value>
     </data>
+    <data name="Enterprising" xml:space="preserve">
+        <value>کارآفرین</value>
+    </data>
     <data name="Error" xml:space="preserve">
         <value>خطا!</value>
     </data>
@@ -1251,16 +1386,16 @@
         <value>خطا: نام کاربری از قبل وجود دارد.</value>
     </data>
     <data name="Even a small annoyance incapacitates me." xml:space="preserve">
-        <value>حتی يک اذيت وآزار کوچک مرا عاجز می کند .</value>
+        <value>حتی یک اذیت وآزار کوچک مرا عاجز می کند .</value>
     </data>
     <data name="Even if I wanted to, I could not deceive anyone." xml:space="preserve">
-        <value>حتي اگر بخواهم نمي توانم کسي را فريب دهم.</value>
+        <value>حتی اگر بخواهم نمی توانم کسی را فریب دهم.</value>
     </data>
     <data name="Even when everything seems to go wrong, I can still make good decisions." xml:space="preserve">
-        <value>حتی وقتی به نظر می رسد که همه کارها اشتباه شده ، باز هم می توان تصميمات خوبی بگيرم .</value>
+        <value>حتی وقتی به نظر می رسد که همه کارها اشتباه شده ، باز هم می توان تصمیمات خوبی بگیرم .</value>
     </data>
     <data name="Even when expressing anger is reasonable, I hesitate to show it." xml:space="preserve">
-        <value>حتي هنگامي که ابراز خشم منطقي است در بروز آن ترديد دارم.</value>
+        <value>حتی هنگامی که ابراز خشم منطقی است در بروز آن تردید دارم.</value>
     </data>
     <data name="Event" xml:space="preserve">
         <value>رویداد</value>
@@ -1376,6 +1511,9 @@
     <data name="Files" xml:space="preserve">
         <value>فایل‌ها</value>
     </data>
+    <data name="Filmmaker" xml:space="preserve">
+        <value>فیلم ساز</value>
+    </data>
     <data name="Filter By Role ..." xml:space="preserve">
         <value>فیلتر با نقش ...</value>
     </data>
@@ -1406,8 +1544,23 @@
     <data name="FinalResult" xml:space="preserve">
         <value>نتیجه نهایی</value>
     </data>
+    <data name="Financial administrative ability" xml:space="preserve">
+        <value>توانایی اداری مالی</value>
+    </data>
+    <data name="Financial and administrative skills" xml:space="preserve">
+        <value>مهارت های مالی و اداری</value>
+    </data>
+    <data name="Financial expert" xml:space="preserve">
+        <value>كارشناس امور مالی</value>
+    </data>
+    <data name="Financial officer" xml:space="preserve">
+        <value>كارمند امور مالی</value>
+    </data>
     <data name="Find your ideal career path by taking validated psychological tests and AI analysis." xml:space="preserve">
         <value>با انجام تست‌های روانشناسی معتبر و تحلیل هوش مصنوعی، مسیر شغلی ایده‌آل خود را بیابید.</value>
+    </data>
+    <data name="Finding new friends and people" xml:space="preserve">
+        <value>پیدا كردن دوستان و افراد جدید</value>
     </data>
     <data name="First of all, I have to take care of myself." xml:space="preserve">
         <value>اول از همه، باید حواسم به خودم باشد.</value>
@@ -1417,6 +1570,9 @@
     </data>
     <data name="First page main image" xml:space="preserve">
         <value>تصویر اصلی صفحه اول</value>
+    </data>
+    <data name="Florist" xml:space="preserve">
+        <value>پرورش دهنده گلها و گیاهان</value>
     </data>
     <data name="Focus" xml:space="preserve">
         <value>تمرکزگرا</value>
@@ -1444,6 +1600,12 @@
     </data>
     <data name="Forgot your password?" xml:space="preserve">
         <value>رمز عبور خود را فراموش کرده‌اید؟</value>
+    </data>
+    <data name="Free study of specific subjects" xml:space="preserve">
+        <value>مطالعه آزاد درباره موضوعات خاص</value>
+    </data>
+    <data name="Friendship and cooperation skills" xml:space="preserve">
+        <value>مهارت های دوستی و تعاون</value>
     </data>
     <data name="From" xml:space="preserve">
         <value>فرستنده</value>
@@ -1478,11 +1640,20 @@
     <data name="General" xml:space="preserve">
         <value>عمومی</value>
     </data>
+    <data name="Geologist" xml:space="preserve">
+        <value>زمین شناس</value>
+    </data>
     <data name="Get Result from AI" xml:space="preserve">
         <value>دریافت نتیجه از هوش مصنوعی</value>
     </data>
+    <data name="Giving speeches" xml:space="preserve">
+        <value>سخنرانی</value>
+    </data>
     <data name="Go to Dashboard" xml:space="preserve">
         <value>برو به داشبورد</value>
+    </data>
+    <data name="Going to musical performances" xml:space="preserve">
+        <value>رفتن به برنامه های اجرای موسیقی</value>
     </data>
     <data name="Graphical Abstract Template" xml:space="preserve">
         <value>قالب چکیده گرافیکی</value>
@@ -1523,6 +1694,15 @@
     <data name="Held Training Courses" xml:space="preserve">
         <value>دوره‌های آموزشی برگزارشده</value>
     </data>
+    <data name="Helping others solve their personal problems" xml:space="preserve">
+        <value>كمك به حل مشكلات شخصی دیگران</value>
+    </data>
+    <data name="High school principal" xml:space="preserve">
+        <value>دبیر دبیرستان</value>
+    </data>
+    <data name="Holland Personality Type" xml:space="preserve">
+        <value>تیپ شخصیتی هالند</value>
+    </data>
     <data name="Holland Test" xml:space="preserve">
         <value>تست هالند</value>
     </data>
@@ -1550,8 +1730,11 @@
     <data name="Host" xml:space="preserve">
         <value>هاست</value>
     </data>
+    <data name="Hotel manager" xml:space="preserve">
+        <value>مدیر هتل</value>
+    </data>
     <data name="Human needs should always take precedence over economic considerations." xml:space="preserve">
-        <value>نياز هاي انساني بايد هميشه مقدم بر ملاحظات اقتصادي باشد .</value>
+        <value>نیاز های انسانی باید همیشه مقدم بر ملاحظات اقتصادی باشد .</value>
     </data>
     <data name="I accept things as they come." xml:space="preserve">
         <value>اتفاقات را همان‌طور که پیش می‌آیند می‌پذیرم.</value>
@@ -1560,16 +1743,16 @@
         <value>همیشه قبل از رسیدن ضرب‌الاجل‌ها، کار را به پایان می‌رسانم.</value>
     </data>
     <data name="I always like to have many people around me." xml:space="preserve">
-        <value>دوست دارم هميشه افراد زيادي دور و برم باشد.</value>
+        <value>دوست دارم همیشه افراد زیادی دور و برم باشد.</value>
     </data>
     <data name="I always need to understand why I have failed." xml:space="preserve">
         <value>همیشه نیاز دارم بفهمم که چرا شکست خورده ام.</value>
     </data>
     <data name="I always think carefully before answering any question." xml:space="preserve">
-        <value>هميشه قبل از پاسخ دادن به هر سوال به دقت درباره آن فکر می کنم .</value>
+        <value>همیشه قبل از پاسخ دادن به هر سوال به دقت درباره آن فکر می کنم .</value>
     </data>
     <data name="I always use the same route to go to a place." xml:space="preserve">
-        <value>برای رفتن به محلی ، هميشه از مسير يکسانی استفاده می کنم .</value>
+        <value>برای رفتن به محلی ، همیشه از مسیر یکسانی استفاده می کنم .</value>
     </data>
     <data name="I am a cheerful and cheerful person." xml:space="preserve">
         <value>آدم شاد و بانشاطی هستم.</value>
@@ -1578,7 +1761,7 @@
         <value>فردی با وجدان و مسئولیت‌پذیری هستم.</value>
     </data>
     <data name="I am a dominant, firm, and decisive person." xml:space="preserve">
-        <value>من فردي مسلط ، استوار و قاطع هستم.</value>
+        <value>من فردی مسلط ، استوار و قاطع هستم.</value>
     </data>
     <data name="I am a drop in the infinite ocean of existence" xml:space="preserve">
         <value>من قطره‌ای از دریای بی‌کران هستی ام</value>
@@ -1594,6 +1777,9 @@
     </data>
     <data name="I am a good conversationalist" xml:space="preserve">
         <value>من هم‌صحبت خوبی هستم</value>
+    </data>
+    <data name="I am a good debater." xml:space="preserve">
+        <value>مباحثه گر خوبی هستم .</value>
     </data>
     <data name="I am a good initiator." xml:space="preserve">
         <value>من یک آغاز گر خوب هستم.</value>
@@ -1641,16 +1827,16 @@
         <value>فردی هیجان‌طلب هستم.</value>
     </data>
     <data name="I am a very active person." xml:space="preserve">
-        <value>شخص بسيار فعالی هستم .</value>
+        <value>شخص بسیار فعالی هستم .</value>
     </data>
     <data name="I am a very capable and competent person." xml:space="preserve">
-        <value>شخص بسيار قادر و توانايی هستم .</value>
+        <value>شخص بسیار قادر و توانایی هستم .</value>
     </data>
     <data name="I am a very conservative person." xml:space="preserve">
         <value>بسیار فردی محافظه کار هستم</value>
     </data>
     <data name="I am a very logical and organized person." xml:space="preserve">
-        <value>شخص بسيار منطقی و مرتبی هستم .</value>
+        <value>شخص بسیار منطقی و مرتبی هستم .</value>
     </data>
     <data name="I am a very social person." xml:space="preserve">
         <value>فردی بسیار اجتماعی هستم.</value>
@@ -1662,16 +1848,16 @@
         <value>من همیشه روابط جدید دوستی برقرار می‌کنم.</value>
     </data>
     <data name="I am always prepared for my work." xml:space="preserve">
-        <value>هميشه برای کارم آماده ام .</value>
+        <value>همیشه برای کارم آماده ام .</value>
     </data>
     <data name="I am always well-known." xml:space="preserve">
         <value>من همیشه به آراستگی شناخته شده‌ام.</value>
     </data>
     <data name="I am always worried about making mistakes when dealing with others." xml:space="preserve">
-        <value>در مواجه با ديگران هميشه نگران هستم که نکند مرتکب اشتباهي شوم.</value>
+        <value>در مواجه با دیگران همیشه نگران هستم که نکند مرتکب اشتباهی شوم.</value>
     </data>
     <data name="I am an active (productive) person who always completes my work." xml:space="preserve">
-        <value>فرد فعال (مولدي) هستم که هميشه کارم را کامل انجام مي دهم.</value>
+        <value>فرد فعال (مولدی) هستم که همیشه کارم را کامل انجام می دهم.</value>
     </data>
     <data name="I am an efficient and effective person in my work." xml:space="preserve">
         <value>در کارم ، شخصی کارا ومؤثرم .</value>
@@ -1689,13 +1875,13 @@
         <value>من از تمام عواملی که بر وضعیت فعلی تاثیرگذار هستند، آگاه هستم</value>
     </data>
     <data name="I am comfortable in the presence of my superiors or other important people." xml:space="preserve">
-        <value>در حضور رؤسايم و يا ساير بزرگان راحت هستم .</value>
+        <value>در حضور رؤسایم و یا سایر بزرگان راحت هستم .</value>
     </data>
     <data name="I am comfortable with many different types of people." xml:space="preserve">
         <value>من با بسیاری از تیپ‌های مختلف آدم‌ها راحت هستم.</value>
     </data>
     <data name="I am comfortable with others and rarely worry about my behavior." xml:space="preserve">
-        <value>وقتي با ديگران هستم راحتم و بندرت نگران رفتار خود هستم.</value>
+        <value>وقتی با دیگران هستم راحتم و بندرت نگران رفتار خود هستم.</value>
     </data>
     <data name="I am committed to growing and improving" xml:space="preserve">
         <value>من متعهدم که رشد کنم و پیشرفت داشته باشم</value>
@@ -1739,8 +1925,14 @@
     <data name="I am good at designing and creating new projects." xml:space="preserve">
         <value>من در طراحی و خلق پروژهای جدید خوب عمل می‌کنم.</value>
     </data>
+    <data name="I am good at getting people to do things I enjoy." xml:space="preserve">
+        <value>به خوبی می توانم مردم را به انجام كار های مورد علاقه خودم وادارم .</value>
+    </data>
+    <data name="I am good at selling." xml:space="preserve">
+        <value>در فروشندگی مهارت دارم .</value>
+    </data>
     <data name="I am happy, cheerful, and in good spirits." xml:space="preserve">
-        <value>خوشحال ، بشاش و دارای روحيه خوبی هستم .</value>
+        <value>خوشحال ، بشاش و دارای روحیه خوبی هستم .</value>
     </data>
     <data name="I am impressed by the authority of famous leaders." xml:space="preserve">
         <value>ابهت رهبران مشهور من را تحت تاثیر قرار می دهد</value>
@@ -1752,7 +1944,7 @@
         <value>دستاوردهایی که در آینده می‌توانم به آن‌ها برسم، الهام‌بخش من هستند.</value>
     </data>
     <data name="I am known as someone who is wise and cautious." xml:space="preserve">
-        <value>ديگران مرا فردي عاقل و محتاط مي شناسند.</value>
+        <value>دیگران مرا فردی عاقل و محتاط می شناسند.</value>
     </data>
     <data name="I am known for my sense of humor." xml:space="preserve">
         <value>من با شوخ‌طبعی‌ام شناخته شده‌ام.</value>
@@ -1764,43 +1956,43 @@
         <value>من از دوستان و نزدیکانم، پخته‌تر هستم</value>
     </data>
     <data name="I am not a cunning or sly person." xml:space="preserve">
-        <value>آدم مکار يا زيرکي نيستم.</value>
+        <value>آدم مکار یا زیرکی نیستم.</value>
     </data>
     <data name="I am not a happy and hopeful person." xml:space="preserve">
-        <value>شخص خوشحال و اميدواري نيستم.</value>
+        <value>شخص خوشحال و امیدواری نیستم.</value>
     </data>
     <data name="I am not a very organized person." xml:space="preserve">
-        <value>فرد بسيار منظمي نيستم.</value>
+        <value>فرد بسیار منظمی نیستم.</value>
     </data>
     <data name="I am not a worrier." xml:space="preserve">
-        <value>فرد نگراني نيستم.</value>
+        <value>فرد نگرانی نیستم.</value>
     </data>
     <data name="I am not as quick and lively as others." xml:space="preserve">
-        <value>سرعت عمل وسرحالی من به اندازه سايرين نيست .</value>
+        <value>سرعت عمل وسرحالی من به اندازه سایرین نیست .</value>
     </data>
     <data name="I am not considered a sensitive and moody person." xml:space="preserve">
-        <value>فردي حساس و دمدمي مزاج به حساب نمي آيم.</value>
+        <value>فردی حساس و دمدمی مزاج به حساب نمی آیم.</value>
     </data>
     <data name="I am not in a hurry in work or play." xml:space="preserve">
-        <value>در کار و تفريح عجله و شتاب ندارم.</value>
+        <value>در کار و تفریح عجله و شتاب ندارم.</value>
     </data>
     <data name="I am not interested in serious reflection and thinking about the fate and nature of humanity." xml:space="preserve">
-        <value>علاقه به تأمل وتفکر جدی در باره سرنوشت وماهيت انسان ندارم .</value>
+        <value>علاقه به تأمل وتفکر جدی در باره سرنوشت وماهیت انسان ندارم .</value>
     </data>
     <data name="I am not obsessive about cleanliness." xml:space="preserve">
-        <value>من در رابطه با تميزی وسواس ندارم .</value>
+        <value>من در رابطه با تمیزی وسواس ندارم .</value>
     </data>
     <data name="I am not satisfied with small successes and seek big successes." xml:space="preserve">
         <value>من از موفقیت های کوچک راضی نمی شوم و به دنبال موفقیت‌های بزرگ هستم.</value>
     </data>
     <data name="I am not strict and do not take things too seriously." xml:space="preserve">
-        <value>سخت گير نيستم و مسائل را جدي نمي گيرم.</value>
+        <value>سخت گیر نیستم و مسائل را جدی نمی گیرم.</value>
     </data>
     <data name="I am often forgetful." xml:space="preserve">
         <value>غالبا فرد فراموش‌کاری هستم.</value>
     </data>
     <data name="I am often thirsty for excitement." xml:space="preserve">
-        <value>اغلب تشنه هيجان هستم.</value>
+        <value>اغلب تشنه هیجان هستم.</value>
     </data>
     <data name="I am open to learning new things and topics." xml:space="preserve">
         <value>پذیرای یادگیری مطالب و موضوعات جدید هستم</value>
@@ -1823,26 +2015,29 @@
     <data name="I am selective in admiring others and do not praise everyone." xml:space="preserve">
         <value>برای تحسین کردن دیگران گزینشی عمل می‌کنم و هرکسی را تحسین نمی‌کنم.</value>
     </data>
+    <data name="I am skilled in warming up older people." xml:space="preserve">
+        <value>در سر گرم كردن افراد بزرگتر از خود مهارت دارم .</value>
+    </data>
     <data name="I am someone who can achieve success on my own" xml:space="preserve">
         <value>من فردی هستم که به تنهایی می‌توانم موفقیت کسب کنم</value>
     </data>
     <data name="I am somewhat picky and precise." xml:space="preserve">
-        <value>تا حدی مشکل پسند و دقيق هستم .</value>
+        <value>تا حدی مشکل پسند و دقیق هستم .</value>
     </data>
     <data name="I am strongly committed to my moral principles." xml:space="preserve">
-        <value>من به شدت پايبند اصول اخلاقی خود هستم .</value>
+        <value>من به شدت پایبند اصول اخلاقی خود هستم .</value>
     </data>
     <data name="I am stubborn and persistent." xml:space="preserve">
         <value>سر سخت ولجوج هستم .</value>
     </data>
     <data name="I am stubborn and rigid in my methods." xml:space="preserve">
-        <value>در روش هايم سرسخت و لجوج هستم.</value>
+        <value>در روش هایم سرسخت و لجوج هستم.</value>
     </data>
     <data name="I am suspicious of the motives of others." xml:space="preserve">
-        <value>نسبت به قصد و نيت ديگران حساس و مشکوک هستم.</value>
+        <value>نسبت به قصد و نیت دیگران حساس و مشکوک هستم.</value>
     </data>
     <data name="I am usually optimistic and trusting about people." xml:space="preserve">
-        <value>معمولاً در مورد افراد خوشبين وخوش باورم .</value>
+        <value>معمولاً در مورد افراد خوشبین وخوش باورم .</value>
     </data>
     <data name="I am very ambitious." xml:space="preserve">
         <value>بسیار بلند پرواز هستم.</value>
@@ -1872,10 +2067,10 @@
         <value>از افراد بی نظم اجتناب می‌کنم.</value>
     </data>
     <data name="I believe all humans deserve respect." xml:space="preserve">
-        <value>معتقدم که تمام انسان ها شايسته احترام هستند .</value>
+        <value>معتقدم که تمام انسان ها شایسته احترام هستند .</value>
     </data>
     <data name="I believe I am better than most people." xml:space="preserve">
-        <value>بر اين باورم که از بيشتر مردم بهتر هستم.</value>
+        <value>بر این باورم که از بیشتر مردم بهتر هستم.</value>
     </data>
     <data name="I believe I am connected to all of humanity" xml:space="preserve">
         <value>من معتقدم با تمام نوع بشر در ارتباط هستم</value>
@@ -1890,10 +2085,10 @@
         <value>از نظر من رویداد های همزمان به دلیل شانس، بخت و اقبال پیش می‌آید یا اینکه به کل تصادفی است</value>
     </data>
     <data name="I believe that every society has its own correct and incorrect beliefs, which are valid and valuable for that society." xml:space="preserve">
-        <value>معتقدم كه هر جامعه دارای باورهای صحيح وغلط خاص خود است ، که برای خود آن جامعه دارای اعتبار وارزش است .</value>
+        <value>معتقدم كه هر جامعه دارای باورهای صحیح وغلط خاص خود است ، که برای خود آن جامعه دارای اعتبار وارزش است .</value>
     </data>
     <data name="I believe that loyalty to personal principles and ideals (having specific biases) is much more important than open-mindedness and lack of bias." xml:space="preserve">
-        <value>معتقدم که وفاداري به اصول وايده آل ها شخصی ( داشتن تعصب خاص ) بسيار مهمتر از آزاد انديشی و نداشتن تعصب است .</value>
+        <value>معتقدم که وفاداری به اصول وایده آل ها شخصی ( داشتن تعصب خاص ) بسیار مهمتر از آزاد اندیشی و نداشتن تعصب است .</value>
     </data>
     <data name="I believe that people who steal should be punished." xml:space="preserve">
         <value>معتقدم افرادی که دزدی می‌کنند، باید مجازات شوند.</value>
@@ -1902,13 +2097,25 @@
         <value>من معتقدم که رویدادهای همزمان تصادفی نیست؛ هر اتفاقی دلیل خودش را دارد</value>
     </data>
     <data name="I believe that when making decisions on moral issues, we should follow our religious authorities." xml:space="preserve">
-        <value>معتقدم که هنگام تصميم گيري در مسايل اخلاقي بايد پيرو مراجع مذهبيمان باشيم.</value>
+        <value>معتقدم که هنگام تصمیم گیری در مسایل اخلاقی باید پیرو مراجع مذهبیمان باشیم.</value>
     </data>
     <data name="I believe the new moral system that advocates leniency in doing things is not morality at all." xml:space="preserve">
-        <value>معتقدم نظام اخلاقی جديدی که آسان گيری ( تساهل ) در انجام امور را توصيه می کند اصلاً اخلاق حساب نمی شود .</value>
+        <value>معتقدم نظام اخلاقی جدیدی که آسان گیری ( تساهل ) در انجام امور را توصیه می کند اصلاً اخلاق حساب نمی شود .</value>
+    </data>
+    <data name="I can act in a puppet show." xml:space="preserve">
+        <value>می توانم در نمایش عروسكی بازی كنم.</value>
+    </data>
+    <data name="I can act out a role in a play." xml:space="preserve">
+        <value>می توانم در نمایشنامه نقشی را بازی كنم .</value>
+    </data>
+    <data name="I can adjust a carburetor." xml:space="preserve">
+        <value>می توانم كاربراتوررا تنظیم كنم .</value>
     </data>
     <data name="I can always control my emotions." xml:space="preserve">
-        <value>هميشه قادرم احساساتم را کنترل کنم .</value>
+        <value>همیشه قادرم احساساتم را کنترل کنم .</value>
+    </data>
+    <data name="I can be a good host." xml:space="preserve">
+        <value>می توانم میزبان خوبی باشم .</value>
     </data>
     <data name="I can be smarter and more cunning than other people." xml:space="preserve">
         <value>می‌توانم از آدم‌های دیگر باهوش‌تر و زیرک‌تر باشم.</value>
@@ -1916,8 +2123,44 @@
     <data name="I can be social when I need to be." xml:space="preserve">
         <value>زمانی که نیاز دارم، می‌توانم اجتماعی باشم.</value>
     </data>
+    <data name="I can design clothes, posters, or wooden objects." xml:space="preserve">
+        <value>طراحی لباس ، پوستر یا وسایل چوبی را می توانم انجام دهم .</value>
+    </data>
+    <data name="I can do a lot of office work in a short time." xml:space="preserve">
+        <value>می توانم مقدار زیادی از كار های دفتری رادر مدت كوتاهی انجام دهم .</value>
+    </data>
+    <data name="I can do simple plumbing repairs." xml:space="preserve">
+        <value>تعمیرات ساده لوله كشی را می توانم انجام دهم.</value>
+    </data>
+    <data name="I can do simple TV repairs." xml:space="preserve">
+        <value>می توانم تعمیرات ساده تلویزیون را انجام دهم.</value>
+    </data>
+    <data name="I can draw people so that they are recognizable." xml:space="preserve">
+        <value>می توانم افراد را طوری نقاشی كنم كه قابل شناسایی باشند .</value>
+    </data>
+    <data name="I can draw technical drawings." xml:space="preserve">
+        <value>رسم های فنی را می توانم بكشم .</value>
+    </data>
+    <data name="I can easily teach children." xml:space="preserve">
+        <value>به راحتی می توانم به كودكان آموزش دهم  .</value>
+    </data>
+    <data name="I can enter accounts payable and receivable (balance sheets) into the general ledger." xml:space="preserve">
+        <value>می توانم بدهی ها وطلب ها ( ترازنامه ها ) رادر دفتر كل وارد كنم .</value>
+    </data>
     <data name="I can excite others" xml:space="preserve">
         <value>من میتوانم دیگران را هیجان زده کنم</value>
+    </data>
+    <data name="I can explain how white blood cells work." xml:space="preserve">
+        <value>چگونگی عملكرد گلبول های سفید خون را می توانم توضیح دهم .</value>
+    </data>
+    <data name="I can explain the Periodic Table." xml:space="preserve">
+        <value>می توانم جدو ل مندلیف را توضیح دهم .</value>
+    </data>
+    <data name="I can explain things well to others." xml:space="preserve">
+        <value>می توانم بخوبی مطالب را برای دیگران توضیح دهم .</value>
+    </data>
+    <data name="I can file letters and other papers." xml:space="preserve">
+        <value>می توانم نامه ها و سایر اوراق را بایگانی كنم .</value>
     </data>
     <data name="I can focus on the things that are important and important to me." xml:space="preserve">
         <value>می‌توانم بر روی مسائل مهم و مورد علاقه‌ام تمرکز کنم.</value>
@@ -1926,10 +2169,28 @@
         <value>من با هر مدل آدمی، می‌توانم کنار بیایم.</value>
     </data>
     <data name="I can handle myself well in a crisis." xml:space="preserve">
-        <value>به خوبی می توان خود را در يک بحران ادراه کنم .</value>
+        <value>به خوبی می توان خود را در یک بحران ادراه کنم .</value>
     </data>
     <data name="I can hardly talk about myself and I have few words." xml:space="preserve">
         <value>به سختی می‌توانم در مورد خودم صحبت کنم و لغت کم می‌آورم.</value>
+    </data>
+    <data name="I can have a specific schedule for my work." xml:space="preserve">
+        <value>می توانم زمان بندی مشخصی برای انجام كار هایم داشته باشم .</value>
+    </data>
+    <data name="I can help people who are anxious or in trouble well." xml:space="preserve">
+        <value>بخوبی می توانم به افراد مضطرب یا دارای مشكل كمك كنم .</value>
+    </data>
+    <data name="I can identify three types of star constellations." xml:space="preserve">
+        <value>سه نوع صورت فلكی ستارگان را می توانم شناسایی كنم .</value>
+    </data>
+    <data name="I can interpret simple chemical formulas." xml:space="preserve">
+        <value>فرمول های ساده شیمی را می توانم تفسیر كنم .</value>
+    </data>
+    <data name="I can judge people's personalities well." xml:space="preserve">
+        <value>درباره شخصیت افراد به خوبی می توانم قضاوت كنم .</value>
+    </data>
+    <data name="I can maintain and prepare accurate records of payments and sales." xml:space="preserve">
+        <value>می توانم گزارشهای دقیق پرداختها و فروشها را نگهداری و تنظیم كنم .</value>
     </data>
     <data name="I can make others feel that they are important to me" xml:space="preserve">
         <value>من می توانم در دیگران این احساس را ایجاد کنم که آنها نزد من افراد مهمی هستند</value>
@@ -1937,8 +2198,38 @@
     <data name="I can make people feel good by picking out the important points from their words" xml:space="preserve">
         <value>من می‌توانم حس خوبی به مردم بدهم، به این روش که نکته‌های مهم را از میان حرف هایشان انتخاب می‌کنم</value>
     </data>
+    <data name="I can make pottery." xml:space="preserve">
+        <value>می توانم سفالگری كنم .</value>
+    </data>
+    <data name="I can make simple repairs to electrical appliances." xml:space="preserve">
+        <value>تعمیرات ساده وسایل برقی را می توانم انجام دهم .</value>
+    </data>
+    <data name="I can name three foods that are rich in protein." xml:space="preserve">
+        <value>می توانم سه غذا راكه از لحاظ مواد پروتئینی غنی هستند را نام ببرم .</value>
+    </data>
     <data name="I can organize my tasks well to complete them on time." xml:space="preserve">
-        <value>به خوبي مي توانم کارهايم را طوري تنظيم کنم که درست سر زمان تعيين شده انجام شوند.</value>
+        <value>به خوبی می توانم کارهایم را طوری تنظیم کنم که درست سر زمان تعیین شده انجام شوند.</value>
+    </data>
+    <data name="I can paint or sculpt." xml:space="preserve">
+        <value>می توانم نقاشی یا مجسمه سازی كنم .</value>
+    </data>
+    <data name="I can participate in a 2-4 person choir." xml:space="preserve">
+        <value>در سرودهای 2 تا 4 نفره می توانم شركت كنم .</value>
+    </data>
+    <data name="I can plan for charity work related to a school or mosque." xml:space="preserve">
+        <value>برای امور خیریه مربوط به مدرسه یا مسجد می توانم برنامه ریزی كنم .</value>
+    </data>
+    <data name="I can plan to entertain others at a party." xml:space="preserve">
+        <value>می توانم برای سرگرمی دیگران در یك مهمانی برنامه ریزی كنم.</value>
+    </data>
+    <data name="I can play a musical instrument in a formal gathering." xml:space="preserve">
+        <value>می توانم یكی ازآلات موسیقی را در یك جمع رسمی بنوازم .</value>
+    </data>
+    <data name="I can play a musical instrument." xml:space="preserve">
+        <value>می توانم یك آلت موسیقی را بنوازم .</value>
+    </data>
+    <data name="I can polish and remove stains from furniture or woodwork." xml:space="preserve">
+        <value>كار جلا زدن و لكه زدایی مبلمان یا كارهای چوبی را می توانم انجام دهم .</value>
     </data>
     <data name="I can put myself in someone else's shoes and understand how they are going through life's difficulties" xml:space="preserve">
         <value>من می‌توانم خود را جای فردی دیگر بگذارم و درک کنم که او چگونه سختی‌های زندگیش را می‌گذارند</value>
@@ -1946,14 +2237,35 @@
     <data name="I can put others at ease" xml:space="preserve">
         <value>من می توانم دیگران را آرام کنم</value>
     </data>
+    <data name="I can read building plans or machine blueprints." xml:space="preserve">
+        <value>می توانم نقشه ساختمان یا طرح ماشین را بخوانم .</value>
+    </data>
+    <data name="I can recite a poem or a piece of writing." xml:space="preserve">
+        <value>می توانم شعر یا نوشته ای را دكلمه كنم .</value>
+    </data>
+    <data name="I can recite poetry or write stories well." xml:space="preserve">
+        <value>می توانم به خوبی شعر بگویم یا داستان بنویسم .</value>
+    </data>
     <data name="I can relate better to others when I understand their goals." xml:space="preserve">
         <value>زمانی با دیگران می‌توانم بهتر ارتباط بر قرار کنم که اهداف آن‌ها را بدانم.</value>
     </data>
     <data name="I can remain calm in critical and sensitive situations." xml:space="preserve">
-        <value>من در مواقع حساس وبحرانی خونسردي خود را حفظ كنم .</value>
+        <value>من در مواقع حساس وبحرانی خونسردی خود را حفظ كنم .</value>
+    </data>
+    <data name="I can repair wooden furniture (chairs, tables, etc.)." xml:space="preserve">
+        <value>می توانم وسایل چوبی ( صندلی ، میز و ... ) راتعمیر كنم .</value>
+    </data>
+    <data name="I can supervise the work of others." xml:space="preserve">
+        <value>می توانم كار دیگران را سرپرستی كنم .</value>
     </data>
     <data name="I can tell stories well." xml:space="preserve">
         <value>من می‌توانم داستان‌ها را به خوبی روایت کنم.</value>
+    </data>
+    <data name="I can type forty words per minute." xml:space="preserve">
+        <value>در هر دقیقه می توانم چهل كلمه تایپ كنم .</value>
+    </data>
+    <data name="I can type quickly." xml:space="preserve">
+        <value>می توانم تند نویسی كنم .</value>
     </data>
     <data name="I can understand the feelings of those around me." xml:space="preserve">
         <value>می‌توانم احساسات اطرافیانم را درک کنم.</value>
@@ -1961,8 +2273,23 @@
     <data name="I can understand what factors have caused the situation I am in today." xml:space="preserve">
         <value>می‌توانم درک کنم که چه عواملی موجب ایجاد شرایط امروز شده است.</value>
     </data>
+    <data name="I can use a calculator." xml:space="preserve">
+        <value>از ماشین حساب می توانم استفاده كنم .</value>
+    </data>
+    <data name="I can use a computer." xml:space="preserve">
+        <value>می توانم از كامپیوتر استفاده كنم .</value>
+    </data>
+    <data name="I can use a microscope." xml:space="preserve">
+        <value>از میكروسكوپ می توانم استفاده كنم .</value>
+    </data>
+    <data name="I can use a slide rule for multiplication or division." xml:space="preserve">
+        <value>می توانم از خط كش محاسبه برای ضریب یا تقسیم استفاده كنم .</value>
+    </data>
     <data name="I can work as hard as most people but I don't have the drive to work harder or harder" xml:space="preserve">
         <value>من می‌توانم هم‌پای اکثر مردم کار کنم ولی همت این را که بیشتر یا سخت‌تر کار کنم، ندارم.</value>
+    </data>
+    <data name="I can work with a photocopier or a tally machine." xml:space="preserve">
+        <value>می توانم با دستگاه فتوكپی یا ماشین جمع بندی قیمت كالا كار كنم .</value>
     </data>
     <data name="I can't concentrate for long periods of time" xml:space="preserve">
         <value>درمدت زمان طولانی نمی توانم تمرکز کنم</value>
@@ -1980,10 +2307,10 @@
         <value>من برای هر کدام از دوستانم مناسب ترین هدیه را انتخاب می‌کنم</value>
     </data>
     <data name="I consider myself a charitable and kind person." xml:space="preserve">
-        <value>خود را شخصی خَير و نيکو کار می دانم .</value>
+        <value>خود را شخصی خَیر و نیکو کار می دانم .</value>
     </data>
     <data name="I consider myself open-minded (broad-minded) and respect others' ways of life, no matter how different they are." xml:space="preserve">
-        <value>خودم را روشن فکر می دانم ( دارای سعه صدر هستم ) و به نحوه زندگی ديگران ، هر اندازه که متفاوت باشد احترام می گذارم .</value>
+        <value>خودم را روشن فکر می دانم ( دارای سعه صدر هستم ) و به نحوه زندگی دیگران ، هر اندازه که متفاوت باشد احترام می گذارم .</value>
     </data>
     <data name="I consistently achieve positive results." xml:space="preserve">
         <value>من به صورت پیوسته نتایج مثبتی را کسب می کنم.</value>
@@ -1992,28 +2319,28 @@
         <value>من به راحتی گریه می‌کنم.</value>
     </data>
     <data name="I develop personal interest in the people I work with." xml:space="preserve">
-        <value>نسبت به افرادی که با آنها کار می کنم علاقه شخصی پيدا می کنم .</value>
+        <value>نسبت به افرادی که با آنها کار می کنم علاقه شخصی پیدا می کنم .</value>
     </data>
     <data name="I discover my future over time." xml:space="preserve">
         <value>با گذر زمان آینده‌ام را کشف می‌کنم.</value>
     </data>
     <data name="I do my tasks slowly but steadily and gradually." xml:space="preserve">
-        <value>کارهايم را به کندي ولي پيوسته و به مرور انجام مي دهم.</value>
+        <value>کارهایم را به کندی ولی پیوسته و به مرور انجام می دهم.</value>
     </data>
     <data name="I do not consider myself a lively and energetic person." xml:space="preserve">
-        <value>خودم را فردی سرحال و سر زنده اي نمي دانم .</value>
+        <value>خودم را فردی سرحال و سر زنده ای نمی دانم .</value>
     </data>
     <data name="I do not enjoy socializing with others much." xml:space="preserve">
-        <value>از مصاحبت با ديگران چندان لذت نمي برم.</value>
+        <value>از مصاحبت با دیگران چندان لذت نمی برم.</value>
     </data>
     <data name="I do not feel any sympathy for people begging on the streets." xml:space="preserve">
-        <value>با آدمهايي كه در خيابان ها گدايي مي كنند ، هيچ گونه احساس همدردي ندارم .</value>
+        <value>با آدمهایی كه در خیابان ها گدایی می كنند ، هیچ گونه احساس همدردی ندارم .</value>
     </data>
     <data name="I do not feel pressured by others to move forward." xml:space="preserve">
-        <value>احساس نمي كنم كه با فشار ديگران به پيش روم .</value>
+        <value>احساس نمی كنم كه با فشار دیگران به پیش روم .</value>
     </data>
     <data name="I do not get too upset if others tease me or joke with me." xml:space="preserve">
-        <value>اگر ديگران سر به سر من بگذارند وبا من شوخی کنن زياد ناراحت نمی شوم .</value>
+        <value>اگر دیگران سر به سر من بگذارند وبا من شوخی کنن زیاد ناراحت نمی شوم .</value>
     </data>
     <data name="I do not involve supernatural issues in making decisions in the ordinary affairs of life." xml:space="preserve">
         <value>من در تصمیم‌گیری در امورعادی زندگی، مسائل ماوراء مادی را دخالت نمی دهم</value>
@@ -2022,22 +2349,22 @@
         <value>از افرادی که بر خلاف طبع من رفتار می کنند خوشم نمی آید</value>
     </data>
     <data name="I do not like spending my holidays in crowded and exciting places." xml:space="preserve">
-        <value>دوست ندارم تعطيلات خود را در جاهاي شلوغ و پرهيجان بگذرانم.</value>
+        <value>دوست ندارم تعطیلات خود را در جاهای شلوغ و پرهیجان بگذرانم.</value>
     </data>
     <data name="I do not like wasting my time on imagination." xml:space="preserve">
-        <value>دوست ندارم وقتم را با خيال پردازي تلف کنم.</value>
+        <value>دوست ندارم وقتم را با خیال پردازی تلف کنم.</value>
     </data>
     <data name="I do not mind boasting about my talents and achievements." xml:space="preserve">
-        <value>بدم نمي آيد به استعدادم و کارهايي که انجام داده ام ببالم.</value>
+        <value>بدم نمی آید به استعدادم و کارهایی که انجام داده ام ببالم.</value>
     </data>
     <data name="I do not seem to be completely successful in anything." xml:space="preserve">
-        <value>به نظر نمی رسد که در هيچ کاری کاملاً موفق باشم .</value>
+        <value>به نظر نمی رسد که در هیچ کاری کاملاً موفق باشم .</value>
     </data>
     <data name="I do not take social activities like voting seriously." xml:space="preserve">
-        <value>من کارهاي اجتماعي همچون راي دادن را جدي نمي گيرم.</value>
+        <value>من کارهای اجتماعی همچون رای دادن را جدی نمی گیرم.</value>
     </data>
     <data name="I do not think I will ever become an organized person." xml:space="preserve">
-        <value>فکر نمی کنم که هيچ وقت بتوانم آدم منظمی بشوم .</value>
+        <value>فکر نمی کنم که هیچ وقت بتوانم آدم منظمی بشوم .</value>
     </data>
     <data name="I don’t like reading and start tasks immediately." xml:space="preserve">
         <value>من از خواندن خوشم نمی‌آید و بلافاصله کارها را شروع می‌کنم.</value>
@@ -2076,13 +2403,13 @@
         <value>از تمیزکاری لذت می‌برم.</value>
     </data>
     <data name="I enjoy crowded parties." xml:space="preserve">
-        <value>از ميهمانی های شلوغ خوشم می آيد .</value>
+        <value>از میهمانی های شلوغ خوشم می آید .</value>
     </data>
     <data name="I enjoy discussing big ideas with those around me." xml:space="preserve">
         <value>از این‌که ایده‌های بزرگ را با اطرافیانم به بحث می‌گذارم، لذت می‌برم.</value>
     </data>
     <data name="I enjoy focusing on an imaginary topic, exploring all possibilities, and elaborating on it." xml:space="preserve">
-        <value>از تمركز بر يك موضوع خيالي ، و بررسي تمام احتمالات ممکن و شاخ وبرگ دادن به آن لذت می برم .</value>
+        <value>از تمركز بر یك موضوع خیالی ، و بررسی تمام احتمالات ممکن و شاخ وبرگ دادن به آن لذت می برم .</value>
     </data>
     <data name="I enjoy giving speeches." xml:space="preserve">
         <value>از سخنرانی کردن خوشم می‌آید.</value>
@@ -2106,16 +2433,16 @@
         <value>من از بازی کردن لذت می‌برم</value>
     </data>
     <data name="I enjoy reading poems filled with emotions and imagination more than stories." xml:space="preserve">
-        <value>از خواندن اشعار حاوی احساسات وتصورات بيشتر از داستان لذت می برم .</value>
+        <value>از خواندن اشعار حاوی احساسات وتصورات بیشتر از داستان لذت می برم .</value>
     </data>
     <data name="I enjoy solving complex puzzles." xml:space="preserve">
-        <value>از حل کردن معماهاي پيچيده لذت مي برم .</value>
+        <value>از حل کردن معماهای پیچیده لذت می برم .</value>
     </data>
     <data name="I enjoy solving puzzles and riddles." xml:space="preserve">
-        <value>از حل جدول و معما لذت مي برم.</value>
+        <value>از حل جدول و معما لذت می برم.</value>
     </data>
     <data name="I enjoy the excitement of riding fast roller coasters." xml:space="preserve">
-        <value>هيجانات ناشی از سوار شدن در چرخ فلک های سريع را دوست دارم .</value>
+        <value>هیجانات ناشی از سوار شدن در چرخ فلک های سریع را دوست دارم .</value>
     </data>
     <data name="I enjoy understanding the causes and roots of world wars." xml:space="preserve">
         <value>فهم علل و ریشه‌های جنگ‌های جهانی، برایم لذت‌بخش است.</value>
@@ -2124,19 +2451,19 @@
         <value>فهم توزیع جمعیت جهان در 50 سال آینده، برایم لذت‌بخش است.</value>
     </data>
     <data name="I experience a wide range of emotional and sensory experiences." xml:space="preserve">
-        <value>تجارب هيجانی و احساسی گسترده و گوناگوني به من دست مي دهند .</value>
+        <value>تجارب هیجانی و احساسی گسترده و گوناگونی به من دست می دهند .</value>
     </data>
     <data name="I feel bad when someone is left out of the team." xml:space="preserve">
         <value>هنگامی که فردی از تیم کنار گذاشته می‌شود، حس بدی به من دست می‌دهد.</value>
     </data>
     <data name="I feel completely worthless." xml:space="preserve">
-        <value>کاملا احساس بي ارزشي مي کنم.</value>
+        <value>کاملا احساس بی ارزشی می کنم.</value>
     </data>
     <data name="I feel guilty when I do something I think is wrong" xml:space="preserve">
         <value>زمانی که کاری را انجام می دهم که فکر می کنم غلط باشد احساس گناه میکنم</value>
     </data>
     <data name="I feel I can handle most of my problems." xml:space="preserve">
-        <value>احساس مي کنم که مي توانم با اغلب مشکلاتم مقابله کنم.</value>
+        <value>احساس می کنم که می توانم با اغلب مشکلاتم مقابله کنم.</value>
     </data>
     <data name="I feel like I am a competent person" xml:space="preserve">
         <value>من احساس می‌کنم که فرد شایسته ای هستم</value>
@@ -2172,13 +2499,13 @@
         <value>بهترین کارکرد من زمانی است که چند کار را هم‌زمان با هم پیش می برم.</value>
     </data>
     <data name="I generally try to be considerate and logical." xml:space="preserve">
-        <value>عموماً سعي مي کنم شخص با ملاحظه و منطقي باشم.</value>
+        <value>عموماً سعی می کنم شخص با ملاحظه و منطقی باشم.</value>
     </data>
     <data name="I get excited about finding a pattern in data." xml:space="preserve">
         <value>من از پیدا کردن یک الگو در میان داده‌ها، هیجان‌زده می‌شوم.</value>
     </data>
     <data name="I get scared easily." xml:space="preserve">
-        <value>زود مي ترسم.</value>
+        <value>زود می ترسم.</value>
     </data>
     <data name="I get to know the people around me one by one" xml:space="preserve">
         <value>من با آدم‌های اطرافم به صورت تک به تک آشنا می‌شوم و آن‌ها را می‌شناسم</value>
@@ -2214,7 +2541,7 @@
         <value>از ضرب‌الاجل‌ها بدم می‌آید.</value>
     </data>
     <data name="I hate it when others think I am a pretentious person." xml:space="preserve">
-        <value>از اينكه ديگران فکر کنند فرد متظاهری هستم متنفرم .</value>
+        <value>از اینكه دیگران فکر کنند فرد متظاهری هستم متنفرم .</value>
     </data>
     <data name="I have a good belief in human nature." xml:space="preserve">
         <value>اعتقاد خوبی به فطرت انسان دارم .</value>
@@ -2238,7 +2565,7 @@
         <value>برای زندگی خود هدف دارم.</value>
     </data>
     <data name="I have a stable temperament." xml:space="preserve">
-        <value>خلقي (روحيه اي) با ثبات دارم.</value>
+        <value>خلقی (روحیه ای) با ثبات دارم.</value>
     </data>
     <data name="I have a strong desire to get rich." xml:space="preserve">
         <value>من اشتیاق شدیدی به ثروت‌مند شدن دارم.</value>
@@ -2253,37 +2580,58 @@
         <value>این استعداد را دارم که مسائل پیچیده را ساده‌سازی کنم.</value>
     </data>
     <data name="I have a very active imagination." xml:space="preserve">
-        <value>خيال پردازي من بسيار قوي است.</value>
+        <value>خیال پردازی من بسیار قوی است.</value>
     </data>
     <data name="I have a very positive opinion of myself." xml:space="preserve">
-        <value>نظرم نسبت به خود م بسيار مثبت است .</value>
+        <value>نظرم نسبت به خود م بسیار مثبت است .</value>
     </data>
     <data name="I have a very realistic mindset and rely on experts in every field, based on their experience and wisdom, to help me find the right path" xml:space="preserve">
         <value>من طرز تفکر بسیار واقع‌بینانه‌ای دارم و از روی تجربه و خرد، در هر زمینه‌ای به متخصصین آن زمینه اتکا می‌کنم تا به من کمک کنند تا راه درست را پیدا کنم</value>
     </data>
     <data name="I have a wide range of intellectual interests." xml:space="preserve">
-        <value>دارای طيف وسيعی از علايق ذهنی ( فکری ) هستم .</value>
+        <value>دارای طیف وسیعی از علایق ذهنی ( فکری ) هستم .</value>
+    </data>
+    <data name="I have acted as a representative for a group to present suggestions or complaints to a higher authority." xml:space="preserve">
+        <value>بعنوان نماینده یك گروه در ارائه پیشنهادات ویا شكایات به مقام بالاتر انجام وظیفه كرده ام .</value>
     </data>
     <data name="I have always worked hard and under pressure" xml:space="preserve">
         <value>من همیشه سخت و پرفشار کار کرده‌ام</value>
     </data>
     <data name="I have an active imaginative life." xml:space="preserve">
-        <value>من زندگي تخيلي فعالي دارم.</value>
+        <value>من زندگی تخیلی فعالی دارم.</value>
     </data>
     <data name="I have clear goals and work according to a plan to achieve them." xml:space="preserve">
-        <value>داراي اهداف روشني هستم و براي رسيدن به آنها طبق برنامه کار مي کنم.</value>
+        <value>دارای اهداف روشنی هستم و برای رسیدن به آنها طبق برنامه کار می کنم.</value>
     </data>
     <data name="I have fewer fears than most people." xml:space="preserve">
         <value>نسبت به اکثر افراد دارای ترس های کمتری هستم .</value>
+    </data>
+    <data name="I have great enthusiasm and energy in doing things." xml:space="preserve">
+        <value>اشتیاق و انرژی فوق العاده ای در انجام كار ها دارم .</value>
     </data>
     <data name="I have had a mentor or teacher who really paid attention to me, apart from others." xml:space="preserve">
         <value>من مربی یا معلمی داشته‌ام که جدا از بقیه، واقعا حواسش به من بود.</value>
     </data>
     <data name="I have never jumped for joy." xml:space="preserve">
-        <value>هرگز از شدت خوشحالي از جا نپريده ام.</value>
+        <value>هرگز از شدت خوشحالی از جا نپریده ام.</value>
+    </data>
+    <data name="I have organized a club, group, or team." xml:space="preserve">
+        <value>باشگاه ، گروه یا دسته ای را سازمان داده ام .</value>
+    </data>
+    <data name="I have participated in a science seminar or competition." xml:space="preserve">
+        <value>در سمینار یا مسابقه علمی شركت كرده ام .</value>
+    </data>
+    <data name="I have participated in charity work by collecting donations from the public." xml:space="preserve">
+        <value>در امور خیریه با جمع آوری كمكهای مردمی شركت كرده ام .</value>
+    </data>
+    <data name="I have received a reward for sales or leading a group." xml:space="preserve">
+        <value>در كار فروشندگی یا رهبری گروه پاداش گرفته ام .</value>
     </data>
     <data name="I have so many small tasks to do that sometimes I ignore them all." xml:space="preserve">
-        <value>آن قدر کارهای ريز وکوچک برای انجام دادن دارم که گاهی تمام آنها را ناديده می گيرم .</value>
+        <value>آن قدر کارهای ریز وکوچک برای انجام دادن دارم که گاهی تمام آنها را نادیده می گیرم .</value>
+    </data>
+    <data name="I have started a business." xml:space="preserve">
+        <value>اقدام به ایجاد كسب و كار نموده ام .</value>
     </data>
     <data name="I have strong emotional bonds with friends." xml:space="preserve">
         <value>با دوستان وابستگی عاطفی قوی ( مستحکم ) دارم .</value>
@@ -2321,8 +2669,20 @@
     <data name="I have to work at being honest with myself." xml:space="preserve">
         <value>برای اینکه بخواهم با خودم صادق باشم، باید تلاش کنم.</value>
     </data>
+    <data name="I have used power tools in a carpentry workshop such as a saw, a lathe, or a sander." xml:space="preserve">
+        <value>از ابزار های برقی كارگاه نجاری مانند اره ، ماشین تراش یاماشین سنباده استفاده كرده ام .</value>
+    </data>
     <data name="I have usually taken on leadership roles in groups I have been part of." xml:space="preserve">
-        <value>معمولاً رهبري را در جمع هايي که جزو آن بوده ام به عهده داشته ام.</value>
+        <value>معمولاً رهبری را در جمع هایی که جزو آن بوده ام به عهده داشته ام.</value>
+    </data>
+    <data name="I have volunteered in hospitals, clinics, or relief centers (Red Crescent, etc.)." xml:space="preserve">
+        <value>داوطلبانه در بیمارستان ، كلینیك یا مراكز امداد رسانی ( هلال احمرو ... ) كار كرده ام .</value>
+    </data>
+    <data name="I have worked in an office." xml:space="preserve">
+        <value>در امور اداری كار كرده ام .</value>
+    </data>
+    <data name="I have worked with power tools such as a drill, grinder, grinder, and sewing machine." xml:space="preserve">
+        <value>با ابزار های برقی مانند : مته ، آسیاب ، خرد كن و چرخ خیاطی كار كرده ام .</value>
     </data>
     <data name="I intend to control the events in my life." xml:space="preserve">
         <value>بنا دارم رویدادهای زندگیم را کنترل کنم.</value>
@@ -2331,13 +2691,28 @@
         <value>با افرادی تعامل می کنم که ارزش توانمندی هایم را بدانند</value>
     </data>
     <data name="I keep my belongings clean and organized." xml:space="preserve">
-        <value>وسايل متعلق به خود را تميز و مرتب نگه مي دارم.</value>
+        <value>وسایل متعلق به خود را تمیز و مرتب نگه می دارم.</value>
+    </data>
+    <data name="I know how a vacuum tube works." xml:space="preserve">
+        <value>طرز كار لامپ خلا ( لوله خالی از هوا ) را می دانم .</value>
+    </data>
+    <data name="I know how to be a successful leader or representative." xml:space="preserve">
+        <value>می دانم چگونه سر دسته یا نماینده موفقی باشم .</value>
+    </data>
+    <data name="I know how to work with a voltmeter." xml:space="preserve">
+        <value>كار كردن  با ولت متر را می دانم .</value>
     </data>
     <data name="I know my strengths better than my weaknesses." xml:space="preserve">
         <value>من نقاط قوتم را بهتر از نقاط ضعفم می‌شناسم.</value>
     </data>
     <data name="I know my weaknesses better than my strengths." xml:space="preserve">
         <value>من ضعف‌هایم را بهتر از نقاط قوتم می‌شناسم.</value>
+    </data>
+    <data name="I know the concept of the half-life of a radioactive element." xml:space="preserve">
+        <value>مفهوم نیمه عمر عنصر رادیواكتیو را می دانم .</value>
+    </data>
+    <data name="I know why satellites do not fall to the ground." xml:space="preserve">
+        <value>می دانم كه چرا ماهواره ها به زمین نمی افتند .</value>
     </data>
     <data name="I laugh easily." xml:space="preserve">
         <value>زود به خنده می افتم.</value>
@@ -2373,7 +2748,7 @@
         <value>من دوست دارم همه دوستم داشته باشند</value>
     </data>
     <data name="I like to be part of the crowd at sports events." xml:space="preserve">
-        <value>دوست دارم در رويداد های ورزشی همراه وهمگام جمعيت باشم .</value>
+        <value>دوست دارم در رویداد های ورزشی همراه وهمگام جمعیت باشم .</value>
     </data>
     <data name="I like to be praised" xml:space="preserve">
         <value>من دوست دارم مردم ستایشم کنند</value>
@@ -2496,46 +2871,46 @@
         <value>من نظاره گر زندگی هستم.</value>
     </data>
     <data name="I often argue with family and colleagues." xml:space="preserve">
-        <value>اغلب با فاميل وهمکارانم بگو مگو دارم .</value>
+        <value>اغلب با فامیل وهمکارانم بگو مگو دارم .</value>
     </data>
     <data name="I often do not like the people I have to interact with." xml:space="preserve">
-        <value>اغلب از افرادي كه بايد با آنها در ارتباط باشم ، خوشم نمی آيد .</value>
+        <value>اغلب از افرادی كه باید با آنها در ارتباط باشم ، خوشم نمی آید .</value>
     </data>
     <data name="I often do things without planning." xml:space="preserve">
-        <value>غالباً کارها يم را بدون برنامه ريزی انجام مي دهم .</value>
+        <value>غالباً کارها یم را بدون برنامه ریزی انجام می دهم .</value>
     </data>
     <data name="I often enjoy grappling with theories and abstract concepts." xml:space="preserve">
-        <value>اغلب از کلنجار رفتن با نظريه ها با مفاهيم انتزاعي (ذهني) لذت مي برم.</value>
+        <value>اغلب از کلنجار رفتن با نظریه ها با مفاهیم انتزاعی (ذهنی) لذت می برم.</value>
     </data>
     <data name="I often feel full of energy." xml:space="preserve">
-        <value>اغلب احساس مي كنم كه سرشار از انرژي هستم .</value>
+        <value>اغلب احساس می كنم كه سرشار از انرژی هستم .</value>
     </data>
     <data name="I often feel helpless and look for someone to solve my problems." xml:space="preserve">
-        <value>اغلب احساس درماندگي مي کنم و دنبال کسي مي گردم که مشکلاتم را برطرف کند.</value>
+        <value>اغلب احساس درماندگی می کنم و دنبال کسی می گردم که مشکلاتم را برطرف کند.</value>
     </data>
     <data name="I often feel inferior to others." xml:space="preserve">
-        <value>اغلب خود را کمتر از ديگران حس مي كنم .</value>
+        <value>اغلب خود را کمتر از دیگران حس می كنم .</value>
     </data>
     <data name="I often feel nervous and tense." xml:space="preserve">
-        <value>اغلب احساس عصبي بودن و تنش مي کنم.</value>
+        <value>اغلب احساس عصبی بودن و تنش می کنم.</value>
     </data>
     <data name="I often find it difficult to make decisions." xml:space="preserve">
-        <value>غالباً تصميم گيری براي من مشکل است .</value>
+        <value>غالباً تصمیم گیری برای من مشکل است .</value>
     </data>
     <data name="I often get angry at the way people treat me." xml:space="preserve">
-        <value>اغلب از طرز برخورد ديگران با خود عصباني مي شوم.</value>
+        <value>اغلب از طرز برخورد دیگران با خود عصبانی می شوم.</value>
     </data>
     <data name="I often get discouraged and lose myself when things do not go right." xml:space="preserve">
-        <value>غالباً وقتی کارها درست پيش نمی رود دلسرد می شوم وخودم را می بازم .</value>
+        <value>غالباً وقتی کارها درست پیش نمی رود دلسرد می شوم وخودم را می بازم .</value>
     </data>
     <data name="I often get involved in tasks without adequate preparation." xml:space="preserve">
-        <value>غالب اوقات بدون آمادگي کافي درگير کارها مي شوم.</value>
+        <value>غالب اوقات بدون آمادگی کافی درگیر کارها می شوم.</value>
     </data>
     <data name="I often let others do most of the talking in meetings." xml:space="preserve">
-        <value>غالباً در جلسات مي گذارم ديگران بيشتر حرف ها را بزنم.</value>
+        <value>غالباً در جلسات می گذارم دیگران بیشتر حرف ها را بزنم.</value>
     </data>
     <data name="I often prefer to do things alone." xml:space="preserve">
-        <value>غالباً ترجيح مي دهم که کارها را به تنهايي انجام بدهم.</value>
+        <value>غالباً ترجیح می دهم که کارها را به تنهایی انجام بدهم.</value>
     </data>
     <data name="I often seem like a hasty person." xml:space="preserve">
         <value>من غالباً شخص عجولی به نظر می رسم .</value>
@@ -2544,34 +2919,34 @@
         <value>من غالبا به زیبایی‌هایی که دیده‌ام، می‌اندیشم.</value>
     </data>
     <data name="I often try new and unfamiliar foods." xml:space="preserve">
-        <value>من اغلب غذاهاي جديد و نا آشنا را امتحان مي كنم.</value>
+        <value>من اغلب غذاهای جدید و نا آشنا را امتحان می كنم.</value>
     </data>
     <data name="I often worry that things will not go according to plan or correctly." xml:space="preserve">
-        <value>غالباً نگران اين هستم که مبادا کارها مطابق برنامه يا به درستی پيش نرود .</value>
+        <value>غالباً نگران این هستم که مبادا کارها مطابق برنامه یا به درستی پیش نرود .</value>
     </data>
     <data name="I only admire someone when there is a valid and important reason for it and I do not admire anyone too much." xml:space="preserve">
         <value>تنها وقتی کسی را تحسین می کنم که دلیلی موجه و مهم برای آن وجود داشته باشد و بیش از حد کسی را تحسین نمی کنم</value>
     </data>
     <data name="I only take time off work when I am truly sick." xml:space="preserve">
-        <value>فقط در شرايطی که واقعاً بيمار باشم کارم را تعطيل می کنم .</value>
+        <value>فقط در شرایطی که واقعاً بیمار باشم کارم را تعطیل می کنم .</value>
     </data>
     <data name="I organize and regulate" xml:space="preserve">
         <value>من سازماندهی و تنظیم می‌کنم</value>
     </data>
     <data name="I pay my debts on time and in full." xml:space="preserve">
-        <value>بدهکاري هايم را سر موقع و کامل پرداخت مي کنم.</value>
+        <value>بدهکاری هایم را سر موقع و کامل پرداخت می کنم.</value>
     </data>
     <data name="I prefer cooperation over competition with others." xml:space="preserve">
-        <value>همکاري را بر رقابت با ديگران ترجيح مي دهم.</value>
+        <value>همکاری را بر رقابت با دیگران ترجیح می دهم.</value>
     </data>
     <data name="I prefer not to talk about myself and my achievements." xml:space="preserve">
-        <value>ترجيح مي دهم در مورد خودم و کارهايم (دستاوردهايم) حرف نزنم.</value>
+        <value>ترجیح می دهم در مورد خودم و کارهایم (دستاوردهایم) حرف نزنم.</value>
     </data>
     <data name="I prefer tasks that I can do alone without the hassle of dealing with others." xml:space="preserve">
-        <value>كارهايي را ترجيح مي دهم كه به تنهايي آنها را انجام دهم و دردسر با ديگران را نداشته باشم .</value>
+        <value>كارهایی را ترجیح می دهم كه به تنهایی آنها را انجام دهم و دردسر با دیگران را نداشته باشم .</value>
     </data>
     <data name="I prefer to be a compassionate and forgiving person rather than just." xml:space="preserve">
-        <value>بيشتر ترجيح می دهم فرد رحيم وبخشنده ای باشم تا عادل .</value>
+        <value>بیشتر ترجیح می دهم فرد رحیم وبخشنده ای باشم تا عادل .</value>
     </data>
     <data name="I prefer to be around people who are like me" xml:space="preserve">
         <value>من ترجیح می‌دهم تا در میان افرادی باشم که مانند من هستند.</value>
@@ -2580,22 +2955,22 @@
         <value>ترجیح می‌دهم با آدم‌های بالغ سروکار داشته باشم.</value>
     </data>
     <data name="I prefer to have freedom in doing things rather than following a pre-determined plan." xml:space="preserve">
-        <value>ترجيح مي دهم در طي هر کاري آزادي انتخاب داشته باشم تا اينکه هر کاري را با نقشه از پيش تعيين شده انجام دهم.</value>
+        <value>ترجیح می دهم در طی هر کاری آزادی انتخاب داشته باشم تا اینکه هر کاری را با نقشه از پیش تعیین شده انجام دهم.</value>
     </data>
     <data name="I prefer to live with what happens." xml:space="preserve">
         <value>ترجیح می‌دهم تا با گذر اتفاقات زندگی کنم.</value>
     </data>
     <data name="I prefer to praise and admire others rather than myself." xml:space="preserve">
-        <value>ترجيح می دهم به جای خودم ديگران را تمجيد وستايش کنم .</value>
+        <value>ترجیح می دهم به جای خودم دیگران را تمجید وستایش کنم .</value>
     </data>
     <data name="I prefer to spend my holidays in a crowded resort rather than an isolated forest cabin." xml:space="preserve">
-        <value>ترجيح می دهم که تعطيلاتم را در يک محل تفريحی شلوع بگذرانم تا در يک کلبه جنگلی دور افتاده .</value>
+        <value>ترجیح می دهم که تعطیلاتم را در یک محل تفریحی شلوع بگذرانم تا در یک کلبه جنگلی دور افتاده .</value>
     </data>
     <data name="I prefer to spend my time in familiar environments." xml:space="preserve">
-        <value>ترجيح مي دهم که وقتم را در محيط هاي آشنا صرف کنم .</value>
+        <value>ترجیح می دهم که وقتم را در محیط های آشنا صرف کنم .</value>
     </data>
     <data name="I prefer to spend my vacations in familiar places." xml:space="preserve">
-        <value>برای مرخصی ترجيح می دهم به محل های آشنا بروم .</value>
+        <value>برای مرخصی ترجیح می دهم به محل های آشنا بروم .</value>
     </data>
     <data name="I prefer to talk about sports." xml:space="preserve">
         <value>ترجیح می‌دهم در مورد مسائل ورزشی صحبت کنم.</value>
@@ -2604,7 +2979,7 @@
         <value>ترجیح می‌دهم به‌صورت تیمی و به‌عنوان عضوی از تیم کار کنم.</value>
     </data>
     <data name="I prefer to work for myself rather than lead others." xml:space="preserve">
-        <value>ترجيح می دهم که برای خودم کار کنم تا راهبر ديگران باشم .</value>
+        <value>ترجیح می دهم که برای خودم کار کنم تا راهبر دیگران باشم .</value>
     </data>
     <data name="I prefer topics that make me think." xml:space="preserve">
         <value>مباحثی که من را به فکر کردن وا می دارد را ترجیح می‌دهم.</value>
@@ -2616,37 +2991,37 @@
         <value>با سرمایه‌گذاری بر استعدادهایم، پیشرفت می‌کنم.</value>
     </data>
     <data name="I rarely feel anxious or afraid." xml:space="preserve">
-        <value>به ندرت احساس اضطراب يا ترس مي کنم.</value>
+        <value>به ندرت احساس اضطراب یا ترس می کنم.</value>
     </data>
     <data name="I rarely feel lonely or sad." xml:space="preserve">
-        <value>بندرت احساس تنهايي و غم مي کنم.</value>
+        <value>بندرت احساس تنهایی و غم می کنم.</value>
     </data>
     <data name="I rarely feel sad or depressed." xml:space="preserve">
-        <value>به ندرت غمگين و افسرده هستم.</value>
+        <value>به ندرت غمگین و افسرده هستم.</value>
     </data>
     <data name="I rarely feel strong emotions and passions." xml:space="preserve">
-        <value>به ندرت هيجانات و عواطف قوي در خودم احساس مي کنم.</value>
+        <value>به ندرت هیجانات و عواطف قوی در خودم احساس می کنم.</value>
     </data>
     <data name="I rarely get overly involved in issues." xml:space="preserve">
-        <value>به ندرت خود را بيش از حد درگير مسائل مي کنم.</value>
+        <value>به ندرت خود را بیش از حد درگیر مسائل می کنم.</value>
     </data>
     <data name="I rarely give in to my immediate desires." xml:space="preserve">
-        <value>من بندرت تسليم خواسته هاي آني خود مي شوم .</value>
+        <value>من بندرت تسلیم خواسته های آنی خود می شوم .</value>
     </data>
     <data name="I rarely make hasty decisions." xml:space="preserve">
-        <value>بندرت عجولانه تصميم می گيرم.</value>
+        <value>بندرت عجولانه تصمیم می گیرم.</value>
     </data>
     <data name="I rarely notice the emotions and feelings resulting from different situations." xml:space="preserve">
-        <value>بندرت متوجه احساسات وعواطف حاصل از وضعيت مختلف می شوم .</value>
+        <value>بندرت متوجه احساسات وعواطف حاصل از وضعیت مختلف می شوم .</value>
     </data>
     <data name="I rarely pay attention to my future feelings." xml:space="preserve">
-        <value>بندرت به احساسات آتي خود توجه مي کنم.</value>
+        <value>بندرت به احساسات آتی خود توجه می کنم.</value>
     </data>
     <data name="I rarely use words like &quot;amazing&quot; and &quot;great&quot; to describe my experiences." xml:space="preserve">
-        <value>بندرت از لغاتی مثل « فوق العاده » و « عالی » برای توصيف تجربياتم استفاده می کنم .</value>
+        <value>بندرت از لغاتی مثل « فوق العاده » و « عالی » برای توصیف تجربیاتم استفاده می کنم .</value>
     </data>
     <data name="I rarely worry about the future." xml:space="preserve">
-        <value>به ندرت نگران آينده مي شوم .</value>
+        <value>به ندرت نگران آینده می شوم .</value>
     </data>
     <data name="I react to things as they arise." xml:space="preserve">
         <value>همان زمانی که مسائلی پیش می‌آید، من به آن‌ها واکنش نشان می‌دهم.</value>
@@ -2655,10 +3030,10 @@
         <value>من تمام دستورالعمل‌ها را قبل از شروع می‌خوانم.</value>
     </data>
     <data name="I really enjoy talking to others." xml:space="preserve">
-        <value>واقعاً از صحبت كردن با ديگران لذت مي برم .</value>
+        <value>واقعاً از صحبت كردن با دیگران لذت می برم .</value>
     </data>
     <data name="I really like most of the people I meet." xml:space="preserve">
-        <value>بيشتر افرادي را که با آنها در تماس هستم ، واقعا دوست دارم.</value>
+        <value>بیشتر افرادی را که با آنها در تماس هستم ، واقعا دوست دارم.</value>
     </data>
     <data name="I relate better to others when I understand their weaknesses." xml:space="preserve">
         <value>زمانی با دیگران بهتر ارتباط بر قرار می‌کنم که نقاط ضعف آن‌ها را دریابم.</value>
@@ -2688,7 +3063,7 @@
         <value>من 70% از وقتم را صرف فکر کردن به آینده می‌کنم.</value>
     </data>
     <data name="I spend a lot of time finding things I did not put in their place." xml:space="preserve">
-        <value>وقت زيادی را برای پيدا کردن چيزهايی که در سرجايشان نگذاشته ام صرف می کنم .</value>
+        <value>وقت زیادی را برای پیدا کردن چیزهایی که در سرجایشان نگذاشته ام صرف می کنم .</value>
     </data>
     <data name="I strive for advancement." xml:space="preserve">
         <value>برای ارتقا یافتن تلاش می‌کنم.</value>
@@ -2700,16 +3075,16 @@
         <value>در این مورد که چه چیزی به دیگران انگیزه می‌دهد، مطالعه می‌کنم.</value>
     </data>
     <data name="I sympathize with people who are not as fortunate as I am." xml:space="preserve">
-        <value>من با افرادی که به خوشبختی خودم نيستند همدردی می کنم .</value>
+        <value>من با افرادی که به خوشبختی خودم نیستند همدردی می کنم .</value>
     </data>
     <data name="I take pride in making accurate and precise judgments." xml:space="preserve">
-        <value>به قضاوت های صحيح ودقيق به خود افتخار مي کنم .</value>
+        <value>به قضاوت های صحیح ودقیق به خود افتخار می کنم .</value>
     </data>
     <data name="I take pride in my cleverness in managing people." xml:space="preserve">
-        <value>به زيرکی خود در اداره کردن افراد افتخار می کنم .</value>
+        <value>به زیرکی خود در اداره کردن افراد افتخار می کنم .</value>
     </data>
     <data name="I take the most share of talking in conversations." xml:space="preserve">
-        <value>در گفتگو ها بيشترين سهم را از صحبت کردن دارم .</value>
+        <value>در گفتگو ها بیشترین سهم را از صحبت کردن دارم .</value>
     </data>
     <data name="I talk to people around me several times a day about I talk about my future vision" xml:space="preserve">
         <value>من هر روز چندین مرتبه با اطرافیانم در مورد چشم‌اندازهای آینده‌ام صحبت می‌کنم</value>
@@ -2736,28 +3111,28 @@
         <value>من طرز تفکر خلاقانه و استراتژیکی دارم و به طور طبیعی، الگوها و مسائلی که باید در نظر بگیرم، برای من پدیدار و روشن می‌شود.</value>
     </data>
     <data name="I think if a person does not know what they believe in by the age of 25, they have a problem." xml:space="preserve">
-        <value>فکر می کنم اگر فردی در سن 25 سالگي اش نداند که به چه چيزی متعقد است ، دارای مشکل است .</value>
+        <value>فکر می کنم اگر فردی در سن 25 سالگی اش نداند که به چه چیزی متعقد است ، دارای مشکل است .</value>
     </data>
     <data name="I think if you allow it, most people will take advantage of you." xml:space="preserve">
-        <value>فکر مي کنم اگر اجازه بدهي (امکان بدهي) بيشتر مردم از تو سوء استفاده مي کنند.</value>
+        <value>فکر می کنم اگر اجازه بدهی (امکان بدهی) بیشتر مردم از تو سوء استفاده می کنند.</value>
     </data>
     <data name="I think learning a new hobby and mastering it is interesting." xml:space="preserve">
-        <value>فکر مي کنم ياد گرفتن سرگرمي جديد و مهارت پيدا کردن در انجام آن کار جالبي است.</value>
+        <value>فکر می کنم یاد گرفتن سرگرمی جدید و مهارت پیدا کردن در انجام آن کار جالبی است.</value>
     </data>
     <data name="I think most people I interact with are honest and trustworthy." xml:space="preserve">
-        <value>فکر مي کنم که اغلب مردمي که با آنها رابطه دارم درستکار و قابل اعتماد هستند.</value>
+        <value>فکر می کنم که اغلب مردمی که با آنها رابطه دارم درستکار و قابل اعتماد هستند.</value>
     </data>
     <data name="I think most people in life have good intentions." xml:space="preserve">
-        <value>فکر مي کنم اغلب مردم در زندگي داراي حسن نيت هستند.</value>
+        <value>فکر می کنم اغلب مردم در زندگی دارای حسن نیت هستند.</value>
     </data>
     <data name="I think most people would steal if given the opportunity." xml:space="preserve">
         <value>فکر می‌کنم اگر شرایط فراهم باشد، بیشتر مردم دزدی می کنند.</value>
     </data>
     <data name="I think social laws and policies should evolve according to the changing needs of the times." xml:space="preserve">
-        <value>فکر مي کنم که قوانين و سياست هاي اجتماعي بايستي مطابق با نيازهاي زمان که در حال تغيير است ، تحول پيدا کنند.</value>
+        <value>فکر می کنم که قوانین و سیاست های اجتماعی بایستی مطابق با نیازهای زمان که در حال تغییر است ، تحول پیدا کنند.</value>
     </data>
     <data name="I think teaching contradictory topics to students only confuses them." xml:space="preserve">
-        <value>فکر مي کنم آموزش مطالب متناقض به دانشجويان فقط به سردرگمي و گمراهي آنها منجر خواهد شد.</value>
+        <value>فکر می کنم آموزش مطالب متناقض به دانشجویان فقط به سردرگمی و گمراهی آنها منجر خواهد شد.</value>
     </data>
     <data name="I treat everyone equally." xml:space="preserve">
         <value>من با تمام افراد به‌طور برابر برخورد می‌کنم.</value>
@@ -2772,16 +3147,16 @@
         <value>حداکثر تلاشم را می‌کنم و آنچه را که در ابتدا گفته‌ام انجام ‌می دهم، به انجام می‌رسانم.</value>
     </data>
     <data name="I try to be a humble and modest person." xml:space="preserve">
-        <value>سعي مي كنم آدم متواضع وفرو تني باشم .</value>
+        <value>سعی می كنم آدم متواضع وفرو تنی باشم .</value>
     </data>
     <data name="I try to be polite to everyone." xml:space="preserve">
-        <value>سعي مي کنم در مقابل همه مؤدب باشم.</value>
+        <value>سعی می کنم در مقابل همه مؤدب باشم.</value>
     </data>
     <data name="I try to direct all my thoughts in realistic directions and avoid imagination and daydreaming." xml:space="preserve">
-        <value>سعي مي کنم کليه افکارم را در جهات واقع بينانه هدايت کنم و از تخيل و رويا پردازي اجتناب نمايم.</value>
+        <value>سعی می کنم کلیه افکارم را در جهات واقع بینانه هدایت کنم و از تخیل و رویا پردازی اجتناب نمایم.</value>
     </data>
     <data name="I try to do all my tasks responsibly." xml:space="preserve">
-        <value>سعي مي کنم که همه کارهايم را با احساس مسئوليت انجام دهم.</value>
+        <value>سعی می کنم که همه کارهایم را با احساس مسئولیت انجام دهم.</value>
     </data>
     <data name="I try to do everything as perfectly as possible." xml:space="preserve">
         <value>تلاش می کنم که هر کاری را به نحو احسن انجام دهم .</value>
@@ -2790,19 +3165,19 @@
         <value>سعی می‌کنم با مطالعه ی گذشته، تا آنجا که می‌توانم بیاموزم.</value>
     </data>
     <data name="I try to stay informed about what is happening and usually make effective and precise decisions." xml:space="preserve">
-        <value>سعي مي کنم از آنچه اتفاق مي افتد مطلع باشم و معمولاً تصميم هاي موثر و دقيق بگيرم .</value>
+        <value>سعی می کنم از آنچه اتفاق می افتد مطلع باشم و معمولاً تصمیم های موثر و دقیق بگیرم .</value>
     </data>
     <data name="I try to stay within my comfort zone." xml:space="preserve">
         <value>تلاش می‌کنم در حاشیه امن ذهنی (محدوده راحتی) خود بمانم.</value>
     </data>
     <data name="I try to watch scary and shocking movies." xml:space="preserve">
-        <value>سعی می کنم فيلم های ترسناک وتکان دهنده را ببينم .</value>
+        <value>سعی می کنم فیلم های ترسناک وتکان دهنده را ببینم .</value>
     </data>
     <data name="I turn to experts to help me find the right answer." xml:space="preserve">
         <value>من به متخصصین رجوع می‌کنم تا به من کمک کنند و پاسخ درست را بیابم.</value>
     </data>
     <data name="I underestimate myself." xml:space="preserve">
-        <value>من خودم را دست کم می گيرم .</value>
+        <value>من خودم را دست کم می گیرم .</value>
     </data>
     <data name="I use accurate data backed by solid research to solve problems" xml:space="preserve">
         <value>برای حل مشکلات، از داده‌های دقیقی استفاده می‌کنم که به پشتوانه تحقیقات قوی به دست آمده‌اند</value>
@@ -2820,7 +3195,7 @@
         <value>من معمولا مستقل از موقعیت یا جایی که در آن قرار دارم، همیشه می‌دانم چه کاری درست است.</value>
     </data>
     <data name="I usually avoid crowded places." xml:space="preserve">
-        <value>معمولاً از جاهاي شلوغ گريزانم.</value>
+        <value>معمولاً از جاهای شلوغ گریزانم.</value>
     </data>
     <data name="I want a few friends who I know a lot about." xml:space="preserve">
         <value>من دوستان اندکی می‌خواهم که درمورد آنها چیزهای زیادی بدانم.</value>
@@ -2843,14 +3218,20 @@
     <data name="I want to have balance in my life" xml:space="preserve">
         <value>من می‌خواهم که در زندگیم تعادل داشته باشم</value>
     </data>
+    <data name="I was elected as a representative at school." xml:space="preserve">
+        <value>در مدرسه به عنوان نماینده انتخاب شدم .</value>
+    </data>
     <data name="I waste a lot of time before starting any task." xml:space="preserve">
-        <value>قبل از شروع هر کاري وقت زيادي را تلف مي کنم.</value>
+        <value>قبل از شروع هر کاری وقت زیادی را تلف می کنم.</value>
     </data>
     <data name="I work hard to achieve my goals." xml:space="preserve">
-        <value>براي دستيابي به اهدافم جديت مي كنم .</value>
+        <value>برای دستیابی به اهدافم جدیت می كنم .</value>
     </data>
     <data name="I work slowly but steadily" xml:space="preserve">
         <value>من آهسته ولی پیوسته کار می کنم</value>
+    </data>
+    <data name="I work well with others and share efforts." xml:space="preserve">
+        <value>با دیگران به خوبی كار وتشریك مساعی می كنم .</value>
     </data>
     <data name="I would like to attend the conference as an audience." xml:space="preserve">
         <value>من دوست دارم به عنوان مخاطب آزاد در کنفرانس شرکت کنم.</value>
@@ -2865,25 +3246,25 @@
         <value>ایده‌پرداز</value>
     </data>
     <data name="If I am alone for a long time, I really feel the need for others." xml:space="preserve">
-        <value>اگر براي مدت طولاني تنها باشم واقعاً نياز به ديگران را حس مي کنم.</value>
+        <value>اگر برای مدت طولانی تنها باشم واقعاً نیاز به دیگران را حس می کنم.</value>
     </data>
     <data name="If I can, I am willing to leave my work to help others." xml:space="preserve">
-        <value>اگر بتوانم برای کمک به ديگران حاضرم کار خود را رها کنم .</value>
+        <value>اگر بتوانم برای کمک به دیگران حاضرم کار خود را رها کنم .</value>
     </data>
     <data name="If I do not like someone, I do not care if they notice." xml:space="preserve">
-        <value>اگر اشخاصي را دوست نداشته باشم ، برايم مهم نيست که متوجه شوند .</value>
+        <value>اگر اشخاصی را دوست نداشته باشم ، برایم مهم نیست که متوجه شوند .</value>
     </data>
     <data name="If I feel my mind is drifting toward imagination, I usually keep myself busy and focus my mind on an activity." xml:space="preserve">
-        <value>اگر احساس کنم که ذهنم به سمت خيال پردازی کشيده می شود معمولاً خود را مشغول کرده وذهن خود را بر روی کاری فعاليتی متمرکز می کنم .</value>
+        <value>اگر احساس کنم که ذهنم به سمت خیال پردازی کشیده می شود معمولاً خود را مشغول کرده وذهن خود را بر روی کاری فعالیتی متمرکز می کنم .</value>
     </data>
     <data name="If I have said something bad about someone or done something wrong, it is hard for me to face that person again." xml:space="preserve">
-        <value>اگر درباره کسی حرف بدی زده باشم ويا کار خلافی انجام داده باشم ، برايم مشکل است دوباره با آن فرد مواجه شوم .</value>
+        <value>اگر درباره کسی حرف بدی زده باشم ویا کار خلافی انجام داده باشم ، برایم مشکل است دوباره با آن فرد مواجه شوم .</value>
     </data>
     <data name="If I were to talk about &quot;who I am,&quot; I wouldn't mind." xml:space="preserve">
         <value>اگر بخواهم در مورد این‌که "که هستم" صحبت کنم، مشکلی ندارم.</value>
     </data>
     <data name="If necessary, I am ready to deceive others to achieve my goals." xml:space="preserve">
-        <value>اگر ضرورت داشته باشد آمادگی درستکاری کردن ( گول زدن ) ديگران برای رسيدن به اهدافم را دارم .</value>
+        <value>اگر ضرورت داشته باشد آمادگی درستکاری کردن ( گول زدن ) دیگران برای رسیدن به اهدافم را دارم .</value>
     </data>
     <data name="If someone starts a fight, I am ready to fight." xml:space="preserve">
         <value>اگر شخصی دعوا را شروع کند من آماده دعوا هستم .</value>
@@ -2963,6 +3344,9 @@
     <data name="Influencing" xml:space="preserve">
         <value>تأثیرگذار</value>
     </data>
+    <data name="Influencing others" xml:space="preserve">
+        <value>تاثیر گذاشتن روی دیگران</value>
+    </data>
     <data name="Info" xml:space="preserve">
         <value>اطلاعات</value>
     </data>
@@ -2972,11 +3356,17 @@
     <data name="Information (Fa)" xml:space="preserve">
         <value>اطلاعات (فا)</value>
     </data>
+    <data name="Innovatively modifying car and motorcycle engines" xml:space="preserve">
+        <value>تغییر ابتكاری موتور اتومبیل و موتورسیكلت</value>
+    </data>
     <data name="Input" xml:space="preserve">
         <value>ورودی‌گرا</value>
     </data>
     <data name="Insights for Your Career Journey" xml:space="preserve">
         <value>بینش‌هایی برای سفر شغلی شما</value>
+    </data>
+    <data name="Installing electronic devices" xml:space="preserve">
+        <value>نصب وسایل الكترونیكی</value>
     </data>
     <data name="Instructor" xml:space="preserve">
         <value>مدرس</value>
@@ -2985,7 +3375,7 @@
         <value>اطلاعات مدرس</value>
     </data>
     <data name="Instructor Management" xml:space="preserve">
-        <value>مديريت مدرس</value>
+        <value>مدیریت مدرس</value>
     </data>
     <data name="Instructor Rating" xml:space="preserve">
         <value>امتیاز مدرس</value>
@@ -2996,11 +3386,20 @@
     <data name="Intellection" xml:space="preserve">
         <value>تفکرگرا</value>
     </data>
+    <data name="Interior design or decoration" xml:space="preserve">
+        <value>طراحی داخل ساختمان یا دكوراسیون</value>
+    </data>
     <data name="Invalid activation code" xml:space="preserve">
         <value>کد فعال سازی نامعتبر است</value>
     </data>
     <data name="Invalid Email." xml:space="preserve">
         <value>ایمیل نامعتبر</value>
+    </data>
+    <data name="Inventory supervisor" xml:space="preserve">
+        <value>ناظر صورت برداری از موجودی</value>
+    </data>
+    <data name="Investigative" xml:space="preserve">
+        <value>جستجوگر</value>
     </data>
     <data name="Is Active" xml:space="preserve">
         <value>فعال است</value>
@@ -3030,37 +3429,37 @@
         <value>روانشناس است</value>
     </data>
     <data name="It is difficult for me to resist my impulses." xml:space="preserve">
-        <value>مقابله با هوس هايم کار مشکلي است.</value>
+        <value>مقابله با هوس هایم کار مشکلی است.</value>
     </data>
     <data name="It is easy for me to admit a bitter truth about myself." xml:space="preserve">
         <value>اقرار کردن به یک حقیقت تلخ در مورد خودم، برایم آسان است.</value>
     </data>
     <data name="It is easy for me to empathize with others (I feel what others feel)." xml:space="preserve">
-        <value>هم حسی با ديگران برايم آسان است ( آنچه را که ديگران حس می کنند من هم حس می کنم ) .</value>
+        <value>هم حسی با دیگران برایم آسان است ( آنچه را که دیگران حس می کنند من هم حس می کنم ) .</value>
     </data>
     <data name="It is easy for me to express my thoughts and express them." xml:space="preserve">
         <value>به زبان آوردن افکارم و بیان کردن آنها، برایم آسان است.</value>
     </data>
     <data name="It is easy for me to smile and behave friendly with strangers." xml:space="preserve">
-        <value>برای من لبخند زدن ودوستانه رفتار کردن با غريبه ها آسان است .</value>
+        <value>برای من لبخند زدن ودوستانه رفتار کردن با غریبه ها آسان است .</value>
     </data>
     <data name="It is hard for me to force myself to do my duties." xml:space="preserve">
-        <value>برايم مشکل است خودم را مجبور به انجام وظايفم کنم .</value>
+        <value>برایم مشکل است خودم را مجبور به انجام وظایفم کنم .</value>
     </data>
     <data name="It is hard for me to let my mind wander freely without control or direction." xml:space="preserve">
-        <value>برايم مشکل است که به آسانی به ذهن يا فکرم اجازه دهم تا بدون کنترل يا هدايت به هر جهتی که خواست برود .</value>
+        <value>برایم مشکل است که به آسانی به ذهن یا فکرم اجازه دهم تا بدون کنترل یا هدایت به هر جهتی که خواست برود .</value>
     </data>
     <data name="It is important to me how I feel about topics." xml:space="preserve">
-        <value>اينکه راجع به موضوعات چه احساسي دارم برايم مهم است.</value>
+        <value>اینکه راجع به موضوعات چه احساسی دارم برایم مهم است.</value>
     </data>
     <data name="It is not easy for me to resist my desires and impulses." xml:space="preserve">
-        <value>مقاومت در مقابل خواسته ها و هوس هايم برايم آسان نيست.</value>
+        <value>مقاومت در مقابل خواسته ها و هوس هایم برایم آسان نیست.</value>
     </data>
     <data name="It is very important to me to be known as a reliable, professional, and successful person." xml:space="preserve">
         <value>برایم بسیار مهم است که به عنوان فردی معتبر، حرفه‌ای و موفق شناخته شوم.</value>
     </data>
     <data name="It takes a long time for me to lose my temper." xml:space="preserve">
-        <value>خيلی طول می کشد تا من از کوره در بروم.</value>
+        <value>خیلی طول می کشد تا من از کوره در بروم.</value>
     </data>
     <data name="Items" xml:space="preserve">
         <value>آیتم‌ها</value>
@@ -3076,6 +3475,9 @@
     </data>
     <data name="Join Meeting" xml:space="preserve">
         <value>پیوستن به جلسه</value>
+    </data>
+    <data name="Journalist" xml:space="preserve">
+        <value>خبرنگار</value>
     </data>
     <data name="Key Features of Our Platform" xml:space="preserve">
         <value>ویژگی‌های کلیدی پلتفرم ما</value>
@@ -3119,6 +3521,9 @@
     <data name="Lead Psychologist" xml:space="preserve">
         <value>روانشناس ارشد</value>
     </data>
+    <data name="Leading a group to achieve a goal" xml:space="preserve">
+        <value>رهبری یك گروه برای رسیدن به هدف</value>
+    </data>
     <data name="Learn More" xml:space="preserve">
         <value>بیشتر بدانید</value>
     </data>
@@ -3129,10 +3534,10 @@
         <value>راهنما</value>
     </data>
     <data name="Life and its events pass quickly for me." xml:space="preserve">
-        <value>زندگی ورويدادهای آن برايم سريع می گذرد .</value>
+        <value>زندگی ورویدادهای آن برایم سریع می گذرد .</value>
     </data>
     <data name="Life without strong emotions and excitement is not interesting to me." xml:space="preserve">
-        <value>زندگي بدون عواطف و هيجانات قوي برايم جالب نيست.</value>
+        <value>زندگی بدون عواطف و هیجانات قوی برایم جالب نیست.</value>
     </data>
     <data name="Link Color" xml:space="preserve">
         <value>رنگ متن لینک</value>
@@ -3151,6 +3556,9 @@
     </data>
     <data name="Location (Fa)" xml:space="preserve">
         <value>محل برگزاری دوره</value>
+    </data>
+    <data name="Locomotive engineer" xml:space="preserve">
+        <value>مهندس لوكوموتیو</value>
     </data>
     <data name="Log in" xml:space="preserve">
         <value>ورود</value>
@@ -3185,6 +3593,12 @@
     <data name="Make Reviewer" xml:space="preserve">
         <value>انتساب نقش داوری</value>
     </data>
+    <data name="Making models of airplanes (models)" xml:space="preserve">
+        <value>ساختن مدلهایی از هواپیما ( ماكت )</value>
+    </data>
+    <data name="Making wooden objects" xml:space="preserve">
+        <value>ساختن اشیا  چوبی</value>
+    </data>
     <data name="Male" xml:space="preserve">
         <value>آفا</value>
     </data>
@@ -3199,6 +3613,15 @@
     </data>
     <data name="Manage your account" xml:space="preserve">
         <value>حساب کاربری خود را مدیریت کنید</value>
+    </data>
+    <data name="Management skills" xml:space="preserve">
+        <value>مهارت های مدیریت</value>
+    </data>
+    <data name="Manual skills (using tools)" xml:space="preserve">
+        <value>مهارت های دستی ( استفاده از ابزار )</value>
+    </data>
+    <data name="Manufacturing factory sales representative" xml:space="preserve">
+        <value>نماینده فروش كارخانه تولیدی</value>
     </data>
     <data name="Manuscript" xml:space="preserve">
         <value>نسخه اصلی</value>
@@ -3215,14 +3638,32 @@
     <data name="Marketing Manager" xml:space="preserve">
         <value>مدیر بازاریابی</value>
     </data>
+    <data name="Marriage counselor" xml:space="preserve">
+        <value>مشاور ازدواج</value>
+    </data>
+    <data name="Mathematical or social science skills" xml:space="preserve">
+        <value>مهارت های ریاضی یا علوم اجتماعی</value>
+    </data>
     <data name="Maximizer" xml:space="preserve">
         <value>بیشینه‌ساز</value>
     </data>
     <data name="Measure your cognitive abilities and specific skills relevant to various job roles." xml:space="preserve">
         <value>توانایی‌های شناختی و مهارت‌های خاص خود را که مربوط به نقش‌های شغلی مختلف هستند، اندازه‌گیری کنید.</value>
     </data>
+    <data name="Mechanical ability" xml:space="preserve">
+        <value>توانایی مكانیكی</value>
+    </data>
+    <data name="Medical laboratory technician" xml:space="preserve">
+        <value>تكنسین آزمایشگاه پزشكی</value>
+    </data>
     <data name="Meet Our Experts" xml:space="preserve">
         <value>با متخصصان ما آشنا شوید</value>
+    </data>
+    <data name="Meeting important figures" xml:space="preserve">
+        <value>ملاقات با شخصیت های مهم</value>
+    </data>
+    <data name="Membership in cultural and social associations and centers" xml:space="preserve">
+        <value>عضویت در انجمن ها و مراكز فرهنگی و اجتماعی</value>
     </data>
     <data name="Menu Background Color" xml:space="preserve">
         <value>رنگ پس‌زمینه منو</value>
@@ -3242,6 +3683,9 @@
     <data name="Messages Box" xml:space="preserve">
         <value>صندوق پیام</value>
     </data>
+    <data name="Meteorologist" xml:space="preserve">
+        <value>متخصص هواشناسی</value>
+    </data>
     <data name="Minor Corrections" xml:space="preserve">
         <value>ایراد جزئی</value>
     </data>
@@ -3258,16 +3702,22 @@
         <value>رویدادهای بیشتر</value>
     </data>
     <data name="Most of my acquaintances like me." xml:space="preserve">
-        <value>اغلب آشنايانم مرا دوست دارند .</value>
+        <value>اغلب آشنایانم مرا دوست دارند .</value>
     </data>
     <data name="Most of my thoughts and energy are spent on the present." xml:space="preserve">
         <value>بیشتر فکر و انرژی من، صرف مسائل فعلی و حال حاضر می‌شود.</value>
+    </data>
+    <data name="Movie or theater actor" xml:space="preserve">
+        <value>بازیگر سینما یا تئاتر</value>
     </data>
     <data name="Mr. Tech Lead" xml:space="preserve">
         <value>آقای رهبر فنی</value>
     </data>
     <data name="Ms. Industry Analyst" xml:space="preserve">
         <value>خانم تحلیلگر صنعت</value>
+    </data>
+    <data name="Musician" xml:space="preserve">
+        <value>آهنگساز</value>
     </data>
     <data name="My ambition and ambition define my life path" xml:space="preserve">
         <value>بلند همتی و بلند پروازی، مسیر زندگی‌ من را مشخص می‌کند</value>
@@ -3288,7 +3738,7 @@
         <value>بیان من از کلمات ساده و کوتاه تشکیل شده است.</value>
     </data>
     <data name="My first reaction to people is to trust them." xml:space="preserve">
-        <value>اولين واکنش من نسبت به افراد اين است که به آنها اعتماد کنم .</value>
+        <value>اولین واکنش من نسبت به افراد این است که به آنها اعتماد کنم .</value>
     </data>
     <data name="My friends ask me for advice and opinions" xml:space="preserve">
         <value>دوستانم از من توصیه و نظر می‌خواهند</value>
@@ -3512,6 +3962,9 @@
     <data name="Occupation" xml:space="preserve">
         <value>شغل</value>
     </data>
+    <data name="Officer" xml:space="preserve">
+        <value>دفتر دار</value>
+    </data>
     <data name="On" xml:space="preserve">
         <value>در تاریخ</value>
     </data>
@@ -3539,6 +3992,9 @@
     <data name="OralPaper" xml:space="preserve">
         <value>مقاله ارائه شفاهی</value>
     </data>
+    <data name="Orchestra leader" xml:space="preserve">
+        <value>رهبر اركستر</value>
+    </data>
     <data name="Order" xml:space="preserve">
         <value>ردیف</value>
     </data>
@@ -3546,19 +4002,19 @@
         <value>نظم</value>
     </data>
     <data name="Others do not know me as a generous and kind person." xml:space="preserve">
-        <value>ديگران مرا به عنوان دست و دلبازي نمی شناسند .</value>
+        <value>دیگران مرا به عنوان دست و دلبازی نمی شناسند .</value>
     </data>
     <data name="Others know me as a cold and unfriendly person." xml:space="preserve">
-        <value>اغلب مرا فردي سرد و غير صميمي مي شناسند.</value>
+        <value>اغلب مرا فردی سرد و غیر صمیمی می شناسند.</value>
     </data>
     <data name="Others know me as a warm and friendly person." xml:space="preserve">
-        <value>ديگران مرا به عنوان فردي گرم و صميمي مي شناسند.</value>
+        <value>دیگران مرا به عنوان فردی گرم و صمیمی می شناسند.</value>
     </data>
     <data name="Others know me as an angry and irritable person." xml:space="preserve">
-        <value>ديگران مرا فردي عصباني مزاج و تحريک پذير مي شناسند (من به عنوان فردي که زود عصباني مي شود شناخته مي شوم.)</value>
+        <value>دیگران مرا فردی عصبانی مزاج و تحریک پذیر می شناسند (من به عنوان فردی که زود عصبانی می شود شناخته می شوم.)</value>
     </data>
     <data name="Others look to me for decision-making in critical situations." xml:space="preserve">
-        <value>ساير افراد در تصميم گيري به من نگاه می کنند .</value>
+        <value>سایر افراد در تصمیم گیری به من نگاه می کنند .</value>
     </data>
     <data name="Our Assessment Services" xml:space="preserve">
         <value>خدمات ارزیابی ما</value>
@@ -3576,7 +4032,7 @@
         <value>صندوق پیام‌های ارسال‌شده</value>
     </data>
     <data name="Over the years, I have occasionally done foolish things." xml:space="preserve">
-        <value>در طول سالهاي گذشته بعضي وقت هاي دست به کارهاي احمقانه اي زده ام.</value>
+        <value>در طول سالهای گذشته بعضی وقت های دست به کارهای احمقانه ای زده ام.</value>
     </data>
     <data name="Package Activation" xml:space="preserve">
         <value>فعال‌سازی پکیج</value>
@@ -3604,6 +4060,12 @@
     </data>
     <data name="Paid" xml:space="preserve">
         <value>پرداخت‌شده</value>
+    </data>
+    <data name="Painter" xml:space="preserve">
+        <value>صورتگر ( نقاش )</value>
+    </data>
+    <data name="Painting from a model or photograph" xml:space="preserve">
+        <value>نقاشی از روی مدل یا عكس</value>
     </data>
     <data name="Paper Certificate Issued" xml:space="preserve">
         <value>گواهی مقاله صادر گردید</value>
@@ -3689,6 +4151,12 @@
     <data name="Papers Files Download" xml:space="preserve">
         <value>دانلود فایل‌های مقالات</value>
     </data>
+    <data name="Participating in political activities" xml:space="preserve">
+        <value>مشاركت در فعالیت های سیاسی</value>
+    </data>
+    <data name="Participating in religious programs" xml:space="preserve">
+        <value>شركت در برنامه های مذهبی</value>
+    </data>
     <data name="Password" xml:space="preserve">
         <value>رمز عبور</value>
     </data>
@@ -3728,11 +4196,14 @@
     <data name="Personality Inventory" xml:space="preserve">
         <value>فهرست شخصیت</value>
     </data>
+    <data name="Personality Type" xml:space="preserve">
+        <value>تیپ شخصیتی</value>
+    </data>
     <data name="Personalized Reports" xml:space="preserve">
         <value>گزارش‌های شخصی‌سازی‌شده</value>
     </data>
     <data name="Philosophical discussions bore me." xml:space="preserve">
-        <value>بحث هاي فلسفي برايم خسته کننده است.</value>
+        <value>بحث های فلسفی برایم خسته کننده است.</value>
     </data>
     <data name="Phone" xml:space="preserve">
         <value>تلفن</value>
@@ -3755,8 +4226,20 @@
     <data name="PhoneNumber" xml:space="preserve">
         <value>شماره تلفن</value>
     </data>
+    <data name="Physicist" xml:space="preserve">
+        <value>فیزیكدان</value>
+    </data>
     <data name="Platform Architect" xml:space="preserve">
         <value>معمار پلتفرم</value>
+    </data>
+    <data name="Playing a musical instrument" xml:space="preserve">
+        <value>نوازندگی یكی از آلات موسیقی</value>
+    </data>
+    <data name="Playing in a band and singing" xml:space="preserve">
+        <value>نوازندگی در گروه موسیقی و سرود</value>
+    </data>
+    <data name="Playwright" xml:space="preserve">
+        <value>نمایشنامه نویس</value>
     </data>
     <data name="Please check your email to confirm your account." xml:space="preserve">
         <value>لطفا ایمیل خود را برای تایید حساب کاربری چک نمایید.</value>
@@ -3785,11 +4268,14 @@
     <data name="Please Wait!!!" xml:space="preserve">
         <value>لطفا منتظر بمانید!!!</value>
     </data>
+    <data name="Poet" xml:space="preserve">
+        <value>شاعر</value>
+    </data>
     <data name="Poetry has almost no effect on me." xml:space="preserve">
-        <value>شعر تقريباً اثری روي من ندارد .</value>
+        <value>شعر تقریباً اثری روی من ندارد .</value>
     </data>
     <data name="Political leaders need to be more aware of the human aspects of their policies." xml:space="preserve">
-        <value>لازم است که رهبران سياسي از جنبه هاي انساني سياست هاي خود آگاهي بيشتري داشته باشند.</value>
+        <value>لازم است که رهبران سیاسی از جنبه های انسانی سیاست های خود آگاهی بیشتری داشته باشند.</value>
     </data>
     <data name="Port" xml:space="preserve">
         <value>پورت</value>
@@ -3893,6 +4379,9 @@
     <data name="Provides insights into current job market demands and trends." xml:space="preserve">
         <value>ارائه دهنده بینش در مورد تقاضاها و روندهای فعلی بازار کار.</value>
     </data>
+    <data name="Psychiatric assistant" xml:space="preserve">
+        <value>دستیار امور روانپزشكی</value>
+    </data>
     <data name="Psychologist" xml:space="preserve">
         <value>روانشناس</value>
     </data>
@@ -3904,6 +4393,9 @@
     </data>
     <data name="Publish Page" xml:space="preserve">
         <value>انتشار صفحه</value>
+    </data>
+    <data name="Purchasing officer" xml:space="preserve">
+        <value>مامور خرید</value>
     </data>
     <data name="Question" xml:space="preserve">
         <value>پرسش</value>
@@ -3917,6 +4409,9 @@
     <data name="Question Replies" xml:space="preserve">
         <value>پاسخ پرسش‌ها</value>
     </data>
+    <data name="Question Type" xml:space="preserve">
+        <value>نوع سوال</value>
+    </data>
     <data name="Questions" xml:space="preserve">
         <value>پرسش‌ها</value>
     </data>
@@ -3928,6 +4423,9 @@
     </data>
     <data name="Quick Links" xml:space="preserve">
         <value>لینک‌های سریع</value>
+    </data>
+    <data name="Rate your abilities and skills in comparison to your peers. Try to make the most accurate assessment of yourself, giving a score of 1 for the least ability and a score of 7 for the most ability, and avoid rating yourself the same for each ability as much as possible." xml:space="preserve">
+        <value>توانائیها ( توان بالقوه ) ومهارت های ( توان بالفعل ) خود را در مقایسه با همسالانتان درجه بندی نمائید. سعی نمائید صحیح ترین برآورد را در مورد خودتان انجام دهید، به كمترین توانایی نمره 1 وبه بیشترین توانایی نمره 7 بدهید و تا حد امكان از درجه بندی یكسان خود در هر توانایی بپرهیزید</value>
     </data>
     <data name="Raven Test" xml:space="preserve">
         <value>تست ریون</value>
@@ -3941,14 +4439,35 @@
     <data name="RavenTest" xml:space="preserve">
         <value>تست ریون</value>
     </data>
+    <data name="Read each statement carefully and mark the answer that most closely matches your thoughts or feelings." xml:space="preserve">
+        <value>هر عبارت را با دقت بخوانید و پاسخی را که بیشتر با افکار یا احساسات شما مطابقت دارد علامت بزنید.</value>
+    </data>
     <data name="Read More" xml:space="preserve">
         <value>بیشتر بخوانید</value>
     </data>
     <data name="Read More ..." xml:space="preserve">
         <value>بیشتر بخوانید ...</value>
     </data>
+    <data name="Reading famous stories" xml:space="preserve">
+        <value>خواندن داستانهای معروف</value>
+    </data>
+    <data name="Reading poetry or writing poetry" xml:space="preserve">
+        <value>خواندن شعر یا سرودن شعر</value>
+    </data>
+    <data name="Reading psychology books" xml:space="preserve">
+        <value>مطالعه كتابهای روانشناسی</value>
+    </data>
+    <data name="Reading scientific books or magazines" xml:space="preserve">
+        <value>خواندن كتابها یا مجلات علمی</value>
+    </data>
     <data name="Ready to Start Your Career Discovery?" xml:space="preserve">
         <value>آماده شروع کشف مسیر شغلی خود هستید؟</value>
+    </data>
+    <data name="Real estate or automobile broker" xml:space="preserve">
+        <value>واسطه گر معاملات ملكی یا اتومبیل</value>
+    </data>
+    <data name="Realistic" xml:space="preserve">
+        <value>واقع گرا</value>
     </data>
     <data name="Receipt" xml:space="preserve">
         <value>رسید پرداخت</value>
@@ -3965,11 +4484,17 @@
     <data name="Recipient" xml:space="preserve">
         <value>مخاطب</value>
     </data>
+    <data name="Recording and maintaining documents of expenses and income" xml:space="preserve">
+        <value>ثبت و نگهداری اسناد هزینه ها و درآمد</value>
+    </data>
     <data name="Recovery Code" xml:space="preserve">
         <value>کد بازیابی</value>
     </data>
+    <data name="Reform and education specialist" xml:space="preserve">
+        <value>متخصص اصلا ح و تربیت</value>
+    </data>
     <data name="Regardless of others' conditions and situations, I do not feel superior to them." xml:space="preserve">
-        <value>صرف نظر از اينکه ديگران چه وضعيت وشرايطی دارند احساس نمی کنم که از بقيه بهتر باشم .</value>
+        <value>صرف نظر از اینکه دیگران چه وضعیت وشرایطی دارند احساس نمی کنم که از بقیه بهتر باشم .</value>
     </data>
     <data name="Register" xml:space="preserve">
         <value>ثبت‌نام</value>
@@ -4013,6 +4538,9 @@
     <data name="Remember this machine" xml:space="preserve">
         <value>این کامپیوتر را به خاطر بسپار</value>
     </data>
+    <data name="Repairing cars" xml:space="preserve">
+        <value>تعمیر اتومبیل</value>
+    </data>
     <data name="Replied By" xml:space="preserve">
         <value>جواب داده‌شده توسط</value>
     </data>
@@ -4030,6 +4558,9 @@
     </data>
     <data name="Reports" xml:space="preserve">
         <value>گزارش‌ها</value>
+    </data>
+    <data name="Researcher" xml:space="preserve">
+        <value>پژوهشگر ( محقق )</value>
     </data>
     <data name="Resend" xml:space="preserve">
         <value>ارسال مجدد</value>
@@ -4051,6 +4582,9 @@
     </data>
     <data name="Responsibility" xml:space="preserve">
         <value>مسئولیت‌پذیر</value>
+    </data>
+    <data name="Restaurant manager" xml:space="preserve">
+        <value>مدیر رستوران</value>
     </data>
     <data name="Restorative" xml:space="preserve">
         <value>ترمیم‌کننده</value>
@@ -4190,6 +4724,15 @@
     <data name="Roles" xml:space="preserve">
         <value>نقش‌ها</value>
     </data>
+    <data name="Sales ability" xml:space="preserve">
+        <value>توانایی فروشندگی</value>
+    </data>
+    <data name="Sales manager" xml:space="preserve">
+        <value>مدیر فروش</value>
+    </data>
+    <data name="Salesperson" xml:space="preserve">
+        <value>فروشنده</value>
+    </data>
     <data name="Sat - Wed : 09 AM - 09 PM" xml:space="preserve">
         <value>شنبه - چهارشنبه: ۰۹ صبح - ۰۹ شب</value>
     </data>
@@ -4214,11 +4757,20 @@
     <data name="Scheduling section background" xml:space="preserve">
         <value>پس‌زمینه بخش زمان‌بندی</value>
     </data>
+    <data name="School principal" xml:space="preserve">
+        <value>مدیر مدرسه</value>
+    </data>
     <data name="Scientific &amp; Executive Committee" xml:space="preserve">
         <value>کمیته علمی و اجرایی</value>
     </data>
     <data name="Scientific &amp; Executive Committee Members" xml:space="preserve">
         <value>اعضای کمیته علمی و اجرایی</value>
+    </data>
+    <data name="Scientific ability" xml:space="preserve">
+        <value>توانایی علمی</value>
+    </data>
+    <data name="Scientific article writer" xml:space="preserve">
+        <value>نویسنده مقالات علمی</value>
     </data>
     <data name="Scientific Chief" xml:space="preserve">
         <value>دبیر علمی</value>
@@ -4235,6 +4787,9 @@
     <data name="Scientific Field" xml:space="preserve">
         <value>فیلد تخصصی علمی</value>
     </data>
+    <data name="Scientific research expert" xml:space="preserve">
+        <value>كارشناس تحقیقات علمی</value>
+    </data>
     <data name="Score" xml:space="preserve">
         <value>امتیاز</value>
     </data>
@@ -4243,6 +4798,9 @@
     </data>
     <data name="ScoreIsReversed" xml:space="preserve">
         <value>امتیاز معکوس شده است</value>
+    </data>
+    <data name="Sculptor" xml:space="preserve">
+        <value>مجسمه ساز</value>
     </data>
     <data name="Search" xml:space="preserve">
         <value>جستجو</value>
@@ -4265,6 +4823,12 @@
     <data name="Select" xml:space="preserve">
         <value>انتخاب</value>
     </data>
+    <data name="Select as many of the following activities as you would like to do." xml:space="preserve">
+        <value>هر تعداد از فعالیت های زیر را که مایلید انجام دهید، مشخص کنید.</value>
+    </data>
+    <data name="Select as many of the following activities that you have experienced and can do." xml:space="preserve">
+        <value>هر تعداد از فعالیت های زیر  را که تجربه کرده اید و می توانید انجام دهید، مشخص نمایید.</value>
+    </data>
     <data name="Select Facet" xml:space="preserve">
         <value>انتخاب وجه</value>
     </data>
@@ -4273,6 +4837,15 @@
     </data>
     <data name="Select Gender" xml:space="preserve">
         <value>انتخاب جنسیت</value>
+    </data>
+    <data name="Select Holland Personality" xml:space="preserve">
+        <value>تیپ شخصیتی هالند را انتخاب کنید</value>
+    </data>
+    <data name="Select Holland Question Type" xml:space="preserve">
+        <value>نوع سوال هالند را انتخاب کنید</value>
+    </data>
+    <data name="Select jobs that you are interested in or find enjoyable." xml:space="preserve">
+        <value>مشاغلی را که به آن علاقه دارید یا برای شما خوشایند است، مشخص نمایید.</value>
     </data>
     <data name="Select Occupation" xml:space="preserve">
         <value>شغل را انتخاب کنید</value>
@@ -4331,6 +4904,9 @@
     <data name="SelfDiscipline" xml:space="preserve">
         <value>خود انضباط</value>
     </data>
+    <data name="Selling goods" xml:space="preserve">
+        <value>فروشندگی اجناس</value>
+    </data>
     <data name="Send" xml:space="preserve">
         <value>ارسال</value>
     </data>
@@ -4375,6 +4951,9 @@
     </data>
     <data name="Services" xml:space="preserve">
         <value>خدمات</value>
+    </data>
+    <data name="Serving as a group leader" xml:space="preserve">
+        <value>خدمت به عنوان مدیر یك گروه</value>
     </data>
     <data name="Session" xml:space="preserve">
         <value>نشست</value>
@@ -4424,6 +5003,9 @@
     <data name="Significance" xml:space="preserve">
         <value>معناداری</value>
     </data>
+    <data name="Singer" xml:space="preserve">
+        <value>خواننده سرود</value>
+    </data>
     <data name="Site Design" xml:space="preserve">
         <value>ظاهر سایت</value>
     </data>
@@ -4448,53 +5030,65 @@
     <data name="Slides" xml:space="preserve">
         <value>اسلایدها</value>
     </data>
+    <data name="Social" xml:space="preserve">
+        <value>اجتماعی</value>
+    </data>
     <data name="Social gatherings are usually boring for me." xml:space="preserve">
-        <value>معمولاً گردهمايی های اجتماعی برايم کسل کننده هستند .</value>
+        <value>معمولاً گردهمایی های اجتماعی برایم کسل کننده هستند .</value>
+    </data>
+    <data name="Social science director" xml:space="preserve">
+        <value>دبیر علوم اجتماعی</value>
+    </data>
+    <data name="Sociologist" xml:space="preserve">
+        <value>جامعه شناس</value>
     </data>
     <data name="Software Developer" xml:space="preserve">
         <value>توسعه‌دهنده نرم‌افزار</value>
+    </data>
+    <data name="Solving math and chess puzzles" xml:space="preserve">
+        <value>حل معماهای ریاضی و شطرنج</value>
     </data>
     <data name="Some people scare me." xml:space="preserve">
         <value>برخی از مردم من را می‌ترسانند.</value>
     </data>
     <data name="Some people think I am selfish and self-centered." xml:space="preserve">
-        <value>بعضي ها فکر مي کنند که من فردي خودخواه و خود محورم.</value>
+        <value>بعضی ها فکر می کنند که من فردی خودخواه و خود محورم.</value>
     </data>
     <data name="Some think I am a calculating and cold person." xml:space="preserve">
-        <value>برخي فکر مي کنند من فردي حسابگر و خشک هستم.</value>
+        <value>برخی فکر می کنند من فردی حسابگر و خشک هستم.</value>
     </data>
     <data name="Some types of music are very attractive and captivating to me." xml:space="preserve">
-        <value>بعضی از انواع موسيقی برايم بسيار جذاب و پرکشش است .</value>
+        <value>بعضی از انواع موسیقی برایم بسیار جذاب و پرکشش است .</value>
     </data>
     <data name="Sometimes I act first and think later." xml:space="preserve">
-        <value>گاهي اول عمل مي کنم بعد مي انديشم.</value>
+        <value>گاهی اول عمل می کنم بعد می اندیشم.</value>
     </data>
     <data name="Sometimes I am a grumpy and irritable person." xml:space="preserve">
         <value>گاهی شخصی بد اخلاق و ترشرو هستم .</value>
     </data>
     <data name="Sometimes I am not as reliable and trustworthy as I should be." xml:space="preserve">
-        <value>گاهي آن طور که بايد و شايد قابل اتکا و اعتماد نيستم.</value>
+        <value>گاهی آن طور که باید و شاید قابل اتکا و اعتماد نیستم.</value>
     </data>
     <data name="Sometimes I cannot be as decisive as I should be." xml:space="preserve">
-        <value>گاهي نمي توانم آن طور که بايد و شايد قاطع باشم.</value>
+        <value>گاهی نمی توانم آن طور که باید و شاید قاطع باشم.</value>
     </data>
     <data name="Sometimes I cheat in single-player games (with myself)." xml:space="preserve">
-        <value>گاهي در بازي هاي تک نفره (با خودم) تقلب مي کنم.</value>
+        <value>گاهی در بازی های تک نفره (با خودم) تقلب می کنم.</value>
     </data>
     <data name="Sometimes I cleverly make others do what I want." xml:space="preserve">
-        <value>گاهی با زرنگی ، ديگران را وادار می کنم کاری را که من می خواهم انجام دهند .</value>
+        <value>گاهی با زرنگی ، دیگران را وادار می کنم کاری را که من می خواهم انجام دهند .</value>
     </data>
     <data name="Sometimes I deeply feel regret and guilt." xml:space="preserve">
-        <value>بعضي اوقات عميقاً احساس پشيماني و تقصير مي کنم.</value>
+        <value>بعضی اوقات عمیقاً احساس پشیمانی و تقصیر می کنم.</value>
     </data>
     <data name="Sometimes I do things just for fun and to pass the time." xml:space="preserve">
-        <value>گاهي کارهايي را فقط براي سرگرمي و وقت تلف کردن انجام داده ام.</value>
+        <value>گاهی کارهایی را فقط برای سرگرمی و وقت تلف کردن انجام داده ام.</value>
     </data>
     <data name="Sometimes I do things without thinking and then regret it." xml:space="preserve">
-        <value>گاهی کارهايی را بدون تأمل انجام می دهم وبعد پشيمان می شوم.</value>
+        <value>گاهی کارهایی را بدون تأمل انجام می دهم وبعد پشیمان می شوم.</value>
     </data>
     <data name="Sometimes I feel a state of euphoria and intense joy." xml:space="preserve">
-        <value>گاهي حالت سرخوشي و نشاط شديدي را احساس مي کنم.</value>
+        <value>گاهی حالت سرخوشی و نشاط شدیدی را احساس می کنم.</value>
     </data>
     <data name="Sometimes I feel very happy (like my heart is melting)." xml:space="preserve">
         <value>بعضی از اوقات احساس خوشحالی می کنم ( قند تو دلم آب می شود ) .</value>
@@ -4503,25 +5097,25 @@
         <value>گاهی چاپلوسی دیگران را می‌کنم.</value>
     </data>
     <data name="Sometimes I get completely absorbed in the music I listen to." xml:space="preserve">
-        <value>گاهي کاملاً جذب (محو) موسيقي مي شوم که به آن گوش مي دهم.</value>
+        <value>گاهی کاملاً جذب (محو) موسیقی می شوم که به آن گوش می دهم.</value>
     </data>
     <data name="Sometimes I have been so embarrassed that I just wanted to hide." xml:space="preserve">
-        <value>گاهي آنچنان خجالت زده شده ام که فقط مي خواستم خود را پنهان کنم.</value>
+        <value>گاهی آنچنان خجالت زده شده ام که فقط می خواستم خود را پنهان کنم.</value>
     </data>
     <data name="Sometimes I manipulate others with flattery or force to get what I want." xml:space="preserve">
-        <value>گاهی افراد را به تملق ويا زور وادار به انجام خواست می کنم .</value>
+        <value>گاهی افراد را به تملق ویا زور وادار به انجام خواست می کنم .</value>
     </data>
     <data name="Sometimes I overeat my favorite food." xml:space="preserve">
-        <value>گاهی از پرخوری بيمار می شوم .</value>
+        <value>گاهی از پرخوری بیمار می شوم .</value>
     </data>
     <data name="Sometimes I struggle to express my ideas and my words fall short." xml:space="preserve">
         <value>بعضی وقت‌ها برای بیان ایده‌هایم لغت کم می‌آورم و کلامم قاصر می‌ماند.</value>
     </data>
     <data name="Sometimes just to create variety in life, I make changes to the arrangement of furniture at home." xml:space="preserve">
-        <value>گاهی فقط به منظور ايجاد تنوع در زندگی تغييراتی در محل اثاثيه خانه ايجاد می کنم .</value>
+        <value>گاهی فقط به منظور ایجاد تنوع در زندگی تغییراتی در محل اثاثیه خانه ایجاد می کنم .</value>
     </data>
     <data name="Sometimes life seems cold and hopeless to me." xml:space="preserve">
-        <value>بعضی اوقات زندگی سرد ونااميد کننده به نظر می رسد .</value>
+        <value>بعضی اوقات زندگی سرد وناامید کننده به نظر می رسد .</value>
     </data>
     <data name="Sometimes my greatness affects others" xml:space="preserve">
         <value>گاهی اوقات ابهت من دیگران را تحت تاثیر قرار می دهد</value>
@@ -4530,10 +5124,10 @@
         <value>گاهی اوقات فکرهای ترسناک به ذهنم می رسد .</value>
     </data>
     <data name="Sometimes when I read a poem or watch an art piece, I feel a tremor and an emotional shake." xml:space="preserve">
-        <value>بعضی اوقات وقتی شعری را می خوانم يا يک هنری را تماشا می کنم يک احساس لرزش ويک تکان هيجانی را حس می کنم .</value>
+        <value>بعضی اوقات وقتی شعری را می خوانم یا یک هنری را تماشا می کنم یک احساس لرزش ویک تکان هیجانی را حس می کنم .</value>
     </data>
     <data name="Sometimes when others talk about very abstract (mental) and theoretical topics, I get bored." xml:space="preserve">
-        <value>گاهی هنگامی که ديگران درباره موضاعات بسيار انتزاعي ( ذهنی ) ونظری صحبت مي كنند حوصله ام سرمی رود.</value>
+        <value>گاهی هنگامی که دیگران درباره موضاعات بسیار انتزاعی ( ذهنی ) ونظری صحبت می كنند حوصله ام سرمی رود.</value>
     </data>
     <data name="Sometimes, it can be justified to change the truth." xml:space="preserve">
         <value>بعضی وقت‌ها، تغییر دادن حقیقت می‌تواند موجه باشد.</value>
@@ -4544,11 +5138,20 @@
     <data name="Specializes in AI algorithms for data analysis and prediction." xml:space="preserve">
         <value>متخصص در الگوریتم‌های هوش مصنوعی برای تحلیل داده و پیش‌بینی.</value>
     </data>
+    <data name="Speech therapist" xml:space="preserve">
+        <value>گفتار درمانگر</value>
+    </data>
     <data name="Sponsors" xml:space="preserve">
         <value>حامیان</value>
     </data>
     <data name="Sponsors List" xml:space="preserve">
         <value>لیست حامیان</value>
+    </data>
+    <data name="Sports club founder" xml:space="preserve">
+        <value>مؤسس باشگاه ورزشی</value>
+    </data>
+    <data name="Sports coach" xml:space="preserve">
+        <value>مربی ورزش</value>
     </data>
     <data name="Start Date" xml:space="preserve">
         <value>تاریخ آغاز</value>
@@ -4563,19 +5166,19 @@
         <value>تاریخ شروع</value>
     </data>
     <data name="Statement" xml:space="preserve">
-        <value>شرح</value>
+        <value>گویه</value>
     </data>
     <data name="Statement A" xml:space="preserve">
-        <value>شرح الف</value>
+        <value>گویه الف</value>
     </data>
     <data name="Statement B" xml:space="preserve">
-        <value>شرح ب</value>
+        <value>گویه ب</value>
     </data>
     <data name="StatementA" xml:space="preserve">
-        <value>شرح الف</value>
+        <value>گویه الف</value>
     </data>
     <data name="StatementB" xml:space="preserve">
-        <value>شرح ب</value>
+        <value>گویه ب</value>
     </data>
     <data name="Status" xml:space="preserve">
         <value>وضعیت</value>
@@ -4584,7 +5187,7 @@
         <value>صراحت</value>
     </data>
     <data name="Strange things like specific smells or the names of distant places can create intense emotional states in me." xml:space="preserve">
-        <value>چيزهای غريبی مثل بوهای خاص ويا نام مکان های دور ، می تواند در من حالات احساسی شديدی بوجود بياورد .</value>
+        <value>چیزهای غریبی مثل بوهای خاص ویا نام مکان های دور ، می تواند در من حالات احساسی شدیدی بوجود بیاورد .</value>
     </data>
     <data name="Strategic" xml:space="preserve">
         <value>استراتژیک</value>
@@ -4661,11 +5264,32 @@
     <data name="Subscribe to our newsletter. You will be kept informed about latest news, activities and developments." xml:space="preserve">
         <value>در خبرنامه ما مشترک شوید. شما از آخرین اخبار، فعالیت ها و پیشرفت ها مطلع خواهید شد.</value>
     </data>
+    <data name="Supervising and supervising the work of others" xml:space="preserve">
+        <value>سرپرستی و نظارت بر كار دیگران</value>
+    </data>
     <data name="Support" xml:space="preserve">
         <value>پشتیبانی</value>
     </data>
+    <data name="Surveyor" xml:space="preserve">
+        <value>نقشه بردار</value>
+    </data>
     <data name="Syllabus (Fa)" xml:space="preserve">
         <value>سرفصل دوره</value>
+    </data>
+    <data name="Tailor" xml:space="preserve">
+        <value>خیاط</value>
+    </data>
+    <data name="Take a bookkeeping course" xml:space="preserve">
+        <value>گذراندن دوره دفترداری</value>
+    </data>
+    <data name="Take a business course" xml:space="preserve">
+        <value>گذراندن دوره بازرگانی</value>
+    </data>
+    <data name="Take a financial accounting course" xml:space="preserve">
+        <value>گذراندن دوره حسابداری مالی</value>
+    </data>
+    <data name="Take a typing course" xml:space="preserve">
+        <value>گذراندن دوره ماشین نویسی</value>
     </data>
     <data name="Take Clifton Test" xml:space="preserve">
         <value>انجام تست کلیفتون</value>
@@ -4673,17 +5297,68 @@
     <data name="Take Neo Test" xml:space="preserve">
         <value>انجام تست نئو</value>
     </data>
+    <data name="Take Holland Test" xml:space="preserve">
+        <value>انجام تست هالند</value>
+    </data>
     <data name="Take Test" xml:space="preserve">
         <value>انجام تست</value>
     </data>
     <data name="Take the first step towards a fulfilling career. Register or log in to access our assessments. If you have questions, feel free to reach out using the form." xml:space="preserve">
         <value>اولین قدم را به سوی یک شغل رضایت‌بخش بردارید. ثبت‌نام کنید یا وارد شوید تا به ارزیابی‌های ما دسترسی پیدا کنید. اگر سوالی دارید، از طریق فرم با ما تماس بگیرید.</value>
     </data>
+    <data name="Taking a biology course" xml:space="preserve">
+        <value>گذراندن دوره زیست شناسی</value>
+    </data>
+    <data name="Taking a carpentry (woodworking) course" xml:space="preserve">
+        <value>گذراندن دوره درودگری ( كارهای چوبی )</value>
+    </data>
+    <data name="Taking a chemistry course" xml:space="preserve">
+        <value>گذراندن دوره شیمی</value>
+    </data>
+    <data name="Taking a geometry or trigonometry course" xml:space="preserve">
+        <value>گذراندن دوره هندسه یا مثلثات</value>
+    </data>
+    <data name="Taking a mechanical design course" xml:space="preserve">
+        <value>گذراندن دوره طراحی مكانیكی</value>
+    </data>
+    <data name="Taking a physics course" xml:space="preserve">
+        <value>گذراندن دوره فیزیك</value>
+    </data>
+    <data name="Taking a sewing course" xml:space="preserve">
+        <value>گذراندن دوره خیاطی</value>
+    </data>
+    <data name="Taking a workshop course" xml:space="preserve">
+        <value>گذراندن دوره كارگاه</value>
+    </data>
+    <data name="Taking an art course" xml:space="preserve">
+        <value>گذراندن دوره هنری</value>
+    </data>
+    <data name="Taking an auto mechanic course" xml:space="preserve">
+        <value>گذراندن دوره اتو مكانیكی</value>
+    </data>
+    <data name="Taking care of children" xml:space="preserve">
+        <value>مراقبت از كودكان</value>
+    </data>
     <data name="Taking on leadership is not easy for me." xml:space="preserve">
-        <value>پذيرش مدير يت برای من کار ساده ای نيست .</value>
+        <value>پذیرش مدیر یت برای من کار ساده ای نیست .</value>
+    </data>
+    <data name="Taking parties and celebrations" xml:space="preserve">
+        <value>شركت در میهمانیها ومراسم جشن و سرور</value>
+    </data>
+    <data name="Taking sports classes" xml:space="preserve">
+        <value>شركت در كلاسهای ورزشی</value>
     </data>
     <data name="Talent And Strength Package" xml:space="preserve">
         <value>بسته استعداد و قدرت</value>
+    </data>
+    <data name="Tax expert" xml:space="preserve">
+        <value>كارشناس مالیات</value>
+    </data>
+    <data name="Taxi service (agency) driver" xml:space="preserve">
+        <value>راننده تاكسی سرویس ( آژانس )</value>
+    </data>
+    <data name="Teaching ability" xml:space="preserve">
+        <value>توانایی تدریس</value>
     </data>
     <data name="Team" xml:space="preserve">
         <value>همکاران</value>
@@ -4693,6 +5368,15 @@
     </data>
     <data name="Technical Information (Fa)" xml:space="preserve">
         <value>اطلاعات فنی</value>
+    </data>
+    <data name="Telecommunication engineer" xml:space="preserve">
+        <value>مهندس مخابرات</value>
+    </data>
+    <data name="Television program producer" xml:space="preserve">
+        <value>تولید كننده برنامه های تلویزیونی</value>
+    </data>
+    <data name="Telling jokes and jokes to friends" xml:space="preserve">
+        <value>بیان مطالب شنیدنی و لطیفه در جمع دوستان</value>
     </data>
     <data name="Tenderness" xml:space="preserve">
         <value>لطافت</value>
@@ -4779,7 +5463,7 @@
         <value>لحظه ای که تصمیم می گیرم،باید شروع به فعالیت کنم</value>
     </data>
     <data name="The patterns in nature amaze me." xml:space="preserve">
-        <value>نقش هاي موجود در طبيعت مرا مبهوت مي کنند.</value>
+        <value>نقش های موجود در طبیعت مرا مبهوت می کنند.</value>
     </data>
     <data name="The payment receipt is under review and not yet confirmed." xml:space="preserve">
         <value>رسید پرداخت در حال بررسی است و هنوز تایید نشده است.</value>
@@ -4857,10 +5541,10 @@
         <value>گیرنده</value>
     </data>
     <data name="To avoid rework, I try to do my tasks carefully." xml:space="preserve">
-        <value>برای جلوگيری از دوباره کاری سعی می کنم کارهايم را با دقت انجام دهم .</value>
+        <value>برای جلوگیری از دوباره کاری سعی می کنم کارهایم را با دقت انجام دهم .</value>
     </data>
     <data name="To know where things are, I prefer to keep everything in its place." xml:space="preserve">
-        <value>براي اينکه بدانم چي کجاست ترجيح مي دهم هر چيزي را در جاي خودش قرار دهم.</value>
+        <value>برای اینکه بدانم چی کجاست ترجیح می دهم هر چیزی را در جای خودش قرار دهم.</value>
     </data>
     <data name="Toggle Active" xml:space="preserve">
         <value>تغییر وضعیت فعال</value>
@@ -4886,6 +5570,9 @@
     <data name="Total Score" xml:space="preserve">
         <value>امتیاز کل</value>
     </data>
+    <data name="Trader, commercial intermediary" xml:space="preserve">
+        <value>معامله گر ، واسطه گر امور تجاری</value>
+    </data>
     <data name="Training Course" xml:space="preserve">
         <value>دوره آموزشی</value>
     </data>
@@ -4900,6 +5587,12 @@
     </data>
     <data name="Try to avoid neutral options as much as possible. Usually, one of the two statements is closer to you. If both statements match you, choose the one that better or more closely describes you." xml:space="preserve">
         <value>سعی کنید تا حد امکان از گزینه‌های خنثی اجتناب کنید. معمولاً یکی از دو عبارت به شما نزدیک‌تر است. اگر هر دو عبارت با شما مطابقت دارند، عبارتی را انتخاب کنید که بهتر یا دقیق‌تر شما را توصیف می‌کند.</value>
+    </data>
+    <data name="Typewriting of papers or letters for myself and others" xml:space="preserve">
+        <value>ماشین نویسی اوراق یا نامه ها برای خود ودیگران</value>
+    </data>
+    <data name="Typing teacher" xml:space="preserve">
+        <value>معلم درس ماشین نویسی</value>
     </data>
     <data name="Unaccepted Review" xml:space="preserve">
         <value>داوری‌های پذیرفته‌نشده</value>
@@ -5030,6 +5723,9 @@
     <data name="Users Registration" xml:space="preserve">
         <value>ثبت‌نام کاربران</value>
     </data>
+    <data name="Using machine or metal tools" xml:space="preserve">
+        <value>استفاده از ابزار ماشینی یا فلزی</value>
+    </data>
     <data name="Validated Psychometric Tests" xml:space="preserve">
         <value>تست‌های روان‌سنجی معتبر</value>
     </data>
@@ -5072,6 +5768,9 @@
     <data name="Verification email sent. Please check your email." xml:space="preserve">
         <value>ایمیل تایید ارسال شد. لطفا ایمیل خود را بررسی کنید.</value>
     </data>
+    <data name="Veterinarian" xml:space="preserve">
+        <value>دامپزشك</value>
+    </data>
     <data name="View" xml:space="preserve">
         <value>مشاهده</value>
     </data>
@@ -5109,10 +5808,10 @@
         <value>گرما</value>
     </data>
     <data name="Watching ballet and modern dance bores me (listening to traditional or classical music bores me)." xml:space="preserve">
-        <value>تماشاي باله و رقص هاي مدرن برايم خسته کننده است (گوش دادن به موسيقي سنتي يا کلاسيک برايم خسته کننده است.)</value>
+        <value>تماشای باله و رقص های مدرن برایم خسته کننده است (گوش دادن به موسیقی سنتی یا کلاسیک برایم خسته کننده است.)</value>
     </data>
     <data name="We can never do much for the poor and elderly." xml:space="preserve">
-        <value>ما هرگز نمي توانيم براي افراد فقير و سالمند کار زيادي بکنيم.</value>
+        <value>ما هرگز نمی توانیم برای افراد فقیر و سالمند کار زیادی بکنیم.</value>
     </data>
     <data name="We offer a comprehensive suite of tools and analyses designed to provide clear, actionable insights for your career development." xml:space="preserve">
         <value>ما مجموعه‌ای جامع از ابزارها و تحلیل‌ها را ارائه می‌دهیم که برای ارائه بینش‌های واضح و عملی برای توسعه شغلی شما طراحی شده‌اند.</value>
@@ -5126,8 +5825,14 @@
     <data name="Welcome to the Clifton Talent Assessment Test (CSTA)!" xml:space="preserve">
         <value>به تست ارزیابی استعداد کلیفتون (CSTA) خوش آمدید!</value>
     </data>
+    <data name="Welcome to the Holland Interest Test (RIASEC)!" xml:space="preserve">
+        <value>به تست رغبت‌سنج هالند (RIASEC) خوش آمدید!</value>
+    </data>
     <data name="Welcome to the Neo NEO Personality Test (NEO PI-R)!" xml:space="preserve">
         <value>به تست شخصیت نئو (NEO PI-R) خوش آمدید!</value>
+    </data>
+    <data name="Welder" xml:space="preserve">
+        <value>جوشكار</value>
     </data>
     <data name="What has happened to me in the past inspires me." xml:space="preserve">
         <value>آنچه در گذشته برایم رخ داده، الهام‌بخش من است.</value>
@@ -5145,13 +5850,13 @@
         <value>نظر کاربران ما</value>
     </data>
     <data name="When a mistake happens, I blame myself." xml:space="preserve">
-        <value>هنگامی که اشتباهی صورت می گيرد خودم را سرزنش می کنم .</value>
+        <value>هنگامی که اشتباهی صورت می گیرد خودم را سرزنش می کنم .</value>
     </data>
     <data name="When a task becomes very difficult, I tend to start a new one." xml:space="preserve">
-        <value>وقتی کاری بسيار مشکل می شود، تمايل پيدا می کنم که کار جديدی را شروع کنم .</value>
+        <value>وقتی کاری بسیار مشکل می شود، تمایل پیدا می کنم که کار جدیدی را شروع کنم .</value>
     </data>
     <data name="When eating my favorite food, I tend to eat a lot." xml:space="preserve">
-        <value>موقع خوردن غذاي مورد علاقه ام ميل دارم خيلی بخورم .</value>
+        <value>موقع خوردن غذای مورد علاقه ام میل دارم خیلی بخورم .</value>
     </data>
     <data name="When familiar people do foolish things, I feel bad for them." xml:space="preserve">
         <value>وقتی از افراد آشنا کارهای احمقانه سر می زند ، برای آنها ناراحت می شوم .</value>
@@ -5160,37 +5865,37 @@
         <value>وقتی در میان یک گروه هستم، به نظر می‌رسد که ایده‌های بیشتری نسبت به دیگران دارم.</value>
     </data>
     <data name="When I do something, I do it enthusiastically." xml:space="preserve">
-        <value>وقتي کاري را مي کنم آن را با اشتياق انجام مي دهم.</value>
+        <value>وقتی کاری را می کنم آن را با اشتیاق انجام می دهم.</value>
     </data>
     <data name="When I find the right way to do something, I always stick to that method." xml:space="preserve">
-        <value>هنگامي که راه درست انجام کاري را پيدا مي کنم آن روش را همواره در آن مورد ادامه مي دهم.</value>
+        <value>هنگامی که راه درست انجام کاری را پیدا می کنم آن روش را همواره در آن مورد ادامه می دهم.</value>
     </data>
     <data name="When I make a commitment, I always fulfill it." xml:space="preserve">
-        <value>وقتی من تعهدی می دهم هميشه آن را اجرا می کنم .</value>
+        <value>وقتی من تعهدی می دهم همیشه آن را اجرا می کنم .</value>
     </data>
     <data name="When I plan a short trip, I carefully plan it in advance." xml:space="preserve">
-        <value>وقتی می خواهم به يک سفر کوتاه بروم ، از قبل با دقت در رابطه با آن برنامه ريزی می کنم .</value>
+        <value>وقتی می خواهم به یک سفر کوتاه بروم ، از قبل با دقت در رابطه با آن برنامه ریزی می کنم .</value>
     </data>
     <data name="When I start a program to improve my situation, I usually abandon it after a few days." xml:space="preserve">
-        <value>وقتي برنامه اي را براي بهبودي وضعيت خود شروع مي کنم معمولاً بعد از چند روز آن را کنار مي گذارم.</value>
+        <value>وقتی برنامه ای را برای بهبودی وضعیت خود شروع می کنم معمولاً بعد از چند روز آن را کنار می گذارم.</value>
     </data>
     <data name="When I take on a task, I almost always complete it." xml:space="preserve">
-        <value>وقتي کاري را به دست می گيرم تقريباً هميشه آن را به پايان مي رسانم .</value>
+        <value>وقتی کاری را به دست می گیرم تقریباً همیشه آن را به پایان می رسانم .</value>
     </data>
     <data name="When necessary, I can criticize others and point out their mistakes." xml:space="preserve">
-        <value>هنگامي که لازم است مي توانم از ديگران ايراد بگيرم و به آنها گوش زد نمايم.</value>
+        <value>هنگامی که لازم است می توانم از دیگران ایراد بگیرم و به آنها گوش زد نمایم.</value>
     </data>
     <data name="When necessary, I can focus on my work for long hours, for example, all night long." xml:space="preserve">
         <value>وقتی لازم باشد، می‌توانم ساعت‌های متمادی، مثلا تمام طول شب را، بر کارم تمرکز کنم.</value>
     </data>
     <data name="When someone does something good for me, I am suspicious of their intentions." xml:space="preserve">
-        <value>وقتی شخصی كار خوبي را برايم انجام دهد ، به نيت او مشکوک می شوم .</value>
+        <value>وقتی شخصی كار خوبی را برایم انجام دهد ، به نیت او مشکوک می شوم .</value>
     </data>
     <data name="When someone doesn't like me, I feel uncomfortable" xml:space="preserve">
         <value>زمانی که فردی من را دوست نداشته باشد، احساس ناراحتی می‌کنم</value>
     </data>
     <data name="When someone insults me, I try to forgive and forget." xml:space="preserve">
-        <value>وقتي به من توهين شود ، سعي مي كنم آن را ببخشم وفراموش كنم .</value>
+        <value>وقتی به من توهین شود ، سعی می كنم آن را ببخشم وفراموش كنم .</value>
     </data>
     <data name="When the going gets tough and I want everything to be done perfectly, I tend to do things myself." xml:space="preserve">
         <value>زمانی که کار سخت می‌شود و من می‌خواهم همه چیز کامل انجام شود، تمایل پیدا می‌کنم که کارها را خودم انجام دهم.</value>
@@ -5199,7 +5904,7 @@
         <value>زمانی که کار سخت می‌شود و من می‌خواهم همه چیز کامل انجام شود، ترجیح می‌دهم بر روی توانایی افراد تیمم تکیه کنم و سعی نمی‌کنم که تمام کار را به تنهایی انجام دهم.</value>
     </data>
     <data name="When under a lot of mental pressure, I sometimes feel like I am falling apart." xml:space="preserve">
-        <value>هنگامي که تحت فشارهاي روحي زيادي هستم گاه احساس مي کنم که دارم خورد مي شوم.</value>
+        <value>هنگامی که تحت فشارهای روحی زیادی هستم گاه احساس می کنم که دارم خورد می شوم.</value>
     </data>
     <data name="Whether a teacher likes me or not doesn't matter at all." xml:space="preserve">
         <value>اینکه معلمی از من خوشش بیاید یا خیر اصلا مهم نیست.</value>
@@ -5210,17 +5915,41 @@
     <data name="Width (mm)" xml:space="preserve">
         <value>عرض (میلی‌متر)</value>
     </data>
+    <data name="Wildlife and aquatic specialist" xml:space="preserve">
+        <value>متخصص موجودات وحشی وآبزی</value>
+    </data>
     <data name="Winning is everything." xml:space="preserve">
         <value>پیروزی همه چیز است.</value>
     </data>
     <data name="Woo" xml:space="preserve">
         <value>جذب‌کننده</value>
     </data>
+    <data name="Working in a laboratory" xml:space="preserve">
+        <value>كار در آزمایشگاه</value>
+    </data>
+    <data name="Working in a personal shop or store" xml:space="preserve">
+        <value>كار كردن در مغازه یا فروشگاه شخصی</value>
+    </data>
     <data name="Working is not a principle in itself, it is just a model of how to live." xml:space="preserve">
         <value>کار کردن به خودی خود اصل نیست و تنها یک مدل از راه‌های گذران زندگی است.</value>
     </data>
+    <data name="Working on a scientific project" xml:space="preserve">
+        <value>كار برروی یك پروژه علمی</value>
+    </data>
+    <data name="Working with tools and Chemicals" xml:space="preserve">
+        <value>كار با وسایل و مواد شیمیایی</value>
+    </data>
+    <data name="Working with various types of office machines (accounts, computers, etc.)" xml:space="preserve">
+        <value>كار باانواع ماشینهای اداری ( حساب ، كامپیوتر و غیره )</value>
+    </data>
     <data name="Write your opinion" xml:space="preserve">
         <value>دیدگاه خود را بنویسید</value>
+    </data>
+    <data name="Writing letters with friends" xml:space="preserve">
+        <value>نامه نگاری با دوستان</value>
+    </data>
+    <data name="Writing official and administrative letters" xml:space="preserve">
+        <value>نوشتن نامه های اداری و رسمی</value>
     </data>
     <data name="Written By" xml:space="preserve">
         <value>نوشته شده توسط</value>

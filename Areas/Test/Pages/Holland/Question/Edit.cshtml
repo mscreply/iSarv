@@ -1,0 +1,30 @@
+@page
+@model iSarv.Areas.Test.Pages.Holland.Question.EditModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Edit");
+}
+
+<h1>@Localizer.TextIgnoreCase("Edit")</h1>
+
+<form method="post" class="needs-validation" novalidate>
+    <div class="form-floating mb-3">
+        <input asp-for="HollandTestQuestion.Statement" class="form-control"
+               placeholder="@Localizer.TextIgnoreCase("Statement")">
+        <label asp-for="HollandTestQuestion.Statement">@Localizer.TextIgnoreCase("Statement")</label>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="HollandTestQuestion.HollandPersonality" class="form-select" asp-items="Html.GetEnumSelectList<iSarv.Data.Tests.HollandPersonality>()">
+            <option value="">@Localizer.TextIgnoreCase("Select Holland Personality Type")</option>
+        </select>
+        <label asp-for="HollandTestQuestion.HollandPersonality"></label>
+    </div>
+    <div class="form-floating mb-3">
+        <select asp-for="HollandTestQuestion.Type" class="form-select" asp-items="Html.GetEnumSelectList<iSarv.Data.Tests.HollandPersonality>()">
+            <option value="">@Localizer.TextIgnoreCase("Select Holland Question Type")</option>
+        </select>
+        <label asp-for="HollandTestQuestion.HollandPersonality"></label>
+    </div>
+    <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
+    <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Cancel")</a>
+</form>
