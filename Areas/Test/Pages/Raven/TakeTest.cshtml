@@ -1,0 +1,121 @@
+@page "{testId:int}"
+@model iSarv.Areas.Test.Pages.Raven.TakeTestModel
+
+@{
+    ViewData["Title"] = Localizer.Text("Take Raven Test");
+}
+
+<h1>@Localizer.TextIgnoreCase("Take Raven Test")</h1>
+
+@if (Model.IsNotStarted)
+{
+    <div>@Localizer.TextIgnoreCase("Your Raven Test has not been started!")</div>
+}
+else if (Model.IsDoneOrExpired)
+{
+    <div>@Localizer.TextIgnoreCase("Your Raven Test has been completed or expired!")</div>
+}
+else
+{
+    <form method="post" id="testForm">
+        <div id="step-container">
+            <div class="step" id="step-1" style=@(Model.CurrentStep != 1 ? "display:none;" : "")>
+                <p>@Localizer.TextIgnoreCase("Welcome to the Raven IQ Test!")</p>
+                <p>@Localizer.TextIgnoreCase("Ensure you answer all questions before submitting.")</p>
+                <p>@Localizer.TextIgnoreCase("Click \"Next\" to begin.")</p>
+                <button class="btn btn-primary next-step" data-next="2">@Localizer.TextIgnoreCase("Next")</button>
+            </div>
+
+            @for (char cls = 'A'; cls <= 'E'; cls++)
+            {
+                for (int no = 1; no <= 12; no++)
+                {
+                    var i = (cls - 'A') * 12 + no;
+                    <div class="step p-5 text-center" id="step-@(i + 1)" style=@(Model.CurrentStep != i + 1 ? "display:none;" : "")>
+                        <h3>@Localizer.TextIgnoreCase("Question") @cls-@no</h3>
+                        <img class="mw-100" src="/App_Files/data/Raven/raven_@(cls)@(no).gif" alt="" >
+                        <div class="d-flex justify-content-center py-5">
+                            @for (int ans = 1; ans <= 6; ans++)
+                            {
+                                <div class="form-check form-check-inline m-0 p-1">
+                                    <input class="btn-check" type="radio" name="answers[@(i - 1)]" value="@ans" id="answers-@i-@ans" @(ans == Model.Answers[i - 1] ? "checked" : "")/>
+                                    <label class="btn btn-outline-success" for="answers-@i-@ans"> @ans</label>
+                                </div>
+                            }
+                            @if (cls > 'B')
+                            {
+                                @for (int ans = 7; ans <= 8; ans++)
+                                {
+                                    <div class="form-check form-check-inline m-0 p-1">
+                                        <input class="btn-check" type="radio" name="answers[@(i - 1)]" value="@ans" id="answers-@i-@ans" @(ans == Model.Answers[i - 1] ? "checked" : "")/>
+                                        <label class="btn btn-outline-success" for="answers-@i-@ans"> @ans</label>
+                                    </div>
+                                }
+                            }
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                @if (i > 0)
+                                {
+                                    <button class="btn btn-primary next-step" data-next="@i">@Localizer.TextIgnoreCase("Previous")</button>
+                                }
+                            </div>
+                            <div>
+                                @if (i < 60)
+                                {
+                                    <button class="btn btn-primary next-step" data-next="@(i + 2)">@Localizer.TextIgnoreCase("Next")</button>
+                                    <a href="#" class="btn btn-success" onclick="saveTestProgress()">@Localizer.TextIgnoreCase("Save")</a>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-success" id="submit-test">@Localizer.TextIgnoreCase("Submit Test")</button>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+        <input type="hidden" name="currentStep" asp-for="CurrentStep" />
+    </form>
+}
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $(".next-step").on("click", function (e) {
+                e.preventDefault();
+                let nextStep = $(this).data("next");
+                $(".step").hide();
+                $("#step-" + nextStep).show();
+                $("input[name='currentStep']").val(nextStep);                
+            });
+
+            $("#submit-test").on("click", function () {
+                alert($.parseHTML('@Localizer.TextIgnoreCase("Test submitted successfully!")')[0].textContent);
+                // Add form submission logic here
+            });
+
+            // Auto-save every 5 minutes
+            setInterval(function () {
+                saveTestProgress();
+            }, 120000);
+
+        });
+
+        function saveTestProgress() {
+            let data = $("#testForm").serialize();
+            $.ajax({
+                url: '?handler=SaveProgress',
+                type: 'POST',
+                data: data,
+                success: function (data) {
+                    console.log('Test progress saved successfully!');
+                },
+                error: function (error) {
+                    console.error('Error saving test progress:', error);
+                }
+            });
+        }
+    </script>
+}

@@ -27,7 +27,10 @@ namespace iSarv.Areas.Test.Pages.Neo
 
         public List<NeoTestQuestion> Questions { get; set; }
 
-        [BindProperty] public Dictionary<int, string> Answers { get; set; }
+        [BindProperty]
+        public int[] Answers { get; set; }
+
+        [BindProperty] public int CurrentStep { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int testId)
         {
@@ -42,7 +45,9 @@ namespace iSarv.Areas.Test.Pages.Neo
             var neoTest = _context.NeoTests.FirstOrDefault(t => t.Id == testId);
             IsDoneOrExpired = neoTest!.IsCompleted || neoTest.Deadline < DateTime.Now;
             IsNotStarted = neoTest.StartDate > DateTime.Now;
-
+            
+            Answers = string.IsNullOrEmpty(neoTest.Response) ? Enumerable.Repeat(2, Questions.Count()).ToArray() : neoTest.Response.Split(",").Select(int.Parse).ToArray();
+            CurrentStep = Answers.Length > Questions.Count ? Answers[Questions.Count] : 1;
             return Page();
         }
 
@@ -65,6 +70,20 @@ namespace iSarv.Areas.Test.Pages.Neo
             }
 
             return Redirect("/User/Dashboard");
+        }
+
+        public async Task<IActionResult> OnPostSaveProgressAsync(int testId, int[] answers)
+        {
+            var neoTest = _context.NeoTests.FirstOrDefault(ct => ct.Id == testId);
+            if (neoTest != null)
+            {
+                neoTest.Response = string.Join(",", answers.Append(CurrentStep));
+                _context.NeoTests.Update(neoTest);
+                await _context.SaveChangesAsync();
+                return new JsonResult(new { success = true });
+            }
+
+            return new JsonResult(new { success = false });
         }
     }
 }

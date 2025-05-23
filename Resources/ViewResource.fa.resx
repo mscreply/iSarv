@@ -761,6 +761,9 @@
     <data name="Click to view the result." xml:space="preserve">
         <value>برای مشاهده نتیجه کلیک کنید.</value>
     </data>
+    <data name="Clifton Domain" xml:space="preserve">
+        <value>دسته توانایی‌های کلیفتون</value>
+    </data>
     <data name="Clifton Result" xml:space="preserve">
         <value>نتیجه کلیفتون</value>
     </data>
@@ -781,6 +784,9 @@
     </data>
     <data name="CliftonTest" xml:space="preserve">
         <value>تست کلیفتون</value>
+    </data>
+    <data name="Clifton Theme" xml:space="preserve">
+        <value>استعداد کلیفتون</value>
     </data>
     <data name="Code" xml:space="preserve">
         <value>کد</value>
@@ -4529,6 +4535,9 @@
     <data name="RelationshipBuilding" xml:space="preserve">
         <value>روابط‌ساز</value>
     </data>
+    <data name="Relationship Building" xml:space="preserve">
+        <value>روابط‌ساز</value>
+    </data>
     <data name="Relator" xml:space="preserve">
         <value>ارتباط‌ساز</value>
     </data>
@@ -4572,10 +4581,10 @@
         <value>بازنشانی</value>
     </data>
     <data name="Reset password" xml:space="preserve">
-        <value>بازنشلنی رمز عبور</value>
+        <value>بازنشانی رمز عبور</value>
     </data>
     <data name="Reset password confirmation" xml:space="preserve">
-        <value>تایید بازنشلنی رمز عبور</value>
+        <value>تایید بازنشانی رمز عبور</value>
     </data>
     <data name="Response" xml:space="preserve">
         <value>پاسخ</value>
@@ -5294,11 +5303,14 @@
     <data name="Take Clifton Test" xml:space="preserve">
         <value>انجام تست کلیفتون</value>
     </data>
+    <data name="Take Holland Test" xml:space="preserve">
+        <value>انجام تست هالند</value>
+    </data>
     <data name="Take Neo Test" xml:space="preserve">
         <value>انجام تست نئو</value>
     </data>
-    <data name="Take Holland Test" xml:space="preserve">
-        <value>انجام تست هالند</value>
+    <data name="Take Raven Test" xml:space="preserve">
+        <value>انجام تست ریون</value>
     </data>
     <data name="Take Test" xml:space="preserve">
         <value>انجام تست</value>
@@ -5828,8 +5840,11 @@
     <data name="Welcome to the Holland Interest Test (RIASEC)!" xml:space="preserve">
         <value>به تست رغبت‌سنج هالند (RIASEC) خوش آمدید!</value>
     </data>
-    <data name="Welcome to the Neo NEO Personality Test (NEO PI-R)!" xml:space="preserve">
+    <data name="Welcome to the NEO Personality Test (NEO PI-R)!" xml:space="preserve">
         <value>به تست شخصیت نئو (NEO PI-R) خوش آمدید!</value>
+    </data>
+    <data name="Welcome to the Raven IQ Test!" xml:space="preserve">
+        <value>به تست هوش ریون خوش آمدید!</value>
     </data>
     <data name="Welder" xml:space="preserve">
         <value>جوشكار</value>
@@ -5990,6 +6005,12 @@
     <data name="Your email is unchanged." xml:space="preserve">
         <value>ایمیل شما بدون تغییر است.</value>
     </data>
+    <data name="Your Holland Test has been completed or expired!" xml:space="preserve">
+        <value>تست هالند شما تکمیل شده یا منقضی شده است!</value>
+    </data>
+    <data name="Your Holland Test has not been started!" xml:space="preserve">
+        <value>تست هالند شما شروع نشده است!</value>
+    </data>
     <data name="Your message has been sent. Thank you!" xml:space="preserve">
         <value>پیام شما ارسال شد. سپاسگزاریم!</value>
     </data>
@@ -6019,5 +6040,38 @@
     </data>
     <data name="Your password has been set." xml:space="preserve">
         <value>رمز عبور شما تنظیم شده است.</value>
+    </data>
+    <data name="Your Raven Test has been completed or expired!" xml:space="preserve">
+        <value>تست ریون شما تکمیل شده یا منقضی شده است!</value>
+    </data>
+    <data name="Your Raven Test has not been started!" xml:space="preserve">
+        <value>تست ریون شما شروع نشده است!</value>
+    </data>
+    <data name="Raven Result" xml:space="preserve">
+        <value>نتیجه ریون</value>
+    </data>
+    <data name="Question Category" xml:space="preserve">
+        <value>دسته بندی سوالات</value>
+    </data>
+    <data name="Correct Answers" xml:space="preserve">
+        <value>پاسخ های صحیح</value>
+    </data>
+    <data name="Total" xml:space="preserve">
+        <value>مجموع</value>
+    </data>
+    <data name="Perceptual reasoning, simple shapes, repetition." xml:space="preserve">
+        <value>استدلال ادراکی، اشکال ساده، تکرار.</value>
+    </data>
+    <data name="Perceptual reasoning, simple transformations." xml:space="preserve">
+        <value>استدلال ادراکی، دگرگونی های ساده.</value>
+    </data>
+    <data name="Multiple rules tracking." xml:space="preserve">
+        <value>ردیابی قوانین چندگانه</value>
+    </data>
+    <data name="Abstract reasoning." xml:space="preserve">
+        <value>استدلال انتزاعی</value>
+    </data>
+    <data name="Mental flexibility, fluid intelligence" xml:space="preserve">
+        <value>انعطاف ذهنی، هوش سیال</value>
     </data>
 </root>

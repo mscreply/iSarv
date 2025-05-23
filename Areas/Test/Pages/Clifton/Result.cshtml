@@ -11,7 +11,7 @@
 <table class="table mt-4">
     <thead>
     <tr>
-        <th>@Localizer.Text("Test Domain")</th>
+        <th>@Localizer.Text("Clifton Domain")</th>
         <th>@Localizer.Text("Total Score")</th>
     </tr>
     </thead>
@@ -20,7 +20,7 @@
     {
         int totalScore = domain.Value.Values.Sum();
         <tr>
-            <td>@domain.Key</td>
+            <td>@Localizer.TextIgnoreCase(domain.Key.ToDescription())</td>
             <td>@totalScore</td>
         </tr>
         <tr>
@@ -28,7 +28,7 @@
                 <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(domain.Key)]">
                     <thead>
                     <tr>
-                        <th>@Localizer.Text("Theme")</th>
+                        <th>@Localizer.Text("Clifton Theme")</th>
                         <th>@Localizer.Text("Score")</th>
                     </tr>
                     </thead>
@@ -36,7 +36,7 @@
                     @foreach (var theme in domain.Value)
                     {
                         <tr>
-                            <td>@theme.Key</td>
+                            <td>@Localizer.TextIgnoreCase(theme.Key.ToDescription())</td>
                             <td>@theme.Value</td>
                         </tr>
                     }

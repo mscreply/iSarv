@@ -78,7 +78,7 @@
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.NeoTest.Response))
+                    @if (Model.TestPackage.NeoTest.IsCompleted)
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">
@@ -127,7 +127,7 @@
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.CliftonTest.Response))
+                    @if (Model.TestPackage.CliftonTest.IsCompleted)
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">
@@ -177,7 +177,7 @@
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.HollandTest.Response))
+                    @if (Model.TestPackage.HollandTest.IsCompleted)
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">
@@ -227,7 +227,7 @@
                     </button>
                 </h5>
                 <div>
-                    @if (!string.IsNullOrEmpty(Model.TestPackage.RavenTest.Response))
+                    @if (Model.TestPackage.RavenTest.IsCompleted)
                     {
                         <div class="input-group">
                             <select class="form-select" name="server">

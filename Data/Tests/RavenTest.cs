@@ -39,14 +39,40 @@ public class RavenTest
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
-    private ApplicationDbContext applicationDbContext { get; }
-
     public string Status => IsCompleted ? "Completed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
+        DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
-    public object CalculateScores()
+    private ApplicationDbContext applicationDbContext { get; }
+
+    public Dictionary<string, int> CalculateScores()
     {
-        throw new NotImplementedException();
+        var correctAnswersString = File.ReadAllText(Path.Combine(new HttpContextAccessor().HttpContext?.RequestServices
+            .GetRequiredService<IWebHostEnvironment>()
+            .WebRootPath!, "App_Files/data/raven/raven_answers.txt"));
+        var correctAnswers = correctAnswersString.Split(',');
+        var userResponses = Response.Split(',');
+
+        var categoryScores = new int[5];
+        for (var i = 0; i < 60; i++)
+        {
+            var categoryIndex = i / 12;
+            if (userResponses.Length > i && correctAnswers.Length > i)
+            {
+                if (userResponses[i].Trim() == correctAnswers[i].Trim())
+                {
+                    categoryScores[categoryIndex]++;
+                }
+            }
+        }
+
+        return new Dictionary<string, int>
+        {
+            { "A", categoryScores[0] },
+            { "B", categoryScores[1] },
+            { "C", categoryScores[2] },
+            { "D", categoryScores[3] },
+            { "E", categoryScores[4] }
+        };
     }
 }

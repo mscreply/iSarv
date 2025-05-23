@@ -27,7 +27,10 @@ namespace iSarv.Areas.Test.Pages.Clifton
 
         public List<CliftonTestQuestion> Questions { get; set; }
 
-        [BindProperty] public Dictionary<int, string> Answers { get; set; }
+        [BindProperty]
+        public int[] Answers { get; set; }
+
+        [BindProperty] public int CurrentStep { get; set; }
 
         public async Task<IActionResult> OnGetAsync(int testId)
         {
@@ -43,6 +46,8 @@ namespace iSarv.Areas.Test.Pages.Clifton
             IsDoneOrExpired = cliftonTest!.IsCompleted || cliftonTest.Deadline < DateTime.Now;
             IsNotStarted = cliftonTest.StartDate > DateTime.Now;
 
+            Answers = string.IsNullOrEmpty(cliftonTest.Response) ? Enumerable.Repeat(2, Questions.Count()).ToArray() : cliftonTest.Response.Split(",").Select(int.Parse).ToArray();
+            CurrentStep = Answers.Length > Questions.Count ? Answers[Questions.Count] : 1;
             return Page();
         }
 
@@ -65,6 +70,20 @@ namespace iSarv.Areas.Test.Pages.Clifton
             }
 
             return Redirect("/User/Dashboard");
+        }
+
+        public async Task<IActionResult> OnPostSaveProgressAsync(int testId, string[] answers)
+        {
+            var cliftonTest = _context.CliftonTests.FirstOrDefault(ct => ct.Id == testId);
+            if (cliftonTest != null)
+            {
+                cliftonTest.Response = string.Join(",", answers.Append(CurrentStep.ToString()));
+                _context.CliftonTests.Update(cliftonTest);
+                await _context.SaveChangesAsync();
+                return new JsonResult(new { success = true });
+            }
+
+            return new JsonResult(new { success = false });
         }
     }
 }

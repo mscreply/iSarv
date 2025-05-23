@@ -27,8 +27,11 @@ namespace iSarv.Areas.Test.Pages.Holland
 
         public List<HollandTestQuestion> Questions { get; set; }
 
-        [BindProperty] public Dictionary<int, string> Answers { get; set; }
+        [BindProperty]
+        public int[] Answers { get; set; }
 
+        [BindProperty] public int CurrentStep { get; set; }
+        
         public async Task<IActionResult> OnGetAsync(int testId)
         {
             if (!await _userManager.DoesTestBelongToUserAsync(User, testId, "holland"))
@@ -43,6 +46,8 @@ namespace iSarv.Areas.Test.Pages.Holland
             IsDoneOrExpired = hollandTest!.IsCompleted || hollandTest.Deadline < DateTime.Now;
             IsNotStarted = hollandTest.StartDate > DateTime.Now;
 
+            Answers = string.IsNullOrEmpty(hollandTest.Response) ? Enumerable.Repeat(0, Questions.Count()).ToArray() : hollandTest.Response.Split(",").Select(int.Parse).ToArray();
+            CurrentStep = Answers.Length > Questions.Count ? Answers[Questions.Count] : 1;
             return Page();
         }
 
@@ -65,6 +70,20 @@ namespace iSarv.Areas.Test.Pages.Holland
             }
 
             return Redirect("/User/Dashboard");
+        }
+
+        public async Task<IActionResult> OnPostSaveProgressAsync(int testId, int[] answers)
+        {
+            var hollandTest = _context.HollandTests.FirstOrDefault(ct => ct.Id == testId);
+            if (hollandTest != null)
+            {
+                hollandTest.Response = string.Join(",", answers.Append(CurrentStep));
+                _context.HollandTests.Update(hollandTest);
+                await _context.SaveChangesAsync();
+                return new JsonResult(new { success = true });
+            }
+
+            return new JsonResult(new { success = false });
         }
     }
 }

@@ -18,9 +18,9 @@ else if (Model.IsDoneOrExpired)
 }
 else
 {
-    <form method="post">
+    <form method="post" id="testForm">
         <div id="step-container">
-            <div class="step" id="step-1">
+            <div class="step" id="step-1" style=@(Model.CurrentStep != 1 ? "display:none;" : "")>
                 <p>@Localizer.TextIgnoreCase("Welcome to the Holland Interest Test (RIASEC)!")</p>
                 <p>@Localizer.TextIgnoreCase("Read each statement carefully and mark the answer that most closely matches your thoughts or feelings.")</p>
                 <p>@Localizer.TextIgnoreCase("Note that there is no right or wrong answer, so try to choose an answer that reflects your true feelings.")</p>
@@ -34,7 +34,7 @@ else
             {
                 foreach (var personality in Enum.GetValues<HollandPersonality>())
                 {
-                    <div class="step p-5" id="step-@(i + 2)" style="display: none;">
+                    <div class="step p-5" id="step-@(i + 2)" style=@(Model.CurrentStep != i + 2 ? "display:none;" : "")>
                         <h4 class="text-primary mb-">
                             @{
                                 var statement = type switch
@@ -57,11 +57,13 @@ else
                                         @if (question.Type != HollandQuestionType.Ability)
                                         {
                                             <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
-                                                   value="0" id="answers-@question.Id-0" checked/>
+                                                   value="0" id="answers-@question.Id-0"
+                                                   @(Model.Answers[question.Id - 1] == 0 ? "checked" : "")/>
                                             <label class="btn btn-outline-danger" for="answers-@question.Id-0"><i
                                                     class="fas fa-xmark"></i> </label>
                                             <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
-                                                   value="1" id="answers-@question.Id-1"/>
+                                                   value="1" id="answers-@question.Id-1"
+                                                   @(Model.Answers[question.Id - 1] == 1 ? "checked" : "")/>
                                             <label class="btn btn-outline-success" for="answers-@question.Id-1"><i
                                                     class="fas fa-check"></i> </label>
                                         }
@@ -69,9 +71,10 @@ else
                                         {
                                             for (var j = 1; j <= 7; j++)
                                             {
+                                                if (Model.Answers[question.Id - 1] == 0) Model.Answers[question.Id - 1] = 1;
                                                 <input class="btn-check" type="radio" name="answers[@(question.Id - 1)]"
                                                        value="@j" id="answers-@question.Id-@j"
-                                                       @(j == 1 ? "checked" : "")/>
+                                                       @(Model.Answers[question.Id - 1] == j ? "checked" : "")/>
                                                 <label class="btn btn-outline-success"
                                                        for="answers-@question.Id-@j"> @j </label>
                                             }
@@ -80,26 +83,34 @@ else
                                 </tr>
                             }
                         </table>
-                        @if (i > 0)
-                        {
-                            <button class="btn btn-primary next-step"
-                                    data-next="@(i + 1)">@Localizer.TextIgnoreCase("Previous")</button>
-                        }
-                        @if (i < 23)
-                        {
-                            <button class="btn btn-primary next-step"
-                                    data-next="@(i + 3)">@Localizer.TextIgnoreCase("Next")</button>
-                        }
-                        else
-                        {
-                            <button class="btn btn-success"
-                                    id="submit-test">@Localizer.TextIgnoreCase("Submit Test")</button>
-                        }
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                @if (i > 0)
+                                {
+                                    <button class="btn btn-primary next-step"
+                                            data-next="@(i + 1)">@Localizer.TextIgnoreCase("Previous")</button>
+                                }
+                            </div>
+                            <div>
+                                @if (i < 23)
+                                {
+                                    <button class="btn btn-primary next-step"
+                                            data-next="@(i + 3)">@Localizer.TextIgnoreCase("Next")</button>
+                                    <a href="#" class="btn btn-success" onclick="saveTestProgress()">@Localizer.TextIgnoreCase("Save")</a>
+                                }
+                                else
+                                {
+                                    <button class="btn btn-success"
+                                            id="submit-test">@Localizer.TextIgnoreCase("Submit Test")</button>
+                                }
+                            </div>
+                        </div>
                     </div>
                     i++;
                 }
             }
         </div>
+        <input type="hidden" name="currentStep" asp-for="CurrentStep">
     </form>
 }
 
@@ -108,15 +119,37 @@ else
         $(document).ready(function () {
             $(".next-step").on("click", function (e) {
                 e.preventDefault();
-                var nextStep = $(this).data("next");
+                let nextStep = $(this).data("next");
                 $(".step").hide();
                 $("#step-" + nextStep).show();
+                $("input[name='currentStep']").val(nextStep);
             });
 
             $("#submit-test").on("click", function () {
                 alert($.parseHTML('@Localizer.TextIgnoreCase("Test submitted successfully!")')[0].textContent);
                 // Add form submission logic here
             });
+
+            // Auto-save every 5 minutes
+            setInterval(function () {
+                saveTestProgress();
+            }, 120000);
+
         });
+
+        function saveTestProgress() {
+            let data = $("#testForm").serialize();
+            $.ajax({
+                url: '?handler=SaveProgress',
+                type: 'POST',
+                data: data,
+                success: function (data) {
+                    console.log('Test progress saved successfully!');
+                },
+                error: function (error) {
+                    console.error('Error saving test progress:', error);
+                }
+            });
+        }
     </script>
 }
