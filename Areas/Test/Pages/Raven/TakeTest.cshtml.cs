@@ -57,7 +57,7 @@ namespace iSarv.Areas.Test.Pages.Raven
             {
                 ravenTest.Response = string.Join(",", answers);
                 ravenTest.SubmitDate = DateTime.Now;
-                var aiResponse = await _AIService.GetAIReplyForTestAsync(ravenTest.CalculateScores().ToJson(), "Raven PI-R");
+                var aiResponse = await _AIService.GetAIReplyForTestAsync(ravenTest.CalculateScores().ToJson(), "Raven IQ");
                 ravenTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
                 _context.RavenTests.Update(ravenTest);
                 await _context.SaveChangesAsync();

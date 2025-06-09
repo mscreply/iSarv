@@ -23,8 +23,6 @@ public class Result : PageModel
 
     public RavenTest RavenTest { get; set; } = default!;
 
-    public Dictionary<string, int> Score { get; set; }
-
     public string AIError { get; set; } = "";
     public async Task<IActionResult> OnGetAsync(int testId)
     {
@@ -40,12 +38,10 @@ public class Result : PageModel
             return RedirectToPage("TakeTest", new { testId });
         }
 
-        Score = RavenTest.CalculateScores();
-
         if (RavenTest.Result == "Wait for AI" || string.IsNullOrEmpty(RavenTest.Result))
         {
             // Get result from AI
-            var aiResponse = await _AIService.GetAIReplyForTestAsync(Score.ToJson(), "Raven PI-R");
+            var aiResponse = await _AIService.GetAIReplyForTestAsync(RavenTest.CalculateScores().ToJson(), "Raven IQ");
             RavenTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             await _context.SaveChangesAsync();
             if(!aiResponse.IsSuccess) AIError = aiResponse.Reply;

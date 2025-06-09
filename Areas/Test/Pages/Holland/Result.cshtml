@@ -2,28 +2,37 @@
 @model iSarv.Areas.Test.Pages.Holland.Result
 
 @{
-    ViewData["Title"] = Localizer.Text("Holland Result");
+    ViewData["Title"] = Localizer.Text("Holland Test Result");
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
 <h4>@ViewData["Title"]</h4>
 
-<table class="table table-striped mt-4">
-    <thead>
-        <tr>
-            <th>@Localizer.Text("Personality")</th>
-            <th>@Localizer.Text("Score")</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var score in Model.Score)
-        {
-            <tr>
-                <td>@Localizer.TextIgnoreCase(score.Key.ToString())</td>
-                <td>@score.Value</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped mt-4">
+            <thead>
+                <tr>
+                    <th>@Localizer.Text("Personality Type")</th>
+                    <th>@Localizer.Text("Score")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var score in Model.Score)
+                {
+                    <tr>
+                        <td>@Localizer.TextIgnoreCase(score.Key.ToString())</td>
+                        <td>@score.Value</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <canvas id="barChartCV"></canvas>
+    </div>
+    <div class="col-md-6">
+        <canvas id="radarChartCV"></canvas>
+    </div>
+</div>
 
 <h5 class="mt-4">
     @Localizer.Text("Result")
@@ -41,4 +50,81 @@
 @if (!string.IsNullOrEmpty(Model.AIError))
 {
     <div class="d-none">@Model.AIError</div>
+}
+
+@section Scripts {
+    <script src="~/lib/chart/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            const data =
+            {
+                labels: decodeHtmlEntities("@string.Join(",", Model.Score.Keys.Select(k => Localizer.TextIgnoreCase(k.ToString())))").split(','),
+                datasets: [{
+                    data: [@string.Join(",", Model.Score.Values)],
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+                }]
+            };
+            
+            const rOptions = {
+                scales: {
+                    r: {
+                        grid: {
+                            circular: true
+                        },
+                        beginAtZero: true,
+                        max: 35
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            };
+
+            const rCtx = document.getElementById('radarChartCV').getContext('2d');
+            var radarChart = new Chart(rCtx, {
+                type: 'radar',
+                data: data,
+                options: rOptions
+            });
+
+            const bOptions = {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 35
+                    },
+                    x: {
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            };
+
+            const bCtx = document.getElementById('barChartCV').getContext('2d');
+            var barChart = new Chart(bCtx, {
+                type: 'bar',
+                data: data,
+                options: bOptions
+            });
+
+            if("@lang" === "fa")
+            {
+                radarChart.options.scales.r.pointLabels.font = {
+                    size: 14,
+                    family: 'Vazir, sans-serif'
+                };
+                barChart.options.scales.x.ticks.font = {
+                    size: 14,
+                    family: 'Vazir, sans-serif'
+                };
+            }
+        });
+    </script>
 }

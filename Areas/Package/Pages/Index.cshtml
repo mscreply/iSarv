@@ -35,6 +35,9 @@
                 <button type="submit" class="btn btn-success">@Localizer.TextIgnoreCase("Load from Excel")</button>
             </div>
         </form>
+        <form asp-page-handler="SavePackagesToExcel" method="post">
+            <button type="submit" class="btn btn-success ms-2">@Localizer.TextIgnoreCase("Download As Excel")</button>
+        </form>
         <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
     }
 </div>

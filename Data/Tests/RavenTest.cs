@@ -43,9 +43,7 @@ public class RavenTest
         DateTime.Now < StartDate ? "Not Started" :
         DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
-    private ApplicationDbContext applicationDbContext { get; }
-
-    public Dictionary<string, int> CalculateScores()
+    public Dictionary<string, int> CalculateCategoryScores()
     {
         var correctAnswersString = File.ReadAllText(Path.Combine(new HttpContextAccessor().HttpContext?.RequestServices
             .GetRequiredService<IWebHostEnvironment>()
@@ -74,5 +72,36 @@ public class RavenTest
             { "D", categoryScores[3] },
             { "E", categoryScores[4] }
         };
+    }
+
+    public Dictionary<string, Dictionary<string, bool>> CalculateScores()
+    {
+        var correctAnswersString = File.ReadAllText(Path.Combine(new HttpContextAccessor().HttpContext?.RequestServices
+            .GetRequiredService<IWebHostEnvironment>()
+            .WebRootPath!, "App_Files/data/raven/raven_answers.txt"));
+        var correctAnswers = correctAnswersString.Split(',');
+        var userResponses = Response.Split(',');
+
+        var categoryAnswers = new Dictionary<string, Dictionary<string, bool>>();
+        for (var categoryIndex = 0; categoryIndex < 5; categoryIndex++)
+        {
+            var categoryName = ((char)('A' + categoryIndex)).ToString();
+            categoryAnswers[categoryName] = new Dictionary<string, bool>();
+            for (var i = categoryIndex * 12; i < (categoryIndex + 1) * 12; i++)
+            {
+                if (userResponses.Length > i && correctAnswers.Length > i)
+                {
+                    var answerKey = $"{categoryName}{i % 12 + 1}";
+                    categoryAnswers[categoryName][answerKey] = userResponses[i].Trim() == correctAnswers[i].Trim();
+                }
+                else
+                {
+                    var answerKey = $"{categoryName}{i % 12 + 1}";
+                    categoryAnswers[categoryName][answerKey] = false; // Or handle missing responses as needed
+                }
+            }
+        }
+
+        return categoryAnswers;
     }
 }

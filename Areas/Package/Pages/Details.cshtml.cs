@@ -335,7 +335,7 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var score = hollandTest.CalculateScores();
-            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Holland Interest (HII)", server, model);
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Holland (RIASEC)", server, model);
             hollandTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
             AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
 

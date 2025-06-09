@@ -307,3 +307,10 @@ function setLetterBackground(on) {
         $("iframe").contents().find(".letter").css("background", "none");
     }
 }
+
+// Localized string &...; to utf-8
+function decodeHtmlEntities(str) {
+    let txt = document.createElement("textarea");
+    txt.innerHTML = str;
+    return txt.value;
+}

@@ -1,10 +1,12 @@
 using ClosedXML.Excel;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using iSarv.Data.Tests;
+using iSarv.Data;
 
+using System.Linq;
 namespace iSarv.Areas.Package.Pages
 {
     [Authorize(Roles = "Administrator, Psychologist")]
@@ -120,5 +122,59 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage();
         }
+
+        public async Task<IActionResult> OnPostSavePackagesToExcelAsync()
+        {
+            try
+            {
+                using (var workbook = new XLWorkbook())
+                {
+                    var worksheet = workbook.Worksheets.Add("Packages");
+
+                    // Add header row
+                    worksheet.Cell(1, 1).Value = "User Full Name";
+                    worksheet.Cell(1, 2).Value = "User National ID";
+                    worksheet.Cell(1, 3).Value = "Start Date";
+                    worksheet.Cell(1, 4).Value = "End Date";
+                    worksheet.Cell(1, 5).Value = "Is Completed";
+                    worksheet.Cell(1, 6).Value = "NEO Test Status";
+                    worksheet.Cell(1, 7).Value = "Clifton Test Status";
+                    worksheet.Cell(1, 8).Value = "Holland Test Status";
+                    worksheet.Cell(1, 9).Value = "Raven Test Status";
+
+                    // Add data rows
+                    var row = 2;
+                    foreach (var package in _context.TestPackages.Include(tp => tp.User)
+                                 .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
+                                 .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest).ToList())
+                    {
+                        worksheet.Cell(row, 1).Value = package.User?.FullName;
+                        worksheet.Cell(row, 2).Value = package.User?.NationalId;
+                        worksheet.Cell(row, 3).Value = package.StartDate;
+                        worksheet.Cell(row, 4).Value = package.Deadline;
+                        worksheet.Cell(row, 5).Value = package.IsCompleted;
+                        worksheet.Cell(row, 6).Value = package.NeoTest.Status;
+                        worksheet.Cell(row, 7).Value = package.CliftonTest.Status;
+                        worksheet.Cell(row, 8).Value = package.HollandTest.Status;
+                        worksheet.Cell(row, 9).Value = package.RavenTest.Status;
+                        row++;
+                    }
+
+                    using (var stream = new MemoryStream())
+                    {
+                        workbook.SaveAs(stream);
+                        var content = stream.ToArray();
+                        return File(content, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Packages.xlsx");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ToastMessage = $"An error occurred while saving the packages: {ex.Message}";
+                return RedirectToPage();
+            }
+        }
+        
+        
     }
 }

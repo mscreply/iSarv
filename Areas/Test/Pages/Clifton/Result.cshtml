@@ -3,16 +3,17 @@
 
 @{
     ViewData["Title"] = @Localizer.Text("Clifton Result");
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
 <h4>@ViewData["Title"]</h4>
 
-@{ var colorStyles = new[] { "table-success", "table-warning", "table-danger", "table-primary" }; }
+@{ var colorStyles = new[] { "table-success", "table-info", "table-warning", "table-danger" }; }
 <table class="table mt-4">
     <thead>
     <tr>
         <th>@Localizer.Text("Clifton Domain")</th>
-        <th>@Localizer.Text("Total Score")</th>
+        <th class="text-center">@Localizer.Text("Total Score")</th>
     </tr>
     </thead>
     <tbody>
@@ -21,10 +22,10 @@
         int totalScore = domain.Value.Values.Sum();
         <tr>
             <td>@Localizer.TextIgnoreCase(domain.Key.ToDescription())</td>
-            <td>@totalScore</td>
+            <td class="text-center">@totalScore</td>
         </tr>
         <tr>
-            <td colspan="2">
+            <td>
                 <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(domain.Key)]">
                     <thead>
                     <tr>
@@ -42,6 +43,10 @@
                     }
                     </tbody>
                 </table>
+                <canvas id="bar-@domain.Key" width="200" height="100"></canvas>
+            </td>
+            <td class="w-50">
+                <canvas id="radar-@domain.Key" width="200" height="100"></canvas>
             </td>
         </tr>
     }
@@ -64,4 +69,126 @@
 @if (!string.IsNullOrEmpty(Model.AIError))
 {
     <div class="d-none">@Model.AIError</div>
+}
+
+@section Scripts {
+    <script src="~/lib/chart/chart.js"></script>
+    <script>
+        $(document).ready(function () {
+            @{
+                var labels = new List<string>();
+                foreach (var domain in Model.Score)
+                {
+                    labels.Add(string.Join(",", domain.Value.Keys.Select(k => Localizer.TextIgnoreCase(k.ToString()))));
+                }
+            }
+            var scoreData = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model.Score));
+            var backgroundColors = [
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(255, 99, 132, 0.2)'
+            ];
+            var borderColors = [
+                'rgba(75, 192, 192, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(255, 99, 132, 1)'
+            ];
+            for (var domain in scoreData) {
+                var labels = "";
+                switch (domain) {
+                    case 'Executing':
+                        labels = decodeHtmlEntities("@labels[0]");
+                        break;
+                    case 'Influencing':
+                        labels = decodeHtmlEntities("@labels[1]");
+                        break;
+                    case 'RelationshipBuilding':
+                        labels = decodeHtmlEntities("@labels[2]");
+                        break;
+                    case 'StrategicThinking':
+                        labels = decodeHtmlEntities("@labels[3]");
+                        break;
+                }
+                if (scoreData.hasOwnProperty(domain)) {
+                    var themes = scoreData[domain];
+                    var data = {
+                        labels: labels.split(','),
+                        datasets: [{
+                            data: Object.values(themes),
+                            backgroundColor: backgroundColors[Object.keys(scoreData).indexOf(domain)],
+                            borderColor: borderColors[Object.keys(scoreData).indexOf(domain)],
+                            borderWidth: 1
+                        }]
+                    };
+
+                    var rOptions = {
+                        scales: {
+                            r: {
+                                grid: {
+                                    circular: true,
+                                },
+                                beginAtZero: true,
+                                min: 0,
+                                max: 45,
+                                pointLabels: {
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    };
+
+                    var bOptions = {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                min: 0,
+                                max: 45
+                            },
+                            x: {
+                                ticks: {
+                                    font: {
+                                        weight: 'bold'
+                                    }
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    };
+
+                    var radarCtx = document.getElementById('radar-' + domain.toString()).getContext('2d');
+                    var radarChart = new Chart(radarCtx, {
+                        type: 'radar',
+                        data: data,
+                        options: rOptions
+                    });
+                    var barCtx = document.getElementById('bar-' + domain.toString()).getContext('2d');
+                    var barChart = new Chart(barCtx, {
+                        type: 'bar',
+                        data: data,
+                        options: bOptions
+                    });
+ 
+                    if ('@lang' === 'fa') {
+                        radarChart.options.scales.r.pointLabels.font.family = 'Vazir';
+                        barChart.options.scales.x.ticks.font.family = 'Vazir';
+                        radarChart.update();
+                        barChart.update();
+                    }
+               }
+            }
+        });
+    </script>
 }

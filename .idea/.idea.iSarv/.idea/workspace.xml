@@ -10,91 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_a9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_b9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_c9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_d9.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e10.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e11.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e12.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e5.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e6.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e7.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e8.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/Raven/raven_e9.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestion.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestion.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminNavPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminNavPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_LoginPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSarv.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iSarv.db" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iSarv.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/js/site.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,12 +50,12 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/42347e6b97634007988f4665aae3611d26ac40/6a/f027e480/ModelValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/DecompilerCache/decompiler/b80d965e256047d4b5aeb047e4d750913b938/88/deeb2f4a/RazorView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/36f346b6c0454bc8a6afa7aed38119fe5bbffcc983298d9bfa4dbd5f49461f/Monitor.CoreCLR.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/db398e56b0886a44a1806fa88c6c6ab21566404a2791b87fc7ea2d74abfd863/ChatClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1584e493603cfc4e9b36b77d6d4afe97de6363f9/src/libraries/System.Private.CoreLib/src/System/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/ISarv-Project/iSarv/Pages/Shared/Layouts/_AdminLayout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
@@ -143,7 +76,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.iSarv: IIS Express.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Launch Settings Profile.iSarv: IIS Express.executor&quot;: &quot;Run&quot;,
     &quot;.NET Launch Settings Profile.iSarv: http.executor&quot;: &quot;Debug&quot;,
     &quot;.NET Launch Settings Profile.iSarv: https.executor&quot;: &quot;Debug&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
@@ -161,7 +94,7 @@
     &quot;two.files.diff.last.used.file&quot;: &quot;D:/RiderProjects/RIMS-Project/RIMS/Areas/Identity/Pages/Account/Manage/Profile.cshtml&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.iSarv: http">
+  <component name="RunManager" selected="Publish to IIS.Publish iSarv to IIS">
     <configuration name="Publish iSarv to IIS" type="DotNetMsBuildPublish" factoryName="Publish to IIS">
       <riderPublish configuration="Release" platform="Any CPU" publish_profile="&lt;no publish profile&gt;" uuid_high="-9159967781003247216" uuid_low="-7189944830166748072" />
       <method v="2" />
@@ -262,7 +195,11 @@
       <workItem from="1747916082090" duration="3551000" />
       <workItem from="1747924530791" duration="14238000" />
       <workItem from="1747952939790" duration="4908000" />
-      <workItem from="1747995780309" duration="1481000" />
+      <workItem from="1747995780309" duration="3527000" />
+      <workItem from="1748038625137" duration="203000" />
+      <workItem from="1748074259786" duration="229000" />
+      <workItem from="1748501013459" duration="507000" />
+      <workItem from="1749460211342" duration="2673000" />
     </task>
     <task id="LOCAL-00001" summary="user management finish">
       <option name="closed" value="true" />
@@ -312,7 +249,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747811666039</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="all take test and result finish">
+      <option name="closed" value="true" />
+      <created>1747997568336</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1747997568336</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +285,8 @@
     <MESSAGE value="add AI myserver" />
     <MESSAGE value="delete s from test names" />
     <MESSAGE value="add holland test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add holland test" />
+    <MESSAGE value="all take test and result finish" />
+    <option name="LAST_COMMIT_MESSAGE" value="all take test and result finish" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -3,40 +3,159 @@
 
 @{
     ViewData["Title"] = Localizer.Text("Raven Result");
+    var lang = System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 }
 
 <h4>@ViewData["Title"]</h4>
 
-<table class="table table-striped mt-4">
-    <thead>
-        <tr>
-            <th>@Localizer.Text("Question Category")</th>
-            <th>@Localizer.Text("Correct Answers")</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            var desc = new Dictionary<string, string>(){
-                { "A", "Perceptual reasoning, simple shapes, repetition." },
-                { "B", "Perceptual reasoning, simple transformations." },
-                { "C", "Multiple rules tracking." },
-                { "D", "Abstract reasoning." },
-                { "E", "Mental flexibility, fluid intelligence" }
-            };
-        }
-        @foreach (var category in Model.Score.Keys)
-        {
-            <tr>
-                <td>@category : @Localizer.TextIgnoreCase(desc[category])</td>
-                <td>@Model.Score[category]</td>
-            </tr>
-        }
-        <tr>
-            <td>@Localizer.TextIgnoreCase("Total")</td>
-            <td>@Model.Score.Values.Sum()</td>
-        </tr>
-    </tbody>
-</table>
+@{
+    var desc = new Dictionary<string, string>(){
+        { "A", "Perceptual reasoning, simple shapes, repetition." },
+        { "B", "Perceptual reasoning, simple transformations." },
+        { "C", "Multiple rules tracking." },
+        { "D", "Abstract reasoning." },
+        { "E", "Mental flexibility, fluid intelligence" }
+    };
+    var Score = Model.RavenTest.CalculateCategoryScores();
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <table class="table table-striped mt-4">
+                <thead>
+                    <tr>
+                        <th>@Localizer.Text("Question Category")</th>
+                        <th>@Localizer.Text("Correct Answers")</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var category in Score.Keys)
+                    {
+                        <tr>
+                            <td>@category : @Localizer.TextIgnoreCase(desc[category])</td>
+                            <td>@Score[category]</td>
+                        </tr>
+                    }
+                    <tr>
+                        <td>@Localizer.TextIgnoreCase("Total")</td>
+                        <td>@Score.Values.Sum()</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            @{ var questionScore = Model.RavenTest.CalculateScores(); }
+            <script src="~/lib/chart/chart.js"></script>
+
+            <canvas id="barChart" width="400" height="150"></canvas>
+
+            <script>
+                var barCtx = document.getElementById('barChart').getContext('2d');
+                var barChart = new Chart(barCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['A', 'B', 'C', 'D', 'E'],
+                        datasets: [{
+                            data: [
+                                @Score["A"],
+                                @Score["B"],
+                                @Score["C"],
+                                @Score["D"],
+                                @Score["E"]
+                            ],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                max: 12
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+            </script>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <canvas id="radarChart" width="400" height="400"></canvas>
+
+        <script>
+            var ctx = document.getElementById('radarChart').getContext('2d');
+            var myChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: [
+                        'A : ' + (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase(desc["A"])', 'text/html').documentElement.textContent,
+                        'B : ' + (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase(desc["B"])', 'text/html').documentElement.textContent,
+                        'C : ' + (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase(desc["C"])', 'text/html').documentElement.textContent,
+                        'D : ' + (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase(desc["D"])', 'text/html').documentElement.textContent,
+                        'E : ' + (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase(desc["E"])', 'text/html').documentElement.textContent
+                    ],
+                    datasets: [{
+                        label: (new DOMParser()).parseFromString('@Localizer.TextIgnoreCase("Raven Test")', 'text/html').documentElement.textContent,
+                        data: [
+                            @Score["A"], 
+                            @Score["B"], 
+                            @Score["C"], 
+                            @Score["D"], 
+                            @Score["E"]  
+                        ],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            beginAtZero: true,
+                            min: 0,
+                            max: 12
+                        }
+                    }
+                }
+            });
+
+            if ('@lang' == 'fa') {
+                myChart.options.scales.r.pointLabels.font.family = 'Vazir';
+                myChart.options.plugins.title.font.family = 'Vazir';
+                myChart.options.plugins.legend = {
+                    labels: {
+                        font: {
+                            family: 'Vazir'
+                        }
+                    }
+                };
+                myChart.update();
+            }
+        </script>
+    </div>
+</div>
+
 
 
 <h5 class="mt-4">

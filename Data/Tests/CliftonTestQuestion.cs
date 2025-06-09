@@ -110,5 +110,5 @@ public enum CliftonDomain
     Executing,
     Influencing,
     [Description("Relationship Building")] RelationshipBuilding,
-    StrategicThinking
+    [Description("Strategic Thinking")] StrategicThinking
 }

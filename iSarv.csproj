@@ -32,6 +32,7 @@
       <Folder Include="Areas\Test\Pages\Neo\" />
       <Folder Include="Areas\User\" />
       <Folder Include="wwwroot\App_Files\uploads\" />
+      <Folder Include="wwwroot\lib\chart\" />
     </ItemGroup>
 
     <ItemGroup>
