@@ -99,8 +99,7 @@ builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.Configure<SmsSettings>(builder.Configuration.GetSection("SmsSettings"));
 builder.Services.AddTransient<ISmsService, SmsService>();
 
-// ChatGPT Configuration
-builder.Services.Configure<AISettings>(builder.Configuration.GetSection("AISettings"));
+// AI Configuration
 builder.Services.AddTransient<IAIService, AIService>();
 
 var app = builder.Build();

@@ -122,6 +122,21 @@
             PublicKeyToken=b77a5c561934e089
         </value>
     </resheader>
+    <data name="Abstract reasoning." xml:space="preserve">
+        <value>استدلال انتزاعی</value>
+    </data>
+    <data name="Mental flexibility, fluid intelligence" xml:space="preserve">
+        <value>انعطاف ذهنی، هوش سیال</value>
+    </data>
+    <data name="Multiple rules tracking." xml:space="preserve">
+        <value>ردیابی قوانین چندگانه</value>
+    </data>
+    <data name="Perceptual reasoning, simple shapes, repetition." xml:space="preserve">
+        <value>استدلال ادراکی، اشکال ساده، تکرار.</value>
+    </data>
+    <data name="Perceptual reasoning, simple transformations." xml:space="preserve">
+        <value>استدلال ادراکی، دگرگونی های ساده.</value>
+    </data>
     <data name="'{0}' is required." xml:space="preserve">
         <value>'{0}' اجباری است.</value>
     </data>
@@ -395,6 +410,9 @@
     <data name="AI Career Matching" xml:space="preserve">
         <value>تطبیق شغلی با هوش مصنوعی</value>
     </data>
+    <data name="AI Settings" xml:space="preserve">
+        <value>تنظیمات هوش مصنوعی</value>
+    </data>
     <data name="AI-Powered Analysis" xml:space="preserve">
         <value>تحلیل مبتنی بر هوش مصنوعی</value>
     </data>
@@ -430,6 +448,9 @@
     </data>
     <data name="Anything that has to do with sports attracts my attention" xml:space="preserve">
         <value>هر چیزی که به ورزش ارتباط داشته باشد، توجه من را به خودش جلب می‌کند.</value>
+    </data>
+    <data name="API Key" xml:space="preserve">
+        <value>کلید دسترسی</value>
     </data>
     <data name="ApplicationUser" xml:space="preserve">
         <value>کاربر</value>
@@ -782,11 +803,11 @@
     <data name="Clifton Test Result" xml:space="preserve">
         <value>نتیجه تست کلیفتون</value>
     </data>
-    <data name="CliftonTest" xml:space="preserve">
-        <value>تست کلیفتون</value>
-    </data>
     <data name="Clifton Theme" xml:space="preserve">
         <value>استعداد کلیفتون</value>
+    </data>
+    <data name="CliftonTest" xml:space="preserve">
+        <value>تست کلیفتون</value>
     </data>
     <data name="Code" xml:space="preserve">
         <value>کد</value>
@@ -944,6 +965,9 @@
     <data name="Conventional" xml:space="preserve">
         <value>قانونمند</value>
     </data>
+    <data name="Correct Answers" xml:space="preserve">
+        <value>پاسخ های صحیح</value>
+    </data>
     <data name="Correspondent" xml:space="preserve">
         <value>نویسنده مسئول</value>
     </data>
@@ -992,8 +1016,14 @@
     <data name="Create New Instructor" xml:space="preserve">
         <value>ایجاد مدرس جدید</value>
     </data>
+    <data name="Create New Setting" xml:space="preserve">
+        <value>ایجاد تنظیمات جدید</value>
+    </data>
     <data name="Create New User" xml:space="preserve">
         <value>ایجاد کاربر جدید</value>
+    </data>
+    <data name="Create Setting" xml:space="preserve">
+        <value>ایجاد تنظیمات</value>
     </data>
     <data name="Create User" xml:space="preserve">
         <value>کاربر ایجاد کنید</value>
@@ -1054,6 +1084,9 @@
     </data>
     <data name="Decision Date" xml:space="preserve">
         <value>تاریخ تصمیم‌گیری</value>
+    </data>
+    <data name="Default Model" xml:space="preserve">
+        <value>مدل پیش‌فرض</value>
     </data>
     <data name="Default Setting" xml:space="preserve">
         <value>تنظیمات پیش‌فرض</value>
@@ -1438,6 +1471,9 @@
     </data>
     <data name="Executive Committee Members" xml:space="preserve">
         <value>اعضای کمیته اجرایی</value>
+    </data>
+    <data name="Existing Settings" xml:space="preserve">
+        <value>تنظیمات موجود</value>
     </data>
     <data name="Experience" xml:space="preserve">
         <value>تجربه</value>
@@ -3650,6 +3686,9 @@
     <data name="Mathematical or social science skills" xml:space="preserve">
         <value>مهارت های ریاضی یا علوم اجتماعی</value>
     </data>
+    <data name="Max Tokens" xml:space="preserve">
+        <value>حداکثر توکن</value>
+    </data>
     <data name="Maximizer" xml:space="preserve">
         <value>بیشینه‌ساز</value>
     </data>
@@ -3697,6 +3736,12 @@
     </data>
     <data name="MinorCorrections" xml:space="preserve">
         <value>ایراد جزئی</value>
+    </data>
+    <data name="Model List" xml:space="preserve">
+        <value>لیست مدل</value>
+    </data>
+    <data name="Model List (comma-separated)" xml:space="preserve">
+        <value>لیست مدل (جداشده با کاما)</value>
     </data>
     <data name="Modesty" xml:space="preserve">
         <value>حیا</value>
@@ -4412,6 +4457,9 @@
     <data name="Question (Fa)" xml:space="preserve">
         <value>پرسش (فا)</value>
     </data>
+    <data name="Question Category" xml:space="preserve">
+        <value>دسته بندی سوالات</value>
+    </data>
     <data name="Question Replies" xml:space="preserve">
         <value>پاسخ پرسش‌ها</value>
     </data>
@@ -4432,6 +4480,9 @@
     </data>
     <data name="Rate your abilities and skills in comparison to your peers. Try to make the most accurate assessment of yourself, giving a score of 1 for the least ability and a score of 7 for the most ability, and avoid rating yourself the same for each ability as much as possible." xml:space="preserve">
         <value>توانائیها ( توان بالقوه ) ومهارت های ( توان بالفعل ) خود را در مقایسه با همسالانتان درجه بندی نمائید. سعی نمائید صحیح ترین برآورد را در مورد خودتان انجام دهید، به كمترین توانایی نمره 1 وبه بیشترین توانایی نمره 7 بدهید و تا حد امكان از درجه بندی یكسان خود در هر توانایی بپرهیزید</value>
+    </data>
+    <data name="Raven Result" xml:space="preserve">
+        <value>نتیجه ریون</value>
     </data>
     <data name="Raven Test" xml:space="preserve">
         <value>تست ریون</value>
@@ -4532,10 +4583,10 @@
     <data name="Reject the Review" xml:space="preserve">
         <value>نپذیرفتن داوری</value>
     </data>
-    <data name="RelationshipBuilding" xml:space="preserve">
+    <data name="Relationship Building" xml:space="preserve">
         <value>روابط‌ساز</value>
     </data>
-    <data name="Relationship Building" xml:space="preserve">
+    <data name="RelationshipBuilding" xml:space="preserve">
         <value>روابط‌ساز</value>
     </data>
     <data name="Relator" xml:space="preserve">
@@ -4957,6 +5008,9 @@
     </data>
     <data name="Send verification email" xml:space="preserve">
         <value>ارسال ایمیل تایید</value>
+    </data>
+    <data name="Server" xml:space="preserve">
+        <value>سرور</value>
     </data>
     <data name="Services" xml:space="preserve">
         <value>خدمات</value>
@@ -5579,6 +5633,9 @@
     <data name="Token is invalid!!!" xml:space="preserve">
         <value>توکن ارسالی نامعتبر است !!!</value>
     </data>
+    <data name="Total" xml:space="preserve">
+        <value>مجموع</value>
+    </data>
     <data name="Total Score" xml:space="preserve">
         <value>امتیاز کل</value>
     </data>
@@ -5671,6 +5728,9 @@
     </data>
     <data name="Upload Slide" xml:space="preserve">
         <value>بارگذاری اسلاید</value>
+    </data>
+    <data name="URI" xml:space="preserve">
+        <value>آدرس اینترنتی</value>
     </data>
     <data name="Url" xml:space="preserve">
         <value>آدرس اینترنتی</value>
@@ -6046,32 +6106,5 @@
     </data>
     <data name="Your Raven Test has not been started!" xml:space="preserve">
         <value>تست ریون شما شروع نشده است!</value>
-    </data>
-    <data name="Raven Result" xml:space="preserve">
-        <value>نتیجه ریون</value>
-    </data>
-    <data name="Question Category" xml:space="preserve">
-        <value>دسته بندی سوالات</value>
-    </data>
-    <data name="Correct Answers" xml:space="preserve">
-        <value>پاسخ های صحیح</value>
-    </data>
-    <data name="Total" xml:space="preserve">
-        <value>مجموع</value>
-    </data>
-    <data name="Perceptual reasoning, simple shapes, repetition." xml:space="preserve">
-        <value>استدلال ادراکی، اشکال ساده، تکرار.</value>
-    </data>
-    <data name="Perceptual reasoning, simple transformations." xml:space="preserve">
-        <value>استدلال ادراکی، دگرگونی های ساده.</value>
-    </data>
-    <data name="Multiple rules tracking." xml:space="preserve">
-        <value>ردیابی قوانین چندگانه</value>
-    </data>
-    <data name="Abstract reasoning." xml:space="preserve">
-        <value>استدلال انتزاعی</value>
-    </data>
-    <data name="Mental flexibility, fluid intelligence" xml:space="preserve">
-        <value>انعطاف ذهنی، هوش سیال</value>
     </data>
 </root>

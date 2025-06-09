@@ -1,0 +1,206 @@
+﻿@page
+@model iSarv.Areas.AISetting.Pages.Index
+
+<div class="container mt-4">
+    <h2>@Localizer.TextIgnoreCase("AI Settings")</h2>
+
+    <hr />
+
+    <h3>@Localizer.TextIgnoreCase("Create New Setting")</h3>
+    <form method="post" asp-page-handler="CreateSetting" class="mb-4">
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="NewSettingServer" class="form-label">@Localizer.TextIgnoreCase("Server")</label>
+                <input type="text" id="NewSettingServer" name="Server" class="form-control" required />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="NewSettingApiKey" class="form-label">@Localizer.TextIgnoreCase("API Key")</label>
+                <input type="text" id="NewSettingApiKey" name="ApiKey" class="form-control" />
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="NewSettingUri" class="form-label">@Localizer.TextIgnoreCase("URI")</label>
+            <input type="url" id="NewSettingUri" name="Uri" class="form-control" />
+        </div>
+        <div class="row">
+            <div class="col-md-5 mb-3">
+                <label for="NewSettingDefaultModel" class="form-label">@Localizer.TextIgnoreCase("Default Model")</label>
+                <input type="text" id="NewSettingDefaultModel" name="DefaultModel" class="form-control" />
+            </div>
+            <div class="col-md-5 mb-3">
+                <label for="NewSettingModelList" class="form-label">@Localizer.TextIgnoreCase("Model List (comma-separated)")</label>
+                <input type="text" id="NewSettingModelList" name="ModelList" class="form-control" />
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="NewSettingMaxTokens" class="form-label">@Localizer.TextIgnoreCase("Max Tokens")</label>
+                <input type="number" id="NewSettingMaxTokens" name="MaxTokens" class="form-control" value="1000" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">@Localizer.TextIgnoreCase("Create Setting")</button>
+    </form>
+
+    <hr />
+    <h3>@Localizer.TextIgnoreCase("Existing Settings")</h3>
+    
+    <style>
+        td span {
+            word-break: break-all;
+        }
+    </style>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>@Localizer.TextIgnoreCase("Server")</th>
+                    <th>@Localizer.TextIgnoreCase("API Key")</th>
+                    <th>@Localizer.TextIgnoreCase("URI")</th>
+                    <th>@Localizer.TextIgnoreCase("Default Model")</th>
+                    <th>@Localizer.TextIgnoreCase("Model List")</th>
+                    <th>@Localizer.TextIgnoreCase("Max Tokens")</th>
+                    <th>@Localizer.TextIgnoreCase("Actions")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.AISettings != null && Model.AISettings.Any())
+                {
+                    @foreach (var setting in Model.AISettings)
+                    {
+                        <tr data-id="@setting.Id">
+                            <td>
+                                <span class="setting-server view-mode">@setting.Server</span>
+                                <input type="text" class="form-control setting-server-input edit-mode d-none" value="@setting.Server" />
+                            </td>
+                            <td>
+                                <span class="setting-apikey view-mode">@setting.ApiKey</span>
+                                <input type="text" class="form-control setting-apikey-input edit-mode d-none" value="@setting.ApiKey" />
+                            </td>
+                            <td>
+                                <span class="setting-uri view-mode">@setting.Uri</span>
+                                <input type="text" class="form-control setting-uri-input edit-mode d-none" value="@setting.Uri" />
+                            </td>
+                            <td>
+                                <span class="setting-defaultmodel view-mode">@setting.DefaultModel</span>
+                                <input type="text" class="form-control setting-defaultmodel-input edit-mode d-none" value="@setting.DefaultModel" />
+                            </td>
+                            <td>
+                                <span class="setting-modellist view-mode">@setting.ModelList</span>
+                                <input type="text" class="form-control setting-modellist-input edit-mode d-none" value="@setting.ModelList" />
+                            </td>
+                            <td>
+                                <span class="setting-maxtokens view-mode">@setting.MaxTokens</span>
+                                <input type="number" class="form-control setting-maxtokens-input edit-mode d-none" value="@setting.MaxTokens" />
+                            </td>
+                            <td>
+                                <button class="btn btn-primary btn-sm edit-btn view-mode">@Localizer.TextIgnoreCase("Edit")</button>
+                                <button class="btn btn-success btn-sm save-btn edit-mode d-none">@Localizer.TextIgnoreCase("Save")</button>
+                                <button class="btn btn-secondary btn-sm cancel-btn edit-mode d-none">@Localizer.TextIgnoreCase("Cancel")</button>
+                                @if (setting.Server.ToLower() != "default") // Assuming "Default" is a special non-deletable setting
+                                {
+                                    <form method="post">
+                                        <button class="btn btn-danger btn-sm delete-btn view-mode" asp-page-handler="DeleteSetting" asp-route-id="@setting.Id">@Localizer.TextIgnoreCase("Delete")</button>
+                                    </form>
+                                }
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">@Localizer.TextIgnoreCase("No AI settings found.")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function toggleEditMode($row, edit) {
+                if (edit) {
+                    $row.find('.view-mode').addClass('d-none');
+                    $row.find('.edit-mode').removeClass('d-none');
+                } else {
+                    $row.find('.view-mode').removeClass('d-none');
+                    $row.find('.edit-mode').addClass('d-none');
+                }
+            }
+
+            $('.edit-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+                toggleEditMode($row, true);
+            });
+
+            $('.cancel-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+                // Reset input values to original span text
+                $row.find('.setting-server-input').val($row.find('.setting-server').text());
+                $row.find('.setting-apikey-input').val($row.find('.setting-apikey').text());
+                $row.find('.setting-uri-input').val($row.find('.setting-uri').text());
+                $row.find('.setting-defaultmodel-input').val($row.find('.setting-defaultmodel').text());
+                $row.find('.setting-modellist-input').val($row.find('.setting-modellist').text());
+                $row.find('.setting-maxtokens-input').val($row.find('.setting-maxtokens').text());
+                toggleEditMode($row, false);
+            });
+
+            $('.save-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+
+                // If a temp form doesn't exist, create and append one containing the current inputs for serialization.
+                var $form = $row.find('form._ajaxSettingForm');
+                if ($form.length === 0) {
+                    $form = $('<form class="_ajaxSettingForm" style="display:none;"></form>');
+                    // Append all input.edit-mode inputs to the form for proper serialize
+                    $form.append($row.find('.setting-server-input').clone().attr('name', 'Server'));
+                    $form.append($row.find('.setting-apikey-input').clone().attr('name', 'ApiKey'));
+                    $form.append($row.find('.setting-uri-input').clone().attr('name', 'Uri'));
+                    $form.append($row.find('.setting-defaultmodel-input').clone().attr('name', 'DefaultModel'));
+                    $form.append($row.find('.setting-modellist-input').clone().attr('name', 'ModelList'));
+                    $form.append($row.find('.setting-maxtokens-input').clone().attr('name', 'MaxTokens'));
+                    // Also add ID (hidden input)
+                    $form.append($('<input type="hidden" name="Id" />').val($row.data('id')));
+                    // Anti-forgery token as well, if exists
+                    var $token = $('input[name="__RequestVerificationToken"]').first().clone();
+                    if ($token.length)
+                        $form.append($token);
+                    $row.append($form);
+                } else {
+                    // Update values if user changed them again before save
+                    $form.find('input[name="Server"]').val($row.find('.setting-server-input').val());
+                    $form.find('input[name="ApiKey"]').val($row.find('.setting-apikey-input').val());
+                    $form.find('input[name="Uri"]').val($row.find('.setting-uri-input').val());
+                    $form.find('input[name="DefaultModel"]').val($row.find('.setting-defaultmodel-input').val());
+                    $form.find('input[name="ModelList"]').val($row.find('.setting-modellist-input').val());
+                    $form.find('input[name="MaxTokens"]').val($row.find('.setting-maxtokens-input').val());
+                }
+
+                $.ajax({
+                    url: '?handler=UpdateSetting',
+                    type: 'POST',
+                    data: $form.serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            // update view-mode spans with new values
+                            $row.find('.setting-server').text($form.find('input[name="Server"]').val());
+                            $row.find('.setting-apikey').text($form.find('input[name="ApiKey"]').val());
+                            $row.find('.setting-uri').text($form.find('input[name="Uri"]').val());
+                            $row.find('.setting-defaultmodel').text($form.find('input[name="DefaultModel"]').val());
+                            $row.find('.setting-modellist').text($form.find('input[name="ModelList"]').val());
+                            $row.find('.setting-maxtokens').text($form.find('input[name="MaxTokens"]').val());
+                            toggleEditMode($row, false);
+                        } else {
+                            alert(response.message || '@Localizer.TextIgnoreCase("Error updating setting.")');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert('@Localizer.TextIgnoreCase("An error occurred while updating the setting.")');
+                        console.error("Update Error:", xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

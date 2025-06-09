@@ -1,3 +1,4 @@
+using iSarv.Data.Services;
 using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -52,4 +53,5 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<HollandTestQuestion> HollandTestQuestions { get; set; }
     public DbSet<RavenTest> RavenTests { get; set; }
     public DbSet<ActivationCode> ActivationCodes { get; set; }
+    public DbSet<AISetting> AISettings { get; set; }
 }

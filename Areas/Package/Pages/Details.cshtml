@@ -11,40 +11,41 @@
 <h1>@Localizer.TextIgnoreCase("Details") @Localizer.TextIgnoreCase(Model.TestPackage.Name)</h1>
 
 <h4>
-    @Model.TestPackage.User.FullName - @Model.TestPackage.StartDate.ToShortCultureDate(lang) : @Model.TestPackage.Deadline.ToShortCultureDate(lang)
+    @Model.TestPackage.User.FullName - @Model.TestPackage.StartDate.ToShortCultureDate(lang) :
+    @Model.TestPackage.Deadline.ToShortCultureDate(lang)
     -
     @Localizer.TextIgnoreCase(Model.TestPackage.Status)
 </h4>
 
-<hr/>
+<hr />
 <ul class="nav nav-tabs mb-3" id="resultTabs" role="tablist">
     <li class="nav-item" role="presentation">
         <button class="nav-link active" id="package-tab" data-bs-toggle="tab" data-bs-target="#package" type="button"
-                role="tab" aria-controls="package" aria-selected="true">
+            role="tab" aria-controls="package" aria-selected="true">
             @Localizer.TextIgnoreCase("Final Result")
         </button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="neo-tab" data-bs-toggle="tab" data-bs-target="#neo" type="button" role="tab"
-                aria-controls="neo" aria-selected="false">
+            aria-controls="neo" aria-selected="false">
             @Localizer.TextIgnoreCase("Neo Test Result")
         </button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="clifton-tab" data-bs-toggle="tab" data-bs-target="#clifton" type="button"
-                role="tab" aria-controls="clifton" aria-selected="false">
+            role="tab" aria-controls="clifton" aria-selected="false">
             @Localizer.TextIgnoreCase("Clifton Test Result")
         </button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="holland-tab" data-bs-toggle="tab" data-bs-target="#holland" type="button"
-                role="tab" aria-controls="holland" aria-selected="false">
+            role="tab" aria-controls="holland" aria-selected="false">
             @Localizer.TextIgnoreCase("Holland Test Result")
         </button>
     </li>
     <li class="nav-item" role="presentation">
         <button class="nav-link" id="raven-tab" data-bs-toggle="tab" data-bs-target="#raven" type="button" role="tab"
-                aria-controls="raven" aria-selected="false">
+            aria-controls="raven" aria-selected="false">
             @Localizer.TextIgnoreCase("Raven Test Result")
         </button>
     </li>
@@ -72,8 +73,8 @@
                 <h5>
                     @Localizer.TextIgnoreCase(Model.TestPackage.NeoTest.Status)
                     <button type="submit" asp-page-handler="ResetNeoTest" class="btn btn-sm btn-danger"
-                            title="Reset test and extend time"
-                            onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                        title="Reset test and extend time"
+                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
@@ -102,7 +103,7 @@
                             @if (Model.TestPackage.NeoTest.IsCompleted)
                             {
                                 <a href="/Test/Neo/Result/@Model.TestPackage.NeoTest.Id" class="btn btn-secondary"
-                                   target="_blank">
+                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
                             }
@@ -121,8 +122,8 @@
                 <h5>
                     @Localizer.TextIgnoreCase(Model.TestPackage.CliftonTest.Status)
                     <button type="submit" asp-page-handler="ResetCliftonTest" class="btn btn-sm btn-danger"
-                            title="Reset test and extend time"
-                            onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                        title="Reset test and extend time"
+                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
@@ -151,7 +152,7 @@
                             @if (Model.TestPackage.CliftonTest.IsCompleted)
                             {
                                 <a href="/Test/Clifton/Result/@Model.TestPackage.CliftonTest.Id" class="btn btn-secondary"
-                                   target="_blank">
+                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
                             }
@@ -161,7 +162,7 @@
             </div>
             <div class="border rounded p-3">
                 <textarea name="result" rows="20" class="form-control"
-                          asp-for="TestPackage.CliftonTest.Result"></textarea>
+                    asp-for="TestPackage.CliftonTest.Result"></textarea>
             </div>
         </form>
     </div>
@@ -171,8 +172,8 @@
                 <h5>
                     @Localizer.TextIgnoreCase(Model.TestPackage.HollandTest.Status)
                     <button type="submit" asp-page-handler="ResetHollandTest" class="btn btn-sm btn-danger"
-                            title="Reset test and extend time"
-                            onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                        title="Reset test and extend time"
+                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
@@ -201,7 +202,7 @@
                             @if (Model.TestPackage.HollandTest.IsCompleted)
                             {
                                 <a href="/Test/Holland/Result/@Model.TestPackage.HollandTest.Id" class="btn btn-secondary"
-                                   target="_blank">
+                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
                             }
@@ -211,7 +212,7 @@
             </div>
             <div class="border rounded p-3">
                 <textarea name="result" rows="20" class="form-control"
-                          asp-for="TestPackage.HollandTest.Result"></textarea>
+                    asp-for="TestPackage.HollandTest.Result"></textarea>
             </div>
         </form>
     </div>
@@ -221,8 +222,8 @@
                 <h5>
                     @Localizer.TextIgnoreCase(Model.TestPackage.RavenTest.Status)
                     <button type="submit" asp-page-handler="ResetRavenTest" class="btn btn-sm btn-danger"
-                            title="Reset test and extend time"
-                            onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                        title="Reset test and extend time"
+                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
                         <i class="bi bi-arrow-counterclockwise"></i>
                     </button>
                 </h5>
@@ -251,7 +252,7 @@
                             @if (Model.TestPackage.RavenTest.IsCompleted)
                             {
                                 <a href="/Test/Raven/Result/@Model.TestPackage.RavenTest.Id" class="btn btn-secondary"
-                                   target="_blank">
+                                    target="_blank">
                                     @Localizer.TextIgnoreCase("Result Details")
                                 </a>
                             }
@@ -261,7 +262,7 @@
             </div>
             <div class="border rounded p-3">
                 <textarea name="result" rows="20" class="form-control"
-                          asp-for="TestPackage.RavenTest.Result"></textarea>
+                    asp-for="TestPackage.RavenTest.Result"></textarea>
             </div>
         </form>
     </div>
