@@ -23,7 +23,7 @@ public class TestPackage
 
     [Display(Name = "Neo Test", Prompt = "Select the Neo test")]
     public NeoTest? NeoTest { get; set; } = new();
-    
+
     [Display(Name = "Clifton Test", Prompt = "Select the Clifton test")]
     public CliftonTest CliftonTest { get; set; } = new();
 
@@ -32,7 +32,7 @@ public class TestPackage
 
     [Display(Name = "Raven Test", Prompt = "Select the Raven test")]
     public RavenTest RavenTest { get; set; } = new();
-    
+
     // Dates ----------------------------------------------------------------------------------
 
     [Required]
@@ -50,10 +50,10 @@ public class TestPackage
     [Display(Name = "Submit Date", Prompt = "Select the submit date")]
     public DateTime SubmitDate { get; set; } = default!;
 
-    public bool IsCompleted => !string.IsNullOrEmpty(FinalResult);
+    public bool IsCompleted => !string.IsNullOrEmpty(FinalResult) && FinalResult != "Wait for AI";
 
     public string Status => IsCompleted ? "Completed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
+        DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
 }

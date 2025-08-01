@@ -27,7 +27,7 @@ namespace iSarv.Areas.Package.Pages
         public string SearchTerm { get; set; }
         public string Status { get; set; }
 
-        public IList<TestPackage> TestPackages { get;set; } = default!;
+        public IList<TestPackage> TestPackages { get; set; } = default!;
         [TempData] public string ToastMessage { get; set; }
 
         public async Task OnGetAsync(int currentPage = 1, string searchTerm = "", string status = "")
@@ -53,7 +53,7 @@ namespace iSarv.Areas.Package.Pages
             if (!string.IsNullOrEmpty(searchTerm))
             {
                 TestPackages = TestPackages.Where(tp =>
-                    tp.User.FullName.Contains(searchTerm) || tp.User.NationalId.Contains(searchTerm)).ToList(); 
+                    tp.User.FullName.Contains(searchTerm) || tp.User.NationalId.Contains(searchTerm)).ToList();
             }
 
             TotalPages = (int)Math.Ceiling(TestPackages.Count() / (double)PageSize);
@@ -65,7 +65,7 @@ namespace iSarv.Areas.Package.Pages
 
             TestPackages = TestPackages.OrderByDescending(tp => tp.StartDate).ToList();
         }
-        
+
         public async Task<IActionResult> OnPostLoadFromExcelAsync(IFormFile excelFile)
         {
             if (excelFile == null || excelFile.Length == 0)
@@ -132,15 +132,16 @@ namespace iSarv.Areas.Package.Pages
                     var worksheet = workbook.Worksheets.Add("Packages");
 
                     // Add header row
-                    worksheet.Cell(1, 1).Value = "User Full Name";
-                    worksheet.Cell(1, 2).Value = "User National ID";
-                    worksheet.Cell(1, 3).Value = "Start Date";
-                    worksheet.Cell(1, 4).Value = "End Date";
-                    worksheet.Cell(1, 5).Value = "Is Completed";
-                    worksheet.Cell(1, 6).Value = "NEO Test Status";
-                    worksheet.Cell(1, 7).Value = "Clifton Test Status";
-                    worksheet.Cell(1, 8).Value = "Holland Test Status";
-                    worksheet.Cell(1, 9).Value = "Raven Test Status";
+                    worksheet.Cell(1, 1).Value = "Username(Mobile)";
+                    worksheet.Cell(1, 2).Value = "User Full Name";
+                    worksheet.Cell(1, 3).Value = "User National ID";
+                    worksheet.Cell(1, 4).Value = "Start Date";
+                    worksheet.Cell(1, 5).Value = "End Date";
+                    worksheet.Cell(1, 6).Value = "Is Completed";
+                    worksheet.Cell(1, 7).Value = "NEO Test Status";
+                    worksheet.Cell(1, 8).Value = "Clifton Test Status";
+                    worksheet.Cell(1, 9).Value = "Holland Test Status";
+                    worksheet.Cell(1, 10).Value = "Raven Test Status";
 
                     // Add data rows
                     var row = 2;
@@ -148,15 +149,16 @@ namespace iSarv.Areas.Package.Pages
                                  .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
                                  .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest).ToList())
                     {
-                        worksheet.Cell(row, 1).Value = package.User?.FullName;
-                        worksheet.Cell(row, 2).Value = package.User?.NationalId;
-                        worksheet.Cell(row, 3).Value = package.StartDate;
-                        worksheet.Cell(row, 4).Value = package.Deadline;
-                        worksheet.Cell(row, 5).Value = package.IsCompleted;
-                        worksheet.Cell(row, 6).Value = package.NeoTest.Status;
-                        worksheet.Cell(row, 7).Value = package.CliftonTest.Status;
-                        worksheet.Cell(row, 8).Value = package.HollandTest.Status;
-                        worksheet.Cell(row, 9).Value = package.RavenTest.Status;
+                        worksheet.Cell(row, 1).Value = package.User?.UserName;
+                        worksheet.Cell(row, 2).Value = package.User?.FullName;
+                        worksheet.Cell(row, 3).Value = package.User?.NationalId;
+                        worksheet.Cell(row, 4).Value = package.StartDate;
+                        worksheet.Cell(row, 5).Value = package.Deadline;
+                        worksheet.Cell(row, 6).Value = package.IsCompleted;
+                        worksheet.Cell(row, 7).Value = package.NeoTest.Status;
+                        worksheet.Cell(row, 8).Value = package.CliftonTest.Status;
+                        worksheet.Cell(row, 9).Value = package.HollandTest.Status;
+                        worksheet.Cell(row, 10).Value = package.RavenTest.Status;
                         row++;
                     }
 
@@ -174,7 +176,7 @@ namespace iSarv.Areas.Package.Pages
                 return RedirectToPage();
             }
         }
-        
-        
+
+
     }
 }

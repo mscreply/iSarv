@@ -1,0 +1,136 @@
+﻿@page "{id:int}"
+@model iSarv.Areas.Package.Pages.PrintResultModel
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@{
+    ViewData["Title"] = "Print Result";
+}
+
+<style>
+    @@media print {
+        .page {
+            margin: 0 !important;
+            box-shadow: none !important;
+            border: none !important;
+            page-break-after: auto !important;
+            page-break-inside: auto !important;
+        }
+
+        .page iframe {
+            margin-top: 20mm !important;
+            margin-bottom: 20mm !important;
+        }
+
+        .page * {
+            page-break-inside: auto !important;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        a.btn {
+            display: none;
+        }
+    }
+
+    .page {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 20mm;
+        margin: 10mm auto;
+        border: 1px #D3D3D3 solid;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        page-break-inside: auto;
+    }
+</style>
+
+<div class="page text-center d-flex flex-column align-items-center justify-content-center">
+    <img src="~/img/logo.png" alt="Site Logo" class="img-fluid mb-5" style="width: 5cm; margin-top: 50mm;" />
+    <h1>@Localizer.TextIgnoreCase("Final Package Result")</h1>
+    <h1>@Localizer.TextIgnoreCase(Model.Package.Name)</h1>
+    <div class="user-info">
+        <p>@Model.Package?.User?.FullName</p>
+        <p><i class="fas fa-envelope"></i> @Model.Package?.User?.Email</p>
+        <p><i class="fas fa-university"></i> @Model.Package?.User?.University</p>
+    </div>
+    <div class="w-100 text-center border-top p-2" style="margin-top: 100mm;">
+        <small class="text-muted">Powered by iSarv</small>
+        <small class="text-muted">https://i-sarv.com</small>
+        <small class="text-muted"><i class="fas fa-phone-alt"></i></small>
+        <small class="text-muted">@Configuration["Site:Phone"]</small>
+        <small class="text-muted"><i class="fas fa-envelope"></i></small>
+        <small class="text-muted">@Configuration["Site:Email"]</small>
+        <br>
+        <small class=" text-muted">Generated on @DateTime.Now.ToString("yyyy-MM-dd HH:mm")</small>
+    </div>
+</div>
+
+@if (Model.Package?.NeoTest != null)
+{
+    <div class="page">
+        <iframe src="/Test/Neo/Result/@Model.Package.NeoTest.Id?inframe=true" class="no-scrolling-iframe w-100"
+            frameborder="0"></iframe>
+    </div>
+}
+
+@if (Model.Package?.CliftonTest != null)
+{
+    <div class="page">
+        <iframe src="/Test/Clifton/Result/@Model.Package.CliftonTest.Id?inframe=true" class="no-scrolling-iframe w-100"
+            frameborder="0"></iframe>
+    </div>
+}
+
+@if (Model.Package?.HollandTest != null)
+{
+    <div class="page">
+        <iframe src="/Test/Holland/Result/@Model.Package.HollandTest.Id?inframe=true" class="no-scrolling-iframe w-100"
+            frameborder="0"></iframe>
+    </div>
+}
+
+@if (Model.Package?.RavenTest != null)
+{
+    <div class="page">
+        <iframe src="/Test/Raven/Result/@Model.Package.RavenTest.Id?inframe=true" class="no-scrolling-iframe w-100"
+            frameborder="0"></iframe>
+    </div>
+}
+
+@if (Model.Package?.FinalResult != null)
+{
+    <div class="page">
+        <h2>@Localizer.TextIgnoreCase("Final Package Result")</h2>
+        <p>@Model.Package.FinalResult</p>
+    </div>
+}
+
+<script>
+    window.onload = () => {
+        const iframes = document.querySelectorAll('iframe');
+        const printDiv = document.getElementById('printDiv');
+
+        iframes.forEach(iframe => {
+            const iframeDoc = iframe.contentDocument;
+            // Find all canvas elements in the iframe
+            const canvases = iframeDoc.querySelectorAll('canvas');
+
+            canvases.forEach(canvas => {
+                const img = new Image();
+                img.src = canvas.toDataURL("image/png");
+                img.classList.add('img-fluid');
+                canvas.parentNode.replaceChild(img, canvas);
+            });
+
+            iframe.parentNode.replaceChild(iframeDoc.body.cloneNode(true).innerHTML, iframe);
+        });
+    };
+</script>
+
+<a href="javascript:void(0)" onclick="window.print()" class="btn btn-primary position-fixed"
+    style="bottom: 20px; right: 20px; z-index: 1000;">
+    <i class="fas fa-file-pdf"></i> @Localizer.TextIgnoreCase("Download Full Result as PDF")
+</a>

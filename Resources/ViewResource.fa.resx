@@ -122,26 +122,14 @@
             PublicKeyToken=b77a5c561934e089
         </value>
     </resheader>
-    <data name="Abstract reasoning." xml:space="preserve">
-        <value>استدلال انتزاعی</value>
-    </data>
-    <data name="Mental flexibility, fluid intelligence" xml:space="preserve">
-        <value>انعطاف ذهنی، هوش سیال</value>
-    </data>
-    <data name="Multiple rules tracking." xml:space="preserve">
-        <value>ردیابی قوانین چندگانه</value>
-    </data>
-    <data name="Perceptual reasoning, simple shapes, repetition." xml:space="preserve">
-        <value>استدلال ادراکی، اشکال ساده، تکرار.</value>
-    </data>
-    <data name="Perceptual reasoning, simple transformations." xml:space="preserve">
-        <value>استدلال ادراکی، دگرگونی های ساده.</value>
-    </data>
     <data name="'{0}' is required." xml:space="preserve">
         <value>'{0}' اجباری است.</value>
     </data>
     <data name="2fa has been disabled. You can reenable 2fa when you setup an authenticator app" xml:space="preserve">
         <value>2fa غیر فعال شده است. هنگامی که یک برنامه احراز هویت را راه اندازی می کنید، می توانید 2fa را دوباره فعال کنید</value>
+    </data>
+    <data name="A : Perceptual reasoning, simple shapes, repetition" xml:space="preserve">
+        <value>الف: استدلال ادراکی، اشکال ساده، تکرار.</value>
     </data>
     <data name="A new idea makes my day and makes me happy." xml:space="preserve">
         <value>یک ایده‌ی جدید، روزی خاص برای من می‌سازد و من را خوشحال می‌کند.</value>
@@ -178,6 +166,9 @@
     </data>
     <data name="Abstract (Fa)" xml:space="preserve">
         <value>چکیده (فا)</value>
+    </data>
+    <data name="Abstract reasoning" xml:space="preserve">
+        <value>استدلال انتزاعی </value>
     </data>
     <data name="Accept" xml:space="preserve">
         <value>پذیرفته‌شده</value>
@@ -225,10 +216,10 @@
         <value>دسترسی غیرمجاز</value>
     </data>
     <data name="Accountant Educated" xml:space="preserve">
-        <value>حسابدار تحصیل كرده</value>
+        <value>حسابدار تحصیل كرده </value>
     </data>
     <data name="Accounting" xml:space="preserve">
-        <value>حسابداری</value>
+        <value>حسابداری </value>
     </data>
     <data name="Accurate and personalized analysis of test results using advanced artificial intelligence." xml:space="preserve">
         <value>تحلیل دقیق و شخصی‌سازی شده نتایج تست‌ها به کمک هوش مصنوعی پیشرفته.</value>
@@ -276,7 +267,7 @@
         <value>فعال‌کننده</value>
     </data>
     <data name="Active participation in seminars" xml:space="preserve">
-        <value>شركت فعال در سمینارها</value>
+        <value>شركت فعال در سمینارها </value>
     </data>
     <data name="Activities" xml:space="preserve">
         <value>فعالیت ها</value>
@@ -363,7 +354,7 @@
         <value>مدیریت</value>
     </data>
     <data name="Administrative financial inspector" xml:space="preserve">
-        <value>بازرسی مالی اداری</value>
+        <value>بازرسی مالی اداری </value>
     </data>
     <data name="Administrator" xml:space="preserve">
         <value>مدیر سیستم</value>
@@ -372,13 +363,13 @@
         <value>پذیرش</value>
     </data>
     <data name="Advertising artist" xml:space="preserve">
-        <value>هنر مند آگهی های تبلیغاتی</value>
+        <value>هنر مند آگهی های تبلیغاتی </value>
     </data>
     <data name="Advertising executive director and advertising manager" xml:space="preserve">
-        <value>مدیر اجرایی آگهی و مسئول تبلیغات</value>
+        <value>مدیر اجرایی آگهی و مسئول تبلیغات </value>
     </data>
     <data name="Advertising manager or public relations manager" xml:space="preserve">
-        <value>مدیر تبلیغات یا مدیر روابط عمومی</value>
+        <value>مدیر تبلیغات یا مدیر روابط عمومی </value>
     </data>
     <data name="Aesthetics" xml:space="preserve">
         <value>زیبایی شناسی</value>
@@ -410,6 +401,9 @@
     <data name="AI Career Matching" xml:space="preserve">
         <value>تطبیق شغلی با هوش مصنوعی</value>
     </data>
+    <data name="AI Prompts Management" xml:space="preserve">
+        <value>مدیریت پرامپت‌های هوش مصنوعی</value>
+    </data>
     <data name="AI Settings" xml:space="preserve">
         <value>تنظیمات هوش مصنوعی</value>
     </data>
@@ -417,7 +411,7 @@
         <value>تحلیل مبتنی بر هوش مصنوعی</value>
     </data>
     <data name="Aircraft mechanic" xml:space="preserve">
-        <value>مكانیك هواپیما</value>
+        <value>مكانیك هواپیما </value>
     </data>
     <data name="All" xml:space="preserve">
         <value>همه</value>
@@ -438,7 +432,7 @@
         <value>خصومت خشم</value>
     </data>
     <data name="Anthropologist" xml:space="preserve">
-        <value>مردم شناس</value>
+        <value>مردم شناس </value>
     </data>
     <data name="Anxiety" xml:space="preserve">
         <value>اضطراب</value>
@@ -474,10 +468,10 @@
         <value>جنبه های هنری و زیبایی شناسی برای من زیاد اهمیت ندارند.</value>
     </data>
     <data name="Artistic" xml:space="preserve">
-        <value>هنر دوست</value>
+        <value>هنر دوست </value>
     </data>
     <data name="Artistic ability" xml:space="preserve">
-        <value>توانایی هنری</value>
+        <value>توانایی هنری </value>
     </data>
     <data name="As a child, I rarely enjoyed games that involved acting and imagination." xml:space="preserve">
         <value>در کودکی بندرت از بازیهای که جنبه نمایشی وتخلیلی داشتند خوشم می آمد .</value>
@@ -552,10 +546,13 @@
         <value>نویسندگان (کاربران عادی)</value>
     </data>
     <data name="Auto mechanic" xml:space="preserve">
-        <value>مكانیك اتومبیل</value>
+        <value>مكانیك اتومبیل </value>
     </data>
     <data name="Avatar" xml:space="preserve">
         <value>آواتار</value>
+    </data>
+    <data name="B : Perceptual reasoning, simple transformations" xml:space="preserve">
+        <value>ب: استدلال ادراکی، دگرگونی های ساده.</value>
     </data>
     <data name="Back To Inbox" xml:space="preserve">
         <value>بازگشت به صندوق پیام</value>
@@ -570,10 +567,10 @@
         <value>رنگ پس‌زمینه</value>
     </data>
     <data name="Bank bailiff" xml:space="preserve">
-        <value>تحویلدار بانك</value>
+        <value>تحویلدار بانك </value>
     </data>
     <data name="Bank inspector" xml:space="preserve">
-        <value>بازرس بانك</value>
+        <value>بازرس بانك </value>
     </data>
     <data name="Before making a decision, I think about all aspects of the matter." xml:space="preserve">
         <value>قبل از اینکه تصمیم بگیرم به همه جوانب کار فکر می کنم.</value>
@@ -609,7 +606,7 @@
         <value>بیوگرافی</value>
     </data>
     <data name="Biologist" xml:space="preserve">
-        <value>زیست شناس</value>
+        <value>زیست شناس </value>
     </data>
     <data name="Blind Review" xml:space="preserve">
         <value>داوری ناشناس</value>
@@ -648,10 +645,10 @@
         <value>آینده شغلی خود را هوشمندانه بسازید</value>
     </data>
     <data name="Building inspector" xml:space="preserve">
-        <value>بازرس ساختمان</value>
+        <value>بازرس ساختمان </value>
     </data>
     <data name="Business company manager" xml:space="preserve">
-        <value>مدیر شركت های بازرگانی</value>
+        <value>مدیر شركت های بازرگانی </value>
     </data>
     <data name="Buy New Package" xml:space="preserve">
         <value>خرید پکیج جدید</value>
@@ -664,6 +661,9 @@
     </data>
     <data name="By studying history, I can discover the future" xml:space="preserve">
         <value>با مطالعه‌ی تاریخ می‌توانم آینده را کشف کنم</value>
+    </data>
+    <data name="C : Multiple rules tracking" xml:space="preserve">
+        <value>ج: ردیابی قوانین چندگانه.</value>
     </data>
     <data name="Cancel" xml:space="preserve">
         <value>لغو</value>
@@ -681,19 +681,19 @@
         <value>کارتها</value>
     </data>
     <data name="Career guide and counselor" xml:space="preserve">
-        <value>راهنما و مشاور شغلی</value>
+        <value>راهنما و مشاور شغلی </value>
     </data>
     <data name="Career Suggestions" xml:space="preserve">
         <value>پیشنهادات شغلی</value>
     </data>
     <data name="Carefully keeping books clean and stationery" xml:space="preserve">
-        <value>دقت در تمیز نگهداشتن كتابها و لوازم التحریر خود</value>
+        <value>دقت در تمیز نگهداشتن كتابها و لوازم التحریر خود </value>
     </data>
     <data name="Carpenter" xml:space="preserve">
-        <value>نجار</value>
+        <value>نجار </value>
     </data>
     <data name="Ceremony manager" xml:space="preserve">
-        <value>مدیر مراسم وتشریفات</value>
+        <value>مدیر مراسم وتشریفات </value>
     </data>
     <data name="Certificate" xml:space="preserve">
         <value>گواهی</value>
@@ -735,7 +735,7 @@
         <value>تنظیمات حساب کاربری خود را تغییر دهید</value>
     </data>
     <data name="Charity affairs director" xml:space="preserve">
-        <value>مدیر امور خیریه</value>
+        <value>مدیر امور خیریه </value>
     </data>
     <data name="Check our Courses" xml:space="preserve">
         <value>دوره های ما را بررسی کنید</value>
@@ -747,19 +747,22 @@
         <value>اخبار جدید ما را چک کنید</value>
     </data>
     <data name="Chemist" xml:space="preserve">
-        <value>شیمیدان</value>
+        <value>شیمیدان </value>
     </data>
     <data name="Chief" xml:space="preserve">
         <value>دبیر</value>
     </data>
     <data name="Children's literature writer" xml:space="preserve">
-        <value>نویصسنده ا دبیات كودكان</value>
+        <value>نویصسنده ا دبیات كودكان </value>
     </data>
     <data name="Choose from Registered Users" xml:space="preserve">
         <value>انتخاب داور از میان کاربران ثبت‌نام شده</value>
     </data>
     <data name="Click &quot;Next&quot; to begin." xml:space="preserve">
         <value>برای شروع روی «بعدی» کلیک کنید.</value>
+    </data>
+    <data name="Click here to download the full result of your talent pack." xml:space="preserve">
+        <value>برای دانلود نتیجه کامل بسته استعداد خود اینجا را کلیک کنید.</value>
     </data>
     <data name="click here to log in" xml:space="preserve">
         <value>برای ورود کلیک کنید</value>
@@ -929,8 +932,11 @@
     <data name="Confirmation link to change email sent. Please check your email." xml:space="preserve">
         <value>پیوند تأیید تغییر ایمیل ارسال شده. لطفا ایمیل خود را بررسی کنید.</value>
     </data>
-    <data name="Congratulation! Your paper has been accepted" xml:space="preserve">
-        <value>تبریک! مقاله شما پذیرفته شده است</value>
+    <data name="Confirmed" xml:space="preserve">
+        <value>تایید شده</value>
+    </data>
+    <data name="Congratulation! Your paper has been accepted " xml:space="preserve">
+        <value>تبریک! مقاله شما پذیرفته شده است </value>
     </data>
     <data name="Congratulation. Presenter card has been issued." xml:space="preserve">
         <value>تبریک. کارت ارایه دهنده مقاله صادر شده است.</value>
@@ -972,10 +978,10 @@
         <value>نویسنده مسئول</value>
     </data>
     <data name="Cost estimator" xml:space="preserve">
-        <value>ارزیاب هزینه ها</value>
+        <value>ارزیاب هزینه ها </value>
     </data>
     <data name="Counselor" xml:space="preserve">
-        <value>مشاور</value>
+        <value>مشاور </value>
     </data>
     <data name="Course" xml:space="preserve">
         <value>دوره آموزشی</value>
@@ -999,7 +1005,7 @@
         <value>دوره‌های آموزشی</value>
     </data>
     <data name="Court draftsman" xml:space="preserve">
-        <value>تند نویس دادگاه</value>
+        <value>تند نویس دادگاه </value>
     </data>
     <data name="Create" xml:space="preserve">
         <value>ایجاد</value>
@@ -1016,11 +1022,17 @@
     <data name="Create New Instructor" xml:space="preserve">
         <value>ایجاد مدرس جدید</value>
     </data>
+    <data name="Create New Prompt" xml:space="preserve">
+        <value>ایجاد پرامپت جدید</value>
+    </data>
     <data name="Create New Setting" xml:space="preserve">
         <value>ایجاد تنظیمات جدید</value>
     </data>
     <data name="Create New User" xml:space="preserve">
         <value>ایجاد کاربر جدید</value>
+    </data>
+    <data name="Create Prompt" xml:space="preserve">
+        <value>ایجاد پرامپت</value>
     </data>
     <data name="Create Setting" xml:space="preserve">
         <value>ایجاد تنظیمات</value>
@@ -1038,7 +1050,7 @@
         <value>اقدام‌کننده</value>
     </data>
     <data name="Criticizing a play" xml:space="preserve">
-        <value>نقد نمایشنامه</value>
+        <value>نقد نمایشنامه </value>
     </data>
     <data name="Crying is a part of my life." xml:space="preserve">
         <value>گریه‌کردن بخشی از زندگی من است.</value>
@@ -1057,6 +1069,9 @@
     </data>
     <data name="Current Roles" xml:space="preserve">
         <value>نقش‌های کاربری فعلی</value>
+    </data>
+    <data name="D : Abstract reasoning" xml:space="preserve">
+        <value>د: استدلال انتزاعی.</value>
     </data>
     <data name="Dashboard" xml:space="preserve">
         <value>داشبورد</value>
@@ -1164,7 +1179,7 @@
         <value>انجام درست کارها همه چیز است.</value>
     </data>
     <data name="Dorm supervisor" xml:space="preserve">
-        <value>سرپرست خوابگاه</value>
+        <value>سرپرست خوابگاه </value>
     </data>
     <data name="Download" xml:space="preserve">
         <value>دانلود</value>
@@ -1188,7 +1203,7 @@
         <value>دکتر مشاور شغلی</value>
     </data>
     <data name="Drawing or calligraphy or music skills" xml:space="preserve">
-        <value>مهارت های نقاشی یا خط یا موسیقی</value>
+        <value>مهارت های نقاشی یا خط یا موسیقی </value>
     </data>
     <data name="Drawing, drawing, painting" xml:space="preserve">
         <value>طراحی ، ترسیم ، نقاشی</value>
@@ -1202,6 +1217,9 @@
     <data name="Dutifulness" xml:space="preserve">
         <value>وظیفه شناسی</value>
     </data>
+    <data name="E : Mental flexibility, fluid intelligence" xml:space="preserve">
+        <value>ه: انعطاف پذیری ذهنی، هوش سیال</value>
+    </data>
     <data name="Edit" xml:space="preserve">
         <value>ویرایش</value>
     </data>
@@ -1210,6 +1228,9 @@
     </data>
     <data name="Edit Course" xml:space="preserve">
         <value>ویرایش دوره آموزشی</value>
+    </data>
+    <data name="Edit Data Files" xml:space="preserve">
+        <value>ویرایش فایلهای داده</value>
     </data>
     <data name="Edit Email Texts" xml:space="preserve">
         <value>ویرایش متن ایمیل‌ها</value>
@@ -1236,13 +1257,13 @@
         <value>ویرایش کاربر</value>
     </data>
     <data name="Editor-in-chief of a Scientific journal" xml:space="preserve">
-        <value>سردبیر یك مجله علمی</value>
+        <value>سردبیر یك مجله علمی </value>
     </data>
     <data name="Electric excavator driver, crane" xml:space="preserve">
-        <value>راننده خاك برداری برقی ، جرثقیل</value>
+        <value>راننده خاك برداری برقی ، جرثقیل </value>
     </data>
     <data name="Electrician" xml:space="preserve">
-        <value>برقكار</value>
+        <value>برقكار </value>
     </data>
     <data name="Email" xml:space="preserve">
         <value>ایمیل</value>
@@ -1364,8 +1385,20 @@
     <data name="Enter the final result" xml:space="preserve">
         <value>نتیجه نهایی را وارد کنید</value>
     </data>
+    <data name="Enter the language of AI reply" xml:space="preserve">
+        <value>زبان پاسخ هوش مصنوعی را وارد کنید</value>
+    </data>
     <data name="Enter the package name" xml:space="preserve">
         <value>نام بسته را وارد کنید</value>
+    </data>
+    <data name="Enter the prompt name" xml:space="preserve">
+        <value>نام پرامپت را وارد کنید</value>
+    </data>
+    <data name="Enter the prompt text" xml:space="preserve">
+        <value>متن پرامپت را وارد کنید</value>
+    </data>
+    <data name="Enter the reply length" xml:space="preserve">
+        <value>طول پاسخ را وارد کنید</value>
     </data>
     <data name="Enter the response" xml:space="preserve">
         <value>پاسخ را وارد کنید</value>
@@ -1406,10 +1439,10 @@
     <data name="Error confirming your email." xml:space="preserve">
         <value>متاسفانه در تایید ایمیل شما خطایی رخدادهاست.</value>
     </data>
-    <data name="Error reading Fields:" xml:space="preserve">
+    <data name="Error reading Fields: " xml:space="preserve">
         <value>خطا در خواندن فیلدها:</value>
     </data>
-    <data name="Error reading options:" xml:space="preserve">
+    <data name="Error reading options: " xml:space="preserve">
         <value>خطا در خواندن گزینه ها:</value>
     </data>
     <data name="Error! Your paper has not been submitted. Please try again later." xml:space="preserve">
@@ -1423,6 +1456,9 @@
     </data>
     <data name="Error: Username already exists." xml:space="preserve">
         <value>خطا: نام کاربری از قبل وجود دارد.</value>
+    </data>
+    <data name="E-Trustseal" xml:space="preserve">
+        <value>نماد اعتماد الکترونیکی</value>
     </data>
     <data name="Even a small annoyance incapacitates me." xml:space="preserve">
         <value>حتی یک اذیت وآزار کوچک مرا عاجز می کند .</value>
@@ -1471,6 +1507,9 @@
     </data>
     <data name="Executive Committee Members" xml:space="preserve">
         <value>اعضای کمیته اجرایی</value>
+    </data>
+    <data name="Existing Prompts" xml:space="preserve">
+        <value>پرامپت‌های موجود</value>
     </data>
     <data name="Existing Settings" xml:space="preserve">
         <value>تنظیمات موجود</value>
@@ -1526,6 +1565,9 @@
     <data name="Field (Optional)" xml:space="preserve">
         <value>فیلد تخصصی (اختیاری)</value>
     </data>
+    <data name="Field Of Studies List" xml:space="preserve">
+        <value>فهرست رشته های تحصیلی</value>
+    </data>
     <data name="Field of Study" xml:space="preserve">
         <value>رشته تحصیلی</value>
     </data>
@@ -1554,7 +1596,7 @@
         <value>فایل‌ها</value>
     </data>
     <data name="Filmmaker" xml:space="preserve">
-        <value>فیلم ساز</value>
+        <value>فیلم ساز </value>
     </data>
     <data name="Filter By Role ..." xml:space="preserve">
         <value>فیلتر با نقش ...</value>
@@ -1580,6 +1622,9 @@
     <data name="Final Manuscripts" xml:space="preserve">
         <value>نسخه‌های نهایی</value>
     </data>
+    <data name="Final Package Result" xml:space="preserve">
+        <value>نتیجه نهایی پکیج</value>
+    </data>
     <data name="Final Result" xml:space="preserve">
         <value>نتیجه نهایی</value>
     </data>
@@ -1587,16 +1632,16 @@
         <value>نتیجه نهایی</value>
     </data>
     <data name="Financial administrative ability" xml:space="preserve">
-        <value>توانایی اداری مالی</value>
+        <value>توانایی اداری مالی </value>
     </data>
     <data name="Financial and administrative skills" xml:space="preserve">
-        <value>مهارت های مالی و اداری</value>
+        <value>مهارت های مالی و اداری </value>
     </data>
     <data name="Financial expert" xml:space="preserve">
-        <value>كارشناس امور مالی</value>
+        <value>كارشناس امور مالی </value>
     </data>
     <data name="Financial officer" xml:space="preserve">
-        <value>كارمند امور مالی</value>
+        <value>كارمند امور مالی </value>
     </data>
     <data name="Find your ideal career path by taking validated psychological tests and AI analysis." xml:space="preserve">
         <value>با انجام تست‌های روانشناسی معتبر و تحلیل هوش مصنوعی، مسیر شغلی ایده‌آل خود را بیابید.</value>
@@ -1644,10 +1689,10 @@
         <value>رمز عبور خود را فراموش کرده‌اید؟</value>
     </data>
     <data name="Free study of specific subjects" xml:space="preserve">
-        <value>مطالعه آزاد درباره موضوعات خاص</value>
+        <value>مطالعه آزاد درباره موضوعات خاص </value>
     </data>
     <data name="Friendship and cooperation skills" xml:space="preserve">
-        <value>مهارت های دوستی و تعاون</value>
+        <value>مهارت های دوستی و تعاون </value>
     </data>
     <data name="From" xml:space="preserve">
         <value>فرستنده</value>
@@ -1683,7 +1728,7 @@
         <value>عمومی</value>
     </data>
     <data name="Geologist" xml:space="preserve">
-        <value>زمین شناس</value>
+        <value>زمین شناس </value>
     </data>
     <data name="Get Result from AI" xml:space="preserve">
         <value>دریافت نتیجه از هوش مصنوعی</value>
@@ -1695,7 +1740,7 @@
         <value>برو به داشبورد</value>
     </data>
     <data name="Going to musical performances" xml:space="preserve">
-        <value>رفتن به برنامه های اجرای موسیقی</value>
+        <value>رفتن به برنامه های اجرای موسیقی </value>
     </data>
     <data name="Graphical Abstract Template" xml:space="preserve">
         <value>قالب چکیده گرافیکی</value>
@@ -1737,10 +1782,10 @@
         <value>دوره‌های آموزشی برگزارشده</value>
     </data>
     <data name="Helping others solve their personal problems" xml:space="preserve">
-        <value>كمك به حل مشكلات شخصی دیگران</value>
+        <value>كمك به حل مشكلات شخصی دیگران </value>
     </data>
     <data name="High school principal" xml:space="preserve">
-        <value>دبیر دبیرستان</value>
+        <value>دبیر دبیرستان </value>
     </data>
     <data name="Holland Personality Type" xml:space="preserve">
         <value>تیپ شخصیتی هالند</value>
@@ -2145,7 +2190,7 @@
         <value>معتقدم نظام اخلاقی جدیدی که آسان گیری ( تساهل ) در انجام امور را توصیه می کند اصلاً اخلاق حساب نمی شود .</value>
     </data>
     <data name="I can act in a puppet show." xml:space="preserve">
-        <value>می توانم در نمایش عروسكی بازی كنم.</value>
+        <value>می توانم در نمایش عروسكی بازی كنم. </value>
     </data>
     <data name="I can act out a role in a play." xml:space="preserve">
         <value>می توانم در نمایشنامه نقشی را بازی كنم .</value>
@@ -3314,6 +3359,9 @@
     <data name="If you understand the instructions, select &quot;Next&quot; to proceed to the main questions." xml:space="preserve">
         <value>اگر دستورالعمل‌ها را درک کردید، برای ادامه به سوالات اصلی روی «بعدی» کلیک کنید.</value>
     </data>
+    <data name="If you want to send subject information in the prompt, use the {SubjectInfo} key." xml:space="preserve">
+        <value>چنانچه در پرامپت می‌خواهید اطلاعات آزمون‌شونده را ارسال نمایید از کلید {SubjectInfo} استفاده نمایید.</value>
+    </data>
     <data name="Image" xml:space="preserve">
         <value>تصویر</value>
     </data>
@@ -3339,7 +3387,7 @@
         <value>اطلاعات ضروری</value>
     </data>
     <data name="Important information and statistics of the industrial town in summary" xml:space="preserve">
-        <value>اطلاعات و آمار مهم شهرک صنعتی به صورت خلاصه</value>
+        <value>اطلاعات و آمار مهم شهرک صنعتی به صورت خلاصه </value>
     </data>
     <data name="Impulsiveness" xml:space="preserve">
         <value>تکانشگری</value>
@@ -3371,6 +3419,9 @@
     <data name="Index" xml:space="preserve">
         <value>شاخص</value>
     </data>
+    <data name="Indicate if the test is completed" xml:space="preserve">
+        <value>مشخص کنید که آیا آزمون کامل شده است یا خیر</value>
+    </data>
     <data name="Individualization" xml:space="preserve">
         <value>فردگرایی</value>
     </data>
@@ -3378,7 +3429,7 @@
         <value>شهرک</value>
     </data>
     <data name="Industrial companies active on the site" xml:space="preserve">
-        <value>شرکت‌های صنعتی فعال در سایت</value>
+        <value>شرکت‌های صنعتی فعال در سایت </value>
     </data>
     <data name="Industrial Town At A Glance" xml:space="preserve">
         <value>شهرک صنعتی در یک نگاه</value>
@@ -3387,7 +3438,7 @@
         <value>تأثیرگذار</value>
     </data>
     <data name="Influencing others" xml:space="preserve">
-        <value>تاثیر گذاشتن روی دیگران</value>
+        <value>تاثیر گذاشتن روی دیگران </value>
     </data>
     <data name="Info" xml:space="preserve">
         <value>اطلاعات</value>
@@ -3399,7 +3450,7 @@
         <value>اطلاعات (فا)</value>
     </data>
     <data name="Innovatively modifying car and motorcycle engines" xml:space="preserve">
-        <value>تغییر ابتكاری موتور اتومبیل و موتورسیكلت</value>
+        <value>تغییر ابتكاری موتور اتومبیل و موتورسیكلت </value>
     </data>
     <data name="Input" xml:space="preserve">
         <value>ورودی‌گرا</value>
@@ -3408,7 +3459,7 @@
         <value>بینش‌هایی برای سفر شغلی شما</value>
     </data>
     <data name="Installing electronic devices" xml:space="preserve">
-        <value>نصب وسایل الكترونیكی</value>
+        <value>نصب وسایل الكترونیكی </value>
     </data>
     <data name="Instructor" xml:space="preserve">
         <value>مدرس</value>
@@ -3429,7 +3480,7 @@
         <value>تفکرگرا</value>
     </data>
     <data name="Interior design or decoration" xml:space="preserve">
-        <value>طراحی داخل ساختمان یا دكوراسیون</value>
+        <value>طراحی داخل ساختمان یا دكوراسیون </value>
     </data>
     <data name="Invalid activation code" xml:space="preserve">
         <value>کد فعال سازی نامعتبر است</value>
@@ -3438,7 +3489,7 @@
         <value>ایمیل نامعتبر</value>
     </data>
     <data name="Inventory supervisor" xml:space="preserve">
-        <value>ناظر صورت برداری از موجودی</value>
+        <value>ناظر صورت برداری از موجودی  </value>
     </data>
     <data name="Investigative" xml:space="preserve">
         <value>جستجوگر</value>
@@ -3448,6 +3499,9 @@
     </data>
     <data name="Is Admin" xml:space="preserve">
         <value>مدیر است</value>
+    </data>
+    <data name="Is Completed" xml:space="preserve">
+        <value>تکمیل شده</value>
     </data>
     <data name="Is Confirmed" xml:space="preserve">
         <value>تایید شده</value>
@@ -3507,19 +3561,19 @@
         <value>آیتم‌ها</value>
     </data>
     <data name="Job advertisements and employment" xml:space="preserve">
-        <value>آگهی‌های شغلی و استخدام</value>
+        <value>آگهی‌های شغلی و استخدام </value>
     </data>
     <data name="Job Seekers" xml:space="preserve">
         <value>افراد جویای کار</value>
     </data>
     <data name="Job Wall" xml:space="preserve">
-        <value>دیوار شغل</value>
+        <value>دیوار شغل </value>
     </data>
     <data name="Join Meeting" xml:space="preserve">
         <value>پیوستن به جلسه</value>
     </data>
     <data name="Journalist" xml:space="preserve">
-        <value>خبرنگار</value>
+        <value>خبرنگار </value>
     </data>
     <data name="Key Features of Our Platform" xml:space="preserve">
         <value>ویژگی‌های کلیدی پلتفرم ما</value>
@@ -3548,6 +3602,9 @@
     <data name="Keywords (Fa)" xml:space="preserve">
         <value>کلمات کلیدی (فا)</value>
     </data>
+    <data name="Language" xml:space="preserve">
+        <value>زبان</value>
+    </data>
     <data name="Last Login Date" xml:space="preserve">
         <value>تاریخ آخرین ورود</value>
     </data>
@@ -3564,7 +3621,7 @@
         <value>روانشناس ارشد</value>
     </data>
     <data name="Leading a group to achieve a goal" xml:space="preserve">
-        <value>رهبری یك گروه برای رسیدن به هدف</value>
+        <value>رهبری یك گروه برای رسیدن به هدف </value>
     </data>
     <data name="Learn More" xml:space="preserve">
         <value>بیشتر بدانید</value>
@@ -3600,7 +3657,7 @@
         <value>محل برگزاری دوره</value>
     </data>
     <data name="Locomotive engineer" xml:space="preserve">
-        <value>مهندس لوكوموتیو</value>
+        <value>مهندس لوكوموتیو </value>
     </data>
     <data name="Log in" xml:space="preserve">
         <value>ورود</value>
@@ -3657,7 +3714,7 @@
         <value>حساب کاربری خود را مدیریت کنید</value>
     </data>
     <data name="Management skills" xml:space="preserve">
-        <value>مهارت های مدیریت</value>
+        <value>مهارت های مدیریت </value>
     </data>
     <data name="Manual skills (using tools)" xml:space="preserve">
         <value>مهارت های دستی ( استفاده از ابزار )</value>
@@ -3681,10 +3738,10 @@
         <value>مدیر بازاریابی</value>
     </data>
     <data name="Marriage counselor" xml:space="preserve">
-        <value>مشاور ازدواج</value>
+        <value>مشاور ازدواج </value>
     </data>
     <data name="Mathematical or social science skills" xml:space="preserve">
-        <value>مهارت های ریاضی یا علوم اجتماعی</value>
+        <value>مهارت های ریاضی یا علوم اجتماعی </value>
     </data>
     <data name="Max Tokens" xml:space="preserve">
         <value>حداکثر توکن</value>
@@ -3696,19 +3753,22 @@
         <value>توانایی‌های شناختی و مهارت‌های خاص خود را که مربوط به نقش‌های شغلی مختلف هستند، اندازه‌گیری کنید.</value>
     </data>
     <data name="Mechanical ability" xml:space="preserve">
-        <value>توانایی مكانیكی</value>
+        <value>توانایی مكانیكی </value>
     </data>
     <data name="Medical laboratory technician" xml:space="preserve">
-        <value>تكنسین آزمایشگاه پزشكی</value>
+        <value>تكنسین آزمایشگاه پزشكی </value>
     </data>
     <data name="Meet Our Experts" xml:space="preserve">
         <value>با متخصصان ما آشنا شوید</value>
     </data>
     <data name="Meeting important figures" xml:space="preserve">
-        <value>ملاقات با شخصیت های مهم</value>
+        <value>ملاقات با شخصیت های مهم </value>
     </data>
     <data name="Membership in cultural and social associations and centers" xml:space="preserve">
-        <value>عضویت در انجمن ها و مراكز فرهنگی و اجتماعی</value>
+        <value>عضویت در انجمن ها و مراكز فرهنگی و اجتماعی </value>
+    </data>
+    <data name="Mental flexibility, fluid intelligence" xml:space="preserve">
+        <value>انعطاف ذهنی، هوش سیال</value>
     </data>
     <data name="Menu Background Color" xml:space="preserve">
         <value>رنگ پس‌زمینه منو</value>
@@ -3729,7 +3789,7 @@
         <value>صندوق پیام</value>
     </data>
     <data name="Meteorologist" xml:space="preserve">
-        <value>متخصص هواشناسی</value>
+        <value>متخصص هواشناسی </value>
     </data>
     <data name="Minor Corrections" xml:space="preserve">
         <value>ایراد جزئی</value>
@@ -3766,6 +3826,9 @@
     </data>
     <data name="Ms. Industry Analyst" xml:space="preserve">
         <value>خانم تحلیلگر صنعت</value>
+    </data>
+    <data name="Multiple rules tracking" xml:space="preserve">
+        <value>ردیابی قوانین چندگانه </value>
     </data>
     <data name="Musician" xml:space="preserve">
         <value>آهنگساز</value>
@@ -3962,6 +4025,9 @@
     <data name="No Post Submitted" xml:space="preserve">
         <value>هیچ اطلاعیه‌ای ارسال نشده است</value>
     </data>
+    <data name="No prompts found." xml:space="preserve">
+        <value>هیچ پرامپتی یافت نشد.</value>
+    </data>
     <data name="No Review Assigned" xml:space="preserve">
         <value>هیچ داوری انتساب داده نشده است</value>
     </data>
@@ -3992,6 +4058,9 @@
     <data name="Not Agree" xml:space="preserve">
         <value>مخالفم</value>
     </data>
+    <data name="Not Confirmed" xml:space="preserve">
+        <value>تایید نشده</value>
+    </data>
     <data name="Not Started" xml:space="preserve">
         <value>شروع نشده  است</value>
     </data>
@@ -4012,6 +4081,9 @@
     </data>
     <data name="Occupation" xml:space="preserve">
         <value>شغل</value>
+    </data>
+    <data name="Occupations List" xml:space="preserve">
+        <value>فهرست مشاغل</value>
     </data>
     <data name="Officer" xml:space="preserve">
         <value>دفتر دار</value>
@@ -4085,6 +4157,9 @@
     <data name="Over the years, I have occasionally done foolish things." xml:space="preserve">
         <value>در طول سالهای گذشته بعضی وقت های دست به کارهای احمقانه ای زده ام.</value>
     </data>
+    <data name="Package" xml:space="preserve">
+        <value>بسته</value>
+    </data>
     <data name="Package Activation" xml:space="preserve">
         <value>فعال‌سازی پکیج</value>
     </data>
@@ -4095,7 +4170,7 @@
         <value>نتیجه بسته</value>
     </data>
     <data name="Packages" xml:space="preserve">
-        <value>بسته ها</value>
+        <value>بسته‌ها</value>
     </data>
     <data name="Packages List" xml:space="preserve">
         <value>لیست بسته‌ها</value>
@@ -4238,6 +4313,12 @@
     <data name="People who haven't found their goals annoy me." xml:space="preserve">
         <value>کسانی که اهدافشان را پیدا نکرده‌اند، من را اذیت می‌کنند.</value>
     </data>
+    <data name="Perceptual reasoning, simple shapes, repetition" xml:space="preserve">
+        <value>استدلال ادراکی، اشکال ساده، تکرار. </value>
+    </data>
+    <data name="Perceptual reasoning, simple transformations" xml:space="preserve">
+        <value>استدلال ادراکی، دگرگونی های ساده. </value>
+    </data>
     <data name="Personal data" xml:space="preserve">
         <value>داده‌های شخصی</value>
     </data>
@@ -4278,7 +4359,7 @@
         <value>شماره تلفن</value>
     </data>
     <data name="Physicist" xml:space="preserve">
-        <value>فیزیكدان</value>
+        <value>فیزیكدان </value>
     </data>
     <data name="Platform Architect" xml:space="preserve">
         <value>معمار پلتفرم</value>
@@ -4290,7 +4371,7 @@
         <value>نوازندگی در گروه موسیقی و سرود</value>
     </data>
     <data name="Playwright" xml:space="preserve">
-        <value>نمایشنامه نویس</value>
+        <value>نمایشنامه نویس </value>
     </data>
     <data name="Please check your email to confirm your account." xml:space="preserve">
         <value>لطفا ایمیل خود را برای تایید حساب کاربری چک نمایید.</value>
@@ -4320,7 +4401,7 @@
         <value>لطفا منتظر بمانید!!!</value>
     </data>
     <data name="Poet" xml:space="preserve">
-        <value>شاعر</value>
+        <value>شاعر </value>
     </data>
     <data name="Poetry has almost no effect on me." xml:space="preserve">
         <value>شعر تقریباً اثری روی من ندارد .</value>
@@ -4412,6 +4493,9 @@
     <data name="Print Cards" xml:space="preserve">
         <value>چاپ کارت</value>
     </data>
+    <data name="Print Result" xml:space="preserve">
+        <value>چاپ نتیجه </value>
+    </data>
     <data name="Privacy policy" xml:space="preserve">
         <value>سیاست محرمانگی</value>
     </data>
@@ -4427,11 +4511,14 @@
     <data name="Program Schedule" xml:space="preserve">
         <value>زمان‌بندی برنامه‌ها</value>
     </data>
+    <data name="Prompt Text" xml:space="preserve">
+        <value>متن پرامپت</value>
+    </data>
     <data name="Provides insights into current job market demands and trends." xml:space="preserve">
         <value>ارائه دهنده بینش در مورد تقاضاها و روندهای فعلی بازار کار.</value>
     </data>
     <data name="Psychiatric assistant" xml:space="preserve">
-        <value>دستیار امور روانپزشكی</value>
+        <value>دستیار امور روانپزشكی </value>
     </data>
     <data name="Psychologist" xml:space="preserve">
         <value>روانشناس</value>
@@ -4446,7 +4533,7 @@
         <value>انتشار صفحه</value>
     </data>
     <data name="Purchasing officer" xml:space="preserve">
-        <value>مامور خرید</value>
+        <value>مامور خرید </value>
     </data>
     <data name="Question" xml:space="preserve">
         <value>پرسش</value>
@@ -4506,25 +4593,25 @@
         <value>بیشتر بخوانید ...</value>
     </data>
     <data name="Reading famous stories" xml:space="preserve">
-        <value>خواندن داستانهای معروف</value>
+        <value>خواندن داستانهای معروف </value>
     </data>
     <data name="Reading poetry or writing poetry" xml:space="preserve">
-        <value>خواندن شعر یا سرودن شعر</value>
+        <value>خواندن شعر یا سرودن شعر </value>
     </data>
     <data name="Reading psychology books" xml:space="preserve">
         <value>مطالعه كتابهای روانشناسی</value>
     </data>
     <data name="Reading scientific books or magazines" xml:space="preserve">
-        <value>خواندن كتابها یا مجلات علمی</value>
+        <value>خواندن كتابها یا مجلات علمی </value>
     </data>
     <data name="Ready to Start Your Career Discovery?" xml:space="preserve">
         <value>آماده شروع کشف مسیر شغلی خود هستید؟</value>
     </data>
     <data name="Real estate or automobile broker" xml:space="preserve">
-        <value>واسطه گر معاملات ملكی یا اتومبیل</value>
+        <value>واسطه گر معاملات ملكی یا اتومبیل </value>
     </data>
     <data name="Realistic" xml:space="preserve">
-        <value>واقع گرا</value>
+        <value>واقع گرا  </value>
     </data>
     <data name="Receipt" xml:space="preserve">
         <value>رسید پرداخت</value>
@@ -4542,13 +4629,13 @@
         <value>مخاطب</value>
     </data>
     <data name="Recording and maintaining documents of expenses and income" xml:space="preserve">
-        <value>ثبت و نگهداری اسناد هزینه ها و درآمد</value>
+        <value>ثبت و نگهداری اسناد هزینه ها و درآمد </value>
     </data>
     <data name="Recovery Code" xml:space="preserve">
         <value>کد بازیابی</value>
     </data>
     <data name="Reform and education specialist" xml:space="preserve">
-        <value>متخصص اصلا ح و تربیت</value>
+        <value>متخصص اصلا ح و تربیت </value>
     </data>
     <data name="Regardless of others' conditions and situations, I do not feel superior to them." xml:space="preserve">
         <value>صرف نظر از اینکه دیگران چه وضعیت وشرایطی دارند احساس نمی کنم که از بقیه بهتر باشم .</value>
@@ -4607,6 +4694,9 @@
     <data name="Reply" xml:space="preserve">
         <value>پاسخ</value>
     </data>
+    <data name="Reply Length" xml:space="preserve">
+        <value>طول پاسخ</value>
+    </data>
     <data name="Reply Message" xml:space="preserve">
         <value>پاسخ به پیام</value>
     </data>
@@ -4644,7 +4734,7 @@
         <value>مسئولیت‌پذیر</value>
     </data>
     <data name="Restaurant manager" xml:space="preserve">
-        <value>مدیر رستوران</value>
+        <value>مدیر رستوران </value>
     </data>
     <data name="Restorative" xml:space="preserve">
         <value>ترمیم‌کننده</value>
@@ -4764,7 +4854,7 @@
         <value>نام و نام خانوادگی داور</value>
     </data>
     <data name="Reviewer No." xml:space="preserve">
-        <value>داور شماره</value>
+        <value>داور شماره </value>
     </data>
     <data name="Reviewer Reject Link" xml:space="preserve">
         <value>لینک رد داوری</value>
@@ -4785,13 +4875,13 @@
         <value>نقش‌ها</value>
     </data>
     <data name="Sales ability" xml:space="preserve">
-        <value>توانایی فروشندگی</value>
+        <value>توانایی فروشندگی </value>
     </data>
     <data name="Sales manager" xml:space="preserve">
         <value>مدیر فروش</value>
     </data>
     <data name="Salesperson" xml:space="preserve">
-        <value>فروشنده</value>
+        <value>فروشنده </value>
     </data>
     <data name="Sat - Wed : 09 AM - 09 PM" xml:space="preserve">
         <value>شنبه - چهارشنبه: ۰۹ صبح - ۰۹ شب</value>
@@ -4818,7 +4908,7 @@
         <value>پس‌زمینه بخش زمان‌بندی</value>
     </data>
     <data name="School principal" xml:space="preserve">
-        <value>مدیر مدرسه</value>
+        <value>مدیر مدرسه </value>
     </data>
     <data name="Scientific &amp; Executive Committee" xml:space="preserve">
         <value>کمیته علمی و اجرایی</value>
@@ -4827,7 +4917,7 @@
         <value>اعضای کمیته علمی و اجرایی</value>
     </data>
     <data name="Scientific ability" xml:space="preserve">
-        <value>توانایی علمی</value>
+        <value>توانایی علمی </value>
     </data>
     <data name="Scientific article writer" xml:space="preserve">
         <value>نویسنده مقالات علمی</value>
@@ -4848,7 +4938,7 @@
         <value>فیلد تخصصی علمی</value>
     </data>
     <data name="Scientific research expert" xml:space="preserve">
-        <value>كارشناس تحقیقات علمی</value>
+        <value>كارشناس تحقیقات علمی </value>
     </data>
     <data name="Score" xml:space="preserve">
         <value>امتیاز</value>
@@ -4860,7 +4950,7 @@
         <value>امتیاز معکوس شده است</value>
     </data>
     <data name="Sculptor" xml:space="preserve">
-        <value>مجسمه ساز</value>
+        <value>مجسمه ساز </value>
     </data>
     <data name="Search" xml:space="preserve">
         <value>جستجو</value>
@@ -4952,7 +5042,7 @@
     <data name="Selected Fields" xml:space="preserve">
         <value>فیلدهای انتخابی</value>
     </data>
-    <data name="Selected Posters ..." xml:space="preserve">
+    <data name="Selected Posters ... " xml:space="preserve">
         <value>پوسترهای انتخابی</value>
     </data>
     <data name="SelfAssurance" xml:space="preserve">
@@ -4965,7 +5055,7 @@
         <value>خود انضباط</value>
     </data>
     <data name="Selling goods" xml:space="preserve">
-        <value>فروشندگی اجناس</value>
+        <value>فروشندگی اجناس </value>
     </data>
     <data name="Send" xml:space="preserve">
         <value>ارسال</value>
@@ -5067,7 +5157,7 @@
         <value>معناداری</value>
     </data>
     <data name="Singer" xml:space="preserve">
-        <value>خواننده سرود</value>
+        <value>خواننده سرود </value>
     </data>
     <data name="Site Design" xml:space="preserve">
         <value>ظاهر سایت</value>
@@ -5094,16 +5184,16 @@
         <value>اسلایدها</value>
     </data>
     <data name="Social" xml:space="preserve">
-        <value>اجتماعی</value>
+        <value>اجتماعی </value>
     </data>
     <data name="Social gatherings are usually boring for me." xml:space="preserve">
         <value>معمولاً گردهمایی های اجتماعی برایم کسل کننده هستند .</value>
     </data>
     <data name="Social science director" xml:space="preserve">
-        <value>دبیر علوم اجتماعی</value>
+        <value>دبیر علوم اجتماعی </value>
     </data>
     <data name="Sociologist" xml:space="preserve">
-        <value>جامعه شناس</value>
+        <value>جامعه شناس </value>
     </data>
     <data name="Software Developer" xml:space="preserve">
         <value>توسعه‌دهنده نرم‌افزار</value>
@@ -5202,7 +5292,7 @@
         <value>متخصص در الگوریتم‌های هوش مصنوعی برای تحلیل داده و پیش‌بینی.</value>
     </data>
     <data name="Speech therapist" xml:space="preserve">
-        <value>گفتار درمانگر</value>
+        <value>گفتار درمانگر </value>
     </data>
     <data name="Sponsors" xml:space="preserve">
         <value>حامیان</value>
@@ -5211,10 +5301,10 @@
         <value>لیست حامیان</value>
     </data>
     <data name="Sports club founder" xml:space="preserve">
-        <value>مؤسس باشگاه ورزشی</value>
+        <value>مؤسس باشگاه ورزشی </value>
     </data>
     <data name="Sports coach" xml:space="preserve">
-        <value>مربی ورزش</value>
+        <value>مربی ورزش </value>
     </data>
     <data name="Start Date" xml:space="preserve">
         <value>تاریخ آغاز</value>
@@ -5328,28 +5418,28 @@
         <value>در خبرنامه ما مشترک شوید. شما از آخرین اخبار، فعالیت ها و پیشرفت ها مطلع خواهید شد.</value>
     </data>
     <data name="Supervising and supervising the work of others" xml:space="preserve">
-        <value>سرپرستی و نظارت بر كار دیگران</value>
+        <value>سرپرستی و نظارت بر كار دیگران </value>
     </data>
     <data name="Support" xml:space="preserve">
         <value>پشتیبانی</value>
     </data>
     <data name="Surveyor" xml:space="preserve">
-        <value>نقشه بردار</value>
+        <value>نقشه بردار </value>
     </data>
     <data name="Syllabus (Fa)" xml:space="preserve">
         <value>سرفصل دوره</value>
     </data>
     <data name="Tailor" xml:space="preserve">
-        <value>خیاط</value>
+        <value>خیاط </value>
     </data>
     <data name="Take a bookkeeping course" xml:space="preserve">
         <value>گذراندن دوره دفترداری</value>
     </data>
     <data name="Take a business course" xml:space="preserve">
-        <value>گذراندن دوره بازرگانی</value>
+        <value>گذراندن دوره بازرگانی </value>
     </data>
     <data name="Take a financial accounting course" xml:space="preserve">
-        <value>گذراندن دوره حسابداری مالی</value>
+        <value>گذراندن دوره حسابداری مالی </value>
     </data>
     <data name="Take a typing course" xml:space="preserve">
         <value>گذراندن دوره ماشین نویسی</value>
@@ -5382,7 +5472,7 @@
         <value>گذراندن دوره شیمی</value>
     </data>
     <data name="Taking a geometry or trigonometry course" xml:space="preserve">
-        <value>گذراندن دوره هندسه یا مثلثات</value>
+        <value>گذراندن دوره هندسه یا مثلثات </value>
     </data>
     <data name="Taking a mechanical design course" xml:space="preserve">
         <value>گذراندن دوره طراحی مكانیكی</value>
@@ -5394,7 +5484,7 @@
         <value>گذراندن دوره خیاطی</value>
     </data>
     <data name="Taking a workshop course" xml:space="preserve">
-        <value>گذراندن دوره كارگاه</value>
+        <value>گذراندن دوره كارگاه </value>
     </data>
     <data name="Taking an art course" xml:space="preserve">
         <value>گذراندن دوره هنری</value>
@@ -5403,7 +5493,7 @@
         <value>گذراندن دوره اتو مكانیكی</value>
     </data>
     <data name="Taking care of children" xml:space="preserve">
-        <value>مراقبت از كودكان</value>
+        <value>مراقبت از كودكان </value>
     </data>
     <data name="Taking on leadership is not easy for me." xml:space="preserve">
         <value>پذیرش مدیر یت برای من کار ساده ای نیست .</value>
@@ -5418,7 +5508,7 @@
         <value>بسته استعداد و قدرت</value>
     </data>
     <data name="Tax expert" xml:space="preserve">
-        <value>كارشناس مالیات</value>
+        <value>كارشناس مالیات </value>
     </data>
     <data name="Taxi service (agency) driver" xml:space="preserve">
         <value>راننده تاكسی سرویس ( آژانس )</value>
@@ -5436,7 +5526,7 @@
         <value>اطلاعات فنی</value>
     </data>
     <data name="Telecommunication engineer" xml:space="preserve">
-        <value>مهندس مخابرات</value>
+        <value>مهندس مخابرات </value>
     </data>
     <data name="Television program producer" xml:space="preserve">
         <value>تولید كننده برنامه های تلویزیونی</value>
@@ -5461,6 +5551,9 @@
     </data>
     <data name="Test Result" xml:space="preserve">
         <value>نتیجه تست</value>
+    </data>
+    <data name="Test result uploaded from AI successfully." xml:space="preserve">
+        <value>نتیجه آزمون با موفقیت از هوش مصنوعی بارگذاری شد</value>
     </data>
     <data name="Test submitted successfully!" xml:space="preserve">
         <value>تست با موفقیت ارسال شد!</value>
@@ -5646,7 +5739,7 @@
         <value>دوره آموزشی</value>
     </data>
     <data name="Training Courses" xml:space="preserve">
-        <value>دوره‌های آموزشی</value>
+        <value>دوره‌های آموزشی </value>
     </data>
     <data name="Training courses held" xml:space="preserve">
         <value>دوره‌های آموزشی برگزارشده</value>
@@ -5658,13 +5751,13 @@
         <value>سعی کنید تا حد امکان از گزینه‌های خنثی اجتناب کنید. معمولاً یکی از دو عبارت به شما نزدیک‌تر است. اگر هر دو عبارت با شما مطابقت دارند، عبارتی را انتخاب کنید که بهتر یا دقیق‌تر شما را توصیف می‌کند.</value>
     </data>
     <data name="Typewriting of papers or letters for myself and others" xml:space="preserve">
-        <value>ماشین نویسی اوراق یا نامه ها برای خود ودیگران</value>
+        <value>ماشین نویسی اوراق یا نامه ها برای خود ودیگران </value>
     </data>
     <data name="Typing teacher" xml:space="preserve">
-        <value>معلم درس ماشین نویسی</value>
+        <value>معلم درس ماشین نویسی </value>
     </data>
     <data name="Unaccepted Review" xml:space="preserve">
-        <value>داوری‌های پذیرفته‌نشده</value>
+        <value>داوری‌های پذیرفته‌نشده </value>
     </data>
     <data name="Uncompleted" xml:space="preserve">
         <value>ناتمام</value>
@@ -5689,6 +5782,9 @@
     </data>
     <data name="Unfortunately Your paper has been rejected!!!" xml:space="preserve">
         <value>متاسفانه مقاله شما مورد پذیرش قرار نگرفت!!!</value>
+    </data>
+    <data name="Universities List" xml:space="preserve">
+        <value>فهرست دانشگاه‌ها</value>
     </data>
     <data name="University" xml:space="preserve">
         <value>دانشگاه</value>
@@ -5734,6 +5830,9 @@
     </data>
     <data name="Url" xml:space="preserve">
         <value>آدرس اینترنتی</value>
+    </data>
+    <data name="Use the {score} key to submit the test result." xml:space="preserve">
+        <value>برای ارسال نتیجه آزمون از کلید {score} استفاده کنید.</value>
     </data>
     <data name="Use these |Code Guide| to write respective info in email. (Click to Copy)" xml:space="preserve">
         <value>از این |کدهای راهنما| جهت قرار دادن اطلاعات متناظر در متن ایمیل استفاده کنید. (برای کپی کلیک کنید)</value>
@@ -5841,7 +5940,7 @@
         <value>ایمیل تایید ارسال شد. لطفا ایمیل خود را بررسی کنید.</value>
     </data>
     <data name="Veterinarian" xml:space="preserve">
-        <value>دامپزشك</value>
+        <value>دامپزشك </value>
     </data>
     <data name="View" xml:space="preserve">
         <value>مشاهده</value>
@@ -5907,7 +6006,7 @@
         <value>به تست هوش ریون خوش آمدید!</value>
     </data>
     <data name="Welder" xml:space="preserve">
-        <value>جوشكار</value>
+        <value>جوشكار </value>
     </data>
     <data name="What has happened to me in the past inspires me." xml:space="preserve">
         <value>آنچه در گذشته برایم رخ داده، الهام‌بخش من است.</value>
@@ -5991,7 +6090,7 @@
         <value>عرض (میلی‌متر)</value>
     </data>
     <data name="Wildlife and aquatic specialist" xml:space="preserve">
-        <value>متخصص موجودات وحشی وآبزی</value>
+        <value>متخصص موجودات وحشی وآبزی </value>
     </data>
     <data name="Winning is everything." xml:space="preserve">
         <value>پیروزی همه چیز است.</value>
@@ -6000,7 +6099,7 @@
         <value>جذب‌کننده</value>
     </data>
     <data name="Working in a laboratory" xml:space="preserve">
-        <value>كار در آزمایشگاه</value>
+        <value>كار در آزمایشگاه </value>
     </data>
     <data name="Working in a personal shop or store" xml:space="preserve">
         <value>كار كردن در مغازه یا فروشگاه شخصی</value>
@@ -6009,7 +6108,7 @@
         <value>کار کردن به خودی خود اصل نیست و تنها یک مدل از راه‌های گذران زندگی است.</value>
     </data>
     <data name="Working on a scientific project" xml:space="preserve">
-        <value>كار برروی یك پروژه علمی</value>
+        <value>كار برروی یك پروژه علمی </value>
     </data>
     <data name="Working with tools and Chemicals" xml:space="preserve">
         <value>كار با وسایل و مواد شیمیایی</value>
@@ -6021,7 +6120,7 @@
         <value>دیدگاه خود را بنویسید</value>
     </data>
     <data name="Writing letters with friends" xml:space="preserve">
-        <value>نامه نگاری با دوستان</value>
+        <value>نامه نگاری با دوستان </value>
     </data>
     <data name="Writing official and administrative letters" xml:space="preserve">
         <value>نوشتن نامه های اداری و رسمی</value>
@@ -6106,5 +6205,8 @@
     </data>
     <data name="Your Raven Test has not been started!" xml:space="preserve">
         <value>تست ریون شما شروع نشده است!</value>
+    </data>
+    <data name="Your test result will be examined by our intelligent system and will be available after review by our professional psychologist." xml:space="preserve">
+        <value>نتیجه آزمون شما توسط سیستم هوشمند ما بررسی شده و پس از بررسی توسط روانشناس حرفه ای ما، در دسترس قرار خواهد گرفت.</value>
     </data>
 </root>

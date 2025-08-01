@@ -21,6 +21,7 @@ namespace iSarv.Areas.Package.Pages
         }
 
         public TestPackage TestPackage { get; set; } = default!;
+        public List<Prompt> Prompts { get; set; }
         [TempData] public string AiError { get; set; } = string.Empty;
 
         public async Task<IActionResult> OnGetAsync(int? id)
@@ -31,8 +32,8 @@ namespace iSarv.Areas.Package.Pages
             }
 
             var testPackage = await _context.TestPackages.Include(tp => tp.User)
-                .Include(tp=>tp.NeoTest).Include(tp=>tp.CliftonTest)
-                .Include(tp=>tp.HollandTest).Include(tp=>tp.RavenTest)
+                .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
+                .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (testPackage == null)
             {
@@ -42,6 +43,9 @@ namespace iSarv.Areas.Package.Pages
             {
                 TestPackage = testPackage;
             }
+
+            Prompts = await _context.Prompts.ToListAsync();
+
             return Page();
         }
 
@@ -54,12 +58,7 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            testPackage.FinalResult = result;
+            testPackage.FinalResult = result ?? "";
             _context.Attach(testPackage).State = EntityState.Modified;
 
             try
@@ -90,12 +89,7 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            neoTest.Result = result;
+            neoTest.Result = result ?? "";
             neoTest.IsConfirmed = true;
             _context.Attach(neoTest).State = EntityState.Modified;
 
@@ -127,12 +121,7 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            cliftonTest.Result = result;
+            cliftonTest.Result = result ?? "";
             cliftonTest.IsConfirmed = true;
             _context.Attach(cliftonTest).State = EntityState.Modified;
 
@@ -164,12 +153,7 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            hollandTest.Result = result;
+            hollandTest.Result = result ?? "";
             hollandTest.IsConfirmed = true;
             _context.Attach(hollandTest).State = EntityState.Modified;
 
@@ -201,12 +185,7 @@ namespace iSarv.Areas.Package.Pages
                 return NotFound();
             }
 
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-
-            ravenTest.Result = result;
+            ravenTest.Result = result ?? "";
             ravenTest.IsConfirmed = true;
             _context.Attach(ravenTest).State = EntityState.Modified;
 
@@ -228,20 +207,30 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetPackageResultFromAIAsync(int id)
+
+        public async Task<IActionResult> OnPostGetPackageResultFromAIAsync(int id, string server, string model, string promptName)
         {
-            var testPackage = await _context.TestPackages.FindAsync(id);
+            var testPackage = await _context.TestPackages.Include(tp => tp.User)
+                .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
+                .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest)
+                .FirstOrDefaultAsync(tp => tp.Id == id);
 
             if (testPackage == null)
             {
                 return NotFound();
             }
 
-            // Call the AI service to get the result
-            //var aiResult = await _aiService.GetResult(testPackage);
+            var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Name == promptName);
+            if (prompt == null) prompt = new() { Name = "", Test = Tests.Package };
 
-            //testPackage.FinalResult = aiResult;
-            //_context.Attach(testPackage).State = EntityState.Modified;
+            var score = "Neo Test:\n" + testPackage.NeoTest?.Result + "\n\n" +
+                        "Clifton Test:\n" + testPackage.CliftonTest?.Result + "\n\n" +
+                        "Holland Test:\n" + testPackage.HollandTest?.Result + "\n\n" +
+                        "Raven Test:\n" + testPackage.RavenTest?.Result + "\n\n";
+
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score, prompt, testPackage.User, server, model);
+            testPackage.FinalResult = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
+            AiError = aiResponse.IsSuccess ? "Test result uploaded from AI successfully." : aiResponse.Reply;
 
             try
             {
@@ -261,19 +250,23 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetNeoResultFromAIAsync(int id, string server, string model)
+
+        public async Task<IActionResult> OnPostGetNeoResultFromAIAsync(int id, string server, string model, string promptName)
         {
-            var neoTest = await _context.NeoTests.FindAsync(id);
+            var neoTest = await _context.NeoTests.Include(nt => nt.TestPackage).ThenInclude(tp => tp.User).FirstOrDefaultAsync(nt => nt.Id == id);
 
             if (neoTest == null)
             {
                 return NotFound();
             }
 
+            var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Name == promptName);
+            if (prompt == null) prompt = new() { Name = "", Test = Tests.Neo };
+
             var score = neoTest.CalculateScores();
-            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Neo PI-R", server, model);
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), prompt, neoTest.TestPackage.User, server, model);
             neoTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
-            AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
+            AiError = aiResponse.IsSuccess ? "Test result uploaded from AI successfully." : aiResponse.Reply;
 
             try
             {
@@ -293,19 +286,22 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetCliftonResultFromAIAsync(int id, string server, string model)
+        public async Task<IActionResult> OnPostGetCliftonResultFromAIAsync(int id, string server, string model, string promptName)
         {
-            var cliftonTest = await _context.CliftonTests.FindAsync(id);
+            var cliftonTest = await _context.CliftonTests.Include(ct => ct.TestPackage).ThenInclude(tp => tp.User).FirstOrDefaultAsync(ct => ct.Id == id);
 
             if (cliftonTest == null)
             {
                 return NotFound();
             }
 
+            var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Name == promptName);
+            if (prompt == null) prompt = new() { Name = "", Test = Tests.Clifton };
+
             var score = cliftonTest.CalculateScores();
-            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Clifton Strengths (CSTA)", server, model);
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), prompt, cliftonTest.TestPackage.User, server, model);
             cliftonTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
-            AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
+            AiError = aiResponse.IsSuccess ? "Test result uploaded from AI successfully." : aiResponse.Reply;
 
             try
             {
@@ -325,19 +321,22 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetHollandResultFromAIAsync(int id, string server, string model)
+        public async Task<IActionResult> OnPostGetHollandResultFromAIAsync(int id, string server, string model, string promptName)
         {
-            var hollandTest = await _context.HollandTests.FindAsync(id);
+            var hollandTest = await _context.HollandTests.Include(ht => ht.TestPackage).ThenInclude(tp => tp.User).FirstOrDefaultAsync(ht => ht.Id == id);
 
             if (hollandTest == null)
             {
                 return NotFound();
             }
 
+            var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Name == promptName);
+            if (prompt == null) prompt = new() { Name = "", Test = Tests.Holland };
+
             var score = hollandTest.CalculateScores();
-            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Holland (RIASEC)", server, model);
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), prompt, hollandTest.TestPackage.User, server, model);
             hollandTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
-            AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
+            AiError = aiResponse.IsSuccess ? "Test result uploaded from AI successfully." : aiResponse.Reply;
 
             try
             {
@@ -357,19 +356,22 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        public async Task<IActionResult> OnPostGetRavenResultFromAIAsync(int id, string server, string model)
+        public async Task<IActionResult> OnPostGetRavenResultFromAIAsync(int id, string server, string model, string promptName)
         {
-            var ravenTest = await _context.RavenTests.FindAsync(id);
+            var ravenTest = await _context.RavenTests.Include(rt => rt.TestPackage).ThenInclude(tp => tp.User).FirstOrDefaultAsync(rt => rt.Id == id);
 
             if (ravenTest == null)
             {
                 return NotFound();
             }
 
+            var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Name == promptName);
+            if (prompt == null) prompt = new() { Name = "", Test = Tests.Raven };
+
             var score = ravenTest.CalculateScores();
-            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), "Raven IQ", server, model);
+            var aiResponse = await AiService.GetAIReplyForTestAsync(score.ToJson(), prompt, ravenTest.TestPackage.User, server, model);
             ravenTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
-            AiError = aiResponse.IsSuccess ? "" : aiResponse.Reply;
+            AiError = aiResponse.IsSuccess ? "Test result uploaded from AI successfully." : aiResponse.Reply;
 
             try
             {
@@ -401,7 +403,8 @@ namespace iSarv.Areas.Package.Pages
 
             neoTest.Response = string.Empty;
             neoTest.Result = string.Empty;
-            if(DateTime.Now > neoTest.Deadline)
+            neoTest.IsCompleted = false;
+            if (DateTime.Now > neoTest.Deadline)
                 neoTest.Deadline = DateTime.Now.AddDays(3);
             neoTest.IsConfirmed = false;
 
@@ -423,7 +426,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        
+
         public async Task<IActionResult> OnPostResetCliftonTestAsync(int id)
         {
             var cliftonTest = await _context.CliftonTests.FindAsync(id);
@@ -435,7 +438,8 @@ namespace iSarv.Areas.Package.Pages
 
             cliftonTest.Response = string.Empty;
             cliftonTest.Result = string.Empty;
-            if(DateTime.Now > cliftonTest.Deadline)
+            cliftonTest.IsCompleted = false;
+            if (DateTime.Now > cliftonTest.Deadline)
                 cliftonTest.Deadline = DateTime.Now.AddDays(3);
             cliftonTest.IsConfirmed = false;
 
@@ -457,7 +461,7 @@ namespace iSarv.Areas.Package.Pages
 
             return RedirectToPage("./Details", new { id = id });
         }
-        
+
         public async Task<IActionResult> OnPostResetHollandTestAsync(int id)
         {
             var hollandTest = await _context.HollandTests.FindAsync(id);
@@ -469,7 +473,8 @@ namespace iSarv.Areas.Package.Pages
 
             hollandTest.Response = string.Empty;
             hollandTest.Result = string.Empty;
-            if(DateTime.Now > hollandTest.Deadline)
+            hollandTest.IsCompleted = false;
+            if (DateTime.Now > hollandTest.Deadline)
                 hollandTest.Deadline = DateTime.Now.AddDays(3);
             hollandTest.IsConfirmed = false;
 
@@ -503,7 +508,8 @@ namespace iSarv.Areas.Package.Pages
 
             ravenTest.Response = string.Empty;
             ravenTest.Result = string.Empty;
-            if(DateTime.Now > ravenTest.Deadline)
+            ravenTest.IsCompleted = false;
+            if (DateTime.Now > ravenTest.Deadline)
                 ravenTest.Deadline = DateTime.Now.AddDays(3);
             ravenTest.IsConfirmed = false;
 

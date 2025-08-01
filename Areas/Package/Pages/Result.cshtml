@@ -1,0 +1,28 @@
+﻿@page "{id:int}"
+@model iSarv.Areas.Package.Pages.ResultModel
+@using iSarv.Data
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("Final Package Result");
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card shadow">
+                <div class="card-header bg-secondary text-white">
+                    <h5 class="mb-0">@Localizer.TextIgnoreCase("Final Package Result")</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>@Localizer.TextIgnoreCase("Name"):</strong> @Model.TestPackage.User.FullName</p>
+                    <hr />
+                    <p><strong>@Localizer.TextIgnoreCase("Package Name"):</strong>
+                        @Localizer.TextIgnoreCase(Model.TestPackage.Name)</p>
+                    <p><strong>@Localizer.TextIgnoreCase("Final Result"):</strong> @Model.TestPackage.FinalResult</p>
+                </div>
+                <div class="card-footer">
+                    <a href="/Package/PrintResult/@Model.TestPackage.Id?inframe=true" target="_blank">@Localizer.TextIgnoreCase("Click here to download the full result of your talent pack.")</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

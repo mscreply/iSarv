@@ -112,7 +112,7 @@
                                                         @Localizer.TextIgnoreCase("Neo Test") -
                                                         @if (package.NeoTest.IsCompleted)
                                                         {
-                                                            <span>@Localizer.TextIgnoreCase("Completed")
+                                                            <span>@(package.NeoTest.IsConfirmed ? Localizer.TextIgnoreCase("Completed") : Localizer.TextIgnoreCase("Not Confirmed"))
                                                                 <a href="/Test/Neo/Result/@package.Id"
                                                                    data-bs-toggle="tooltip"
                                                                    title="@Localizer.TextIgnoreCase("Click to view the result.")">
@@ -146,9 +146,12 @@
                                                         @Localizer.TextIgnoreCase("Clifton Test") -
                                                         @if (package.CliftonTest.IsCompleted)
                                                         {
-                                                            <span>@Localizer.TextIgnoreCase("Completed")
-                                                                <a href="/Test/Clifton/Result/@package.Id"><i
-                                                                        class="fas fa-eye"></i></a>
+                                                            <span>@(package.CliftonTest.IsConfirmed ? Localizer.TextIgnoreCase("Completed") : Localizer.TextIgnoreCase("Not Confirmed"))
+                                                                <a href="/Test/Clifton/Result/@package.Id"
+                                                                    data-bs-toggle="tooltip"
+                                                                    title="@Localizer.TextIgnoreCase("Click to view the result")">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
                                                             </span>
                                                         }
                                                         else
@@ -177,9 +180,12 @@
                                                         @Localizer.TextIgnoreCase("Holland Test") -
                                                         @if (package.HollandTest.IsCompleted)
                                                         {
-                                                            <span>@Localizer.TextIgnoreCase("Completed")
-                                                                <a href="/Test/Holland/Result/@package.Id"><i
-                                                                        class="fas fa-eye"></i></a>
+                                                            <span>@(package.HollandTest.IsConfirmed ? Localizer.TextIgnoreCase("Completed") : Localizer.TextIgnoreCase("Not Confirmed"))
+                                                                <a href="/Test/Holland/Result/@package.Id"
+                                                                    data-bs-toggle="tooltip"
+                                                                    title="@Localizer.TextIgnoreCase("Click to view the result")">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
                                                             </span>
                                                         }
                                                         else
@@ -208,9 +214,12 @@
                                                         @Localizer.TextIgnoreCase("Raven Test") -
                                                         @if (package.RavenTest.IsCompleted)
                                                         {
-                                                            <span>@Localizer.TextIgnoreCase("Completed")
-                                                                <a href="/Test/Raven/Result/@package.Id"><i
-                                                                        class="fas fa-eye"></i></a>
+                                                            <span>@(package.RavenTest.IsConfirmed ? Localizer.TextIgnoreCase("Completed") : Localizer.TextIgnoreCase("Not Confirmed"))
+                                                                <a href="/Test/Raven/Result/@package.Id"
+                                                                   data-bs-toggle="tooltip"
+                                                                   title="@Localizer.TextIgnoreCase("Click to view the result")">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </a>
                                                             </span>
                                                         }
                                                         else
@@ -240,7 +249,7 @@
                                             <div class="card-footer text-center">
                                                 @if (package.IsCompleted)
                                                 {
-                                                    <a href="/Packages/Result/@package.Id" class="btn btn-success">
+                                                    <a href="/Package/Result/@package.Id" class="btn btn-success">
                                                         @Localizer.TextIgnoreCase("See Result")
                                                     </a>
                                                 }

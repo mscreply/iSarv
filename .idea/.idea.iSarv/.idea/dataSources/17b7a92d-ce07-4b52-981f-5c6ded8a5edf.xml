@@ -499,7 +499,7 @@
     <routine id="190" parent="1" name="fts5"/>
     <schema id="191" parent="1" name="main">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-05-20.17:18:42</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-08-01.21:44:30</LastIntrospectionLocalTimestamp>
     </schema>
     <argument id="192" parent="16">
       <ArgumentDirection>R</ArgumentDirection>
@@ -1590,771 +1590,873 @@
     <argument id="554" parent="190">
       <Position>1</Position>
     </argument>
-    <table id="555" parent="191" name="ActivationCodes"/>
-    <table id="556" parent="191" name="AspNetRoleClaims"/>
-    <table id="557" parent="191" name="AspNetRoles"/>
-    <table id="558" parent="191" name="AspNetUserClaims"/>
-    <table id="559" parent="191" name="AspNetUserLogins"/>
-    <table id="560" parent="191" name="AspNetUserRoles"/>
-    <table id="561" parent="191" name="AspNetUserTokens"/>
-    <table id="562" parent="191" name="AspNetUsers"/>
-    <table id="563" parent="191" name="CliftonTestQuestions"/>
-    <table id="564" parent="191" name="CliftonTests"/>
-    <table id="565" parent="191" name="HollandTestQuestions"/>
-    <table id="566" parent="191" name="HollandTests"/>
-    <table id="567" parent="191" name="NeoTestQuestions"/>
-    <table id="568" parent="191" name="NeoTests"/>
-    <table id="569" parent="191" name="RavenTests"/>
-    <table id="570" parent="191" name="TestPackages"/>
-    <table id="571" parent="191" name="__EFMigrationsHistory"/>
-    <table id="572" parent="191" name="sqlite_master">
+    <table id="555" parent="191" name="AISettings"/>
+    <table id="556" parent="191" name="ActivationCodes"/>
+    <table id="557" parent="191" name="AspNetRoleClaims"/>
+    <table id="558" parent="191" name="AspNetRoles"/>
+    <table id="559" parent="191" name="AspNetUserClaims"/>
+    <table id="560" parent="191" name="AspNetUserLogins"/>
+    <table id="561" parent="191" name="AspNetUserRoles"/>
+    <table id="562" parent="191" name="AspNetUserTokens"/>
+    <table id="563" parent="191" name="AspNetUsers"/>
+    <table id="564" parent="191" name="CliftonTestQuestions"/>
+    <table id="565" parent="191" name="CliftonTests"/>
+    <table id="566" parent="191" name="HollandTestQuestions"/>
+    <table id="567" parent="191" name="HollandTests"/>
+    <table id="568" parent="191" name="NeoTestQuestions"/>
+    <table id="569" parent="191" name="NeoTests"/>
+    <table id="570" parent="191" name="Prompts"/>
+    <table id="571" parent="191" name="RavenTests"/>
+    <table id="572" parent="191" name="TestPackages"/>
+    <table id="573" parent="191" name="__EFMigrationsHistory"/>
+    <table id="574" parent="191" name="sqlite_master">
       <System>1</System>
     </table>
-    <table id="573" parent="191" name="sqlite_sequence">
+    <table id="575" parent="191" name="sqlite_sequence">
       <System>1</System>
     </table>
-    <column id="574" parent="555" name="Id">
+    <column id="576" parent="555" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="575" parent="555" name="Code">
+    <column id="577" parent="555" name="Server">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="576" parent="555" name="Email">
+    <column id="578" parent="555" name="Uri">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="577" parent="555" name="PhoneNumber">
+    <column id="579" parent="555" name="ApiKey">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="578" parent="555" name="NationalId">
+    <column id="580" parent="555" name="DefaultModel">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <key id="579" parent="555" name="PK_ActivationCodes">
+    <column id="581" parent="555" name="ModelList">
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="582" parent="555" name="MaxTokens">
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <key id="583" parent="555" name="PK_AISettings">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="580" parent="556" name="Id">
+    <column id="584" parent="556" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="581" parent="556" name="RoleId">
+    <column id="585" parent="556" name="Code">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="582" parent="556" name="ClaimType">
+    <column id="586" parent="556" name="Email">
+      <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="583" parent="556" name="ClaimValue">
+    <column id="587" parent="556" name="PhoneNumber">
+      <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="584" parent="556" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+    <column id="588" parent="556" name="NationalId">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <key id="589" parent="556" name="PK_ActivationCodes">
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="590" parent="557" name="Id">
+      <AutoIncrement>1</AutoIncrement>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="591" parent="557" name="RoleId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="592" parent="557" name="ClaimType">
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="593" parent="557" name="ClaimValue">
+      <Position>4</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <foreign-key id="594" parent="557" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
       <ColNames>RoleId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetRoles</RefTableName>
     </foreign-key>
-    <index id="585" parent="556" name="IX_AspNetRoleClaims_RoleId">
+    <index id="595" parent="557" name="IX_AspNetRoleClaims_RoleId">
       <ColNames>RoleId</ColNames>
     </index>
-    <key id="586" parent="556" name="PK_AspNetRoleClaims">
+    <key id="596" parent="557" name="PK_AspNetRoleClaims">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="587" parent="557" name="Id">
+    <column id="597" parent="558" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="588" parent="557" name="Name">
+    <column id="598" parent="558" name="Name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="589" parent="557" name="NormalizedName">
+    <column id="599" parent="558" name="NormalizedName">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="590" parent="557" name="ConcurrencyStamp">
+    <column id="600" parent="558" name="ConcurrencyStamp">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <index id="591" parent="557" name="sqlite_autoindex_AspNetRoles_1">
+    <index id="601" parent="558" name="sqlite_autoindex_AspNetRoles_1">
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="592" parent="557" name="RoleNameIndex">
+    <index id="602" parent="558" name="RoleNameIndex">
       <ColNames>NormalizedName</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="593" parent="557" name="PK_AspNetRoles">
+    <key id="603" parent="558" name="PK_AspNetRoles">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetRoles_1</UnderlyingIndexName>
     </key>
-    <column id="594" parent="558" name="Id">
+    <column id="604" parent="559" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="595" parent="558" name="UserId">
+    <column id="605" parent="559" name="UserId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="596" parent="558" name="ClaimType">
+    <column id="606" parent="559" name="ClaimType">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="597" parent="558" name="ClaimValue">
+    <column id="607" parent="559" name="ClaimValue">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="598" parent="558" name="FK_AspNetUserClaims_AspNetUsers_UserId">
+    <foreign-key id="608" parent="559" name="FK_AspNetUserClaims_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="599" parent="558" name="IX_AspNetUserClaims_UserId">
+    <index id="609" parent="559" name="IX_AspNetUserClaims_UserId">
       <ColNames>UserId</ColNames>
     </index>
-    <key id="600" parent="558" name="PK_AspNetUserClaims">
+    <key id="610" parent="559" name="PK_AspNetUserClaims">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="601" parent="559" name="LoginProvider">
+    <column id="611" parent="560" name="LoginProvider">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="602" parent="559" name="ProviderKey">
+    <column id="612" parent="560" name="ProviderKey">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="603" parent="559" name="ProviderDisplayName">
+    <column id="613" parent="560" name="ProviderDisplayName">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="604" parent="559" name="UserId">
+    <column id="614" parent="560" name="UserId">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="605" parent="559" name="FK_AspNetUserLogins_AspNetUsers_UserId">
+    <foreign-key id="615" parent="560" name="FK_AspNetUserLogins_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="606" parent="559" name="sqlite_autoindex_AspNetUserLogins_1">
+    <index id="616" parent="560" name="sqlite_autoindex_AspNetUserLogins_1">
       <ColNames>LoginProvider
 ProviderKey</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="607" parent="559" name="IX_AspNetUserLogins_UserId">
+    <index id="617" parent="560" name="IX_AspNetUserLogins_UserId">
       <ColNames>UserId</ColNames>
     </index>
-    <key id="608" parent="559" name="PK_AspNetUserLogins">
+    <key id="618" parent="560" name="PK_AspNetUserLogins">
       <ColNames>LoginProvider
 ProviderKey</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetUserLogins_1</UnderlyingIndexName>
     </key>
-    <column id="609" parent="560" name="UserId">
+    <column id="619" parent="561" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="610" parent="560" name="RoleId">
+    <column id="620" parent="561" name="RoleId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="611" parent="560" name="FK_AspNetUserRoles_AspNetUsers_UserId">
+    <foreign-key id="621" parent="561" name="FK_AspNetUserRoles_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <foreign-key id="612" parent="560" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
+    <foreign-key id="622" parent="561" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
       <ColNames>RoleId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetRoles</RefTableName>
     </foreign-key>
-    <index id="613" parent="560" name="sqlite_autoindex_AspNetUserRoles_1">
+    <index id="623" parent="561" name="sqlite_autoindex_AspNetUserRoles_1">
       <ColNames>UserId
 RoleId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="614" parent="560" name="IX_AspNetUserRoles_RoleId">
+    <index id="624" parent="561" name="IX_AspNetUserRoles_RoleId">
       <ColNames>RoleId</ColNames>
     </index>
-    <key id="615" parent="560" name="PK_AspNetUserRoles">
+    <key id="625" parent="561" name="PK_AspNetUserRoles">
       <ColNames>UserId
 RoleId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetUserRoles_1</UnderlyingIndexName>
     </key>
-    <column id="616" parent="561" name="UserId">
+    <column id="626" parent="562" name="UserId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="617" parent="561" name="LoginProvider">
+    <column id="627" parent="562" name="LoginProvider">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="618" parent="561" name="Name">
+    <column id="628" parent="562" name="Name">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="619" parent="561" name="Value">
+    <column id="629" parent="562" name="Value">
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="620" parent="561" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+    <foreign-key id="630" parent="562" name="FK_AspNetUserTokens_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="621" parent="561" name="sqlite_autoindex_AspNetUserTokens_1">
+    <index id="631" parent="562" name="sqlite_autoindex_AspNetUserTokens_1">
       <ColNames>UserId
 LoginProvider
 Name</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="622" parent="561" name="PK_AspNetUserTokens">
+    <key id="632" parent="562" name="PK_AspNetUserTokens">
       <ColNames>UserId
 LoginProvider
 Name</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetUserTokens_1</UnderlyingIndexName>
     </key>
-    <column id="623" parent="562" name="Id">
+    <column id="633" parent="563" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="624" parent="562" name="AccessFailedCount">
+    <column id="634" parent="563" name="AccessFailedCount">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="625" parent="562" name="Address">
+    <column id="635" parent="563" name="Address">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="626" parent="562" name="Bio">
+    <column id="636" parent="563" name="Bio">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="627" parent="562" name="ConcurrencyStamp">
+    <column id="637" parent="563" name="ConcurrencyStamp">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="628" parent="562" name="CreatedDate">
+    <column id="638" parent="563" name="CreatedDate">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="629" parent="562" name="DateOfBirth">
+    <column id="639" parent="563" name="DateOfBirth">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="630" parent="562" name="Email">
+    <column id="640" parent="563" name="Email">
       <Position>8</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="631" parent="562" name="EmailConfirmed">
+    <column id="641" parent="563" name="EmailConfirmed">
       <NotNull>1</NotNull>
       <Position>9</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="632" parent="562" name="FieldOfStudy">
+    <column id="642" parent="563" name="FieldOfStudy">
       <NotNull>1</NotNull>
       <Position>10</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="633" parent="562" name="FullName">
+    <column id="643" parent="563" name="FullName">
       <NotNull>1</NotNull>
       <Position>11</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="634" parent="562" name="Gender">
+    <column id="644" parent="563" name="Gender">
       <NotNull>1</NotNull>
       <Position>12</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="635" parent="562" name="IsActive">
+    <column id="645" parent="563" name="IsActive">
       <NotNull>1</NotNull>
       <Position>13</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="636" parent="562" name="LastLoginDate">
+    <column id="646" parent="563" name="LastLoginDate">
       <NotNull>1</NotNull>
       <Position>14</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="637" parent="562" name="LockoutEnabled">
+    <column id="647" parent="563" name="LockoutEnabled">
       <NotNull>1</NotNull>
       <Position>15</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="638" parent="562" name="LockoutEnd">
+    <column id="648" parent="563" name="LockoutEnd">
       <Position>16</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="639" parent="562" name="NationalId">
+    <column id="649" parent="563" name="NationalId">
       <NotNull>1</NotNull>
       <Position>17</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="640" parent="562" name="NormalizedEmail">
+    <column id="650" parent="563" name="NormalizedEmail">
       <Position>18</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="641" parent="562" name="NormalizedUserName">
+    <column id="651" parent="563" name="NormalizedUserName">
       <Position>19</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="642" parent="562" name="Occupation">
+    <column id="652" parent="563" name="Occupation">
       <NotNull>1</NotNull>
       <Position>20</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="643" parent="562" name="PasswordHash">
+    <column id="653" parent="563" name="PasswordHash">
       <Position>21</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="644" parent="562" name="PhoneNumber">
+    <column id="654" parent="563" name="PhoneNumber">
       <Position>22</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="645" parent="562" name="PhoneNumberConfirmed">
+    <column id="655" parent="563" name="PhoneNumberConfirmed">
       <NotNull>1</NotNull>
       <Position>23</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="646" parent="562" name="SecurityStamp">
+    <column id="656" parent="563" name="SecurityStamp">
       <Position>24</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="647" parent="562" name="TwoFactorEnabled">
+    <column id="657" parent="563" name="TwoFactorEnabled">
       <NotNull>1</NotNull>
       <Position>25</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="648" parent="562" name="University">
+    <column id="658" parent="563" name="University">
       <NotNull>1</NotNull>
       <Position>26</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="649" parent="562" name="UserName">
+    <column id="659" parent="563" name="UserName">
       <Position>27</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <index id="650" parent="562" name="sqlite_autoindex_AspNetUsers_1">
+    <index id="660" parent="563" name="sqlite_autoindex_AspNetUsers_1">
       <ColNames>Id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <index id="651" parent="562" name="UserNameIndex">
+    <index id="661" parent="563" name="UserNameIndex">
       <ColNames>NormalizedUserName</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="652" parent="562" name="EmailIndex">
+    <index id="662" parent="563" name="EmailIndex">
       <ColNames>NormalizedEmail</ColNames>
     </index>
-    <key id="653" parent="562" name="PK_AspNetUsers">
+    <key id="663" parent="563" name="PK_AspNetUsers">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex_AspNetUsers_1</UnderlyingIndexName>
     </key>
-    <column id="654" parent="563" name="Id">
+    <column id="664" parent="564" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="655" parent="563" name="StatementA">
+    <column id="665" parent="564" name="StatementA">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="656" parent="563" name="StatementB">
+    <column id="666" parent="564" name="StatementB">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="657" parent="563" name="ThemeA">
+    <column id="667" parent="564" name="ThemeA">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="658" parent="563" name="ThemeB">
+    <column id="668" parent="564" name="ThemeB">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <key id="659" parent="563" name="PK_CliftonTestQuestions">
+    <key id="669" parent="564" name="PK_CliftonTestQuestions">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="660" parent="564" name="Id">
+    <column id="670" parent="565" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="661" parent="564" name="Deadline">
+    <column id="671" parent="565" name="Deadline">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="662" parent="564" name="SubmitDate">
+    <column id="672" parent="565" name="SubmitDate">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="663" parent="564" name="Response">
+    <column id="673" parent="565" name="Response">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="664" parent="564" name="Result">
+    <column id="674" parent="565" name="Result">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="665" parent="564" name="StartDate">
+    <column id="675" parent="565" name="StartDate">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="666" parent="564" name="IsConfirmed">
+    <column id="676" parent="565" name="IsConfirmed">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <foreign-key id="667" parent="564" name="FK_CliftonTests_TestPackages_Id">
+    <column id="677" parent="565" name="IsCompleted">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="678" parent="565" name="FK_CliftonTests_TestPackages_Id">
       <ColNames>Id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>TestPackages</RefTableName>
     </foreign-key>
-    <key id="668" parent="564" name="PK_CliftonTests">
+    <key id="679" parent="565" name="PK_CliftonTests">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="669" parent="565" name="Id">
+    <column id="680" parent="566" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="670" parent="565" name="Statement">
+    <column id="681" parent="566" name="Statement">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="671" parent="565" name="HollandPersonality">
+    <column id="682" parent="566" name="HollandPersonality">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="672" parent="565" name="Type">
+    <column id="683" parent="566" name="Type">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <key id="673" parent="565" name="PK_HollandTestQuestions">
+    <key id="684" parent="566" name="PK_HollandTestQuestions">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="674" parent="566" name="Id">
+    <column id="685" parent="567" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="675" parent="566" name="Result">
+    <column id="686" parent="567" name="Result">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="676" parent="566" name="IsConfirmed">
+    <column id="687" parent="567" name="IsConfirmed">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="677" parent="566" name="StartDate">
+    <column id="688" parent="567" name="StartDate">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="678" parent="566" name="Deadline">
+    <column id="689" parent="567" name="Deadline">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="679" parent="566" name="SubmitDate">
+    <column id="690" parent="567" name="SubmitDate">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="680" parent="566" name="Response">
+    <column id="691" parent="567" name="Response">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="681" parent="566" name="FK_HollandTests_TestPackages_Id">
+    <column id="692" parent="567" name="IsCompleted">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="693" parent="567" name="FK_HollandTests_TestPackages_Id">
       <ColNames>Id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>TestPackages</RefTableName>
     </foreign-key>
-    <key id="682" parent="566" name="PK_HollandTests">
+    <key id="694" parent="567" name="PK_HollandTests">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="683" parent="567" name="Id">
+    <column id="695" parent="568" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="684" parent="567" name="Statement">
+    <column id="696" parent="568" name="Statement">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="685" parent="567" name="Facet">
+    <column id="697" parent="568" name="Facet">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="686" parent="567" name="ScoreIsReversed">
+    <column id="698" parent="568" name="ScoreIsReversed">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <key id="687" parent="567" name="PK_NeoTestQuestions">
+    <key id="699" parent="568" name="PK_NeoTestQuestions">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="688" parent="568" name="Id">
+    <column id="700" parent="569" name="Id">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="689" parent="568" name="Deadline">
+    <column id="701" parent="569" name="Deadline">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="690" parent="568" name="SubmitDate">
+    <column id="702" parent="569" name="SubmitDate">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="691" parent="568" name="Result">
+    <column id="703" parent="569" name="Result">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="692" parent="568" name="StartDate">
+    <column id="704" parent="569" name="StartDate">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="693" parent="568" name="Response">
+    <column id="705" parent="569" name="Response">
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="694" parent="568" name="IsConfirmed">
+    <column id="706" parent="569" name="IsConfirmed">
       <DefaultExpression>0</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <foreign-key id="695" parent="568" name="FK_NeoTests_TestPackages_Id">
+    <column id="707" parent="569" name="IsCompleted">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="708" parent="569" name="FK_NeoTests_TestPackages_Id">
       <ColNames>Id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>TestPackages</RefTableName>
     </foreign-key>
-    <key id="696" parent="568" name="PK_NeoTests">
+    <key id="709" parent="569" name="PK_NeoTests">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="697" parent="569" name="Id">
+    <column id="710" parent="570" name="Name">
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StoredType>INTEGER|0s</StoredType>
+      <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="698" parent="569" name="Result">
+    <column id="711" parent="570" name="PromptText">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="699" parent="569" name="IsConfirmed">
+    <column id="712" parent="570" name="Language">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="713" parent="570" name="ReplyLength">
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="714" parent="570" name="Test">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <index id="715" parent="570" name="sqlite_autoindex_Prompts_1">
+      <ColNames>Name</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <Unique>1</Unique>
+    </index>
+    <key id="716" parent="570" name="PK_Prompts">
+      <ColNames>Name</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>sqlite_autoindex_Prompts_1</UnderlyingIndexName>
+    </key>
+    <column id="717" parent="571" name="Id">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <column id="718" parent="571" name="Result">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>TEXT|0s</StoredType>
+    </column>
+    <column id="719" parent="571" name="IsConfirmed">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="700" parent="569" name="StartDate">
+    <column id="720" parent="571" name="StartDate">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="701" parent="569" name="Deadline">
+    <column id="721" parent="571" name="Deadline">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="702" parent="569" name="SubmitDate">
+    <column id="722" parent="571" name="SubmitDate">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="703" parent="569" name="Response">
+    <column id="723" parent="571" name="Response">
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="704" parent="569" name="FK_RavenTests_TestPackages_Id">
+    <column id="724" parent="571" name="IsCompleted">
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+      <StoredType>INTEGER|0s</StoredType>
+    </column>
+    <foreign-key id="725" parent="571" name="FK_RavenTests_TestPackages_Id">
       <ColNames>Id</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>TestPackages</RefTableName>
     </foreign-key>
-    <key id="705" parent="569" name="PK_RavenTests">
+    <key id="726" parent="571" name="PK_RavenTests">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="706" parent="570" name="Id">
+    <column id="727" parent="572" name="Id">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>INTEGER|0s</StoredType>
     </column>
-    <column id="707" parent="570" name="FinalResult">
+    <column id="728" parent="572" name="FinalResult">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="708" parent="570" name="UserId">
+    <column id="729" parent="572" name="UserId">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="709" parent="570" name="SubmitDate">
+    <column id="730" parent="572" name="SubmitDate">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="710" parent="570" name="Deadline">
+    <column id="731" parent="572" name="Deadline">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="711" parent="570" name="StartDate">
+    <column id="732" parent="572" name="StartDate">
       <DefaultExpression>&apos;0001-01-01 00:00:00&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="712" parent="570" name="Name">
+    <column id="733" parent="572" name="Name">
       <DefaultExpression>&apos;&apos;</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>7</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <foreign-key id="713" parent="570" name="FK_TestPackages_AspNetUsers_UserId">
+    <foreign-key id="734" parent="572" name="FK_TestPackages_AspNetUsers_UserId">
       <ColNames>UserId</ColNames>
       <OnDelete>cascade</OnDelete>
       <RefColNames>Id</RefColNames>
       <RefTableName>AspNetUsers</RefTableName>
     </foreign-key>
-    <index id="714" parent="570" name="IX_TestPackages_UserId">
+    <index id="735" parent="572" name="IX_TestPackages_UserId">
       <ColNames>UserId</ColNames>
     </index>
-    <key id="715" parent="570" name="PK_TestPackages">
+    <key id="736" parent="572" name="PK_TestPackages">
       <ColNames>Id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="716" parent="571" name="MigrationId">
+    <column id="737" parent="573" name="MigrationId">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="717" parent="571" name="ProductVersion">
+    <column id="738" parent="573" name="ProductVersion">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <index id="718" parent="571" name="sqlite_autoindex___EFMigrationsHistory_1">
+    <index id="739" parent="573" name="sqlite_autoindex___EFMigrationsHistory_1">
       <ColNames>MigrationId</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <Unique>1</Unique>
     </index>
-    <key id="719" parent="571" name="PK___EFMigrationsHistory">
+    <key id="740" parent="573" name="PK___EFMigrationsHistory">
       <ColNames>MigrationId</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>sqlite_autoindex___EFMigrationsHistory_1</UnderlyingIndexName>
     </key>
-    <column id="720" parent="572" name="type">
+    <column id="741" parent="574" name="type">
       <Position>1</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="721" parent="572" name="name">
+    <column id="742" parent="574" name="name">
       <Position>2</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="722" parent="572" name="tbl_name">
+    <column id="743" parent="574" name="tbl_name">
       <Position>3</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="723" parent="572" name="rootpage">
+    <column id="744" parent="574" name="rootpage">
       <Position>4</Position>
       <StoredType>INT|0s</StoredType>
     </column>
-    <column id="724" parent="572" name="sql">
+    <column id="745" parent="574" name="sql">
       <Position>5</Position>
       <StoredType>TEXT|0s</StoredType>
     </column>
-    <column id="725" parent="573" name="name">
+    <column id="746" parent="575" name="name">
       <Position>1</Position>
     </column>
-    <column id="726" parent="573" name="seq">
+    <column id="747" parent="575" name="seq">
       <Position>2</Position>
     </column>
   </database-model>

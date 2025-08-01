@@ -10,18 +10,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Activation.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Activation.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Data/Services/AIService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Services/AIService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/HollandTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/HollandTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/NeoTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/NeoTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Utilities.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_FooterPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_FooterPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iSarv.db" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/App_Files/data/University.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/University.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wwwroot/img/carousel-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/img/carousel-1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +76,7 @@
     <setting file="file://$USER_HOME$/AppData/Local/JetBrains/Shared/vAny/SourcesCache/db398e56b0886a44a1806fa88c6c6ab21566404a2791b87fc7ea2d74abfd863/ChatClient.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1584e493603cfc4e9b36b77d6d4afe97de6363f9/src/libraries/System.Private.CoreLib/src/System/Runtime/ExceptionServices/ExceptionDispatchInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/dotnet/runtime/1584e493603cfc4e9b36b77d6d4afe97de6363f9/src/libraries/System.Private.CoreLib/src/System/ThrowHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://D:/RiderProjects/ISarv-Project/iSarv/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" root0="FORCE_HIGHLIGHTING" />
@@ -194,7 +221,13 @@
       <workItem from="1748501013459" duration="507000" />
       <workItem from="1749460211342" duration="2673000" />
       <workItem from="1749463412591" duration="1471000" />
-      <workItem from="1749472683410" duration="660000" />
+      <workItem from="1749472683410" duration="1262000" />
+      <workItem from="1749717185014" duration="577000" />
+      <workItem from="1753728368238" duration="1250000" />
+      <workItem from="1754002878012" duration="1677000" />
+      <workItem from="1754006874617" duration="91000" />
+      <workItem from="1754010532361" duration="763000" />
+      <workItem from="1754084359791" duration="3448000" />
     </task>
     <task id="LOCAL-00001" summary="user management finish">
       <option name="closed" value="true" />
@@ -260,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749463528774</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="after ai setting to db">
+      <option name="closed" value="true" />
+      <created>1749473954627</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1749473954627</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -290,7 +331,8 @@
     <MESSAGE value="add holland test" />
     <MESSAGE value="all take test and result finish" />
     <MESSAGE value="add charts" />
-    <option name="LAST_COMMIT_MESSAGE" value="add charts" />
+    <MESSAGE value="after ai setting to db" />
+    <option name="LAST_COMMIT_MESSAGE" value="after ai setting to db" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

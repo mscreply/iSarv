@@ -1,0 +1,24 @@
+﻿@page
+@model iSarv.Areas.AISetting.Pages.DataFilesModel
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("Edit Data Files");
+}
+
+<div class="container mt-4">
+    <h2>@Localizer.TextIgnoreCase("Edit Data Files")</h2>
+    <form method="post">
+        <div class="form-group mb-3">
+            <label>@Localizer.TextIgnoreCase("Universities List")</label>
+            <textarea class="form-control content-en" asp-for="UniversityFile" rows="10"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label>@Localizer.TextIgnoreCase("Field Of Studies List")</label>
+            <textarea class="form-control content-en" asp-for="FieldOfStudyFile" rows="10"></textarea>
+        </div>
+        <div class="form-group mb-3">
+            <label>@Localizer.TextIgnoreCase("Occupations List")</label>
+            <textarea class="form-control content-en" asp-for="OccupationFile" rows="10"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">@Localizer.TextIgnoreCase("Save")</button>
+    </form>
+</div>

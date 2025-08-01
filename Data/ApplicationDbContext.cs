@@ -40,7 +40,7 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
             .HasOne(tp => tp.NeoTest)
             .WithOne(nt => nt.TestPackage)
             .HasForeignKey<NeoTest>();
-        
+
         base.OnModelCreating(builder);
     }
 
@@ -54,4 +54,5 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<RavenTest> RavenTests { get; set; }
     public DbSet<ActivationCode> ActivationCodes { get; set; }
     public DbSet<AISetting> AISettings { get; set; }
+    public DbSet<Prompt> Prompts { get; set; }
 }

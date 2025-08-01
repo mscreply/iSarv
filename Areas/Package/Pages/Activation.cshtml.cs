@@ -4,6 +4,7 @@ using iSarv.Data;
 using System.Security.Claims;
 using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 
 namespace iSarv.Areas.Test.Pages;
 
@@ -36,16 +37,15 @@ public class Activation : PageModel
                 // Check if any other fields are not empty and they should be equal to User respective info
                 // For example, check if Email is not empty
                 // and it should be equal to the user's email
-                var userEmail = User.FindFirstValue(ClaimTypes.Email);
-                if (!string.IsNullOrEmpty(activationCodeInfo.Email) && activationCodeInfo.Email != userEmail)
+                var user = _context.Users.Find(User.FindFirstValue(ClaimTypes.NameIdentifier));
+                if (!string.IsNullOrEmpty(activationCodeInfo.Email) && activationCodeInfo.Email != user.Email)
                 {
                     ModelState.AddModelError("activationCode", "Invalid Email.");
                     ToastMessage = "This Code does not belong to you.";
                     return Page();
                 }
 
-                if (!string.IsNullOrEmpty(activationCodeInfo.PhoneNumber) &&
-                    activationCodeInfo.PhoneNumber != "PhoneNumber")
+                if (!string.IsNullOrEmpty(activationCodeInfo.PhoneNumber) && activationCodeInfo.PhoneNumber != user.PhoneNumber)
                 {
                     ModelState.AddModelError("activationCode", "Invalid Phone Number.");
                     ToastMessage = "This Code does not belong to you.";
@@ -53,7 +53,7 @@ public class Activation : PageModel
                 }
 
                 if (!string.IsNullOrEmpty(activationCodeInfo.NationalId) &&
-                    activationCodeInfo.NationalId != "NationalId")
+                    activationCodeInfo.NationalId != user.NationalId)
                 {
                     ModelState.AddModelError("activationCode", "Invalid National Id.");
                     ToastMessage = "This Code does not belong to you.";
@@ -65,7 +65,7 @@ public class Activation : PageModel
                 // For example, set a flag in the database to indicate that the package is activated
                 var testPackage = new TestPackage()
                 {
-                    UserId = User.FindFirstValue(ClaimTypes.NameIdentifier)
+                    UserId = user.Id
                 };
                 _context.TestPackages.Add(testPackage);
                 _context.ActivationCodes.Remove(activationCodeInfo);

@@ -31,22 +31,24 @@ public class CliftonTest
     [Display(Name = "Submit Date", Prompt = "Select the submit date")]
     public DateTime SubmitDate { get; set; } = default!; // Date when the test was submitted
 
-    public bool IsCompleted => !string.IsNullOrEmpty(Result);
+    [Display(Name = "Is Completed", Prompt = "Indicate if the test is completed")]
+    public bool IsCompleted { get; set; } = false; // Indicates if the test is completed
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
     [Display(Name = "Response", Prompt = "Enter the response")]
     public string Response { get; set; } = "";
 
-    public string Status => IsCompleted ? "Completed" :
+    public string Status => IsCompleted ? IsConfirmed ? "Completed" : "Not Confirmed" :
         DateTime.Now < StartDate ? "Not Started" :
         DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
     private readonly ApplicationDbContext _applicationDbContext;
 
-    public Dictionary<CliftonDomain, Dictionary<CliftonTheme, int>> CalculateScores()
+    public Dictionary<CliftonDomain, Dictionary<CliftonTheme, double>> CalculateScores()
     {
-        var scores = new Dictionary<CliftonDomain, Dictionary<CliftonTheme, int>>();
+        var scores = new Dictionary<CliftonDomain, Dictionary<CliftonTheme, double>>();
+        var themeCount = new Dictionary<CliftonTheme, int>();
 
         var questions = _applicationDbContext.CliftonTestQuestions.ToList();
         var responses = Response.Split(",");
@@ -57,16 +59,25 @@ public class CliftonTest
             response -= 2;
             // Initialize domain and theme scores if not already present
             if (!scores.ContainsKey(question.DomainA))
-                scores[question.DomainA] = new Dictionary<CliftonTheme, int>();
+                scores[question.DomainA] = new Dictionary<CliftonTheme, double>();
 
             if (!scores[question.DomainA].ContainsKey(question.ThemeA))
                 scores[question.DomainA][question.ThemeA] = 0;
 
+            if (!themeCount.ContainsKey(question.ThemeA))
+                themeCount[question.ThemeA] = 0;
+
             if (!scores.ContainsKey(question.DomainB))
-                scores[question.DomainB] = new Dictionary<CliftonTheme, int>();
+                scores[question.DomainB] = new Dictionary<CliftonTheme, double>();
 
             if (!scores[question.DomainB].ContainsKey(question.ThemeB))
                 scores[question.DomainB][question.ThemeB] = 0;
+
+            if (!themeCount.ContainsKey(question.ThemeB))
+                themeCount[question.ThemeB] = 0;
+
+            themeCount[question.ThemeA]++;
+            themeCount[question.ThemeB]++;
 
             // Assign scores based on the response
             if (response == 2) // Fully Describe Me for A
@@ -86,6 +97,14 @@ public class CliftonTest
                 scores[question.DomainB][question.ThemeB] += 2;
             }
             // Neutral (0) does not affect the score
+        }
+
+        foreach (var domain in scores.Keys)
+        {
+            foreach (var theme in scores[domain].Keys)
+            {
+                scores[domain][theme] = scores[domain][theme] * 100 / (2 * themeCount[theme]);
+            }
         }
 
         return scores;

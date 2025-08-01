@@ -1,0 +1,218 @@
+﻿@page
+@model iSarv.Areas.AISetting.Pages.PromptsModel
+@{
+    ViewData["Title"] = Localizer.TextIgnoreCase("AI Prompts Management");
+}
+
+<div class="container mt-4">
+    <h2>@Localizer.TextIgnoreCase("AI Prompts Management")</h2>
+
+    <hr />
+
+    <h3>@Localizer.TextIgnoreCase("Create New Prompt")</h3>
+    <form method="post" asp-page-handler="CreatePrompt" class="mb-4">
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="NewPromptName" class="form-label">@Localizer.TextIgnoreCase("Name")</label>
+                <input type="text" id="NewPromptName" name="Name" class="form-control" required />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="NewPromptTest" class="form-label">@Localizer.TextIgnoreCase("Test")</label>
+                <select id="NewPromptTest" name="Test" class="form-control" required>
+                    <option value="Clifton">@Localizer.TextIgnoreCase("Clifton Test")</option>
+                    <option value="Holland">@Localizer.TextIgnoreCase("Holland Test")</option>
+                    <option value="Raven">@Localizer.TextIgnoreCase("Raven Test")</option>
+                    <option value="Neo">@Localizer.TextIgnoreCase("Neo Test")</option>
+                    <option value="Package">@Localizer.TextIgnoreCase("Package")</option>
+                </select>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="NewPromptText" class="form-label">
+                @Localizer.TextIgnoreCase("Prompt Text") - 
+                <span class="small">
+                    @Localizer.TextIgnoreCase("If you want to send subject information in the prompt, use the {SubjectInfo} key.") - 
+                    @Localizer.TextIgnoreCase("Use the {score} key to submit the test result.")
+                </span>
+            </label>
+            <textarea id="NewPromptText" name="PromptText" class="form-control" rows="5"></textarea>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="NewPromptLanguage" class="form-label">@Localizer.TextIgnoreCase("Enter the language of AI reply")</label>
+                <input type="text" id="NewPromptLanguage" name="Language" class="form-control" value="Persian" />
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="NewPromptReplyLength" class="form-label">@Localizer.TextIgnoreCase("Reply Length")</label>
+                <input type="number" id="NewPromptReplyLength" name="ReplyLength" class="form-control" value="1000" />
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">@Localizer.TextIgnoreCase("Create Prompt")</button>
+    </form>
+
+    <hr />
+    <h3>@Localizer.TextIgnoreCase("Existing Prompts")</h3>
+
+    <style>
+        td span {
+            word-break: break-all;
+        }
+    </style>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>@Localizer.TextIgnoreCase("Name")</th>
+                    <th>@Localizer.TextIgnoreCase("Test")</th>
+                    <th>@Localizer.TextIgnoreCase("Prompt Text")</th>
+                    <th>@Localizer.TextIgnoreCase("Language")</th>
+                    <th>@Localizer.TextIgnoreCase("Reply Length")</th>
+                    <th>@Localizer.TextIgnoreCase("Actions")</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Prompts != null && Model.Prompts.Any())
+                {
+                    @foreach (var prompt in Model.Prompts)
+                    {
+                        <tr data-id="@prompt.Name">
+                            <td>
+                                <span class="prompt-name view-mode">@prompt.Name</span>
+                                <input type="text" class="form-control prompt-name-input edit-mode d-none"
+                                    value="@prompt.Name" />
+                            </td>
+                            <td>
+                                <span class="prompt-test view-mode">@prompt.Test</span>
+                                <select class="form-control prompt-test-input edit-mode d-none" value="@prompt.Test">
+                                    <option value="Clifton">@Localizer.TextIgnoreCase("Clifton Test")</option>
+                                    <option value="Holland">@Localizer.TextIgnoreCase("Holland Test")</option>
+                                    <option value="Raven">@Localizer.TextIgnoreCase("Raven Test")</option>
+                                    <option value="Neo">@Localizer.TextIgnoreCase("Neo Test")</option>
+                                    <option value="Package">@Localizer.TextIgnoreCase("Package")</option>
+                                </select>
+                            </td>
+                            <td>
+                                <span class="prompt-text view-mode">@prompt.PromptText</span>
+                                <textarea class="form-control prompt-text-input edit-mode d-none">@prompt.PromptText</textarea>
+                            </td>
+                            <td>
+                                <span class="prompt-language view-mode">@prompt.Language</span>
+                                <input type="text" class="form-control prompt-language-input edit-mode d-none"
+                                    value="@prompt.Language" />
+                            </td>
+                            <td>
+                                <span class="prompt-replylength view-mode">@prompt.ReplyLength</span>
+                                <input type="number" class="form-control prompt-replylength-input edit-mode d-none"
+                                    value="@prompt.ReplyLength" />
+                            </td>
+                            <td>
+                                <button
+                                    class="btn btn-primary btn-sm edit-btn view-mode">@Localizer.TextIgnoreCase("Edit")</button>
+                                <button
+                                    class="btn btn-success btn-sm save-btn edit-mode d-none">@Localizer.TextIgnoreCase("Save")</button>
+                                <button
+                                    class="btn btn-secondary btn-sm cancel-btn edit-mode d-none">@Localizer.TextIgnoreCase("Cancel")</button>
+                                <form method="post">
+                                    <button class="btn btn-danger btn-sm delete-btn view-mode" asp-page-handler="DeletePrompt"
+                                        asp-route-id="@prompt.Name">@Localizer.TextIgnoreCase("Delete")</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center">@Localizer.TextIgnoreCase("No prompts found.")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            function toggleEditMode($row, edit) {
+                if (edit) {
+                    $row.find('.view-mode').addClass('d-none');
+                    $row.find('.edit-mode').removeClass('d-none');
+                } else {
+                    $row.find('.view-mode').removeClass('d-none');
+                    $row.find('.edit-mode').addClass('d-none');
+                }
+            }
+
+            $('.edit-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+                toggleEditMode($row, true);
+            });
+
+            $('.cancel-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+                // Reset input values to original span text
+                $row.find('.prompt-name-input').val($row.find('.prompt-name').text());
+                $row.find('.prompt-test-input').val($row.find('.prompt-test').text());
+                $row.find('.prompt-text-input').val($row.find('.prompt-text').text());
+                $row.find('.prompt-language-input').val($row.find('.prompt-language').text());
+                $row.find('.prompt-replylength-input').val($row.find('.prompt-replylength').text());
+                toggleEditMode($row, false);
+            });
+
+            $('.save-btn').on('click', function () {
+                var $row = $(this).closest('tr');
+
+                // If a temp form doesn't exist, create and append one containing the current inputs for serialization.
+                var $form = $row.find('form._ajaxPromptForm');
+                if ($form.length === 0) {
+                    $form = $('<form class="_ajaxPromptForm" style="display:none;"></form>');
+                    // Append all input.edit-mode inputs to the form for proper serialize
+                    $form.append($row.find('.prompt-name-input').clone().attr('name', 'Name'));
+                    $form.append($row.find('.prompt-test-input').clone().attr('name', 'Test'));
+                    $form.append($row.find('.prompt-text-input').clone().attr('name', 'PromptText'));
+                    $form.append($row.find('.prompt-language-input').clone().attr('name', 'Language'));
+                    $form.append($row.find('.prompt-replylength-input').clone().attr('name', 'ReplyLength'));
+                    // Also add ID (hidden input)
+                    $form.append($('<input type="hidden" name="Name" />').val($row.data('id')));
+                    // Anti-forgery token as well, if exists
+                    var $token = $('input[name="__RequestVerificationToken"]').first().clone();
+                    if ($token.length)
+                        $form.append($token);
+                    $row.append($form);
+                } else {
+                    // Update values if user changed them again before save
+                    $form.find('input[name="Name"]').val($row.find('.prompt-name-input').val());
+                    $form.find('input[name="Test"]').val($row.find('.prompt-test-input').val());
+                    $form.find('textarea[name="PromptText"]').val($row.find('.prompt-text-input').val());
+                    $form.find('input[name="Language"]').val($row.find('.prompt-language-input').val());
+                    $form.find('input[name="ReplyLength"]').val($row.find('.prompt-replylength-input').val());
+                }
+
+                $.ajax({
+                    url: '?handler=UpdatePrompt',
+                    type: 'POST',
+                    data: $form.serialize(),
+                    success: function (response) {
+                        if (response.success) {
+                            // update view-mode spans with new values
+                            $row.find('.prompt-name').text($form.find('input[name="Name"]').val());
+                            $row.find('.prompt-test').text($form.find('input[name="Test"]').val());
+                            $row.find('.prompt-text').text($form.find('textarea[name="PromptText"]').val());
+                            $row.find('.prompt-language').text($form.find('input[name="Language"]').val());
+                            $row.find('.prompt-replylength').text($form.find('input[name="ReplyLength"]').val());
+                            toggleEditMode($row, false);
+                        } else {
+                            alert(response.message || '@Localizer.TextIgnoreCase("Error updating prompt.")');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert('@Localizer.TextIgnoreCase("An error occurred while updating the prompt.")');
+                        console.error("Update Error:", xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+}

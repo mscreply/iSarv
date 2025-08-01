@@ -43,5 +43,5 @@ Shahed University|دانشگاه شاهد
 Shahid Rajaee Teacher Training University|دانشگاه تربیت دبیر شهید رجایی
 Shiraz University of Technology|دانشگاه صنعتی شیراز
 Sistan and Baluchestan University|دانشگاه سیستان و بلوچستان
-یاسوج|دانشگاه علوم پزشکی یاسوج
+Tafresh University|دانشگاه تفرش
 Other|سایر

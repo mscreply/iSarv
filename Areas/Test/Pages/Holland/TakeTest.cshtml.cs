@@ -4,7 +4,6 @@ using iSarv.Data.Tests;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NuGet.Protocol;
 
 namespace iSarv.Areas.Test.Pages.Holland
 {
@@ -13,13 +12,11 @@ namespace iSarv.Areas.Test.Pages.Holland
     {
         private readonly ApplicationDbContext _context;
         private readonly ApplicationUserManager _userManager;
-        private readonly IAIService _AIService;
 
-        public TakeTestModel(ApplicationDbContext context, ApplicationUserManager userManager, IAIService aiService)
+        public TakeTestModel(ApplicationDbContext context, ApplicationUserManager userManager)
         {
             _context = context;
             _userManager = userManager;
-            _AIService = aiService;
         }
 
         public bool IsDoneOrExpired { get; set; }
@@ -31,7 +28,7 @@ namespace iSarv.Areas.Test.Pages.Holland
         public int[] Answers { get; set; }
 
         [BindProperty] public int CurrentStep { get; set; }
-        
+
         public async Task<IActionResult> OnGetAsync(int testId)
         {
             if (!await _userManager.DoesTestBelongToUserAsync(User, testId, "holland"))
@@ -63,8 +60,8 @@ namespace iSarv.Areas.Test.Pages.Holland
             {
                 hollandTest.Response = string.Join(",", answers);
                 hollandTest.SubmitDate = DateTime.Now;
-                var aiResponse = await _AIService.GetAIReplyForTestAsync(hollandTest.CalculateScores().ToJson(), "Holland (RIASEC)");
-                hollandTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
+                hollandTest.Result = ""; // Clear previous result to force recalculation
+                hollandTest.IsCompleted = true;
                 _context.HollandTests.Update(hollandTest);
                 await _context.SaveChangesAsync();
             }

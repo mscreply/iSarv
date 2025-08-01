@@ -13,6 +13,20 @@ namespace iSarv.Data
             .GetRequiredService<IWebHostEnvironment>()
             .WebRootPath;
 
+        public static string ReadTextFile(string destination)
+        {
+            var path = Path.Combine(WebRootPath!, destination);
+            if (File.Exists(path))
+                return File.ReadAllText(path);
+            return string.Empty;
+        }
+
+        public static void SaveTextFile(string destination, string content)
+        {
+            var path = Path.Combine(WebRootPath!, destination);
+            File.WriteAllText(path, content);
+        }
+
         public static async Task SaveToFileAsync(string destination, IFormFile file)
         {
             var path = Path.Combine(WebRootPath!, destination);

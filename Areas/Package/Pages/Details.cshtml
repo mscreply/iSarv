@@ -1,6 +1,7 @@
 @page "{id:int}"
 @using System.Globalization
 @using Microsoft.AspNetCore.Mvc.TagHelpers
+@using iSarv.Data.Services
 @model iSarv.Areas.Package.Pages.DetailsModel
 
 @{
@@ -17,262 +18,305 @@
     @Localizer.TextIgnoreCase(Model.TestPackage.Status)
 </h4>
 
-<hr />
-<ul class="nav nav-tabs mb-3" id="resultTabs" role="tablist">
-    <li class="nav-item" role="presentation">
-        <button class="nav-link active" id="package-tab" data-bs-toggle="tab" data-bs-target="#package" type="button"
-            role="tab" aria-controls="package" aria-selected="true">
-            @Localizer.TextIgnoreCase("Final Result")
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="neo-tab" data-bs-toggle="tab" data-bs-target="#neo" type="button" role="tab"
-            aria-controls="neo" aria-selected="false">
-            @Localizer.TextIgnoreCase("Neo Test Result")
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="clifton-tab" data-bs-toggle="tab" data-bs-target="#clifton" type="button"
-            role="tab" aria-controls="clifton" aria-selected="false">
-            @Localizer.TextIgnoreCase("Clifton Test Result")
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="holland-tab" data-bs-toggle="tab" data-bs-target="#holland" type="button"
-            role="tab" aria-controls="holland" aria-selected="false">
-            @Localizer.TextIgnoreCase("Holland Test Result")
-        </button>
-    </li>
-    <li class="nav-item" role="presentation">
-        <button class="nav-link" id="raven-tab" data-bs-toggle="tab" data-bs-target="#raven" type="button" role="tab"
-            aria-controls="raven" aria-selected="false">
-            @Localizer.TextIgnoreCase("Raven Test Result")
-        </button>
-    </li>
-</ul>
 
-<div class="tab-content" id="resultTabsContent">
-    <div class="tab-pane fade show active" id="package" role="tabpanel" aria-labelledby="package-tab">
-        <form method="post" asp-page-handler="EditPackageResult">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5>@Localizer.TextIgnoreCase(Model.TestPackage.Status)</h5>
-                <div>
-                    <button type="submit" class="btn btn-primary">
-                        @Localizer.TextIgnoreCase("Confirm")
-                    </button>
-                </div>
-            </div>
-            <div class="border rounded p-3">
-                <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.FinalResult"></textarea>
-            </div>
-        </form>
-    </div>
-    <div class="tab-pane fade" id="neo" role="tabpanel" aria-labelledby="neo-tab">
-        <form method="post" asp-page-handler="EditNeoResult">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.NeoTest.Status)
-                    <button type="submit" asp-page-handler="ResetNeoTest" class="btn btn-sm btn-danger"
-                        title="Reset test and extend time"
-                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                    </button>
-                </h5>
-                <div>
-                    @if (Model.TestPackage.NeoTest.IsCompleted)
-                    {
-                        <div class="input-group">
-                            <select class="form-select" name="server">
-                                @foreach (var server in Model.AiService.GetServerList())
-                                {
-                                    <option name="@server">@server</option>
-                                }
-                            </select>
-                            <select class="form-select" name="model">
-                                @foreach (var aiModel in Model.AiService.GetModelList())
-                                {
-                                    <option name="@aiModel">@aiModel</option>
-                                }
-                            </select>
-                            <button type="submit" asp-page-handler="GetNeoResultFromAI" class="btn btn-success">
-                                @Localizer.TextIgnoreCase("Get Result from AI")
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                @Localizer.TextIgnoreCase("Confirm")
-                            </button>
-                            @if (Model.TestPackage.NeoTest.IsCompleted)
+<partial name="_ToastMessage" for="AiError" />
+<hr />
+
+<div class="row" id="neo" role="tabpanel" aria-labelledby="neo-tab">
+    <form method="post" asp-page-handler="EditNeoResult">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>
+                @Localizer.TextIgnoreCase("Neo Test Result"):
+                @Localizer.TextIgnoreCase(Model.TestPackage.NeoTest.Status)
+                <button type="submit" asp-page-handler="ResetNeoTest" class="btn btn-sm btn-danger"
+                    title="Reset test and extend time"
+                    onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </h5>
+            <div>
+                @if (Model.TestPackage.NeoTest.IsCompleted)
+                {
+                    <div class="input-group">
+                        <select class="form-select" name="server">
+                            @foreach (var server in Model.AiService.GetServerList())
                             {
-                                <a href="/Test/Neo/Result/@Model.TestPackage.NeoTest.Id" class="btn btn-secondary"
-                                    target="_blank">
-                                    @Localizer.TextIgnoreCase("Result Details")
-                                </a>
+                                <option name="@server">@server</option>
                             }
-                        </div>
-                    }
-                </div>
-            </div>
-            <div class="border rounded p-3">
-                <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.NeoTest.Result"></textarea>
-            </div>
-        </form>
-    </div>
-    <div class="tab-pane fade" id="clifton" role="tabpanel" aria-labelledby="clifton-tab">
-        <form method="post" asp-page-handler="EditCliftonResult">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.CliftonTest.Status)
-                    <button type="submit" asp-page-handler="ResetCliftonTest" class="btn btn-sm btn-danger"
-                        title="Reset test and extend time"
-                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                    </button>
-                </h5>
-                <div>
-                    @if (Model.TestPackage.CliftonTest.IsCompleted)
-                    {
-                        <div class="input-group">
-                            <select class="form-select" name="server">
-                                @foreach (var server in Model.AiService.GetServerList())
-                                {
-                                    <option name="@server">@server</option>
-                                }
-                            </select>
-                            <select class="form-select" name="model">
-                                @foreach (var aiModel in Model.AiService.GetModelList())
-                                {
-                                    <option name="@aiModel">@aiModel</option>
-                                }
-                            </select>
-                            <button type="submit" asp-page-handler="GetCliftonResultFromAI" class="btn btn-success">
-                                @Localizer.TextIgnoreCase("Get Result from AI")
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                @Localizer.TextIgnoreCase("Confirm")
-                            </button>
-                            @if (Model.TestPackage.CliftonTest.IsCompleted)
+                        </select>
+                        <select class="form-select" name="model">
+                            @foreach (var aiModel in Model.AiService.GetModelList())
                             {
-                                <a href="/Test/Clifton/Result/@Model.TestPackage.CliftonTest.Id" class="btn btn-secondary"
-                                    target="_blank">
-                                    @Localizer.TextIgnoreCase("Result Details")
-                                </a>
+                                <option name="@aiModel">@aiModel</option>
                             }
-                        </div>
-                    }
-                </div>
-            </div>
-            <div class="border rounded p-3">
-                <textarea name="result" rows="20" class="form-control"
-                    asp-for="TestPackage.CliftonTest.Result"></textarea>
-            </div>
-        </form>
-    </div>
-    <div class="tab-pane fade" id="holland" role="tabpanel" aria-labelledby="holland-tab">
-        <form method="post" asp-page-handler="EditHollandResult">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.HollandTest.Status)
-                    <button type="submit" asp-page-handler="ResetHollandTest" class="btn btn-sm btn-danger"
-                        title="Reset test and extend time"
-                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                    </button>
-                </h5>
-                <div>
-                    @if (Model.TestPackage.HollandTest.IsCompleted)
-                    {
-                        <div class="input-group">
-                            <select class="form-select" name="server">
-                                @foreach (var server in Model.AiService.GetServerList())
-                                {
-                                    <option name="@server">@server</option>
-                                }
-                            </select>
-                            <select class="form-select" name="model">
-                                @foreach (var aiModel in Model.AiService.GetModelList())
-                                {
-                                    <option name="@aiModel">@aiModel</option>
-                                }
-                            </select>
-                            <button type="submit" asp-page-handler="GetHollandResultFromAI" class="btn btn-success">
-                                @Localizer.TextIgnoreCase("Get Result from AI")
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                @Localizer.TextIgnoreCase("Confirm")
-                            </button>
-                            @if (Model.TestPackage.HollandTest.IsCompleted)
+                        </select>
+                        <select class="form-select" name="promptName">
+                            @foreach (var prompt in Model.Prompts.Where(p => p.Test == Tests.Neo))
                             {
-                                <a href="/Test/Holland/Result/@Model.TestPackage.HollandTest.Id" class="btn btn-secondary"
-                                    target="_blank">
-                                    @Localizer.TextIgnoreCase("Result Details")
-                                </a>
+                                <option value="@prompt.Name">
+                                    @prompt.Name
+                                </option>
                             }
-                        </div>
-                    }
-                </div>
+                        </select>
+                        <button type="submit" asp-page-handler="GetNeoResultFromAI" class="btn btn-success">
+                            @Localizer.TextIgnoreCase("Get Result from AI")
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            @Localizer.TextIgnoreCase("Confirm")
+                        </button>
+                        @if (Model.TestPackage.NeoTest.IsCompleted)
+                        {
+                            <a href="/Test/Neo/Result/@Model.TestPackage.NeoTest.Id" class="btn btn-secondary" target="_blank">
+                                @Localizer.TextIgnoreCase("Result Details")
+                            </a>
+                        }
+                    </div>
+                }
             </div>
-            <div class="border rounded p-3">
-                <textarea name="result" rows="20" class="form-control"
-                    asp-for="TestPackage.HollandTest.Result"></textarea>
-            </div>
-        </form>
-    </div>
-    <div class="tab-pane fade" id="raven" role="tabpanel" aria-labelledby="raven-tab">
-        <form method="post" asp-page-handler="EditRavenResult">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-                <h5>
-                    @Localizer.TextIgnoreCase(Model.TestPackage.RavenTest.Status)
-                    <button type="submit" asp-page-handler="ResetRavenTest" class="btn btn-sm btn-danger"
-                        title="Reset test and extend time"
-                        onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
-                        <i class="bi bi-arrow-counterclockwise"></i>
-                    </button>
-                </h5>
-                <div>
-                    @if (Model.TestPackage.RavenTest.IsCompleted)
-                    {
-                        <div class="input-group">
-                            <select class="form-select" name="server">
-                                @foreach (var server in Model.AiService.GetServerList())
-                                {
-                                    <option name="@server">@server</option>
-                                }
-                            </select>
-                            <select class="form-select" name="model">
-                                @foreach (var aiModel in Model.AiService.GetModelList())
-                                {
-                                    <option name="@aiModel">@aiModel</option>
-                                }
-                            </select>
-                            <button type="submit" asp-page-handler="GetRavenResultFromAI" class="btn btn-success">
-                                @Localizer.TextIgnoreCase("Get Result from AI")
-                            </button>
-                            <button type="submit" class="btn btn-primary">
-                                @Localizer.TextIgnoreCase("Confirm")
-                            </button>
-                            @if (Model.TestPackage.RavenTest.IsCompleted)
+        </div>
+        <div class="border rounded p-3">
+            <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.NeoTest.Result"></textarea>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+<div class="row" id="clifton" role="tabpanel" aria-labelledby="clifton-tab">
+    <form method="post" asp-page-handler="EditCliftonResult">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>
+                @Localizer.TextIgnoreCase("Clifton Test Result"):
+                @Localizer.TextIgnoreCase(Model.TestPackage.CliftonTest.Status)
+                <button type="submit" asp-page-handler="ResetCliftonTest" class="btn btn-sm btn-danger"
+                    title="Reset test and extend time"
+                    onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </h5>
+            <div>
+                @if (Model.TestPackage.CliftonTest.IsCompleted)
+                {
+                    <div class="input-group">
+                        <select class="form-select" name="server">
+                            @foreach (var server in Model.AiService.GetServerList())
                             {
-                                <a href="/Test/Raven/Result/@Model.TestPackage.RavenTest.Id" class="btn btn-secondary"
-                                    target="_blank">
-                                    @Localizer.TextIgnoreCase("Result Details")
-                                </a>
+                                <option name="@server">@server</option>
                             }
-                        </div>
-                    }
-                </div>
+                        </select>
+                        <select class="form-select" name="model">
+                            @foreach (var aiModel in Model.AiService.GetModelList())
+                            {
+                                <option name="@aiModel">@aiModel</option>
+                            }
+                        </select>
+                        <select class="form-select" name="promptName">
+                            @foreach (var prompt in Model.Prompts.Where(p => p.Test == Tests.Clifton))
+                            {
+                                <option value="@prompt.Name">
+                                    @prompt.Name
+                                </option>
+                            }
+                        </select>
+                        <button type="submit" asp-page-handler="GetCliftonResultFromAI" class="btn btn-success">
+                            @Localizer.TextIgnoreCase("Get Result from AI")
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            @Localizer.TextIgnoreCase("Confirm")
+                        </button>
+                        @if (Model.TestPackage.CliftonTest.IsCompleted)
+                        {
+                            <a href="/Test/Clifton/Result/@Model.TestPackage.CliftonTest.Id" class="btn btn-secondary"
+                                target="_blank">
+                                @Localizer.TextIgnoreCase("Result Details")
+                            </a>
+                        }
+                    </div>
+                }
             </div>
-            <div class="border rounded p-3">
-                <textarea name="result" rows="20" class="form-control"
-                    asp-for="TestPackage.RavenTest.Result"></textarea>
+        </div>
+        <div class="border rounded p-3">
+            <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.CliftonTest.Result"></textarea>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+<div class="row" id="holland" role="tabpanel" aria-labelledby="holland-tab">
+    <form method="post" asp-page-handler="EditHollandResult">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>
+                @Localizer.TextIgnoreCase("Holland Test Result"):
+                @Localizer.TextIgnoreCase(Model.TestPackage.HollandTest.Status)
+                <button type="submit" asp-page-handler="ResetHollandTest" class="btn btn-sm btn-danger"
+                    title="Reset test and extend time"
+                    onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </h5>
+            <div>
+                @if (Model.TestPackage.HollandTest.IsCompleted)
+                {
+                    <div class="input-group">
+                        <select class="form-select" name="server">
+                            @foreach (var server in Model.AiService.GetServerList())
+                            {
+                                <option name="@server">@server</option>
+                            }
+                        </select>
+                        <select class="form-select" name="model">
+                            @foreach (var aiModel in Model.AiService.GetModelList())
+                            {
+                                <option name="@aiModel">@aiModel</option>
+                            }
+                        </select>
+                        <select class="form-select" name="promptName">
+                            @foreach (var prompt in Model.Prompts.Where(p => p.Test == Tests.Holland))
+                            {
+                                <option value="@prompt.Name">
+                                    @prompt.Name
+                                </option>
+                            }
+                        </select>
+                        <button type="submit" asp-page-handler="GetHollandResultFromAI" class="btn btn-success">
+                            @Localizer.TextIgnoreCase("Get Result from AI")
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            @Localizer.TextIgnoreCase("Confirm")
+                        </button>
+                        @if (Model.TestPackage.HollandTest.IsCompleted)
+                        {
+                            <a href="/Test/Holland/Result/@Model.TestPackage.HollandTest.Id" class="btn btn-secondary"
+                                target="_blank">
+                                @Localizer.TextIgnoreCase("Result Details")
+                            </a>
+                        }
+                    </div>
+                }
             </div>
-        </form>
-    </div>
+        </div>
+        <div class="border rounded p-3">
+            <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.HollandTest.Result"></textarea>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+<div class="row" id="raven" role="tabpanel" aria-labelledby="raven-tab">
+    <form method="post" asp-page-handler="EditRavenResult">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>
+                @Localizer.TextIgnoreCase("Raven Test Result"):
+                @Localizer.TextIgnoreCase(Model.TestPackage.RavenTest.Status)
+                <button type="submit" asp-page-handler="ResetRavenTest" class="btn btn-sm btn-danger"
+                    title="Reset test and extend time"
+                    onclick="return confirm('@Localizer.TextIgnoreCase("Are you sure you want to reset the test and extend its time?")');">
+                    <i class="bi bi-arrow-counterclockwise"></i>
+                </button>
+            </h5>
+            <div>
+                @if (Model.TestPackage.RavenTest.IsCompleted)
+                {
+                    <div class="input-group">
+                        <select class="form-select" name="server">
+                            @foreach (var server in Model.AiService.GetServerList())
+                            {
+                                <option name="@server">@server</option>
+                            }
+                        </select>
+                        <select class="form-select" name="model">
+                            @foreach (var aiModel in Model.AiService.GetModelList())
+                            {
+                                <option name="@aiModel">@aiModel</option>
+                            }
+                        </select>
+                        <select class="form-select" name="promptName">
+                            @foreach (var prompt in Model.Prompts.Where(p => p.Test == Tests.Raven))
+                            {
+                                <option value="@prompt.Name">
+                                    @prompt.Name
+                                </option>
+                            }
+                        </select>
+                        <button type="submit" asp-page-handler="GetRavenResultFromAI" class="btn btn-success">
+                            @Localizer.TextIgnoreCase("Get Result from AI")
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            @Localizer.TextIgnoreCase("Confirm")
+                        </button>
+                        @if (Model.TestPackage.RavenTest.IsCompleted)
+                        {
+                            <a href="/Test/Raven/Result/@Model.TestPackage.RavenTest.Id" class="btn btn-secondary"
+                                target="_blank">
+                                @Localizer.TextIgnoreCase("Result Details")
+                            </a>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="border rounded p-3">
+            <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.RavenTest.Result"></textarea>
+        </div>
+    </form>
+</div>
+
+<hr />
+
+<div class="row show active" id="package" role="tabpanel" aria-labelledby="package-tab">
+    <form method="post" asp-page-handler="EditPackageResult">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5>
+                @Localizer.TextIgnoreCase("Final Package Result"):
+                @Localizer.TextIgnoreCase(Model.TestPackage.Status)
+            </h5>
+            <div>
+                @if (Model.TestPackage.NeoTest.IsConfirmed && Model.TestPackage.CliftonTest.IsConfirmed &&
+                                Model.TestPackage.HollandTest.IsConfirmed && Model.TestPackage.RavenTest.IsConfirmed)
+                {
+                    <div class="input-group">
+                        <select class="form-select" name="server">
+                            @foreach (var server in Model.AiService.GetServerList())
+                            {
+                                <option name="@server">@server</option>
+                            }
+                        </select>
+                        <select class="form-select" name="model">
+                            @foreach (var aiModel in Model.AiService.GetModelList())
+                            {
+                                <option name="@aiModel">@aiModel</option>
+                            }
+                        </select>
+                        <select class="form-select" name="promptName">
+                            @foreach (var prompt in Model.Prompts.Where(p => p.Test == Tests.Package))
+                            {
+                                <option value="@prompt.Name">
+                                    @prompt.Name
+                                </option>
+                            }
+                        </select>
+                        <button type="submit" asp-page-handler="GetPackageResultFromAI" class="btn btn-success">
+                            @Localizer.TextIgnoreCase("Get Result from AI")
+                        </button>
+                        <button type="submit" class="btn btn-primary">
+                            @Localizer.TextIgnoreCase("Confirm")
+                        </button>
+                    </div>
+                }
+            </div>
+        </div>
+        <div class="border rounded p-3">
+            <textarea name="result" rows="20" class="form-control" asp-for="TestPackage.FinalResult"></textarea>
+        </div>
+    </form>
 </div>
 
 <div class="mt-2">
     <a asp-page="./Index" class="btn btn-secondary">@Localizer.TextIgnoreCase("Back to List")</a>
+    @if (Model.TestPackage.IsCompleted)
+    {
+        <a href="/Package/PrintResult/@Model.TestPackage.Id?inframe=true" target="_blank">@Localizer.TextIgnoreCase("Click here to download the full result of your talent pack.")</a>
+    }
 </div>
-
-@if (!string.IsNullOrEmpty(Model.AiError))
-{
-    <div class="d-none">@Model.AiError</div>
-}

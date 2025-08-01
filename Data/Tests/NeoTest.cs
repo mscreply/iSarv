@@ -32,16 +32,17 @@ public class NeoTest
     public DateTime SubmitDate { get; set; } = default!; // Date when the test was submitted
 
     // Add properties and methods specific to NEO Personality Inventory test
-    public bool IsCompleted => !string.IsNullOrEmpty(Result);
+    [Display(Name = "Is Completed", Prompt = "Indicate if the test is completed")]
+    public bool IsCompleted { get; set; } = false; // Indicates if the test is completed
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
     [Display(Name = "Response", Prompt = "Enter the response")]
     public string Response { get; set; } = "";
 
-    public string Status => IsCompleted ? "Completed" :
+    public string Status => IsCompleted ? IsConfirmed ? "Completed" : "Not Confirmed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
+        DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
     private ApplicationDbContext applicationDbContext { get; }
 

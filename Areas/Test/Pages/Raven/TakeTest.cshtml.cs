@@ -3,7 +3,6 @@ using iSarv.Data.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using NuGet.Protocol;
 
 namespace iSarv.Areas.Test.Pages.Raven
 {
@@ -12,13 +11,11 @@ namespace iSarv.Areas.Test.Pages.Raven
     {
         private readonly ApplicationDbContext _context;
         private readonly ApplicationUserManager _userManager;
-        private readonly IAIService _AIService;
 
-        public TakeTestModel(ApplicationDbContext context, ApplicationUserManager userManager, IAIService aiService)
+        public TakeTestModel(ApplicationDbContext context, ApplicationUserManager userManager)
         {
             _context = context;
             _userManager = userManager;
-            _AIService = aiService;
         }
 
         public bool IsDoneOrExpired { get; set; }
@@ -39,7 +36,7 @@ namespace iSarv.Areas.Test.Pages.Raven
             var ravenTest = _context.RavenTests.FirstOrDefault(t => t.Id == testId);
             IsDoneOrExpired = ravenTest!.IsCompleted || ravenTest.Deadline < DateTime.Now;
             IsNotStarted = ravenTest.StartDate > DateTime.Now;
-            
+
             Answers = string.IsNullOrEmpty(ravenTest.Response) ? Enumerable.Repeat(1, 60).ToArray() : ravenTest.Response.Split(",").Select(int.Parse).ToArray();
             CurrentStep = Answers.Length > 60 ? Answers[60] : 1;
             return Page();
@@ -57,8 +54,8 @@ namespace iSarv.Areas.Test.Pages.Raven
             {
                 ravenTest.Response = string.Join(",", answers);
                 ravenTest.SubmitDate = DateTime.Now;
-                var aiResponse = await _AIService.GetAIReplyForTestAsync(ravenTest.CalculateScores().ToJson(), "Raven IQ");
-                ravenTest.Result = aiResponse.IsSuccess ? aiResponse.Reply : "Wait for AI";
+                ravenTest.Result = ""; // Clear previous result to force recalculation
+                ravenTest.IsCompleted = true;
                 _context.RavenTests.Update(ravenTest);
                 await _context.SaveChangesAsync();
             }

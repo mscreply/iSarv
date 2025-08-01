@@ -35,11 +35,12 @@ public class RavenTest
     public string Response { get; set; } = "";
 
     // Add properties and methods specific to Raven's Progressive Matrices test
-    public bool IsCompleted => !string.IsNullOrEmpty(Result);
+    [Display(Name = "Is Completed", Prompt = "Indicate if the test is completed")]
+    public bool IsCompleted { get; set; } = false; // Indicates if the test is completed
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
-    public string Status => IsCompleted ? "Completed" :
+    public string Status => IsCompleted ? IsConfirmed ? "Completed" : "Not Confirmed" :
         DateTime.Now < StartDate ? "Not Started" :
         DateTime.Now <= Deadline ? "In Progress" : "Expired";
 

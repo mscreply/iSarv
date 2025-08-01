@@ -35,11 +35,12 @@ public class HollandTest
     public string Response { get; set; } = "";
 
     // Add properties and methods specific to Holland's Occupational Themes test
-    public bool IsCompleted => !string.IsNullOrEmpty(Result);
+    [Display(Name = "Is Completed", Prompt = "Indicate if the test is completed")]
+    public bool IsCompleted { get; set; } = false; // Indicates if the test is completed
 
-    public string Status => IsCompleted ? "Completed" :
+    public string Status => IsCompleted ? IsConfirmed ? "Completed" : "Not Confirmed" :
         DateTime.Now < StartDate ? "Not Started" :
-        DateTime.Now <= Deadline ? "In Progress" : "Expired" ;
+        DateTime.Now <= Deadline ? "In Progress" : "Expired";
 
     public TimeSpan TimeRemaining => Deadline - DateTime.Now;
 
