@@ -19,66 +19,67 @@
     <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
 </div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>
-                @Localizer.TextIgnoreCase("Id")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Statement")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Facet")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Score Is Reversed")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.NeoTestQuestion)
-        {
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.Statement)
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.Facet.ToDescription())
-                </td>
-                <td class="text-center">
-                    @if (item.ScoreIsReversed)
-                    {
-                        <i class="bi bi-arrow-down text-danger"></i>
-                    }
-                    else
-                    {
-                        <i class="bi bi-arrow-up text-success"></i>
-                    }
-                </td>
-                <td>
-
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
-                        <i class="bi bi-pencil"></i>
-                    </a>
-                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                        <i class="bi bi-info-circle"></i>
-                    </a>
-                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
-                        <i class="bi bi-trash"></i>
-                    </a>
-                </td>
+                <th>
+                    @Localizer.TextIgnoreCase("Id")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Statement")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Facet")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Score Is Reversed")
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.NeoTestQuestion)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.Statement)
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.Facet.ToDescription())
+                    </td>
+                    <td class="text-center">
+                        @if (item.ScoreIsReversed)
+                        {
+                            <i class="bi bi-arrow-down text-danger"></i>
+                        }
+                        else
+                        {
+                            <i class="bi bi-arrow-up text-success"></i>
+                        }
+                    </td>
+                    <td>
 
+                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
-@section Scripts 
+@section Scripts
 {
     <partial name="_ValidationScriptPartial" />
 }

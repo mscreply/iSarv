@@ -19,65 +19,66 @@
     <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
 </div>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>
-                @Localizer.TextIgnoreCase("Id")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Statement A")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Theme A")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Statement B")
-            </th>
-            <th>
-                @Localizer.TextIgnoreCase("Theme B")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.CliftonTestQuestion)
-        {
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
             <tr>
-                <td>
-                    @item.Id
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.StatementA)
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.ThemeA.ToDescription())
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.StatementB)
-                </td>
-                <td>
-                    @Localizer.TextIgnoreCase(item.ThemeB.ToDescription())
-                </td>
-                <td>
-
-                    <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
-                        <i class="bi bi-pencil"></i>
-                    </a>
-                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                        <i class="bi bi-info-circle"></i>
-                    </a>
-                    <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
-                        <i class="bi bi-trash"></i>
-                    </a>
-                </td>
+                <th>
+                    @Localizer.TextIgnoreCase("Id")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Statement A")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Theme A")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Statement B")
+                </th>
+                <th>
+                    @Localizer.TextIgnoreCase("Theme B")
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CliftonTestQuestion)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.StatementA)
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.ThemeA.ToDescription())
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.StatementB)
+                    </td>
+                    <td>
+                        @Localizer.TextIgnoreCase(item.ThemeB.ToDescription())
+                    </td>
+                    <td>
 
+                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">
+                            <i class="bi bi-pencil"></i>
+                        </a>
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                            <i class="bi bi-info-circle"></i>
+                        </a>
+                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
-@section Scripts 
+@section Scripts
 {
     <partial name="_ValidationScriptPartial" />
 }

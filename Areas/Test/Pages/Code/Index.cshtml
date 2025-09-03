@@ -19,57 +19,63 @@
     <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
 </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ActivationCode[0].Code)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ActivationCode[0].Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ActivationCode[0].PhoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ActivationCode[0].NationalId)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.ActivationCode) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Code)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-                @if (!string.IsNullOrEmpty(item.Email))
-                {
-                    <form method="post" asp-page-handler="SendEmail" asp-route-id="@item.Id" class="d-inline">
-                        <button type="submit" class="btn btn-warning btn-sm"><i class="bi bi-envelope"></i></button>
-                    </form>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-                @if (!string.IsNullOrEmpty(item.PhoneNumber))
-                {
-                    <form method="post" asp-page-handler="SendSms" asp-route-id="@item.Id" class="d-inline">
-                        <button type="submit" class="btn btn-secondary btn-sm"><i class="bi bi-phone"></i></button>
-                    </form>
-                }
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NationalId)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i class="bi bi-pencil"></i></a> |
-                <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm"><i class="bi bi-info-circle"></i></a> |
-                <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i></a> |
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ActivationCode[0].Code)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ActivationCode[0].Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ActivationCode[0].PhoneNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ActivationCode[0].NationalId)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.ActivationCode)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Code)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                        @if (!string.IsNullOrEmpty(item.Email))
+                        {
+                            <form method="post" asp-page-handler="SendEmail" asp-route-id="@item.Id" class="d-inline">
+                                <button type="submit" class="btn btn-warning btn-sm"><i class="bi bi-envelope"></i></button>
+                            </form>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        @if (!string.IsNullOrEmpty(item.PhoneNumber))
+                        {
+                            <form method="post" asp-page-handler="SendSms" asp-route-id="@item.Id" class="d-inline">
+                                <button type="submit" class="btn btn-secondary btn-sm"><i class="bi bi-phone"></i></button>
+                            </form>
+                        }
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NationalId)
+                    </td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm"><i
+                                class="bi bi-pencil"></i></a> |
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm"><i
+                                class="bi bi-info-circle"></i></a> |
+                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm"><i
+                                class="bi bi-trash"></i></a> |
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

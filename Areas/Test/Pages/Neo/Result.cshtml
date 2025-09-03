@@ -10,49 +10,51 @@
 
 
 @{ var colorStyles = new[] { "table-success", "table-info", "table-warning", "table-danger", "table-primary" }; }
-<table class="table mt-4">
-    <thead>
-        <tr>
-            <th>@Localizer.Text("Personality Inventory")</th>
-            <th class="text-center">@Localizer.Text("Total Score")</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var pi in Model.Score)
-        {
-            int totalScore = pi.Value.Values.Sum();
+<div class="table-responsive">
+    <table class="table mt-4">
+        <thead>
             <tr>
-                <td>@Localizer.TextIgnoreCase(pi.Key.ToString())</td>
-                <td class="text-center">@totalScore</td>
+                <th>@Localizer.Text("Personality Inventory")</th>
+                <th class="text-center">@Localizer.Text("Total Score")</th>
             </tr>
-            <tr>
-                <td>
-                    <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(pi.Key)]">
-                        <thead>
-                            <tr>
-                                <th>@Localizer.Text("Facet")</th>
-                                <th>@Localizer.Text("Score")</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach (var facet in pi.Value)
-                            {
+        </thead>
+        <tbody>
+            @foreach (var pi in Model.Score)
+            {
+                int totalScore = pi.Value.Values.Sum();
+                <tr>
+                    <td>@Localizer.TextIgnoreCase(pi.Key.ToString())</td>
+                    <td class="text-center">@totalScore</td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(pi.Key)]">
+                            <thead>
                                 <tr>
-                                    <td>@Localizer.TextIgnoreCase(facet.Key.ToString())</td>
-                                    <td>@Localizer.Text(facet.Value.ToString())</td>
+                                    <th>@Localizer.Text("Facet")</th>
+                                    <th>@Localizer.Text("Score")</th>
                                 </tr>
-                            }
-                        </tbody>
-                    </table>
-                    <canvas id="bar-@pi.Key" width="200" height="100"></canvas>
-                </td>
-                <td class="w-50">
-                    <canvas id="radar-@pi.Key" width="200" height="100"></canvas>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+                            </thead>
+                            <tbody>
+                                @foreach (var facet in pi.Value)
+                                {
+                                    <tr>
+                                        <td>@Localizer.TextIgnoreCase(facet.Key.ToString())</td>
+                                        <td>@Localizer.Text(facet.Value.ToString())</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <canvas id="bar-@pi.Key" width="200" height="100"></canvas>
+                    </td>
+                    <td class="w-50">
+                        <canvas id="radar-@pi.Key" width="200" height="100"></canvas>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <h5 class="mt-4">@Localizer.Text("Result")</h5>
 @if (Model.NeoTest.IsConfirmed)

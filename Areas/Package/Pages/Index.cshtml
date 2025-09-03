@@ -11,24 +11,9 @@
 <h1>@ViewData["Title"]</h1>
 <partial name="_ToastMessage" for="ToastMessage" />
 
-<div class="d-inline-flex mb-3 w-100">
-    <form method="get" class="d-inline-flex">
-        <div class="input-group">
-            <label class="input-group-text" for="searchTerm">@Localizer.TextIgnoreCase("Search")</label>
-            <input type="text" class="form-control" id="searchTerm" name="searchTerm" value="@Model.SearchTerm">
-            <button type="submit" class="btn btn-success"><i class="fas fa-search"></i></button>
-        </div>
-        <div class="input-group">
-            <select class="form-select" asp-for="Status" name="status" id="status">
-                <option value="">@Localizer.TextIgnoreCase("All")</option>
-                <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
-                <option value="Uncompleted">@Localizer.TextIgnoreCase("Uncompleted")</option>
-            </select>
-            <button type="submit" class="btn btn-info"><i class="fas fa-filter"></i></button>
-        </div>
-    </form>
-    @if (User.IsInRole("Administrator"))
-    {
+@if (User.IsInRole("Administrator"))
+{
+    <div class="d-inline-flex mb-3 w-100">
         <form asp-page-handler="LoadFromExcel" method="post" enctype="multipart/form-data">
             <div class="input-group">
                 <input type="file" name="excelFile" class="form-control" accept=".xlsx, .xls">
@@ -38,213 +23,394 @@
         <form asp-page-handler="SavePackagesToExcel" method="post">
             <button type="submit" class="btn btn-success ms-2">@Localizer.TextIgnoreCase("Download As Excel")</button>
         </form>
-        <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New")</a>
-    }
-</div>
+        <a asp-page="Create" class="btn btn-primary ms-2 flex-shrink-0">@Localizer.TextIgnoreCase("Create New Package")</a>
+    </div>
+    <hr />
+}
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Localizer.TextIgnoreCase("Id")
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TestPackages[0].User.NationalId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TestPackages[0].User.FullName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TestPackages[0].StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TestPackages[0].Deadline)
-            </th>
-            <th>@Localizer.Text("Neo Test")</th>
-            <th>@Localizer.Text("Clifton Test")</th>
-            <th>@Localizer.Text("Holland Test")</th>
-            <th>@Localizer.Text("Raven Test")</th>
-            <th>
-                @Html.DisplayNameFor(model => model.TestPackages[0].SubmitDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.TestPackages)
-        {
+<div class="d-inline-flex mb-3 w-100">
+    <form method="get" class="row row-cols-lg-auto g-3 align-items-center">
+        <div class="col-12">
+            <label class="visually-hidden" for="fullName">@Localizer.TextIgnoreCase("Full Name")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Full Name")</div>
+                <input type="text" class="form-control" id="fullName" name="fullName"
+                    value="@HttpContext.Request.Query["fullName"]">
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="nationalId">@Localizer.TextIgnoreCase("National ID")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("National ID")</div>
+                <input type="text" class="form-control" id="nationalId" name="nationalId"
+                    value="@HttpContext.Request.Query["nationalId"]">
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="university">@Localizer.TextIgnoreCase("University")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("University")</div>
+                <input type="text" class="form-control" id="university" name="university"
+                    value="@HttpContext.Request.Query["university"]">
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="startDate">@Localizer.TextIgnoreCase("Start Date")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Start Date")</div>
+                <input type="date" class="form-control" id="startDate" name="startDate"
+                    value="@HttpContext.Request.Query["startDate"]">
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="endDate">@Localizer.TextIgnoreCase("End Date")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("End Date")</div>
+                <input type="date" class="form-control" id="endDate" name="endDate"
+                    value="@HttpContext.Request.Query["endDate"]">
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="neoStatus">@Localizer.TextIgnoreCase("Neo Test")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Neo Test")</div>
+                <select class="form-select" name="neoStatus" id="neoStatus">
+                    <option value="">@Localizer.TextIgnoreCase("All")</option>
+                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
+                    <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
+                    <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
+                </select>
+                <script>document.querySelector("#neoStatus").value = "@HttpContext.Request.Query["neoStatus"]";</script>
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="cliftonStatus">@Localizer.TextIgnoreCase("Clifton Test")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Clifton Test")</div>
+                <select class="form-select" name="cliftonStatus" id="cliftonStatus">
+                    <option value="">@Localizer.TextIgnoreCase("All")</option>
+                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
+                    <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
+                    <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
+                </select>
+                <script>document.querySelector("#cliftonStatus").value = "@HttpContext.Request.Query["cliftonStatus"]";</script>
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="hollandStatus">@Localizer.TextIgnoreCase("Holland Test")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Holland Test")</div>
+                <select class="form-select" name="hollandStatus" id="hollandStatus">
+                    <option value="">@Localizer.TextIgnoreCase("All")</option>
+                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
+                    <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
+                    <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
+                </select>
+                <script>document.querySelector("#hollandStatus").value = "@HttpContext.Request.Query["hollandStatus"]";</script>
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="ravenStatus">@Localizer.TextIgnoreCase("Raven Test")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Raven Test")</div>
+                <select class="form-select" name="ravenStatus" id="ravenStatus">
+                    <option value="">@Localizer.TextIgnoreCase("All")</option>
+                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
+                    <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
+                    <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
+                </select>
+                <script>document.querySelector("#ravenStatus").value = "@HttpContext.Request.Query["ravenStatus"]";</script>
+            </div>
+        </div>
+        <div class="col-12">
+            <label class="visually-hidden" for="status">@Localizer.TextIgnoreCase("Status")</label>
+            <div class="input-group">
+                <div class="input-group-text">@Localizer.TextIgnoreCase("Status")</div>
+                <select class="form-select" name="status" id="status">
+                    <option value="">@Localizer.TextIgnoreCase("All")</option>
+                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="Uncompleted">@Localizer.TextIgnoreCase("Uncompleted")</option>
+                </select>
+                <script>document.querySelector("#status").value = "@HttpContext.Request.Query["status"]";</script>
+            </div>
+        </div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-success">
+                <i class="fas fa-filter"></i> @Localizer.TextIgnoreCase("Filter")
+            </button>
+            <a href="/Package" class="btn btn-danger"><i class="fas fa-xmark"></i></a>
+        </div>
+    </form>
+</div>
+<hr />
+
+<div class="table-responsive">
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Id)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.NationalId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.User.FullName)
-                </td>
-                <td>
-                    @item.StartDate.ToShortCultureDate(lang)
-                </td>
-                <td>
-                    @item.Deadline.ToShortCultureDate(lang)
-                </td>
-                <td>
-                    @if (item.NeoTest.IsCompleted)
-                    {
-                        <i class="bi bi-check-circle text-success"></i>
-                        @if (item.NeoTest.IsConfirmed)
-                        {
-                            @Localizer.Text("Confirmed")
-                        }
-                        else
-                        {
-                            @Localizer.Text("Not Confirmed")
-                        }
-                    }
-                    else if (DateTime.Now < item.NeoTest.StartDate)
-                    {
-                        <i class="bi bi-hourglass text-secondary"></i>
-                        @Localizer.Text("Not Started")
-                    }
-                    else if (DateTime.Now <= item.NeoTest.Deadline)
-                    {
-                        <i class="bi bi-play-circle text-primary"></i>
-                        @Localizer.Text("In Progress")
-                    }
-                    else
-                    {
-                        <i class="bi bi-x-circle text-danger"></i>
-                        @Localizer.Text("Expired")
-                    }
-                </td>
-                <td>
-                    @if (item.CliftonTest.IsCompleted)
-                    {
-                        <i class="bi bi-check-circle text-success"></i>
-                        @if (item.CliftonTest.IsConfirmed)
-                        {
-                            @Localizer.Text("Confirmed")
-                        }
-                        else
-                        {
-                            @Localizer.Text("Not Confirmed")
-                        }
-                    }
-                    else if (DateTime.Now < item.CliftonTest.StartDate)
-                    {
-                        <i class="bi bi-hourglass text-secondary"></i>
-                        @Localizer.Text("Not Started")
-                    }
-                    else if (DateTime.Now <= item.CliftonTest.Deadline)
-                    {
-                        <i class="bi bi-play-circle text-primary"></i>
-                        @Localizer.Text("In Progress")
-                    }
-                    else
-                    {
-                        <i class="bi bi-x-circle text-danger"></i>
-                        @Localizer.Text("Expired")
-                    }
-                </td>
-                <td>
-                    @if (item.HollandTest.IsCompleted)
-                    {
-                        <i class="bi bi-check-circle text-success"></i>
-                        @if (item.HollandTest.IsConfirmed)
-                        {
-                            @Localizer.Text("Confirmed")
-                        }
-                        else
-                        {
-                            @Localizer.Text("Not Confirmed")
-                        }
-                    }
-                    else if (DateTime.Now < item.HollandTest.StartDate)
-                    {
-                        <i class="bi bi-hourglass text-secondary"></i>
-                        @Localizer.Text("Not Started")
-                    }
-                    else if (DateTime.Now <= item.HollandTest.Deadline)
-                    {
-                        <i class="bi bi-play-circle text-primary"></i>
-                        @Localizer.Text("In Progress")
-                    }
-                    else
-                    {
-                        <i class="bi bi-x-circle text-danger"></i>
-                        @Localizer.Text("Expired")
-                    }
-                </td>
-                <td>
-                    @if (item.RavenTest.IsCompleted)
-                    {
-                        <i class="bi bi-check-circle text-success"></i>
-                        @if (item.RavenTest.IsConfirmed)
-                        {
-                            @Localizer.Text("Confirmed")
-                        }
-                        else
-                        {
-                            @Localizer.Text("Not Confirmed")
-                        }
-                    }
-                    else if (DateTime.Now < item.RavenTest.StartDate)
-                    {
-                        <i class="bi bi-hourglass text-secondary"></i>
-                        @Localizer.Text("Not Started")
-                    }
-                    else if (DateTime.Now <= item.RavenTest.Deadline)
-                    {
-                        <i class="bi bi-play-circle text-primary"></i>
-                        @Localizer.Text("In Progress")
-                    }
-                    else
-                    {
-                        <i class="bi bi-x-circle text-danger"></i>
-                        @Localizer.Text("Expired")
-                    }
-                </td>
-                <td>
-                    @if (item.IsCompleted)
-                    {
-                        <i class="bi bi-check-circle text-success"></i>
-                        @Localizer.Text("Completed")
-                    }
-                    else if (DateTime.Now < item.StartDate)
-                    {
-                        <i class="bi bi-hourglass text-secondary"></i>
-                        @Localizer.Text("Not Started")
-                    }
-                    else if (DateTime.Now <= item.Deadline)
-                    {
-                        <i class="bi bi-play-circle text-primary"></i>
-                        @Localizer.Text("In Progress")
-                    }
-                    else
-                    {
-                        <i class="bi bi-x-circle text-danger"></i>
-                        @Localizer.Text("Expired")
-                    }
-                </td>
-                <td>
-                    <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
-                        <i class="bi bi-eye"></i>
-                    </a>
-                    @if (User.IsInRole("Administrator"))
-                    {
-                        <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
-                            <i class="bi bi-pencil"></i>
-                        </a>
-                        <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
-                            <i class="bi bi-trash"></i>
-                        </a>
-                    }
-                </td>
+                <th>
+                    @Localizer.TextIgnoreCase("Id")
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].User.NationalId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].User.FullName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].User.University)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].Deadline)
+                </th>
+                <th>@Localizer.Text("Neo Test")</th>
+                <th>@Localizer.Text("Clifton Test")</th>
+                <th>@Localizer.Text("Holland Test")</th>
+                <th>@Localizer.Text("Raven Test")</th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TestPackages[0].SubmitDate)
+                </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.TestPackages)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.NationalId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.FullName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.User.University)
+                    </td>
+                    <td>
+                        @item.StartDate.ToShortCultureDate(lang)
+                    </td>
+                    <td>
+                        @item.Deadline.ToShortCultureDate(lang)
+                    </td>
+                    <td>
+                        @if (item.NeoTest.IsCompleted)
+                        {
+                            @if (item.NeoTest.IsConfirmed)
+                            {
+                                <span class="text-success">
+                                    <i class="bi bi-check-circle"></i>
+                                    @Localizer.Text("Confirmed")
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">
+                                    <i class="bi bi-hourglass-split"></i>
+                                    @Localizer.Text("Not Confirmed")
+                                </span>
+                            }
+                        }
+                        else if (DateTime.Now < item.NeoTest.StartDate)
+                        {
+                            <span class="text-secondary">
+                                <i class="bi bi-hourglass"></i>
+                                @Localizer.Text("Not Started")
+                            </span>
+                        }
+                        else if (DateTime.Now <= item.NeoTest.Deadline)
+                        {
+                            <span class="text-primary">
+                                <i class="bi bi-play-circle"></i>
+                                @Localizer.Text("In Progress")
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                <i class="bi bi-x-circle"></i>
+                                @Localizer.Text("Expired")
+                            </span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.CliftonTest.IsCompleted)
+                        {
+                            @if (item.CliftonTest.IsConfirmed)
+                            {
+                                <span class="text-success">
+                                    <i class="bi bi-check-circle"></i>
+                                    @Localizer.Text("Confirmed")
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">
+                                    <i class="bi bi-hourglass-split"></i>
+                                    @Localizer.Text("Not Confirmed")
+                                </span>
+                            }
+                        }
+                        else if (DateTime.Now < item.CliftonTest.StartDate)
+                        {
+                            <span class="text-secondary">
+                                <i class="bi bi-hourglass"></i>
+                                @Localizer.Text("Not Started")
+                            </span>
+                        }
+                        else if (DateTime.Now <= item.CliftonTest.Deadline)
+                        {
+                            <span class="text-primary">
+                                <i class="bi bi-play-circle"></i>
+                                @Localizer.Text("In Progress")
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                <i class="bi bi-x-circle"></i>
+                                @Localizer.Text("Expired")
+                            </span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.HollandTest.IsCompleted)
+                        {
+                            @if (item.HollandTest.IsConfirmed)
+                            {
+                                <span class="text-success">
+                                    <i class="bi bi-check-circle"></i>
+                                    @Localizer.Text("Confirmed")
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">
+                                    <i class="bi bi-hourglass-split"></i>
+                                    @Localizer.Text("Not Confirmed")
+                                </span>
+                            }
+                        }
+                        else if (DateTime.Now < item.HollandTest.StartDate)
+                        {
+                            <span class="text-secondary">
+                                <i class="bi bi-hourglass"></i>
+                                @Localizer.Text("Not Started")
+                            </span>
+                        }
+                        else if (DateTime.Now <= item.HollandTest.Deadline)
+                        {
+                            <span class="text-primary">
+                                <i class="bi bi-play-circle"></i>
+                                @Localizer.Text("In Progress")
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                <i class="bi bi-x-circle"></i>
+                                @Localizer.Text("Expired")
+                            </span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.RavenTest.IsCompleted)
+                        {
+                            @if (item.RavenTest.IsConfirmed)
+                            {
+                                <span class="text-success">
+                                    <i class="bi bi-check-circle"></i>
+                                    @Localizer.Text("Confirmed")
+                                </span>
+                            }
+                            else
+                            {
+                                <span class="text-warning">
+                                    <i class="bi bi-hourglass-split"></i>
+                                    @Localizer.Text("Not Confirmed")
+                                </span>
+                            }
+                        }
+                        else if (DateTime.Now < item.RavenTest.StartDate)
+                        {
+                            <span class="text-secondary">
+                                <i class="bi bi-hourglass"></i>
+                                @Localizer.Text("Not Started")
+                            </span>
+                        }
+                        else if (DateTime.Now <= item.RavenTest.Deadline)
+                        {
+                            <span class="text-primary">
+                                <i class="bi bi-play-circle"></i>
+                                @Localizer.Text("In Progress")
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                <i class="bi bi-x-circle"></i>
+                                @Localizer.Text("Expired")
+                            </span>
+                        }
+                    </td>
+                    <td>
+                        @if (item.IsCompleted)
+                        {
+                            <span class="text-success">
+                                <i class="bi bi-check-circle"></i>
+                                @Localizer.Text("Completed")
+                            </span>
+                        }
+                        else if (DateTime.Now < item.StartDate)
+                        {
+                            <span class="text-secondary">
+                                <i class="bi bi-hourglass"></i>
+                                @Localizer.Text("Not Started")
+                            </span>
+                        }
+                        else if (DateTime.Now <= item.Deadline)
+                        {
+                            <span class="text-primary">
+                                <i class="bi bi-play-circle"></i>
+                                @Localizer.Text("In Progress")
+                            </span>
+                        }
+                        else
+                        {
+                            <span class="text-danger">
+                                <i class="bi bi-x-circle"></i>
+                                @Localizer.Text("Expired")
+                            </span>
+                        }
+                    </td>
+                    <td>
+                        <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-info btn-sm">
+                            <i class="bi bi-eye"></i>
+                        </a>
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-primary btn-sm">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
 
 <nav aria-label="Package list pagination">
     <ul class="pagination">

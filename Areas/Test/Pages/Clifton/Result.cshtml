@@ -9,49 +9,51 @@
 <h4>@ViewData["Title"]</h4>
 
 @{ var colorStyles = new[] { "table-success", "table-info", "table-warning", "table-danger" }; }
-<table class="table mt-4">
-    <thead>
-    <tr>
-        <th>@Localizer.Text("Clifton Domain")</th>
-        <th class="text-center">@Localizer.Text("Total Score")</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var domain in Model.Score)
-    {
-        double totalScore = domain.Value.Values.Sum() / domain.Value.Count;
+<div class="table-responsive">
+    <table class="table mt-4">
+        <thead>
         <tr>
-            <td>@Localizer.TextIgnoreCase(domain.Key.ToDescription())</td>
-            <td class="text-center">@totalScore.ToString("F2") %</td>
+            <th>@Localizer.Text("Clifton Domain")</th>
+            <th class="text-center">@Localizer.Text("Total Score")</th>
         </tr>
-        <tr>
-            <td>
-                <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(domain.Key)]">
-                    <thead>
-                    <tr>
-                        <th>@Localizer.Text("Clifton Theme")</th>
-                        <th>@Localizer.Text("Score")</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach (var theme in domain.Value)
-                    {
+        </thead>
+        <tbody>
+        @foreach (var domain in Model.Score)
+        {
+            double totalScore = domain.Value.Values.Sum() / domain.Value.Count;
+            <tr>
+                <td>@Localizer.TextIgnoreCase(domain.Key.ToDescription())</td>
+                <td class="text-center">@totalScore.ToString("F2") %</td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="table table-sm table-striped @colorStyles[Model.Score.Keys.ToList().IndexOf(domain.Key)]">
+                        <thead>
                         <tr>
-                            <td>@Localizer.TextIgnoreCase(theme.Key.ToDescription())</td>
-                            <td>@theme.Value.ToString("F2") %</td>
+                            <th>@Localizer.Text("Clifton Theme")</th>
+                            <th>@Localizer.Text("Score")</th>
                         </tr>
-                    }
-                    </tbody>
-                </table>
-                <canvas id="bar-@domain.Key" width="200" height="100"></canvas>
-            </td>
-            <td class="w-50">
-                <canvas id="radar-@domain.Key" width="200" height="100"></canvas>
-            </td>
-        </tr>
-    }
-    </tbody>
-</table>
+                        </thead>
+                        <tbody>
+                        @foreach (var theme in domain.Value)
+                        {
+                            <tr>
+                                <td>@Localizer.TextIgnoreCase(theme.Key.ToDescription())</td>
+                                <td>@theme.Value.ToString("F2") %</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                    <canvas id="bar-@domain.Key" width="200" height="100"></canvas>
+                </td>
+                <td class="w-50">
+                    <canvas id="radar-@domain.Key" width="200" height="100"></canvas>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
 
 <h5 class="mt-4">@Localizer.Text("Result")</h5>
 @if(Model.CliftonTest.IsConfirmed)

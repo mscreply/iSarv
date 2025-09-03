@@ -10,44 +10,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/dataSources/17b7a92d-ce07-4b52-981f-5c6ded8a5edf.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/Article.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/AISetting/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Activation.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Activation.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Details.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Question/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/TakeTest.cshtml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Question/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/TakeTest.cshtml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/TakeTest.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/Dashboard.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/ApplicationDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Services/AIService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Services/AIService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/HollandTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/HollandTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/NeoTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/NeoTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/RavenTest.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/TestPackage.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Utilities.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Utilities.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Layouts/_AdminLayout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_FooterPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_FooterPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_CSSPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_CSSPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/iSarv.db" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/App_Files/data/University.txt" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/App_Files/data/University.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wwwroot/img/carousel-1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/wwwroot/img/carousel-1.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +207,9 @@
       <workItem from="1754002878012" duration="1677000" />
       <workItem from="1754006874617" duration="91000" />
       <workItem from="1754010532361" duration="763000" />
-      <workItem from="1754084359791" duration="3448000" />
+      <workItem from="1754084359791" duration="3860000" />
+      <workItem from="1756073703873" duration="2041000" />
+      <workItem from="1756914387660" duration="3042000" />
     </task>
     <task id="LOCAL-00001" summary="user management finish">
       <option name="closed" value="true" />
@@ -301,7 +283,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749473954627</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="after prompt added">
+      <option name="closed" value="true" />
+      <created>1754089006392</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754089006392</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +322,8 @@
     <MESSAGE value="all take test and result finish" />
     <MESSAGE value="add charts" />
     <MESSAGE value="after ai setting to db" />
-    <option name="LAST_COMMIT_MESSAGE" value="after ai setting to db" />
+    <MESSAGE value="after prompt added" />
+    <option name="LAST_COMMIT_MESSAGE" value="after prompt added" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -23,47 +23,153 @@ namespace iSarv.Areas.Package.Pages
         public int PageSize { get; set; } = 10;
         public int TotalPages { get; set; }
 
-        [BindProperty(SupportsGet = true)]
-        public string SearchTerm { get; set; }
-        public string Status { get; set; }
-
         public IList<TestPackage> TestPackages { get; set; } = default!;
         [TempData] public string ToastMessage { get; set; }
 
-        public async Task OnGetAsync(int currentPage = 1, string searchTerm = "", string status = "")
+        public async Task OnGetAsync(int? currentPage, string? userId, string? status, string? fullName, string? nationalId, string? university, DateTime? startDate, DateTime? endDate, string? neoStatus, string? cliftonStatus, string? hollandStatus, string? ravenStatus)
         {
-            CurrentPage = currentPage;
-            SearchTerm = searchTerm;
-            Status = status;
+            CurrentPage = currentPage ?? 1;
 
-            TestPackages = _context.TestPackages.Include(tp => tp.User)
+            var query = _context.TestPackages.Include(tp => tp.User)
                 .Include(tp => tp.NeoTest).Include(tp => tp.CliftonTest)
                 .Include(tp => tp.HollandTest).Include(tp => tp.RavenTest)
                 .ToList();
 
-            switch (status)
+            if (!string.IsNullOrEmpty(userId))
             {
-                case "Completed":
-                    TestPackages = TestPackages.AsEnumerable().Where(tp => tp.IsCompleted).ToList(); break;
-                case "Uncompleted":
-                    TestPackages = TestPackages.AsEnumerable().Where(tp => !tp.IsCompleted).ToList(); break;
-                default: break;
+                query = query.Where(tp => tp.UserId == userId).ToList();
             }
 
-            if (!string.IsNullOrEmpty(searchTerm))
+            if (!string.IsNullOrEmpty(status))
             {
-                TestPackages = TestPackages.Where(tp =>
-                    tp.User.FullName.Contains(searchTerm) || tp.User.NationalId.Contains(searchTerm)).ToList();
+                if (status == "Completed")
+                {
+                    query = query.Where(tp => tp.IsCompleted).ToList();
+                }
+                else if (status == "Uncompleted")
+                {
+                    query = query.Where(tp => !tp.IsCompleted).ToList();
+                }
             }
 
-            TotalPages = (int)Math.Ceiling(TestPackages.Count() / (double)PageSize);
+            if (!string.IsNullOrEmpty(fullName))
+            {
+                query = query.Where(tp => tp.User.FullName.Contains(fullName)).ToList();
+            }
 
-            TestPackages = TestPackages
+            if (!string.IsNullOrEmpty(nationalId))
+            {
+                query = query.Where(tp => tp.User.NationalId.Contains(nationalId)).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(university))
+            {
+                query = query.Where(tp => tp.User.University.Contains(university)).ToList();
+            }
+
+            if (startDate.HasValue)
+            {
+                query = query.Where(tp => tp.StartDate.Date >= startDate.Value.Date).ToList();
+            }
+
+            if (endDate.HasValue)
+            {
+                query = query.Where(tp => tp.Deadline.Date <= endDate.Value.Date).ToList();
+            }
+
+            if (!string.IsNullOrEmpty(neoStatus))
+            {
+                switch (neoStatus)
+                {
+                    case "Completed":
+                        query = query.Where(tp => tp.NeoTest.IsCompleted).ToList();
+                        break;
+                    case "InProgress":
+                        query = query.Where(tp =>
+                            DateTime.Now >= tp.NeoTest.StartDate && DateTime.Now <= tp.NeoTest.Deadline && !tp.NeoTest.IsCompleted).ToList();
+                        break;
+                    case "Expired":
+                        query = query.Where(tp =>
+                            DateTime.Now > tp.NeoTest.Deadline && !tp.NeoTest.IsCompleted).ToList();
+                        break;
+                    case "NotStarted":
+                        query = query.Where(tp =>
+                            DateTime.Now < tp.NeoTest.StartDate).ToList();
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(cliftonStatus))
+            {
+                switch (cliftonStatus)
+                {
+                    case "Completed":
+                        query = query.Where(tp => tp.CliftonTest.IsCompleted).ToList();
+                        break;
+                    case "InProgress":
+                        query = query.Where(tp =>
+                            DateTime.Now >= tp.CliftonTest.StartDate && DateTime.Now <= tp.CliftonTest.Deadline && !tp.CliftonTest.IsCompleted).ToList();
+                        break;
+                    case "Expired":
+                        query = query.Where(tp =>
+                            DateTime.Now > tp.CliftonTest.Deadline && !tp.CliftonTest.IsCompleted).ToList();
+                        break;
+                    case "NotStarted":
+                        query = query.Where(tp =>
+                            DateTime.Now < tp.CliftonTest.StartDate).ToList();
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(hollandStatus))
+            {
+                switch (hollandStatus)
+                {
+                    case "Completed":
+                        query = query.Where(tp => tp.HollandTest.IsCompleted).ToList();
+                        break;
+                    case "InProgress":
+                        query = query.Where(tp =>
+                            DateTime.Now >= tp.HollandTest.StartDate && DateTime.Now <= tp.HollandTest.Deadline && !tp.HollandTest.IsCompleted).ToList();
+                        break;
+                    case "Expired":
+                        query = query.Where(tp =>
+                            DateTime.Now > tp.HollandTest.Deadline && !tp.HollandTest.IsCompleted).ToList();
+                        break;
+                    case "NotStarted":
+                        query = query.Where(tp =>
+                            DateTime.Now < tp.HollandTest.StartDate).ToList();
+                        break;
+                }
+            }
+
+            if (!string.IsNullOrEmpty(ravenStatus))
+            {
+                switch (ravenStatus)
+                {
+                    case "Completed":
+                        query = query.Where(tp => tp.RavenTest.IsCompleted).ToList();
+                        break;
+                    case "InProgress":
+                        query = query.Where(tp =>
+                            DateTime.Now >= tp.RavenTest.StartDate && DateTime.Now <= tp.RavenTest.Deadline && !tp.RavenTest.IsCompleted).ToList();
+                        break;
+                    case "Expired":
+                        query = query.Where(tp =>
+                            DateTime.Now > tp.RavenTest.Deadline && !tp.RavenTest.IsCompleted).ToList();
+                        break;
+                    case "NotStarted":
+                        query = query.Where(tp =>
+                            DateTime.Now < tp.RavenTest.StartDate).ToList();
+                        break;
+                }
+            }
+
+            TotalPages = (int)Math.Ceiling(query.Count() / (double)PageSize);
+
+            TestPackages = query
                 .Skip((CurrentPage - 1) * PageSize)
-                .Take(PageSize)
-                .ToList();
-
-            TestPackages = TestPackages.OrderByDescending(tp => tp.StartDate).ToList();
+                .Take(PageSize).ToList();
         }
 
         public async Task<IActionResult> OnPostLoadFromExcelAsync(IFormFile excelFile)
@@ -135,13 +241,14 @@ namespace iSarv.Areas.Package.Pages
                     worksheet.Cell(1, 1).Value = "Username(Mobile)";
                     worksheet.Cell(1, 2).Value = "User Full Name";
                     worksheet.Cell(1, 3).Value = "User National ID";
-                    worksheet.Cell(1, 4).Value = "Start Date";
-                    worksheet.Cell(1, 5).Value = "End Date";
-                    worksheet.Cell(1, 6).Value = "Is Completed";
-                    worksheet.Cell(1, 7).Value = "NEO Test Status";
-                    worksheet.Cell(1, 8).Value = "Clifton Test Status";
-                    worksheet.Cell(1, 9).Value = "Holland Test Status";
-                    worksheet.Cell(1, 10).Value = "Raven Test Status";
+                    worksheet.Cell(1, 4).Value = "University";
+                    worksheet.Cell(1, 5).Value = "Start Date";
+                    worksheet.Cell(1, 6).Value = "End Date";
+                    worksheet.Cell(1, 7).Value = "Is Completed";
+                    worksheet.Cell(1, 8).Value = "NEO Test Status";
+                    worksheet.Cell(1, 9).Value = "Clifton Test Status";
+                    worksheet.Cell(1, 10).Value = "Holland Test Status";
+                    worksheet.Cell(1, 11).Value = "Raven Test Status";
 
                     // Add data rows
                     var row = 2;
@@ -152,13 +259,14 @@ namespace iSarv.Areas.Package.Pages
                         worksheet.Cell(row, 1).Value = package.User?.UserName;
                         worksheet.Cell(row, 2).Value = package.User?.FullName;
                         worksheet.Cell(row, 3).Value = package.User?.NationalId;
-                        worksheet.Cell(row, 4).Value = package.StartDate;
-                        worksheet.Cell(row, 5).Value = package.Deadline;
-                        worksheet.Cell(row, 6).Value = package.IsCompleted;
-                        worksheet.Cell(row, 7).Value = package.NeoTest.Status;
-                        worksheet.Cell(row, 8).Value = package.CliftonTest.Status;
-                        worksheet.Cell(row, 9).Value = package.HollandTest.Status;
-                        worksheet.Cell(row, 10).Value = package.RavenTest.Status;
+                        worksheet.Cell(row, 4).Value = package.User?.University;
+                        worksheet.Cell(row, 5).Value = package.StartDate;
+                        worksheet.Cell(row, 6).Value = package.Deadline;
+                        worksheet.Cell(row, 7).Value = package.IsCompleted;
+                        worksheet.Cell(row, 8).Value = package.NeoTest.Status;
+                        worksheet.Cell(row, 9).Value = package.CliftonTest.Status;
+                        worksheet.Cell(row, 10).Value = package.HollandTest.Status;
+                        worksheet.Cell(row, 11).Value = package.RavenTest.Status;
                         row++;
                     }
 
@@ -176,7 +284,5 @@ namespace iSarv.Areas.Package.Pages
                 return RedirectToPage();
             }
         }
-
-
     }
 }

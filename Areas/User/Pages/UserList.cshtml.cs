@@ -59,6 +59,7 @@ namespace iSarv.Areas.User.Pages
                     PhoneNumber = user.PhoneNumber,
                     Id = user.Id,
                     NationalId = user.NationalId,
+                    University = user.University,
                     IsAdmin = await _userManager.IsInRoleAsync(user, "Administrator"),
                     IsPsychologist = await _userManager.IsInRoleAsync(user, "Psychologist"),
                     IsActive = user.IsActive,
@@ -75,6 +76,7 @@ namespace iSarv.Areas.User.Pages
             public string FullName { get; set; }
             public string PhoneNumber { get; set; }
             public string NationalId { get; set; }
+            public string University { get; set; }
             public bool IsAdmin { get; set; }
             public bool IsActive { get; set; }
             public bool EmailConfirmed { get; set; }
