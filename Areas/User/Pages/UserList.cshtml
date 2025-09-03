@@ -67,9 +67,9 @@
                         <span
                             class="@(user.PhoneNumberConfirmed ? "text-success" : "text-danger")">@user.PhoneNumber</span>|
                         <form method="post" asp-page-handler="TogglePhoneNumberConfirmed" asp-route-id="@user.Id"
-                              asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
+                            asp-route-currentPage="@Model.CurrentPage" style="display:inline;">
                             <button type="submit" class="btn btn-link" style="padding:0; border:none;"
-                                    title="@Localizer.TextIgnoreCase("Toggle Phone Number Confirmed")">
+                                title="@Localizer.TextIgnoreCase("Toggle Phone Number Confirmed")">
                                 @if (user.PhoneNumberConfirmed)
                                 {
                                     <i class="fas fa-phone text-success"></i>
@@ -163,17 +163,18 @@
     <ul class="pagination">
         <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
             <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(Model.CurrentPage - 1)"
-                asp-area="User">@Localizer.TextIgnoreCase("Previous")</a>
+                asp-route-searchTerm="@Model.SearchTerm" asp-area="User">@Localizer.TextIgnoreCase("Previous")</a>
         </li>
         @for (int i = 1; i <= Model.TotalPages; i++)
         {
             <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(i.ToString())" asp-area="User">@i</a>
+                <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(i.ToString())"
+                    asp-route-searchTerm="@Model.SearchTerm" asp-area="User">@i</a>
             </li>
         }
         <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
             <a class="page-link" asp-page="./UserList" asp-route-currentPage="@(Model.CurrentPage + 1)"
-                asp-area="User">@Localizer.TextIgnoreCase("Next")</a>
+                asp-route-searchTerm="@Model.SearchTerm" asp-area="User">@Localizer.TextIgnoreCase("Next")</a>
         </li>
     </ul>
 </nav>

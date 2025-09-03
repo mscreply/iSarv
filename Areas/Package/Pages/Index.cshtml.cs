@@ -81,8 +81,11 @@ namespace iSarv.Areas.Package.Pages
             {
                 switch (neoStatus)
                 {
-                    case "Completed":
-                        query = query.Where(tp => tp.NeoTest.IsCompleted).ToList();
+                    case "Confirmed":
+                        query = query.Where(tp => tp.NeoTest.IsCompleted && tp.NeoTest.IsConfirmed).ToList();
+                        break;
+                    case "NotConfirmed":
+                        query = query.Where(tp => tp.NeoTest.IsCompleted && !tp.NeoTest.IsConfirmed).ToList();
                         break;
                     case "InProgress":
                         query = query.Where(tp =>
@@ -103,8 +106,11 @@ namespace iSarv.Areas.Package.Pages
             {
                 switch (cliftonStatus)
                 {
-                    case "Completed":
-                        query = query.Where(tp => tp.CliftonTest.IsCompleted).ToList();
+                    case "Confirmed":
+                        query = query.Where(tp => tp.CliftonTest.IsCompleted && tp.CliftonTest.IsConfirmed).ToList();
+                        break;
+                    case "NotConfirmed":
+                        query = query.Where(tp => tp.CliftonTest.IsCompleted && !tp.CliftonTest.IsConfirmed).ToList();
                         break;
                     case "InProgress":
                         query = query.Where(tp =>
@@ -125,8 +131,11 @@ namespace iSarv.Areas.Package.Pages
             {
                 switch (hollandStatus)
                 {
-                    case "Completed":
-                        query = query.Where(tp => tp.HollandTest.IsCompleted).ToList();
+                    case "Confirmed":
+                        query = query.Where(tp => tp.HollandTest.IsCompleted && tp.HollandTest.IsConfirmed).ToList();
+                        break;
+                    case "NotConfirmed":
+                        query = query.Where(tp => tp.HollandTest.IsCompleted && !tp.HollandTest.IsConfirmed).ToList();
                         break;
                     case "InProgress":
                         query = query.Where(tp =>
@@ -147,8 +156,11 @@ namespace iSarv.Areas.Package.Pages
             {
                 switch (ravenStatus)
                 {
-                    case "Completed":
-                        query = query.Where(tp => tp.RavenTest.IsCompleted).ToList();
+                    case "Confirmed":
+                        query = query.Where(tp => tp.RavenTest.IsCompleted && tp.RavenTest.IsConfirmed).ToList();
+                        break;
+                    case "NotConfirmed":
+                        query = query.Where(tp => tp.RavenTest.IsCompleted && !tp.RavenTest.IsConfirmed).ToList();
                         break;
                     case "InProgress":
                         query = query.Where(tp =>

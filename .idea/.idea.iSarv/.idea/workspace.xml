@@ -9,26 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Data/Article.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.iSarv/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Package/Pages/Index.cshtml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Question/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Clifton/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Code/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Question/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Holland/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Question/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Question/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Neo/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Test/Pages/Raven/Result.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/User/Pages/UserList.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Data/Tests/CliftonTestQuestionsSource.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_AdminSidebarPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pages/Shared/Partials/_CSSPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/Shared/Partials/_CSSPartial.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/ViewResource.fa.resx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/iSarv.db" beforeDir="false" afterPath="$PROJECT_DIR$/iSarv.db" afterDir="false" />
-    </list>
+    <list default="true" id="c2b23862-486c-464a-bb59-09eddc7b9275" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +190,7 @@
       <workItem from="1754010532361" duration="763000" />
       <workItem from="1754084359791" duration="3860000" />
       <workItem from="1756073703873" duration="2041000" />
-      <workItem from="1756914387660" duration="3042000" />
+      <workItem from="1756914387660" duration="3489000" />
     </task>
     <task id="LOCAL-00001" summary="user management finish">
       <option name="closed" value="true" />
@@ -291,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754089006392</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add filter to package list">
+      <option name="closed" value="true" />
+      <created>1756918215953</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1756918215953</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +312,8 @@
     <MESSAGE value="add charts" />
     <MESSAGE value="after ai setting to db" />
     <MESSAGE value="after prompt added" />
-    <option name="LAST_COMMIT_MESSAGE" value="after prompt added" />
+    <MESSAGE value="add filter to package list" />
+    <option name="LAST_COMMIT_MESSAGE" value="add filter to package list" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

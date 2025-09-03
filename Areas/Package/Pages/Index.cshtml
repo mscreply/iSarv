@@ -76,7 +76,8 @@
                 <div class="input-group-text">@Localizer.TextIgnoreCase("Neo Test")</div>
                 <select class="form-select" name="neoStatus" id="neoStatus">
                     <option value="">@Localizer.TextIgnoreCase("All")</option>
-                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="Confirmed">@Localizer.TextIgnoreCase("Confirmed")</option>
+                    <option value="NotConfirmed">@Localizer.TextIgnoreCase("Not Confirmed")</option>
                     <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
                     <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
                     <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
@@ -90,7 +91,8 @@
                 <div class="input-group-text">@Localizer.TextIgnoreCase("Clifton Test")</div>
                 <select class="form-select" name="cliftonStatus" id="cliftonStatus">
                     <option value="">@Localizer.TextIgnoreCase("All")</option>
-                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="Confirmed">@Localizer.TextIgnoreCase("Confirmed")</option>
+                    <option value="NotConfirmed">@Localizer.TextIgnoreCase("Not Confirmed")</option>
                     <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
                     <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
                     <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
@@ -104,7 +106,8 @@
                 <div class="input-group-text">@Localizer.TextIgnoreCase("Holland Test")</div>
                 <select class="form-select" name="hollandStatus" id="hollandStatus">
                     <option value="">@Localizer.TextIgnoreCase("All")</option>
-                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="Confirmed">@Localizer.TextIgnoreCase("Confirmed")</option>
+                    <option value="NotConfirmed">@Localizer.TextIgnoreCase("Not Confirmed")</option>
                     <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
                     <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
                     <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
@@ -118,7 +121,8 @@
                 <div class="input-group-text">@Localizer.TextIgnoreCase("Raven Test")</div>
                 <select class="form-select" name="ravenStatus" id="ravenStatus">
                     <option value="">@Localizer.TextIgnoreCase("All")</option>
-                    <option value="Completed">@Localizer.TextIgnoreCase("Completed")</option>
+                    <option value="Confirmed">@Localizer.TextIgnoreCase("Confirmed")</option>
+                    <option value="NotConfirmed">@Localizer.TextIgnoreCase("Not Confirmed")</option>
                     <option value="InProgress">@Localizer.TextIgnoreCase("In Progress")</option>
                     <option value="Expired">@Localizer.TextIgnoreCase("Expired")</option>
                     <option value="NotStarted">@Localizer.TextIgnoreCase("Not Started")</option>
@@ -412,21 +416,29 @@
     </table>
 </div>
 
+@{
+    var queryParams = Microsoft.AspNetCore.WebUtilities.QueryHelpers.ParseQuery(HttpContext.Request.QueryString.ToString());
+    queryParams.Remove("currentPage");
+    var queryString = string.Join("&", queryParams.SelectMany(kvp => kvp.Value, (kvp, value) =>
+    $"{kvp.Key}={Uri.EscapeDataString(value)}"));
+}
 <nav aria-label="Package list pagination">
     <ul class="pagination">
         <li class="page-item @(Model.CurrentPage <= 1 ? "disabled" : "")">
-            <a class="page-link" asp-page="./Index" asp-route-currentPage="@(Model.CurrentPage - 1)"
-                asp-area="Package">@Localizer.TextIgnoreCase("Previous")</a>
+            <a class="page-link" href="@($"/Package/Index?currentPage={Model.CurrentPage - 1}&{queryString}")">
+                @Localizer.TextIgnoreCase("Previous")
+            </a>
         </li>
         @for (int i = 1; i <= Model.TotalPages; i++)
         {
             <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
-                <a class="page-link" asp-page="./Index" asp-route-currentPage="@(i.ToString())" asp-area="Package">@i</a>
+                <a class="page-link" href="@($"/Package/Index?currentPage={i}&{queryString}")">@i</a>
             </li>
         }
         <li class="page-item @(Model.CurrentPage >= Model.TotalPages ? "disabled" : "")">
-            <a class="page-link" asp-page="./Index" asp-route-currentPage="@(Model.CurrentPage + 1)"
-                asp-area="Package">@Localizer.TextIgnoreCase("Next")</a>
+            <a class="page-link" href="@($"/Package/Index?currentPage={Model.CurrentPage + 1}&{queryString}")">
+                @Localizer.TextIgnoreCase("Next")
+            </a>
         </li>
     </ul>
 </nav>
